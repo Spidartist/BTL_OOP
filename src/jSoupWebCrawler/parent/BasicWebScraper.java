@@ -16,7 +16,6 @@ public abstract class BasicWebScraper {
 	protected Document doc;
 	
 	public BasicWebScraper() {
-		
 	}
 	protected void setUrl(String url) {
 		this.url = url;

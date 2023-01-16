@@ -119,7 +119,7 @@ public class WikipediaFigure extends BasicWebScraper implements IScraping {
 				else continue;
 			}
 		}
-		String filePath = "./king.json";
+		String filePath = "D:\\webCrawler\\jSoupWebCrawler\\src\\jSoupWebCrawler\\jsonFiles\\king.json";
 		JSONArray jarray = new JSONArray();
 		Gson gson = new GsonBuilder().setPrettyPrinting().create();
 		String test = gson.toJson(kings);
