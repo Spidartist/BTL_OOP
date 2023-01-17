@@ -39,6 +39,10 @@ public class Vinpearl extends BasicWebScraper implements IScraping {
 		
 	}
 	public static void main(String[] args) {
+		LeHoiDaNang daNang = new LeHoiDaNang();
+		daNang.scraping();
+		LeHoiTuyenQuang tuyenQuang = new LeHoiTuyenQuang();
+		tuyenQuang.scraping();
 		LeHoiBacNinh bacNinh = new LeHoiBacNinh();
 		bacNinh.scraping();
 		LeHoiAnGiang anGiang = new LeHoiAnGiang();
@@ -46,8 +50,10 @@ public class Vinpearl extends BasicWebScraper implements IScraping {
 		Wikipedia obj = new Wikipedia();
 		obj.scraping();
 		ArrayList<Festival> list = new ArrayList<Festival>();
+		list.addAll(tuyenQuang.getList());
 		list.addAll(bacNinh.getList());
 		list.addAll(anGiang.getList());
+		list.addAll(daNang.getList());
 		list.addAll(obj.getList());
 		String filePath = "D:\\webCrawler\\jSoupWebCrawler\\src\\jSoupWebCrawler\\jsonFiles\\festival.json";
 		Gson gson = new GsonBuilder().setPrettyPrinting().create();

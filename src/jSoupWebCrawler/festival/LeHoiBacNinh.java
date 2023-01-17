@@ -24,7 +24,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 public class LeHoiBacNinh extends BasicWebScraper implements IScraping {
-private ArrayList<Festival> list = new ArrayList<Festival>() ;
+	private ArrayList<Festival> list = new ArrayList<Festival>() ;
 	public LeHoiBacNinh() {
 		String url = "https://alltours.vn/bac-ninh/nhung-le-hoi-o-bac-ninh.html";
 		this.url = url;

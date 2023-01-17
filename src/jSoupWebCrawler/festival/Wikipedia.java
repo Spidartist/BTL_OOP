@@ -56,61 +56,66 @@ public class Wikipedia extends BasicWebScraper implements IScraping {
 			String data = fes.text();
 			int splitPoint = data.indexOf(":");
 			String diaDiem = data.substring(0,splitPoint);
-//			System.out.println(diaDiem);
-			String festivalNames = data.substring(splitPoint+1);
-			festivalNames = festivalNames.replace(";", ",");
-			festivalNames = modify(diaDiem,festivalNames);
-			String [] names = festivalNames.split(",");
-			for (String name:names) {
-				System.out.println(name);
-				String tenLeHoi ="";
-				String que = "";
-				String thoiGian ="";
-				if (name.contains("(")) {
-					int open = name.indexOf("(");
-					int close = name.indexOf(")");
-					tenLeHoi = tenLeHoi.concat(name.substring(0,open));
-					que = que.concat(name.substring(open+1,close));
-					que = que.concat(",");
-					que = que.concat(diaDiem);
-					thoiGian = thoiGian.concat(name.substring(close+1));
-				}
-				else if (name.contains("tháng")){
-					int start = name.indexOf("tháng");
-					tenLeHoi = tenLeHoi.concat(name.substring(0,start-1));
-					que = que.concat(diaDiem);
-					thoiGian = thoiGian.concat(name.substring(start));
-				}
-				
-				else  {
-					char[] ch = name.toCharArray();
-					int index = 0;
-
-					for ( char c : ch ) {
-						if (Character.isDigit(c)) {
-							break;
-						}
-						else {
-							tenLeHoi = tenLeHoi.concat(Character.toString(c));
-							index++;
-						}
-					}
-					for (int i = index;i<ch.length;i++) {
-						thoiGian = thoiGian.concat(Character.toString(ch[i]));
-					}
-					que = que.concat(diaDiem);
-				}
-				
-//				System.out.println("Ten Le Hoi: "+tenLeHoi);
-//				System.out.println("Thoi gian: "+thoiGian);
-//				System.out.println("Dia Diem: "+que);
-				Festival festival = new Festival(tenLeHoi,thoiGian,diaDiem);
-				Figure figure = new Figure("");
-				festival.setFigure(figure);
-				festival.setNoiDung("");
-				list.add(festival);
+			if (diaDiem.equals("An Giang") || diaDiem.equals("Bắc Ninh") || diaDiem.equals("Tuyên Quang") || diaDiem.equals("Đà Nẵng")) {
+				continue;
 			}
-		}
+			else {
+				String festivalNames = data.substring(splitPoint+1);
+				festivalNames = festivalNames.replace(";", ",");
+				festivalNames = modify(diaDiem,festivalNames);
+				String [] names = festivalNames.split(",");
+				for (String name:names) {
+					System.out.println(name);
+					String tenLeHoi ="";
+					String que = "";
+					String thoiGian ="";
+					if (name.contains("(")) {
+						int open = name.indexOf("(");
+						int close = name.indexOf(")");
+						tenLeHoi = tenLeHoi.concat(name.substring(0,open));
+						que = que.concat(name.substring(open+1,close));
+						que = que.concat(",");
+						que = que.concat(diaDiem);
+						thoiGian = thoiGian.concat(name.substring(close+1));
+					}
+					else if (name.contains("tháng")){
+						int start = name.indexOf("tháng");
+						tenLeHoi = tenLeHoi.concat(name.substring(0,start-1));
+						que = que.concat(diaDiem);
+						thoiGian = thoiGian.concat(name.substring(start));
+					}
+					
+					else  {
+						char[] ch = name.toCharArray();
+						int index = 0;
+
+						for ( char c : ch ) {
+							if (Character.isDigit(c)) {
+								break;
+							}
+							else {
+								tenLeHoi = tenLeHoi.concat(Character.toString(c));
+								index++;
+							}
+						}
+						for (int i = index;i<ch.length;i++) {
+							thoiGian = thoiGian.concat(Character.toString(ch[i]));
+						}
+						que = que.concat(diaDiem);
+					}
+					
+//					System.out.println("Ten Le Hoi: "+tenLeHoi);
+//					System.out.println("Thoi gian: "+thoiGian);
+//					System.out.println("Dia Diem: "+que);
+					Festival festival = new Festival(tenLeHoi,thoiGian,diaDiem);
+					Figure figure = new Figure("");
+					festival.setFigure(figure);
+					festival.setNoiDung("");
+					list.add(festival);
+				}//end for 2
+			}
+			
+		}//end for 1
 	}
 	
 	public ArrayList<Festival> getList(){
