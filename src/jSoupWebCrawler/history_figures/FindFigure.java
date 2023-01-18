@@ -13,15 +13,9 @@ import org.jsoup.select.Elements;
 
 import jSoupWebCrawler.parent.BasicWebScraper;
 
-public class TomTatLichSu extends BasicWebScraper{
-	public TomTatLichSu() {
-		String url = "https://nguoikesu.com/tu-lieu/tom-luoc-lich-su-viet-nam";
-		this.setUrl();
-		connect();
+public class FindFigure {
+	public static void main(String[] args) {
+		AnhHungLucLuong anhHung = new AnhHungLucLuong();
+		anhHung.scraping();
 	}
-	public void setUrl() {
-		
-	}
-	
-	
 }

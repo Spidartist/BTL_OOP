@@ -1,616 +1,616 @@
 [
   {
     "queQuan": "Bắc Ninh",
+    "ghiChu": "Trạng nguyên đầu tiên.",
     "namDoTrangNguyen": "1075",
     "doiVua": {
       "ten": "Lý Nhân Tông"
     },
-    "ghiChu": "Trạng nguyên đầu tiên.",
     "namSinh": "1050",
     "namMat": "1096",
     "ten": "Lê Văn Thịnh"
   },
   {
     "queQuan": "Hải Dương",
+    "ghiChu": "Tổ 5 đời của Trạng nguyên Mạc Đĩnh Chi.",
     "namDoTrangNguyen": "1086",
     "doiVua": {
       "ten": "Lý Nhân Tông"
     },
-    "ghiChu": "Tổ 5 đời của Trạng nguyên Mạc Đĩnh Chi.",
     "namSinh": "1060",
     "namMat": "1189",
     "ten": "Mạc Hiển Tích"
   },
   {
     "queQuan": "Hải Dương",
+    "ghiChu": "",
     "namDoTrangNguyen": "1185",
     "doiVua": {
       "ten": "Lý Cao Tông"
     },
-    "ghiChu": "",
     "namSinh": "1141",
     "namMat": "1234",
     "ten": "Bùi Quốc Khái"
   },
   {
     "queQuan": "Vĩnh Phúc",
+    "ghiChu": "Ông tổ nghề nuôi ong.",
     "namDoTrangNguyen": "1213",
     "doiVua": {
       "ten": "Lý Huệ Tông"
     },
-    "ghiChu": "Ông tổ nghề nuôi ong.",
     "namSinh": "Chưa biết",
     "namMat": "Chưa biết",
     "ten": "Nguyễn Công Bình"
   },
   {
     "queQuan": "Hải Dương",
+    "ghiChu": "Trạng nguyên đầu tiên của triều đại nhà Trần.",
     "namDoTrangNguyen": "1232",
     "doiVua": {
       "ten": "Trần Thái Tông"
     },
-    "ghiChu": "Trạng nguyên đầu tiên của triều đại nhà Trần.",
     "namSinh": "1200",
     "namMat": "Chưa biết",
     "ten": "Trương Hanh"
   },
   {
     "queQuan": "Thanh Hóa",
+    "ghiChu": "",
     "namDoTrangNguyen": "1239",
     "doiVua": {
       "ten": "Trần Thái Tông"
     },
-    "ghiChu": "",
     "namSinh": "Chưa biết",
     "namMat": "Chưa biết",
     "ten": "Lưu Miễn"
   },
   {
     "queQuan": "Bắc Ninh",
+    "ghiChu": "Trạng nguyên đầu tiên của nước ta. (Khoa thi đầu tiên đặt ra danh hiệu Tam Khôi)",
     "namDoTrangNguyen": "1246",
     "doiVua": {
       "ten": "Trần Thái Tông"
     },
-    "ghiChu": "Trạng nguyên đầu tiên của nước ta. (Khoa thi đầu tiên đặt ra danh hiệu Tam Khôi)",
     "namSinh": "1222",
     "namMat": "Chưa biết",
     "ten": "Nguyễn Quan Quang"
   },
   {
     "queQuan": "Nam Định",
+    "ghiChu": "Trạng nguyên nhỏ tuổi nhất.",
     "namDoTrangNguyen": "1247",
     "doiVua": {
       "ten": "Trần Thái Tông"
     },
-    "ghiChu": "Trạng nguyên nhỏ tuổi nhất.",
     "namSinh": "1234",
     "namMat": "1255",
     "ten": "Nguyễn Hiền"
   },
   {
     "queQuan": "Hải Dương",
+    "ghiChu": "Kinh Trạng nguyên",
     "namDoTrangNguyen": "1256",
     "doiVua": {
       "ten": "Trần Thái Tông"
     },
-    "ghiChu": "Kinh Trạng nguyên",
     "namSinh": "1230",
     "namMat": "Chưa biết",
     "ten": "Trần Quốc Lặc"
   },
   {
     "queQuan": "Quảng Bình",
+    "ghiChu": "Trại Trạng nguyên",
     "namDoTrangNguyen": "1256",
     "doiVua": {
       "ten": "Trần Thái Tông"
     },
-    "ghiChu": "Trại Trạng nguyên",
     "namSinh": "1227",
     "namMat": "Chưa biết",
     "ten": "Trương Xán"
   },
   {
     "queQuan": "Hải Dương",
+    "ghiChu": "Kinh Trạng nguyên",
     "namDoTrangNguyen": "1266",
     "doiVua": {
       "ten": "Trần Thánh Tông"
     },
-    "ghiChu": "Kinh Trạng nguyên",
     "namSinh": "Chưa biết",
     "namMat": "Chưa biết",
     "ten": "Trần Cố"
   },
   {
     "queQuan": "Nghệ An",
+    "ghiChu": "Trại Trạng nguyên",
     "namDoTrangNguyen": "1266",
     "doiVua": {
       "ten": "Trần Thánh Tông"
     },
-    "ghiChu": "Trại Trạng nguyên",
     "namSinh": "1236",
     "namMat": "1315",
     "ten": "Bạch Liêu"
   },
   {
     "queQuan": "Bắc Ninh",
+    "ghiChu": "Tổ thứ ba (Huyền Quang) của thiền phái Trúc Lâm Yên Tử",
     "namDoTrangNguyen": "1272",
     "doiVua": {
       "ten": "Trần Thánh Tông"
     },
-    "ghiChu": "Tổ thứ ba (Huyền Quang) của thiền phái Trúc Lâm Yên Tử",
     "namSinh": "1254",
     "namMat": "1334",
     "ten": "Lý Đạo Tái"
   },
   {
     "queQuan": "Thanh Hóa",
+    "ghiChu": "",
     "namDoTrangNguyen": "1275",
     "doiVua": {
       "ten": "Trần Thánh Tông"
     },
-    "ghiChu": "",
     "namSinh": "Chưa biết",
     "namMat": "Chưa biết",
     "ten": "Đào Tiêu"
   },
   {
     "queQuan": "Hải Dương",
+    "ghiChu": "Cháu 5 đời của Mạc Hiển Tích, Lưỡng quốc Trạng nguyên[cần dẫn nguồn]",
     "namDoTrangNguyen": "1304",
     "doiVua": {
       "ten": "Trần Anh Tông"
     },
-    "ghiChu": "Cháu 5 đời của Mạc Hiển Tích, Lưỡng quốc Trạng nguyên[cần dẫn nguồn]",
     "namSinh": "1272",
     "namMat": "1346",
     "ten": "Mạc Đĩnh Chi"
   },
   {
     "queQuan": "Nam Định",
+    "ghiChu": "Tam nguyên",
     "namDoTrangNguyen": "1374",
     "doiVua": {
       "ten": "Trần Duệ Tông"
     },
-    "ghiChu": "Tam nguyên",
     "namSinh": "1348",
     "namMat": "1396",
     "ten": "Đào Sư Tích"
   },
   {
     "queQuan": "Bắc Ninh",
+    "ghiChu": "",
     "namDoTrangNguyen": "1400",
     "doiVua": {
       "ten": "Hồ Quý Ly"
     },
-    "ghiChu": "",
     "namSinh": "1373",
     "namMat": "1434",
     "ten": "Lưu Thúc Kiệm"
   },
   {
     "queQuan": "Hà Nội",
+    "ghiChu": "Lưỡng quốc Trạng nguyên[cần dẫn nguồn]– văn bia đầu tiên.",
     "namDoTrangNguyen": "1442",
     "doiVua": {
       "ten": "Lê Thái Tông"
     },
-    "ghiChu": "Lưỡng quốc Trạng nguyên[cần dẫn nguồn]– văn bia đầu tiên.",
     "namSinh": "1417",
     "namMat": "1474",
     "ten": "Nguyễn Trực"
   },
   {
     "queQuan": "Bắc Ninh",
+    "ghiChu": "Trạng Lợn, Lưỡng quốc trạng nguyên, Trạng nguyên lớn tuổi nhất",
     "namDoTrangNguyen": "1448",
     "doiVua": {
       "ten": "Lê Nhân Tông"
     },
-    "ghiChu": "Trạng Lợn, Lưỡng quốc trạng nguyên, Trạng nguyên lớn tuổi nhất",
     "namSinh": "1383",
     "namMat": "1471",
     "ten": "Nguyễn Nghiêu Tư"
   },
   {
     "queQuan": "Nam Định",
+    "ghiChu": "Trạng Lường",
     "namDoTrangNguyen": "1463",
     "doiVua": {
       "ten": "Lê Thánh Tông"
     },
-    "ghiChu": "Trạng Lường",
     "namSinh": "1441",
     "namMat": "1496",
     "ten": "Lương Thế Vinh"
   },
   {
     "queQuan": "Bắc Ninh",
+    "ghiChu": "Trạng Vít",
     "namDoTrangNguyen": "1472",
     "doiVua": {
       "ten": "Lê Thánh Tông"
     },
-    "ghiChu": "Trạng Vít",
     "namSinh": "1452",
     "namMat": "Chưa biết",
     "ten": "Vũ Kiệt"
   },
   {
     "queQuan": "Nam Định",
+    "ghiChu": "",
     "namDoTrangNguyen": "1475",
     "doiVua": {
       "ten": "Lê Thánh Tông"
     },
-    "ghiChu": "",
     "namSinh": "1425",
     "namMat": "Chưa biết",
     "ten": "Vũ Tuấn Chiêu"
   },
   {
     "queQuan": "Thái Bình",
+    "ghiChu": "Trạng Chiếu (Tam nguyên)",
     "namDoTrangNguyen": "1481",
     "doiVua": {
       "ten": "Lê Thánh Tông"
     },
-    "ghiChu": "Trạng Chiếu (Tam nguyên)",
     "namSinh": "1454",
     "namMat": "Chưa biết",
     "ten": "Phạm Đôn Lễ"
   },
   {
     "queQuan": "Bắc Ninh",
+    "ghiChu": "",
     "namDoTrangNguyen": "1484",
     "doiVua": {
       "ten": "Lê Thánh Tông"
     },
-    "ghiChu": "",
     "namSinh": "1463",
     "namMat": "1505",
     "ten": "Nguyễn Quang Bật"
   },
   {
     "queQuan": "Hải Dương",
+    "ghiChu": "",
     "namDoTrangNguyen": "1487",
     "doiVua": {
       "ten": "Lê Thánh Tông"
     },
-    "ghiChu": "",
     "namSinh": "1465",
     "namMat": "Chưa biết",
     "ten": "Trần Sùng Dĩnh"
   },
   {
     "queQuan": "Phú Thọ",
+    "ghiChu": "",
     "namDoTrangNguyen": "1490",
     "doiVua": {
       "ten": "Lê Thánh Tông"
     },
-    "ghiChu": "",
     "namSinh": "?",
     "namMat": "1520",
     "ten": "Vũ Duệ"
   },
   {
     "queQuan": "Hải Dương",
+    "ghiChu": "Tam nguyên",
     "namDoTrangNguyen": "1493",
     "doiVua": {
       "ten": "Lê Thánh Tông"
     },
-    "ghiChu": "Tam nguyên",
     "namSinh": "Chưa biết",
     "namMat": "Chưa biết",
     "ten": "Vũ Tích (Vũ Dương)"
   },
   {
     "queQuan": "Bắc Ninh",
+    "ghiChu": "Trạng Hổ",
     "namDoTrangNguyen": "1496",
     "doiVua": {
       "ten": "Lê Thánh Tông"
     },
-    "ghiChu": "Trạng Hổ",
     "namSinh": "Chưa biết",
     "namMat": "Chưa biết",
     "ten": "Nghiêm Hoản"
   },
   {
     "queQuan": "Thái Bình",
+    "ghiChu": "",
     "namDoTrangNguyen": "1499",
     "doiVua": {
       "ten": "Lê Hiển Tông"
     },
-    "ghiChu": "",
     "namSinh": "Chưa biết",
     "namMat": "Chưa biết",
     "ten": "Đỗ Lý Khiêm"
   },
   {
     "queQuan": "Hải Phòng",
+    "ghiChu": "",
     "namDoTrangNguyen": "1502",
     "doiVua": {
       "ten": "Lê Hiển Tông"
     },
-    "ghiChu": "",
     "namSinh": "1458",
     "namMat": "1538",
     "ten": "Lê Ích Mộc"
   },
   {
     "queQuan": "Hải Dương",
+    "ghiChu": "Trạng Ăn",
     "namDoTrangNguyen": "1505",
     "doiVua": {
       "ten": "Lê Uy Mục"
     },
-    "ghiChu": "Trạng Ăn",
     "namSinh": "1528",
     "namMat": "Chưa biết",
     "ten": "Lê Nại"
   },
   {
     "queQuan": "Bắc Ninh",
+    "ghiChu": "Trạng Me và Trạng Ngọt",
     "namDoTrangNguyen": "1508",
     "doiVua": {
       "ten": "Lê Uy Mục"
     },
-    "ghiChu": "Trạng Me và Trạng Ngọt",
     "namSinh": "1482",
     "namMat": "Chưa biết",
     "ten": "Nguyễn Giản Thanh và Hứa Tam Tỉnh"
   },
   {
     "queQuan": "Hà Nội",
+    "ghiChu": "",
     "namDoTrangNguyen": "1511",
     "doiVua": {
       "ten": "Lê Tương Dực"
     },
-    "ghiChu": "",
     "namSinh": "1479",
     "namMat": "Chưa biết",
     "ten": "Hoàng Nghĩa Phú"
   },
   {
     "queQuan": "Hà Nội",
+    "ghiChu": "",
     "namDoTrangNguyen": "1514",
     "doiVua": {
       "ten": "Lê Tương Dực"
     },
-    "ghiChu": "",
     "namSinh": "1465",
     "namMat": "Chưa biết",
     "ten": "Nguyễn Đức Lượng"
   },
   {
     "queQuan": "Bắc Ninh",
+    "ghiChu": "",
     "namDoTrangNguyen": "1518",
     "doiVua": {
       "ten": "Lê Chiêu Tông"
     },
-    "ghiChu": "",
     "namSinh": "1498",
     "namMat": "Chưa biết",
     "ten": "Ngô Miễn Thiệu"
   },
   {
     "queQuan": "Bắc Ninh",
+    "ghiChu": "",
     "namDoTrangNguyen": "1523",
     "doiVua": {
       "ten": "Lê Cung Hoàng"
     },
-    "ghiChu": "",
     "namSinh": "Chưa biết",
     "namMat": "Chưa biết",
     "ten": "Hoàng Văn Tán"
   },
   {
     "queQuan": "Hải Phòng",
+    "ghiChu": "",
     "namDoTrangNguyen": "1526",
     "doiVua": {
       "ten": "Lê Cung Hoàng"
     },
-    "ghiChu": "",
     "namSinh": "1428",
     "namMat": "1527",
     "ten": "Trần Tất Văn"
   },
   {
     "queQuan": "Hưng Yên",
+    "ghiChu": "",
     "namDoTrangNguyen": "1529",
     "doiVua": {
       "ten": "Mạc Thái Tổ"
     },
-    "ghiChu": "",
     "namSinh": "1504",
     "namMat": "Chưa biết",
     "ten": "Đỗ Tống"
   },
   {
     "queQuan": "Hà Nội",
+    "ghiChu": "",
     "namDoTrangNguyen": "1532",
     "doiVua": {
       "ten": "Mạc Thái Tông"
     },
-    "ghiChu": "",
     "namSinh": "1495",
     "namMat": "1557",
     "ten": "Nguyễn Thiến"
   },
   {
     "queQuan": "Hải Phòng",
+    "ghiChu": "Trạng Trình",
     "namDoTrangNguyen": "1535",
     "doiVua": {
       "ten": "Mạc Thái Tông"
     },
-    "ghiChu": "Trạng Trình",
     "namSinh": "1491",
     "namMat": "1585",
     "ten": "Nguyễn Bỉnh Khiêm"
   },
   {
     "queQuan": "Bắc Giang",
+    "ghiChu": "Trạng Ác",
     "namDoTrangNguyen": "1538",
     "doiVua": {
       "ten": "Mạc Thái Tông"
     },
-    "ghiChu": "Trạng Ác",
     "namSinh": "1515",
     "namMat": "1585",
     "ten": "Giáp Hải"
   },
   {
     "queQuan": "Hưng Yên",
+    "ghiChu": "",
     "namDoTrangNguyen": "1541",
     "doiVua": {
       "ten": "Mạc Hiến Tông"
     },
-    "ghiChu": "",
     "namSinh": "1518",
     "namMat": "Chưa biết",
     "ten": "Nguyễn Kỳ"
   },
   {
     "queQuan": "Hưng Yên",
+    "ghiChu": "",
     "namDoTrangNguyen": "1547",
     "doiVua": {
       "ten": "Mạc Tuyên Tông"
     },
-    "ghiChu": "",
     "namSinh": "1505",
     "namMat": "1564",
     "ten": "Dương Phúc Tư"
   },
   {
     "queQuan": "Nam Định",
+    "ghiChu": "",
     "namDoTrangNguyen": "1550",
     "doiVua": {
       "ten": "Mạc Tuyên Tông"
     },
-    "ghiChu": "",
     "namSinh": "1524",
     "namMat": "1610",
     "ten": "Trần Văn Bảo"
   },
   {
     "queQuan": "Bắc Ninh",
+    "ghiChu": "",
     "namDoTrangNguyen": "1553",
     "doiVua": {
       "ten": "Mạc Tuyên Tông"
     },
-    "ghiChu": "",
     "namSinh": "1525",
     "namMat": "1576",
     "ten": "Nguyễn Lượng Thái"
   },
   {
     "queQuan": "Hải Dương",
+    "ghiChu": "",
     "namDoTrangNguyen": "1556",
     "doiVua": {
       "ten": "Mạc Tuyên Tông"
     },
-    "ghiChu": "",
     "namSinh": "1523",
     "namMat": "Chưa biết",
     "ten": "Phạm Trấn"
   },
   {
     "queQuan": "Hải Dương",
+    "ghiChu": "(là Thám hoa)",
     "namDoTrangNguyen": "1559",
     "doiVua": {
       "ten": "Mạc Tuyên Tông"
     },
-    "ghiChu": "(là Thám hoa)",
     "namSinh": "1526",
     "namMat": "Chưa biết",
     "ten": "Đặng Thì Thố"
   },
   {
     "queQuan": "Hải Dương",
+    "ghiChu": "",
     "namDoTrangNguyen": "1562",
     "doiVua": {
       "ten": "Mạc Mậu Hợp"
     },
-    "ghiChu": "",
     "namSinh": "1521",
     "namMat": "Chưa biết",
     "ten": "Phạm Duy Quyết"
   },
   {
     "queQuan": "Bắc Ninh",
+    "ghiChu": "",
     "namDoTrangNguyen": "1565",
     "doiVua": {
       "ten": "Mạc Mậu Hợp"
     },
-    "ghiChu": "",
     "namSinh": "Chưa biết",
     "namMat": "Chưa biết",
     "ten": "Phạm Quang Tiến"
   },
   {
     "queQuan": "Vĩnh Phúc",
+    "ghiChu": "Tam Nguyên",
     "namDoTrangNguyen": "1599",
     "doiVua": {
       "ten": "Lê Trung Hưng"
     },
-    "ghiChu": "Tam Nguyên",
     "namSinh": "1562",
     "namMat": "1642",
     "ten": "Nguyễn Duy Thì"
   },
   {
     "queQuan": "Bắc Ninh",
+    "ghiChu": "Trạng Cháy",
     "namDoTrangNguyen": "1637",
     "doiVua": {
       "ten": "Lê Thần Tông"
     },
-    "ghiChu": "Trạng Cháy",
     "namSinh": "1587",
     "namMat": "Chưa biết",
     "ten": "Nguyễn Xuân Chính"
   },
   {
     "queQuan": "Hà Nội",
+    "ghiChu": "",
     "namDoTrangNguyen": "1659",
     "doiVua": {
       "ten": "Lê Thần Tông"
     },
-    "ghiChu": "",
     "namSinh": "1624",
     "namMat": "1674",
     "ten": "Nguyễn Quốc Trinh"
   },
   {
     "queQuan": "Hà Nội",
+    "ghiChu": "",
     "namDoTrangNguyen": "1661",
     "doiVua": {
       "ten": "Lê Thần Tông"
     },
-    "ghiChu": "",
     "namSinh": "1621",
     "namMat": "1683",
     "ten": "Đặng Công Chất"
   },
   {
     "queQuan": "Hà Nội",
+    "ghiChu": "",
     "namDoTrangNguyen": "1670",
     "doiVua": {
       "ten": "Lê Huyền Tông"
     },
-    "ghiChu": "",
     "namSinh": "1643",
     "namMat": "Chưa biết",
     "ten": "Lưu Danh Công"
   },
   {
     "queQuan": "Bắc Ninh",
+    "ghiChu": "Trạng Bịu, Lưỡng quốc Trạng nguyên",
     "namDoTrangNguyen": "1683",
     "doiVua": {
       "ten": "Lê Hy Tông"
     },
-    "ghiChu": "Trạng Bịu, Lưỡng quốc Trạng nguyên",
     "namSinh": "1650",
     "namMat": "1718",
     "ten": "Nguyễn Đăng Đạo"
   },
   {
     "queQuan": "Thanh Hóa",
+    "ghiChu": "Trạng nguyên cuối cùng",
     "namDoTrangNguyen": "1736",
     "doiVua": {
       "ten": "Lê Ý Tông"
     },
-    "ghiChu": "Trạng nguyên cuối cùng",
     "namSinh": "1701",
     "namMat": "Chưa biết",
     "ten": "Trịnh Tuệ /Trịnh Huệ"

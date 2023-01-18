@@ -14,7 +14,6 @@ import objects.festival.Festival;
 import objects.figure.Figure;
 import objects.figure.HistoricalFigure;
 import objects.figure.King;
-import objects.figure.TrangNguyen;
 
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -25,13 +24,13 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 public class CacTrangNguyen extends BasicWebScraper implements IScraping {
 	
-	private ArrayList<TrangNguyen> list = new ArrayList<TrangNguyen>();
+	private ArrayList<Figure> list = new ArrayList<Figure>();
 	public CacTrangNguyen() {
 		String url = "https://modacaocap.com/danh-sach-trang-nguyen-viet-nam/";
 		this.url = url;
 		connect();
 	}
-	public ArrayList<TrangNguyen> getList() {
+	public ArrayList<Figure> getList() {
 		return list;
 	}
 
@@ -66,7 +65,7 @@ public class CacTrangNguyen extends BasicWebScraper implements IScraping {
 			String vua = data.get(5).text();
 			String ghiChu = data.get(6).text();
 			King doiVua = new King(vua);
-			TrangNguyen trang = new TrangNguyen(ten, namSinh, namMat);
+			Figure trang = new Figure(ten, namSinh, namMat);
 			trang.setDoiVua(doiVua);
 			trang.setGhiChu(ghiChu);
 			trang.setNamDoTrangNguyen(namDoTrangNguyen);
@@ -77,13 +76,14 @@ public class CacTrangNguyen extends BasicWebScraper implements IScraping {
 	}
 	
 	public static void main(String[] args) {
+		
 		CacTrangNguyen trangNguyen = new CacTrangNguyen();
 		trangNguyen.scraping();
-		String filePath = "D:\\webCrawler\\jSoupWebCrawler\\src\\jSoupWebCrawler\\jsonFiles\\trangNguyen.json";
+		String filePath = "D:\\webCrawler\\jSoupWebCrawler\\src\\jSoupWebCrawler\\jsonFiles\\figure.json";
 		Gson gson = new GsonBuilder().setPrettyPrinting().create();
 		try {
             FileWriter writer = new FileWriter(new File(filePath));
-            ArrayList<TrangNguyen> list = new ArrayList<TrangNguyen>();
+            ArrayList<Figure> list = new ArrayList<Figure>();
             list.addAll(trangNguyen.getList());
             gson.toJson(list, writer);
             writer.close();
