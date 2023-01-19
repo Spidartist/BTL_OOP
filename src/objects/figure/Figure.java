@@ -3,7 +3,7 @@ package objects.figure;
 public class Figure extends HistoricalFigure {
 	private String queQuan ;
 	private String danToc;
-	private String namPhongChuc;
+	private String namNhapNgu;
 	private String ghiChu;
 	private String namDoTrangNguyen;
 	private King doiVua;
@@ -38,11 +38,11 @@ public class Figure extends HistoricalFigure {
 	public void setDanToc(String danToc) {
 		this.danToc = danToc;
 	}
-	public String getNamPhongChuc() {
-		return namPhongChuc;
+	public String getNamNhapNgu() {
+		return namNhapNgu;
 	}
-	public void setNamPhongChuc(String namPhongChuc) {
-		this.namPhongChuc = namPhongChuc;
+	public void setNamNhapNgu(String namPhongChuc) {
+		this.namNhapNgu = namPhongChuc;
 	}
 	public String getGhiChu() {
 		return ghiChu;
