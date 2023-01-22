@@ -22,6 +22,8 @@ import objects.figure.Figure;
 
 public class FindFigure {
 	public static void main(String[] args) {
+		TuongNhaTran nhaTran = new TuongNhaTran();
+		nhaTran.scraping();
 		AnhHungLucLuong anhHung = new AnhHungLucLuong();
 		anhHung.scraping();
 		CacTrangNguyen trangNguyen = new CacTrangNguyen();
@@ -30,6 +32,7 @@ public class FindFigure {
 		ArrayList<Figure> list = new ArrayList<Figure>();
 		list.addAll(anhHung.getList());
 		list.addAll(trangNguyen.getList());
+		list.addAll(nhaTran.getList());
 		Gson gson = new GsonBuilder().setPrettyPrinting().create();
 		try {
             FileWriter writer = new FileWriter(new File(filePath));
