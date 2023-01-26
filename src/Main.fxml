@@ -13,12 +13,11 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-
-<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
    <top>
       <GridPane hgap="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" BorderPane.alignment="CENTER">
         <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="115.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" />
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="362.0" />
             <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="75.0" />
         </columnConstraints>
@@ -26,11 +25,11 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <MenuButton mnemonicParsing="false" prefHeight="25.0" prefWidth="109.0" text="Tìm kiếm theo">
+            <MenuButton fx:id="searchField" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefWidth="150.0" text="Tìm kiếm theo">
               <items>
-                <MenuItem mnemonicParsing="false" text="Nhân vật lịch sử" />
-                <MenuItem mnemonicParsing="false" text="Di tích lịch sử" />
-                  <MenuItem mnemonicParsing="false" text="Sự kiện lịch sử" />
+                <MenuItem fx:id="menuItem1" mnemonicParsing="false" onAction="#clickMenuItem" text="Nhân vật lịch sử" />
+                <MenuItem fx:id="menuItem2" mnemonicParsing="false" onAction="#clickMenuItem" text="Di tích lịch sử" />
+                  <MenuItem fx:id="menuItem3" mnemonicParsing="false" onAction="#clickMenuItem" text="Sự kiện lịch sử" />
               </items>
             </MenuButton>
             <TextField GridPane.columnIndex="1" />
