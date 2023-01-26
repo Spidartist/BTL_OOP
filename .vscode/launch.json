@@ -1,0 +1,100 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}",
+            
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "application.Main",
+            "projectName": "jSoupWebCrawler",
+            "vmArgs": "--module-path \"C:\\Program Files\\javafx-sdk-19\\lib\" --add-modules javafx.controls,javafx.fxml",
+        },
+        {
+            "type": "java",
+            "name": "Launch CrawlerPrototype",
+            "request": "launch",
+            "mainClass": "jSoupWebCrawler.CrawlerPrototype",
+            "projectName": "jSoupWebCrawler"
+        },
+        {
+            "type": "java",
+            "name": "Launch TomTatLichSu",
+            "request": "launch",
+            "mainClass": "jSoupWebCrawler.TomTatLichSu",
+            "projectName": "jSoupWebCrawler"
+        },
+        {
+            "type": "java",
+            "name": "Launch VnDoc",
+            "request": "launch",
+            "mainClass": "jSoupWebCrawler.VnDoc",
+            "projectName": "jSoupWebCrawler"
+        },
+        {
+            "type": "java",
+            "name": "Launch LeHoiAnGiang",
+            "request": "launch",
+            "mainClass": "jSoupWebCrawler.festival.LeHoiAnGiang",
+            "projectName": "jSoupWebCrawler"
+        },
+        {
+            "type": "java",
+            "name": "Launch LeHoiChuaHuong",
+            "request": "launch",
+            "mainClass": "jSoupWebCrawler.festival.LeHoiChuaHuong",
+            "projectName": "jSoupWebCrawler"
+        },
+        {
+            "type": "java",
+            "name": "Launch LeHoiGoDongDa",
+            "request": "launch",
+            "mainClass": "jSoupWebCrawler.festival.LeHoiGoDongDa",
+            "projectName": "jSoupWebCrawler"
+        },
+        {
+            "type": "java",
+            "name": "Launch Vinpearl",
+            "request": "launch",
+            "mainClass": "jSoupWebCrawler.festival.Vinpearl",
+            "projectName": "jSoupWebCrawler"
+        },
+        {
+            "type": "java",
+            "name": "Launch Wikipedia",
+            "request": "launch",
+            "mainClass": "jSoupWebCrawler.festival.Wikipedia",
+            "projectName": "jSoupWebCrawler"
+        },
+        {
+            "type": "java",
+            "name": "Launch CacTrangNguyen",
+            "request": "launch",
+            "mainClass": "jSoupWebCrawler.history_figures.CacTrangNguyen",
+            "projectName": "jSoupWebCrawler"
+        },
+        {
+            "type": "java",
+            "name": "Launch FindFigure",
+            "request": "launch",
+            "mainClass": "jSoupWebCrawler.history_figures.FindFigure",
+            "projectName": "jSoupWebCrawler"
+        },
+        {
+            "type": "java",
+            "name": "Launch WikipediaFigure",
+            "request": "launch",
+            "mainClass": "jSoupWebCrawler.history_figures.WikipediaFigure",
+            "projectName": "jSoupWebCrawler"
+        }
+    ]
+}
