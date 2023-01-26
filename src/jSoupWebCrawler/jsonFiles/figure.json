@@ -1,95 +1,5 @@
 [
   {
-    "queQuan": "huyện Trùng Khánh, tỉnh Cao Bằng",
-    "danToc": "Tày",
-    "namNhapNgu": "",
-    "ghiChu": "Ông đã chiến đấu 29 trận, trận nào cũng thể hiện rõ tinh thần gương mẫu, dũng cảm, kiên quyết vượt qua khó khăn, chấp hành nghiêm mệnh lệnh, hoàn thành xuất sắc nhiệm vụ được giao. Trận Đông Khê lần thứ hai (năm 1950), cánh tay phải bị đạn bắn gãy nát, La Văn Cầu khẩn thiết yêu cầu chặt hộ cánh tay để khỏi vướng rồi lại tiếp tục ôm bộc phá xông lên, phá tan lô cốt đầu cầu, mở đường cho đơn vị xung phong diệt gọn vị trí địch.",
-    "namSinh": "1932",
-    "namMat": "Chưa biết",
-    "ten": "La Văn Cầu"
-  },
-  {
-    "queQuan": "xã Quỳnh Đôi, huyện Quỳnh Lưu, tỉnh Nghệ An",
-    "danToc": "Kinh",
-    "namNhapNgu": "",
-    "ghiChu": "Nhập ngũ năm 1946, ông sớm nổi bật trong học tập và công tác. Đặc biệt trong chiến đấu, ông luôn nêu cao tinh thần dũng cảm, táo bạo, mưu trí, hoàn thành xuất sắc mọi nhiệm vụ. Ngày 29/12/1951, tham gia đánh đồn Cô Tô, bị thương hai lần, Cù Chính Lan vẫn dũng cảm xông lên phá tiếp hai lớp rào mở đường cho đơn vị tiến vào. Lần thứ ba, bị thương nặng, ông không rời trận địa, nằm tại chỗ chỉ hướng tiến và động viên anh em diệt địch. Ông đã anh dũng hy sinh khi trận đánh kết thúc thắng lợi.",
-    "namSinh": "1930",
-    "namMat": "Chưa biết",
-    "ten": "Cù Chính Lan"
-  },
-  {
-    "queQuan": "huyện Phục Hoà, tỉnh Cao Bằng",
-    "danToc": "Tày",
-    "namNhapNgu": "",
-    "ghiChu": "Nhập ngũ từ tháng 1 năm 1948 anh tham gia nhiều chiến dịch, luôn nêu cao tinh thần dũng cảm, tích cực vượt qua mọi khó khăn ác liệt, hoàn thành xuất sắc nhiệm vụ được giao. Trong trận Mường Pồn (Lai Châu) tháng 12/1953, trong tình thế hiểm nghèo khi bị địch phản công, Bế Văn Đàn đã lấy thân mình làm giá súng cho đồng đội bắn, đẩy lùi kẻ thù. Anh đã anh dũng hy sinh khi hai tay vẫn còn ghì chặt súng trên vai mình.",
-    "namSinh": "1931",
-    "namMat": "Chưa biết",
-    "ten": "Bế Văn Đàn"
-  },
-  {
-    "queQuan": "xã Nông Trường, huyện Nông Cống, tỉnh Thanh Hoá, nhập ngũ tháng 7/1949",
-    "danToc": "Kinh",
-    "namNhapNgu": "tháng 7/1949",
-    "ghiChu": "Trong học tập công tác, anh luôn thể hiện tinh thần gương mẫu đi đầu, lôi cuốn đồng đội noi theo. Khi kéo pháo ra khỏi trận địa Điện Biên Phủ đầu năm 1954, nửa chừng dây tời bị đứt, pháo lao nhanh xuống dốc, Tô Vĩnh Diện đã buông tay lái xông lên phía trước, lấy thân mình chèn vào bánh pháo, nhờ đó đơn vị kịp ghìm giữ pháo dừng lại. Anh đã anh dũng hi sinh sau hành động dũng cảm phi thường này.",
-    "namSinh": "1924",
-    "namMat": "Chưa biết",
-    "ten": "Tô Vĩnh Diện"
-  },
-  {
-    "queQuan": "làng Vịnh Yên, xã Tam Quan, huyện Cẩm Xuyên, tỉnh Hà Tĩnh, nhập ngũ năm 1950",
-    "danToc": "kinh",
-    "namNhapNgu": "năm 1950",
-    "ghiChu": "Tham gia nhiều chiến dịch lớn, anh đã nêu cao tinh thần quả cảm, kiên quyết vượt qua mọi khó khăn, hoàn thành xuất sắc nhiệm vụ. Chiều ngày 13/3/1954, anh đã hy sinh oanh liệt khi lấy thân mình lấp lỗ châu mai mở đường cho đơn vị tiến lên tiêu diệt cứ điểm Him Lam, giành toàn thắng cho trận đánh mở màn Chiến dịch lịch sử Điện Biên Phủ.",
-    "namSinh": "1922",
-    "namMat": "Chưa biết",
-    "ten": "Phan Đình Giót"
-  },
-  {
-    "queQuan": "xã Sơn Thành, huyện Yên Thành, tỉnh Nghệ An, nhập ngũ tháng 1/1951",
-    "danToc": "Kinh",
-    "namNhapNgu": "tháng 1/1951",
-    "ghiChu": "Từ khi vào bộ đội, anh chiến đấu rất dũng cảm, mưu trí, chỉ huy hết sức linh hoạt và trở thành tấm gương cổ vũ phong trào thi đua giết giặc lập công sôi nổi trong toàn đơn vị. Trần Can đã hy sinh anh dũng sáng ngày 7/5/1954, ngày kết thúc Chiến dịch Điện Biên Phủ lịch sử trong trận đánh điểm cao 507",
-    "namSinh": "1931",
-    "namMat": "Chưa biết",
-    "ten": "Trần Can"
-  },
-  {
-    "queQuan": "xã Việt Tiến, huyện Lâm Thao, tỉnh Vĩnh Phú (nay là tỉnh Phú Thọ), nhập ngũ tháng 2 năm 1949",
-    "danToc": "Kinh",
-    "namNhapNgu": "tháng 2 năm 1949",
-    "ghiChu": "Từ ngày nhập ngũ đến năm 1954, Bùi Đình Cư liên tục chiến đấu và trưởng thành ở Binh chủng Pháo binh, đã trực tiếp tham gia 9 chiến dịch lớn ở Bắc Bộ, luôn luôn thể hiện rõ tinh thần hăng say đánh giặc, bền bỉ tích cực trong công tác, dũng cảm mưu trí trong chiến đấu, lập nhiều chiến công xuất sắc.",
-    "namSinh": "1927",
-    "namMat": "Chưa biết",
-    "ten": "Bùi Đình Cư"
-  },
-  {
-    "queQuan": "xã Thượng Lan, huyện Việt Yên, tỉnh Hà Bắc (nay là tỉnh Bắc Giang), nhập ngũ năm 1949",
-    "danToc": "Kinh",
-    "namNhapNgu": "năm 1949",
-    "ghiChu": "Từ khi nhập ngũ đến năm 1954, anh đã tham gia bảy chiến dịch lớn, đảm nhận những công tác khác nhau : pháo thủ, chiến sĩ nuôi quân, chiến sĩ xung kích, Tiểu đội phó súng cối, Tiểu đội trưởng thông tin liên lạc; nhiệm vụ nào anh cũng nêu cao tinh thần bền bỉ, quyết vượt qua mọi thử thách, hoàn thành một cách xuất sắc.",
-    "namSinh": "1929",
-    "namMat": "Chưa biết",
-    "ten": "Chu Văn Mùi"
-  },
-  {
-    "queQuan": "xã Thanh Bình, huyện Thanh Chương, tỉnh Nghệ An, nhập ngũ năm 1950",
-    "danToc": "Kinh",
-    "namNhapNgu": "năm 1950",
-    "ghiChu": "Nhà nghèo, cha mẹ mất sớm, có đứa em lại bị chết đói, Đặng Đình Hồ phải đi chăn trâu, đốn củi kiếm ăn. Từ ngày vào bộ đội, anh rất hăng hái dũng cảm, trưởng thành từ chiến sĩ xung kích lên cán bộ trung đội. Đặng Đình Hồ có tác phong chiến đấu linh hoạt, táo bạo, đã nổ súng là kiên quyết xung phong tiêu diệt địch, dù bị thương vẫn tiếp tục chiến đấu, có tác dụng cổ vũ đơn vị hăng hái thi đua giết giặc lập công.",
-    "namSinh": "1925",
-    "namMat": "Chưa biết",
-    "ten": "Đặng Đình Hồ"
-  },
-  {
-    "queQuan": "xã Ninh Sơn, huyện Việt Yên, tỉnh Bắc Giang, nhập ngũ tháng 2/1949",
-    "danToc": "Kinh",
-    "namNhapNgu": "tháng 2/1949",
-    "ghiChu": "Từ ngày nhập ngũ đến tháng 7/1954, anh đã tham gia 7 chiến dịch lớn trên chiến trường Bắc Bộ, với 35 trận đánh, trận nào cũng thể hiện tinh thần dũng cảm, táo bạo, bị thương vẫn không rời trận địa, lập công xuất sắc. Khi làm chiến sĩ liên lạc cũng như khi phụ trách Tiểu đội trưởng bộc phá, bất kỳ nhiệm vụ nào, trong hoàn cảnh nào, đồng chí đều chấp hành nghiêm chỉnh mệnh lệnh.",
-    "namSinh": "1931",
-    "namMat": "Chưa biết",
-    "ten": "Nguyễn Văn Ty"
-  },
-  {
     "queQuan": "Bắc Ninh",
     "ghiChu": "Trạng nguyên đầu tiên.",
     "namDoTrangNguyen": "1075",
@@ -743,5 +653,243 @@
     "namSinh": "1255",
     "namMat": "1320.",
     "ten": "  PHẠM NGŨ LÃO "
+  },
+  {
+    "queQuan": "quê xã Quảng Thọ, huyện Quảng Điền, tỉnh Thừa Thiên - Huế",
+    "ghiChu": "Nguyễn Chí Thanh (1914-1967), tên thật là Nguyễn Vịnh, quê xã Quảng Thọ, huyện Quảng Điền, tỉnh Thừa Thiên - Huế; tham gia cách mạng 1934, vào Đảng Cộng sản Đông Dương năm 1937.",
+    "namSinh": "1914",
+    "namMat": "1967",
+    "ten": "Nguyễn Chí Thanh"
+  },
+  {
+    "queQuan": "quê xã Tây An, huyện Tiền Hải, tỉnh Thái Bình",
+    "ghiChu": "Hoàng Văn Thái (1915-1986), Tổng Tham mưu trưởng đầu tiên của Quân đội Nhân dân Việt Nam (1945-1953), tên thật là Hoàng Văn Xiêm, quê xã Tây An, huyện Tiền Hải, tỉnh Thái Bình; tham gia cách mạng năm 1936, nhập ngũ năm 1944, đảng viên Đảng Cộng sản Việt Nam năm 1938.",
+    "namSinh": "1915",
+    "namMat": "1986",
+    "ten": "Hoàng Văn Thái"
+  },
+  {
+    "queQuan": "quê xã Yên Nghĩa, huyện Hoài Đức, Hà Nội",
+    "ghiChu": "Lê Trọng Tấn (1914-1986), tên thật là Lê Trọng Tố, quê xã Yên Nghĩa, huyện Hoài Đức, Hà Nội; tham gia cách mạng năm 1944, nhập ngũ tháng 8/1945, đảng viên Đảng Cộng sản Việt Nam năm 1945.",
+    "namSinh": "1914",
+    "namMat": "1986",
+    "ten": "Lê Trọng Tấn"
+  },
+  {
+    "queQuan": "quê xã Vĩnh Quỳnh, huyện Thanh Trì, Hà Nội",
+    "ghiChu": "Vương Thừa Vũ (1910-1980), tên thật là Nguyễn Văn Đồi, quê xã Vĩnh Quỳnh, huyện Thanh Trì, Hà Nội; đảng viên Đảng Cộng sản Việt Nam năm 1943, nhập ngũ tháng 8/1945.",
+    "namSinh": "1910",
+    "namMat": "1980",
+    "ten": "Vương Thừa Vũ"
+  },
+  {
+    "queQuan": "quê xã Kiêu Kỵ, huyện Gia Lâm, Hà Nội",
+    "ghiChu": "Nguyễn Sơn (1908-1956), tên thật là Vũ Nguyên Bác, quê xã Kiêu Kỵ, huyện Gia Lâm, Hà Nội; tham gia cách mạng 1925, đảng viên Đảng Cộng sản Việt Nam.",
+    "namSinh": "1908",
+    "namMat": "1956",
+    "ten": "Nguyễn Sơn"
+  },
+  {
+    "queQuan": "quê xã Quảng Phú Cầu, huyện Ứng Hòa, Hà Nội",
+    "ghiChu": "Trần Đăng Ninh (1910-1955), Chủ nhiệm Tổng cục cung cấp (Chủ nhiệm đầu tiên của ngành hậu cần Quân đội nhân dân Việt Nam) giai đoạn 1950-1955; quê xã Quảng Phú Cầu, huyện Ứng Hòa, Hà Nội; tham gia cách mạng năm 1930, đảng viên ĐCS VN năm 1936, nhập ngũ năm 1950.",
+    "namSinh": "1910",
+    "namMat": "1955",
+    "ten": "Trần Đăng Ninh"
+  },
+  {
+    "queQuan": "quê xã Ngũ Kiên, huyện Vĩnh Tường, tỉnh Vĩnh Phúc",
+    "ghiChu": "Nguyễn Viết Xuân (1934-1964), Anh hùng lực lượng vũ trang nhân dân (truy tặng năm 1967), quê xã Ngũ Kiên, huyện Vĩnh Tường, tỉnh Vĩnh Phúc; nhập ngũ năm 1952, thiếu úy (1964), đảng viên ĐCS VN (1956); khi hy sinh là chính trị viên Đại đội 3, Tiểu đoàn pháo phòng không 14 thuộc Sư đoàn 325.",
+    "namSinh": "1934",
+    "namMat": "1964",
+    "ten": "Nguyễn Viết Xuân"
+  },
+  {
+    "queQuan": "quê phường Thịnh Liệt, quận Hoàng Mai, Hà Nội",
+    "ghiChu": "Bùi Ngọc Dương (1943-1968), Anh hùng lực lượng vũ trang nhân dân (truy tặng năm 1969), quê phường Thịnh Liệt, quận Hoàng Mai, Hà Nội; nhập ngũ năm 1967, đảng viên Đảng Cộng sản Việt Nam (năm 1968); khi hy sinh là chuẩn úy, trung đội phó thuộc Trung đoàn 7, Bộ tư lệnh Công binh.",
+    "namSinh": "1943",
+    "namMat": "1968",
+    "ten": "Bùi Ngọc Dương"
+  },
+  {
+    "queQuan": "quê gốc ở huyện Hải Hậu, tỉnh Nam Định",
+    "ghiChu": "Vũ Xuân Thiều (1945-1972), Anh hùng lực lượng vũ trang nhân dân (truy tặng năm 1994), quê gốc ở huyện Hải Hậu, tỉnh Nam Định; đang học năm thứ ba khoa Vô tuyến điện trường Đại học Bách khoa tình nguyện nhập ngũ năm 1965, được tuyển đi học lái máy bay ở Liên Xô.",
+    "namSinh": "1945",
+    "namMat": "1972",
+    "ten": "Vũ Xuân Thiều"
+  },
+  {
+    "queQuan": "quê xã Chi Long, huyện Nam Xương (nay là huyện Lý Nhân), tỉnh Hà Nam",
+    "ghiChu": "Nguyễn Phúc Lai (1928-1947), quê xã Chi Long, huyện Nam Xương (nay là huyện Lý Nhân), tỉnh Hà Nam. Ông sống ở Hà Nội, nhập ngũ Vệ quốc đoàn tháng 4/1946.",
+    "namSinh": "1928",
+    "namMat": "1947",
+    "ten": "Nguyễn Phúc Lai"
+  },
+  {
+    "queQuan": "quê xã Diễn Yên, huyện Diễn Châu, tỉnh Nghệ An",
+    "ghiChu": "Phùng Chí Kiên ( 1901-1941), có tên là Nguyễn Vĩ, quê xã Diễn Yên, huyện Diễn Châu, tỉnh Nghệ An; đảng viên Đảng Cộng sản Việt Nam (1930).",
+    "namSinh": " 1901",
+    "namMat": "1941",
+    "ten": "Phùng Chí Kiên"
+  },
+  {
+    "queQuan": "quê xã Nông Trường, huyện Triệu Sơn, tỉnh Thanh Hóa",
+    "ghiChu": "Tô Vĩnh Diện (1924-1954), Anh hùng lực lượng vũ trang nhân dân (truy tặng năm 1956), quê xã Nông Trường, huyện Triệu Sơn, tỉnh Thanh Hóa; nhập ngũ năm 1949, đảng viên ĐCS VN (1949); khi hy sinh là khẩu đội trưởng pháo phòng không, Đại đội 827, Tiểu đoàn 394, Trung đoàn 367.",
+    "namSinh": "1924",
+    "namMat": "1954",
+    "ten": "Tô Vĩnh Diện"
+  },
+  {
+    "queQuan": "quê xã Cẩm Quan, huyện Cẩm Xuyên, tỉnh Hà Tĩnh",
+    "ghiChu": "Phan Đình Giót (1922-1954), Anh hùng lực lượng vũ trang nhân dân (truy tặng năm 1955), quê xã Cẩm Quan, huyện Cẩm Xuyên, tỉnh Hà Tĩnh; nhập ngũ năm 1950, đảng viên ĐCS VN (1952); khi hy sinh là tiểu đội phó thuộc Đại đội 58, Tiểu đoàn 428, Trung đoàn 141, Sư đoàn 312.",
+    "namSinh": "1922",
+    "namMat": "1954",
+    "ten": "Phan Đình Giót"
+  },
+  {
+    "queQuan": "quê xã Quỳnh Đôi, huyện Quỳnh Lưu, tỉnh Nghệ An",
+    "ghiChu": "Cù Chính Lan (1930-1951), Anh hùng lực lượng vũ trang nhân dân (truy tặng năm 1952); quê xã Quỳnh Đôi, huyện Quỳnh Lưu, tỉnh Nghệ An; nhập ngũ năm 1946, đảng viên ĐCS VN (1951); khi hy sinh là tiểu đội trưởng thuộc Tiểu đoàn 353, Đại đoàn 304.",
+    "namSinh": "1930",
+    "namMat": "1951",
+    "ten": "Cù Chính Lan"
+  },
+  {
+    "queQuan": "quê Cống Thôn, xã Yên Viên, huyện Gia Lâm, Hà Nội",
+    "ghiChu": "Ngô Xuân Quảng (1945-1972), quê Cống Thôn, xã Yên Viên, huyện Gia Lâm, Hà Nội; liệt sĩ được truy tặng Anh hùng lực lượng vũ trang nhân dân; nhập ngũ năm 1965.",
+    "namSinh": "1945",
+    "namMat": "1972",
+    "ten": "Ngô Xuân Quảng"
+  },
+  {
+    "queQuan": "Quê xã Văn Hóa, huyện Tuyên Hóa, tỉnh Quảng Bình.",
+    "ghiChu": "Hoàng Sâm (1915-1968), tên thật là Trần Văn Kỳ, đội trưởng đầu tiên Đội Việt Nam tuyên truyền giải phóng quân. Quê xã Văn Hóa, huyện Tuyên Hóa, tỉnh Quảng Bình.",
+    "namSinh": "1915",
+    "namMat": "1968",
+    "ten": "Hoàng Sâm"
+  },
+  {
+    "queQuan": "quê xã Đại Kim, huyện Thanh Trì, Hà Nội",
+    "ghiChu": "Hoàng Đạo Thúy (1900-1994), Cục trưởng đầu tiên Cục Thông tin liên lạc Bộ Quốc phòng; quê xã Đại Kim, huyện Thanh Trì, Hà Nội; tham gia cách mạng năm 1944, nhập ngũ 1945, đảng viên ĐCS VN (1947), đại tá (1958).",
+    "namSinh": "1900",
+    "namMat": "1994",
+    "ten": "Hoàng Đạo Thúy"
+  },
+  {
+    "queQuan": "quê xã Quảng Thọ, huyện Quảng Điền, tỉnh Thừa Thiên - Huế",
+    "ghiChu": "Nguyễn Chí Thanh (1914-1967), tên thật là Nguyễn Vịnh, quê xã Quảng Thọ, huyện Quảng Điền, tỉnh Thừa Thiên - Huế; tham gia cách mạng 1934, vào Đảng Cộng sản Đông Dương năm 1937.",
+    "namSinh": "1914",
+    "namMat": "1967",
+    "ten": "Nguyễn Chí Thanh"
+  },
+  {
+    "queQuan": "quê xã Tây An, huyện Tiền Hải, tỉnh Thái Bình",
+    "ghiChu": "Hoàng Văn Thái (1915-1986), Tổng Tham mưu trưởng đầu tiên của Quân đội Nhân dân Việt Nam (1945-1953), tên thật là Hoàng Văn Xiêm, quê xã Tây An, huyện Tiền Hải, tỉnh Thái Bình; tham gia cách mạng năm 1936, nhập ngũ năm 1944, đảng viên Đảng Cộng sản Việt Nam năm 1938.",
+    "namSinh": "1915",
+    "namMat": "1986",
+    "ten": "Hoàng Văn Thái"
+  },
+  {
+    "queQuan": "quê xã Yên Nghĩa, huyện Hoài Đức, Hà Nội",
+    "ghiChu": "Lê Trọng Tấn (1914-1986), tên thật là Lê Trọng Tố, quê xã Yên Nghĩa, huyện Hoài Đức, Hà Nội; tham gia cách mạng năm 1944, nhập ngũ tháng 8/1945, đảng viên Đảng Cộng sản Việt Nam năm 1945.",
+    "namSinh": "1914",
+    "namMat": "1986",
+    "ten": "Lê Trọng Tấn"
+  },
+  {
+    "queQuan": "quê xã Vĩnh Quỳnh, huyện Thanh Trì, Hà Nội",
+    "ghiChu": "Vương Thừa Vũ (1910-1980), tên thật là Nguyễn Văn Đồi, quê xã Vĩnh Quỳnh, huyện Thanh Trì, Hà Nội; đảng viên Đảng Cộng sản Việt Nam năm 1943, nhập ngũ tháng 8/1945.",
+    "namSinh": "1910",
+    "namMat": "1980",
+    "ten": "Vương Thừa Vũ"
+  },
+  {
+    "queQuan": "quê xã Kiêu Kỵ, huyện Gia Lâm, Hà Nội",
+    "ghiChu": "Nguyễn Sơn (1908-1956), tên thật là Vũ Nguyên Bác, quê xã Kiêu Kỵ, huyện Gia Lâm, Hà Nội; tham gia cách mạng 1925, đảng viên Đảng Cộng sản Việt Nam.",
+    "namSinh": "1908",
+    "namMat": "1956",
+    "ten": "Nguyễn Sơn"
+  },
+  {
+    "queQuan": "quê xã Quảng Phú Cầu, huyện Ứng Hòa, Hà Nội",
+    "ghiChu": "Trần Đăng Ninh (1910-1955), Chủ nhiệm Tổng cục cung cấp (Chủ nhiệm đầu tiên của ngành hậu cần Quân đội nhân dân Việt Nam) giai đoạn 1950-1955; quê xã Quảng Phú Cầu, huyện Ứng Hòa, Hà Nội; tham gia cách mạng năm 1930, đảng viên ĐCS VN năm 1936, nhập ngũ năm 1950.",
+    "namSinh": "1910",
+    "namMat": "1955",
+    "ten": "Trần Đăng Ninh"
+  },
+  {
+    "queQuan": "quê xã Ngũ Kiên, huyện Vĩnh Tường, tỉnh Vĩnh Phúc",
+    "ghiChu": "Nguyễn Viết Xuân (1934-1964), Anh hùng lực lượng vũ trang nhân dân (truy tặng năm 1967), quê xã Ngũ Kiên, huyện Vĩnh Tường, tỉnh Vĩnh Phúc; nhập ngũ năm 1952, thiếu úy (1964), đảng viên ĐCS VN (1956); khi hy sinh là chính trị viên Đại đội 3, Tiểu đoàn pháo phòng không 14 thuộc Sư đoàn 325.",
+    "namSinh": "1934",
+    "namMat": "1964",
+    "ten": "Nguyễn Viết Xuân"
+  },
+  {
+    "queQuan": "quê phường Thịnh Liệt, quận Hoàng Mai, Hà Nội",
+    "ghiChu": "Bùi Ngọc Dương (1943-1968), Anh hùng lực lượng vũ trang nhân dân (truy tặng năm 1969), quê phường Thịnh Liệt, quận Hoàng Mai, Hà Nội; nhập ngũ năm 1967, đảng viên Đảng Cộng sản Việt Nam (năm 1968); khi hy sinh là chuẩn úy, trung đội phó thuộc Trung đoàn 7, Bộ tư lệnh Công binh.",
+    "namSinh": "1943",
+    "namMat": "1968",
+    "ten": "Bùi Ngọc Dương"
+  },
+  {
+    "queQuan": "quê gốc ở huyện Hải Hậu, tỉnh Nam Định",
+    "ghiChu": "Vũ Xuân Thiều (1945-1972), Anh hùng lực lượng vũ trang nhân dân (truy tặng năm 1994), quê gốc ở huyện Hải Hậu, tỉnh Nam Định; đang học năm thứ ba khoa Vô tuyến điện trường Đại học Bách khoa tình nguyện nhập ngũ năm 1965, được tuyển đi học lái máy bay ở Liên Xô.",
+    "namSinh": "1945",
+    "namMat": "1972",
+    "ten": "Vũ Xuân Thiều"
+  },
+  {
+    "queQuan": "quê xã Chi Long, huyện Nam Xương (nay là huyện Lý Nhân), tỉnh Hà Nam",
+    "ghiChu": "Nguyễn Phúc Lai (1928-1947), quê xã Chi Long, huyện Nam Xương (nay là huyện Lý Nhân), tỉnh Hà Nam. Ông sống ở Hà Nội, nhập ngũ Vệ quốc đoàn tháng 4/1946.",
+    "namSinh": "1928",
+    "namMat": "1947",
+    "ten": "Nguyễn Phúc Lai"
+  },
+  {
+    "queQuan": "quê xã Diễn Yên, huyện Diễn Châu, tỉnh Nghệ An",
+    "ghiChu": "Phùng Chí Kiên ( 1901-1941), có tên là Nguyễn Vĩ, quê xã Diễn Yên, huyện Diễn Châu, tỉnh Nghệ An; đảng viên Đảng Cộng sản Việt Nam (1930).",
+    "namSinh": " 1901",
+    "namMat": "1941",
+    "ten": "Phùng Chí Kiên"
+  },
+  {
+    "queQuan": "quê xã Nông Trường, huyện Triệu Sơn, tỉnh Thanh Hóa",
+    "ghiChu": "Tô Vĩnh Diện (1924-1954), Anh hùng lực lượng vũ trang nhân dân (truy tặng năm 1956), quê xã Nông Trường, huyện Triệu Sơn, tỉnh Thanh Hóa; nhập ngũ năm 1949, đảng viên ĐCS VN (1949); khi hy sinh là khẩu đội trưởng pháo phòng không, Đại đội 827, Tiểu đoàn 394, Trung đoàn 367.",
+    "namSinh": "1924",
+    "namMat": "1954",
+    "ten": "Tô Vĩnh Diện"
+  },
+  {
+    "queQuan": "quê xã Cẩm Quan, huyện Cẩm Xuyên, tỉnh Hà Tĩnh",
+    "ghiChu": "Phan Đình Giót (1922-1954), Anh hùng lực lượng vũ trang nhân dân (truy tặng năm 1955), quê xã Cẩm Quan, huyện Cẩm Xuyên, tỉnh Hà Tĩnh; nhập ngũ năm 1950, đảng viên ĐCS VN (1952); khi hy sinh là tiểu đội phó thuộc Đại đội 58, Tiểu đoàn 428, Trung đoàn 141, Sư đoàn 312.",
+    "namSinh": "1922",
+    "namMat": "1954",
+    "ten": "Phan Đình Giót"
+  },
+  {
+    "queQuan": "quê xã Quỳnh Đôi, huyện Quỳnh Lưu, tỉnh Nghệ An",
+    "ghiChu": "Cù Chính Lan (1930-1951), Anh hùng lực lượng vũ trang nhân dân (truy tặng năm 1952); quê xã Quỳnh Đôi, huyện Quỳnh Lưu, tỉnh Nghệ An; nhập ngũ năm 1946, đảng viên ĐCS VN (1951); khi hy sinh là tiểu đội trưởng thuộc Tiểu đoàn 353, Đại đoàn 304.",
+    "namSinh": "1930",
+    "namMat": "1951",
+    "ten": "Cù Chính Lan"
+  },
+  {
+    "queQuan": "quê Cống Thôn, xã Yên Viên, huyện Gia Lâm, Hà Nội",
+    "ghiChu": "Ngô Xuân Quảng (1945-1972), quê Cống Thôn, xã Yên Viên, huyện Gia Lâm, Hà Nội; liệt sĩ được truy tặng Anh hùng lực lượng vũ trang nhân dân; nhập ngũ năm 1965.",
+    "namSinh": "1945",
+    "namMat": "1972",
+    "ten": "Ngô Xuân Quảng"
+  },
+  {
+    "queQuan": "Quê xã Văn Hóa, huyện Tuyên Hóa, tỉnh Quảng Bình.",
+    "ghiChu": "Hoàng Sâm (1915-1968), tên thật là Trần Văn Kỳ, đội trưởng đầu tiên Đội Việt Nam tuyên truyền giải phóng quân. Quê xã Văn Hóa, huyện Tuyên Hóa, tỉnh Quảng Bình.",
+    "namSinh": "1915",
+    "namMat": "1968",
+    "ten": "Hoàng Sâm"
+  },
+  {
+    "queQuan": "quê xã Đại Kim, huyện Thanh Trì, Hà Nội",
+    "ghiChu": "Hoàng Đạo Thúy (1900-1994), Cục trưởng đầu tiên Cục Thông tin liên lạc Bộ Quốc phòng; quê xã Đại Kim, huyện Thanh Trì, Hà Nội; tham gia cách mạng năm 1944, nhập ngũ 1945, đảng viên ĐCS VN (1947), đại tá (1958).",
+    "namSinh": "1900",
+    "namMat": "1994",
+    "ten": "Hoàng Đạo Thúy"
   }
 ]

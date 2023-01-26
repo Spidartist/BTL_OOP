@@ -22,17 +22,20 @@ import objects.figure.Figure;
 
 public class FindFigure {
 	public static void main(String[] args) {
+		AnhHung anhHung = new AnhHung();
+		anhHung.scraping();
 		TuongNhaTran nhaTran = new TuongNhaTran();
 		nhaTran.scraping();
-		AnhHungLucLuong anhHung = new AnhHungLucLuong();
+		AnhHungLucLuong anhHungLucLuong = new AnhHungLucLuong();
 		anhHung.scraping();
 		CacTrangNguyen trangNguyen = new CacTrangNguyen();
 		trangNguyen.scraping();
 		String filePath = "D:\\webCrawler\\jSoupWebCrawler\\src\\jSoupWebCrawler\\jsonFiles\\figure.json";
 		ArrayList<Figure> list = new ArrayList<Figure>();
-		list.addAll(anhHung.getList());
+		list.addAll(anhHungLucLuong.getList());
 		list.addAll(trangNguyen.getList());
 		list.addAll(nhaTran.getList());
+		list.addAll(anhHung.getList());
 		Gson gson = new GsonBuilder().setPrettyPrinting().create();
 		try {
             FileWriter writer = new FileWriter(new File(filePath));
