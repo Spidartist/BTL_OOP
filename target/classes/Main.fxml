@@ -32,8 +32,8 @@
                   <MenuItem fx:id="menuItem3" mnemonicParsing="false" onAction="#clickMenuItem" text="Sự kiện lịch sử" />
               </items>
             </MenuButton>
-            <TextField GridPane.columnIndex="1" />
-            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Tìm kiếm" GridPane.columnIndex="2" />
+            <TextField fx:id="textField" onKeyPressed="#pressEnter" GridPane.columnIndex="1" />
+            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#search" text="Tìm kiếm" GridPane.columnIndex="2" />
          </children>
       </GridPane>
    </top>
