@@ -1,5 +1,7 @@
 package application;
 
+import application.ReadJson;
+
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -47,10 +49,13 @@ public class MainController {
 
     @FXML
     void search(ActionEvent event) {
+        ReadJson reader = new ReadJson();
+        reader.readData();
         System.out.println(textField.getText());
         tableView.setDisable(false);
         TableColumn column = new TableColumn<>("colunm 1");
         tableView.getColumns().add(column);
+        System.out.println(reader.getKingList().get(0).getMieuHieu());
     }
 
     @FXML
