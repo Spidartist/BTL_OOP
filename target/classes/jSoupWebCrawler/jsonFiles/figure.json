@@ -1,0 +1,895 @@
+[
+  {
+    "queQuan": "Bắc Ninh",
+    "ghiChu": "Trạng nguyên đầu tiên.",
+    "namDoTrangNguyen": "1075",
+    "doiVua": {
+      "ten": "Lý Nhân Tông"
+    },
+    "namSinh": "1050",
+    "namMat": "1096",
+    "ten": "Lê Văn Thịnh"
+  },
+  {
+    "queQuan": "Hải Dương",
+    "ghiChu": "Tổ 5 đời của Trạng nguyên Mạc Đĩnh Chi.",
+    "namDoTrangNguyen": "1086",
+    "doiVua": {
+      "ten": "Lý Nhân Tông"
+    },
+    "namSinh": "1060",
+    "namMat": "1189",
+    "ten": "Mạc Hiển Tích"
+  },
+  {
+    "queQuan": "Hải Dương",
+    "ghiChu": "",
+    "namDoTrangNguyen": "1185",
+    "doiVua": {
+      "ten": "Lý Cao Tông"
+    },
+    "namSinh": "1141",
+    "namMat": "1234",
+    "ten": "Bùi Quốc Khái"
+  },
+  {
+    "queQuan": "Vĩnh Phúc",
+    "ghiChu": "Ông tổ nghề nuôi ong.",
+    "namDoTrangNguyen": "1213",
+    "doiVua": {
+      "ten": "Lý Huệ Tông"
+    },
+    "namSinh": "Chưa biết",
+    "namMat": "Chưa biết",
+    "ten": "Nguyễn Công Bình"
+  },
+  {
+    "queQuan": "Hải Dương",
+    "ghiChu": "Trạng nguyên đầu tiên của triều đại nhà Trần.",
+    "namDoTrangNguyen": "1232",
+    "doiVua": {
+      "ten": "Trần Thái Tông"
+    },
+    "namSinh": "1200",
+    "namMat": "Chưa biết",
+    "ten": "Trương Hanh"
+  },
+  {
+    "queQuan": "Thanh Hóa",
+    "ghiChu": "",
+    "namDoTrangNguyen": "1239",
+    "doiVua": {
+      "ten": "Trần Thái Tông"
+    },
+    "namSinh": "Chưa biết",
+    "namMat": "Chưa biết",
+    "ten": "Lưu Miễn"
+  },
+  {
+    "queQuan": "Bắc Ninh",
+    "ghiChu": "Trạng nguyên đầu tiên của nước ta. (Khoa thi đầu tiên đặt ra danh hiệu Tam Khôi)",
+    "namDoTrangNguyen": "1246",
+    "doiVua": {
+      "ten": "Trần Thái Tông"
+    },
+    "namSinh": "1222",
+    "namMat": "Chưa biết",
+    "ten": "Nguyễn Quan Quang"
+  },
+  {
+    "queQuan": "Nam Định",
+    "ghiChu": "Trạng nguyên nhỏ tuổi nhất.",
+    "namDoTrangNguyen": "1247",
+    "doiVua": {
+      "ten": "Trần Thái Tông"
+    },
+    "namSinh": "1234",
+    "namMat": "1255",
+    "ten": "Nguyễn Hiền"
+  },
+  {
+    "queQuan": "Hải Dương",
+    "ghiChu": "Kinh Trạng nguyên",
+    "namDoTrangNguyen": "1256",
+    "doiVua": {
+      "ten": "Trần Thái Tông"
+    },
+    "namSinh": "1230",
+    "namMat": "Chưa biết",
+    "ten": "Trần Quốc Lặc"
+  },
+  {
+    "queQuan": "Quảng Bình",
+    "ghiChu": "Trại Trạng nguyên",
+    "namDoTrangNguyen": "1256",
+    "doiVua": {
+      "ten": "Trần Thái Tông"
+    },
+    "namSinh": "1227",
+    "namMat": "Chưa biết",
+    "ten": "Trương Xán"
+  },
+  {
+    "queQuan": "Hải Dương",
+    "ghiChu": "Kinh Trạng nguyên",
+    "namDoTrangNguyen": "1266",
+    "doiVua": {
+      "ten": "Trần Thánh Tông"
+    },
+    "namSinh": "Chưa biết",
+    "namMat": "Chưa biết",
+    "ten": "Trần Cố"
+  },
+  {
+    "queQuan": "Nghệ An",
+    "ghiChu": "Trại Trạng nguyên",
+    "namDoTrangNguyen": "1266",
+    "doiVua": {
+      "ten": "Trần Thánh Tông"
+    },
+    "namSinh": "1236",
+    "namMat": "1315",
+    "ten": "Bạch Liêu"
+  },
+  {
+    "queQuan": "Bắc Ninh",
+    "ghiChu": "Tổ thứ ba (Huyền Quang) của thiền phái Trúc Lâm Yên Tử",
+    "namDoTrangNguyen": "1272",
+    "doiVua": {
+      "ten": "Trần Thánh Tông"
+    },
+    "namSinh": "1254",
+    "namMat": "1334",
+    "ten": "Lý Đạo Tái"
+  },
+  {
+    "queQuan": "Thanh Hóa",
+    "ghiChu": "",
+    "namDoTrangNguyen": "1275",
+    "doiVua": {
+      "ten": "Trần Thánh Tông"
+    },
+    "namSinh": "Chưa biết",
+    "namMat": "Chưa biết",
+    "ten": "Đào Tiêu"
+  },
+  {
+    "queQuan": "Hải Dương",
+    "ghiChu": "Cháu 5 đời của Mạc Hiển Tích, Lưỡng quốc Trạng nguyên[cần dẫn nguồn]",
+    "namDoTrangNguyen": "1304",
+    "doiVua": {
+      "ten": "Trần Anh Tông"
+    },
+    "namSinh": "1272",
+    "namMat": "1346",
+    "ten": "Mạc Đĩnh Chi"
+  },
+  {
+    "queQuan": "Nam Định",
+    "ghiChu": "Tam nguyên",
+    "namDoTrangNguyen": "1374",
+    "doiVua": {
+      "ten": "Trần Duệ Tông"
+    },
+    "namSinh": "1348",
+    "namMat": "1396",
+    "ten": "Đào Sư Tích"
+  },
+  {
+    "queQuan": "Bắc Ninh",
+    "ghiChu": "",
+    "namDoTrangNguyen": "1400",
+    "doiVua": {
+      "ten": "Hồ Quý Ly"
+    },
+    "namSinh": "1373",
+    "namMat": "1434",
+    "ten": "Lưu Thúc Kiệm"
+  },
+  {
+    "queQuan": "Hà Nội",
+    "ghiChu": "Lưỡng quốc Trạng nguyên[cần dẫn nguồn]– văn bia đầu tiên.",
+    "namDoTrangNguyen": "1442",
+    "doiVua": {
+      "ten": "Lê Thái Tông"
+    },
+    "namSinh": "1417",
+    "namMat": "1474",
+    "ten": "Nguyễn Trực"
+  },
+  {
+    "queQuan": "Bắc Ninh",
+    "ghiChu": "Trạng Lợn, Lưỡng quốc trạng nguyên, Trạng nguyên lớn tuổi nhất",
+    "namDoTrangNguyen": "1448",
+    "doiVua": {
+      "ten": "Lê Nhân Tông"
+    },
+    "namSinh": "1383",
+    "namMat": "1471",
+    "ten": "Nguyễn Nghiêu Tư"
+  },
+  {
+    "queQuan": "Nam Định",
+    "ghiChu": "Trạng Lường",
+    "namDoTrangNguyen": "1463",
+    "doiVua": {
+      "ten": "Lê Thánh Tông"
+    },
+    "namSinh": "1441",
+    "namMat": "1496",
+    "ten": "Lương Thế Vinh"
+  },
+  {
+    "queQuan": "Bắc Ninh",
+    "ghiChu": "Trạng Vít",
+    "namDoTrangNguyen": "1472",
+    "doiVua": {
+      "ten": "Lê Thánh Tông"
+    },
+    "namSinh": "1452",
+    "namMat": "Chưa biết",
+    "ten": "Vũ Kiệt"
+  },
+  {
+    "queQuan": "Nam Định",
+    "ghiChu": "",
+    "namDoTrangNguyen": "1475",
+    "doiVua": {
+      "ten": "Lê Thánh Tông"
+    },
+    "namSinh": "1425",
+    "namMat": "Chưa biết",
+    "ten": "Vũ Tuấn Chiêu"
+  },
+  {
+    "queQuan": "Thái Bình",
+    "ghiChu": "Trạng Chiếu (Tam nguyên)",
+    "namDoTrangNguyen": "1481",
+    "doiVua": {
+      "ten": "Lê Thánh Tông"
+    },
+    "namSinh": "1454",
+    "namMat": "Chưa biết",
+    "ten": "Phạm Đôn Lễ"
+  },
+  {
+    "queQuan": "Bắc Ninh",
+    "ghiChu": "",
+    "namDoTrangNguyen": "1484",
+    "doiVua": {
+      "ten": "Lê Thánh Tông"
+    },
+    "namSinh": "1463",
+    "namMat": "1505",
+    "ten": "Nguyễn Quang Bật"
+  },
+  {
+    "queQuan": "Hải Dương",
+    "ghiChu": "",
+    "namDoTrangNguyen": "1487",
+    "doiVua": {
+      "ten": "Lê Thánh Tông"
+    },
+    "namSinh": "1465",
+    "namMat": "Chưa biết",
+    "ten": "Trần Sùng Dĩnh"
+  },
+  {
+    "queQuan": "Phú Thọ",
+    "ghiChu": "",
+    "namDoTrangNguyen": "1490",
+    "doiVua": {
+      "ten": "Lê Thánh Tông"
+    },
+    "namSinh": "?",
+    "namMat": "1520",
+    "ten": "Vũ Duệ"
+  },
+  {
+    "queQuan": "Hải Dương",
+    "ghiChu": "Tam nguyên",
+    "namDoTrangNguyen": "1493",
+    "doiVua": {
+      "ten": "Lê Thánh Tông"
+    },
+    "namSinh": "Chưa biết",
+    "namMat": "Chưa biết",
+    "ten": "Vũ Tích (Vũ Dương)"
+  },
+  {
+    "queQuan": "Bắc Ninh",
+    "ghiChu": "Trạng Hổ",
+    "namDoTrangNguyen": "1496",
+    "doiVua": {
+      "ten": "Lê Thánh Tông"
+    },
+    "namSinh": "Chưa biết",
+    "namMat": "Chưa biết",
+    "ten": "Nghiêm Hoản"
+  },
+  {
+    "queQuan": "Thái Bình",
+    "ghiChu": "",
+    "namDoTrangNguyen": "1499",
+    "doiVua": {
+      "ten": "Lê Hiển Tông"
+    },
+    "namSinh": "Chưa biết",
+    "namMat": "Chưa biết",
+    "ten": "Đỗ Lý Khiêm"
+  },
+  {
+    "queQuan": "Hải Phòng",
+    "ghiChu": "",
+    "namDoTrangNguyen": "1502",
+    "doiVua": {
+      "ten": "Lê Hiển Tông"
+    },
+    "namSinh": "1458",
+    "namMat": "1538",
+    "ten": "Lê Ích Mộc"
+  },
+  {
+    "queQuan": "Hải Dương",
+    "ghiChu": "Trạng Ăn",
+    "namDoTrangNguyen": "1505",
+    "doiVua": {
+      "ten": "Lê Uy Mục"
+    },
+    "namSinh": "1528",
+    "namMat": "Chưa biết",
+    "ten": "Lê Nại"
+  },
+  {
+    "queQuan": "Bắc Ninh",
+    "ghiChu": "Trạng Me và Trạng Ngọt",
+    "namDoTrangNguyen": "1508",
+    "doiVua": {
+      "ten": "Lê Uy Mục"
+    },
+    "namSinh": "1482",
+    "namMat": "Chưa biết",
+    "ten": "Nguyễn Giản Thanh và Hứa Tam Tỉnh"
+  },
+  {
+    "queQuan": "Hà Nội",
+    "ghiChu": "",
+    "namDoTrangNguyen": "1511",
+    "doiVua": {
+      "ten": "Lê Tương Dực"
+    },
+    "namSinh": "1479",
+    "namMat": "Chưa biết",
+    "ten": "Hoàng Nghĩa Phú"
+  },
+  {
+    "queQuan": "Hà Nội",
+    "ghiChu": "",
+    "namDoTrangNguyen": "1514",
+    "doiVua": {
+      "ten": "Lê Tương Dực"
+    },
+    "namSinh": "1465",
+    "namMat": "Chưa biết",
+    "ten": "Nguyễn Đức Lượng"
+  },
+  {
+    "queQuan": "Bắc Ninh",
+    "ghiChu": "",
+    "namDoTrangNguyen": "1518",
+    "doiVua": {
+      "ten": "Lê Chiêu Tông"
+    },
+    "namSinh": "1498",
+    "namMat": "Chưa biết",
+    "ten": "Ngô Miễn Thiệu"
+  },
+  {
+    "queQuan": "Bắc Ninh",
+    "ghiChu": "",
+    "namDoTrangNguyen": "1523",
+    "doiVua": {
+      "ten": "Lê Cung Hoàng"
+    },
+    "namSinh": "Chưa biết",
+    "namMat": "Chưa biết",
+    "ten": "Hoàng Văn Tán"
+  },
+  {
+    "queQuan": "Hải Phòng",
+    "ghiChu": "",
+    "namDoTrangNguyen": "1526",
+    "doiVua": {
+      "ten": "Lê Cung Hoàng"
+    },
+    "namSinh": "1428",
+    "namMat": "1527",
+    "ten": "Trần Tất Văn"
+  },
+  {
+    "queQuan": "Hưng Yên",
+    "ghiChu": "",
+    "namDoTrangNguyen": "1529",
+    "doiVua": {
+      "ten": "Mạc Thái Tổ"
+    },
+    "namSinh": "1504",
+    "namMat": "Chưa biết",
+    "ten": "Đỗ Tống"
+  },
+  {
+    "queQuan": "Hà Nội",
+    "ghiChu": "",
+    "namDoTrangNguyen": "1532",
+    "doiVua": {
+      "ten": "Mạc Thái Tông"
+    },
+    "namSinh": "1495",
+    "namMat": "1557",
+    "ten": "Nguyễn Thiến"
+  },
+  {
+    "queQuan": "Hải Phòng",
+    "ghiChu": "Trạng Trình",
+    "namDoTrangNguyen": "1535",
+    "doiVua": {
+      "ten": "Mạc Thái Tông"
+    },
+    "namSinh": "1491",
+    "namMat": "1585",
+    "ten": "Nguyễn Bỉnh Khiêm"
+  },
+  {
+    "queQuan": "Bắc Giang",
+    "ghiChu": "Trạng Ác",
+    "namDoTrangNguyen": "1538",
+    "doiVua": {
+      "ten": "Mạc Thái Tông"
+    },
+    "namSinh": "1515",
+    "namMat": "1585",
+    "ten": "Giáp Hải"
+  },
+  {
+    "queQuan": "Hưng Yên",
+    "ghiChu": "",
+    "namDoTrangNguyen": "1541",
+    "doiVua": {
+      "ten": "Mạc Hiến Tông"
+    },
+    "namSinh": "1518",
+    "namMat": "Chưa biết",
+    "ten": "Nguyễn Kỳ"
+  },
+  {
+    "queQuan": "Hưng Yên",
+    "ghiChu": "",
+    "namDoTrangNguyen": "1547",
+    "doiVua": {
+      "ten": "Mạc Tuyên Tông"
+    },
+    "namSinh": "1505",
+    "namMat": "1564",
+    "ten": "Dương Phúc Tư"
+  },
+  {
+    "queQuan": "Nam Định",
+    "ghiChu": "",
+    "namDoTrangNguyen": "1550",
+    "doiVua": {
+      "ten": "Mạc Tuyên Tông"
+    },
+    "namSinh": "1524",
+    "namMat": "1610",
+    "ten": "Trần Văn Bảo"
+  },
+  {
+    "queQuan": "Bắc Ninh",
+    "ghiChu": "",
+    "namDoTrangNguyen": "1553",
+    "doiVua": {
+      "ten": "Mạc Tuyên Tông"
+    },
+    "namSinh": "1525",
+    "namMat": "1576",
+    "ten": "Nguyễn Lượng Thái"
+  },
+  {
+    "queQuan": "Hải Dương",
+    "ghiChu": "",
+    "namDoTrangNguyen": "1556",
+    "doiVua": {
+      "ten": "Mạc Tuyên Tông"
+    },
+    "namSinh": "1523",
+    "namMat": "Chưa biết",
+    "ten": "Phạm Trấn"
+  },
+  {
+    "queQuan": "Hải Dương",
+    "ghiChu": "(là Thám hoa)",
+    "namDoTrangNguyen": "1559",
+    "doiVua": {
+      "ten": "Mạc Tuyên Tông"
+    },
+    "namSinh": "1526",
+    "namMat": "Chưa biết",
+    "ten": "Đặng Thì Thố"
+  },
+  {
+    "queQuan": "Hải Dương",
+    "ghiChu": "",
+    "namDoTrangNguyen": "1562",
+    "doiVua": {
+      "ten": "Mạc Mậu Hợp"
+    },
+    "namSinh": "1521",
+    "namMat": "Chưa biết",
+    "ten": "Phạm Duy Quyết"
+  },
+  {
+    "queQuan": "Bắc Ninh",
+    "ghiChu": "",
+    "namDoTrangNguyen": "1565",
+    "doiVua": {
+      "ten": "Mạc Mậu Hợp"
+    },
+    "namSinh": "Chưa biết",
+    "namMat": "Chưa biết",
+    "ten": "Phạm Quang Tiến"
+  },
+  {
+    "queQuan": "Vĩnh Phúc",
+    "ghiChu": "Tam Nguyên",
+    "namDoTrangNguyen": "1599",
+    "doiVua": {
+      "ten": "Lê Trung Hưng"
+    },
+    "namSinh": "1562",
+    "namMat": "1642",
+    "ten": "Nguyễn Duy Thì"
+  },
+  {
+    "queQuan": "Bắc Ninh",
+    "ghiChu": "Trạng Cháy",
+    "namDoTrangNguyen": "1637",
+    "doiVua": {
+      "ten": "Lê Thần Tông"
+    },
+    "namSinh": "1587",
+    "namMat": "Chưa biết",
+    "ten": "Nguyễn Xuân Chính"
+  },
+  {
+    "queQuan": "Hà Nội",
+    "ghiChu": "",
+    "namDoTrangNguyen": "1659",
+    "doiVua": {
+      "ten": "Lê Thần Tông"
+    },
+    "namSinh": "1624",
+    "namMat": "1674",
+    "ten": "Nguyễn Quốc Trinh"
+  },
+  {
+    "queQuan": "Hà Nội",
+    "ghiChu": "",
+    "namDoTrangNguyen": "1661",
+    "doiVua": {
+      "ten": "Lê Thần Tông"
+    },
+    "namSinh": "1621",
+    "namMat": "1683",
+    "ten": "Đặng Công Chất"
+  },
+  {
+    "queQuan": "Hà Nội",
+    "ghiChu": "",
+    "namDoTrangNguyen": "1670",
+    "doiVua": {
+      "ten": "Lê Huyền Tông"
+    },
+    "namSinh": "1643",
+    "namMat": "Chưa biết",
+    "ten": "Lưu Danh Công"
+  },
+  {
+    "queQuan": "Bắc Ninh",
+    "ghiChu": "Trạng Bịu, Lưỡng quốc Trạng nguyên",
+    "namDoTrangNguyen": "1683",
+    "doiVua": {
+      "ten": "Lê Hy Tông"
+    },
+    "namSinh": "1650",
+    "namMat": "1718",
+    "ten": "Nguyễn Đăng Đạo"
+  },
+  {
+    "queQuan": "Thanh Hóa",
+    "ghiChu": "Trạng nguyên cuối cùng",
+    "namDoTrangNguyen": "1736",
+    "doiVua": {
+      "ten": "Lê Ý Tông"
+    },
+    "namSinh": "1701",
+    "namMat": "Chưa biết",
+    "ten": "Trịnh Tuệ /Trịnh Huệ"
+  },
+  {
+    "namSinh": "1194",
+    "namMat": " 1264.",
+    "ten": " TRẦN THỦ ĐỘ "
+  },
+  {
+    "namSinh": "1228",
+    "namMat": "1300.",
+    "ten": " HƯNG ĐẠO ĐẠI VƯƠNG TRẦN QUỐC TUẤN "
+  },
+  {
+    "namSinh": "1240",
+    "namMat": "1294.",
+    "ten": " TRẦN QUANG KHẢI "
+  },
+  {
+    "namSinh": "1253",
+    "namMat": " 1330.",
+    "ten": " TRẦN NHẬT DUẬT "
+  },
+  {
+    "ten": " TRẦN KHÁNH DƯ. "
+  },
+  {
+    "ten": " TRẦN BÌNH TRỌNG"
+  },
+  {
+    "namSinh": "1267",
+    "namMat": "1285.",
+    "ten": " TRẦN QUỐC TOẢN "
+  },
+  {
+    "ten": " YẾT KIÊU."
+  },
+  {
+    "namSinh": "1255",
+    "namMat": "1320.",
+    "ten": "  PHẠM NGŨ LÃO "
+  },
+  {
+    "queQuan": "quê xã Quảng Thọ, huyện Quảng Điền, tỉnh Thừa Thiên - Huế",
+    "ghiChu": "Nguyễn Chí Thanh (1914-1967), tên thật là Nguyễn Vịnh, quê xã Quảng Thọ, huyện Quảng Điền, tỉnh Thừa Thiên - Huế; tham gia cách mạng 1934, vào Đảng Cộng sản Đông Dương năm 1937.",
+    "namSinh": "1914",
+    "namMat": "1967",
+    "ten": "Nguyễn Chí Thanh"
+  },
+  {
+    "queQuan": "quê xã Tây An, huyện Tiền Hải, tỉnh Thái Bình",
+    "ghiChu": "Hoàng Văn Thái (1915-1986), Tổng Tham mưu trưởng đầu tiên của Quân đội Nhân dân Việt Nam (1945-1953), tên thật là Hoàng Văn Xiêm, quê xã Tây An, huyện Tiền Hải, tỉnh Thái Bình; tham gia cách mạng năm 1936, nhập ngũ năm 1944, đảng viên Đảng Cộng sản Việt Nam năm 1938.",
+    "namSinh": "1915",
+    "namMat": "1986",
+    "ten": "Hoàng Văn Thái"
+  },
+  {
+    "queQuan": "quê xã Yên Nghĩa, huyện Hoài Đức, Hà Nội",
+    "ghiChu": "Lê Trọng Tấn (1914-1986), tên thật là Lê Trọng Tố, quê xã Yên Nghĩa, huyện Hoài Đức, Hà Nội; tham gia cách mạng năm 1944, nhập ngũ tháng 8/1945, đảng viên Đảng Cộng sản Việt Nam năm 1945.",
+    "namSinh": "1914",
+    "namMat": "1986",
+    "ten": "Lê Trọng Tấn"
+  },
+  {
+    "queQuan": "quê xã Vĩnh Quỳnh, huyện Thanh Trì, Hà Nội",
+    "ghiChu": "Vương Thừa Vũ (1910-1980), tên thật là Nguyễn Văn Đồi, quê xã Vĩnh Quỳnh, huyện Thanh Trì, Hà Nội; đảng viên Đảng Cộng sản Việt Nam năm 1943, nhập ngũ tháng 8/1945.",
+    "namSinh": "1910",
+    "namMat": "1980",
+    "ten": "Vương Thừa Vũ"
+  },
+  {
+    "queQuan": "quê xã Kiêu Kỵ, huyện Gia Lâm, Hà Nội",
+    "ghiChu": "Nguyễn Sơn (1908-1956), tên thật là Vũ Nguyên Bác, quê xã Kiêu Kỵ, huyện Gia Lâm, Hà Nội; tham gia cách mạng 1925, đảng viên Đảng Cộng sản Việt Nam.",
+    "namSinh": "1908",
+    "namMat": "1956",
+    "ten": "Nguyễn Sơn"
+  },
+  {
+    "queQuan": "quê xã Quảng Phú Cầu, huyện Ứng Hòa, Hà Nội",
+    "ghiChu": "Trần Đăng Ninh (1910-1955), Chủ nhiệm Tổng cục cung cấp (Chủ nhiệm đầu tiên của ngành hậu cần Quân đội nhân dân Việt Nam) giai đoạn 1950-1955; quê xã Quảng Phú Cầu, huyện Ứng Hòa, Hà Nội; tham gia cách mạng năm 1930, đảng viên ĐCS VN năm 1936, nhập ngũ năm 1950.",
+    "namSinh": "1910",
+    "namMat": "1955",
+    "ten": "Trần Đăng Ninh"
+  },
+  {
+    "queQuan": "quê xã Ngũ Kiên, huyện Vĩnh Tường, tỉnh Vĩnh Phúc",
+    "ghiChu": "Nguyễn Viết Xuân (1934-1964), Anh hùng lực lượng vũ trang nhân dân (truy tặng năm 1967), quê xã Ngũ Kiên, huyện Vĩnh Tường, tỉnh Vĩnh Phúc; nhập ngũ năm 1952, thiếu úy (1964), đảng viên ĐCS VN (1956); khi hy sinh là chính trị viên Đại đội 3, Tiểu đoàn pháo phòng không 14 thuộc Sư đoàn 325.",
+    "namSinh": "1934",
+    "namMat": "1964",
+    "ten": "Nguyễn Viết Xuân"
+  },
+  {
+    "queQuan": "quê phường Thịnh Liệt, quận Hoàng Mai, Hà Nội",
+    "ghiChu": "Bùi Ngọc Dương (1943-1968), Anh hùng lực lượng vũ trang nhân dân (truy tặng năm 1969), quê phường Thịnh Liệt, quận Hoàng Mai, Hà Nội; nhập ngũ năm 1967, đảng viên Đảng Cộng sản Việt Nam (năm 1968); khi hy sinh là chuẩn úy, trung đội phó thuộc Trung đoàn 7, Bộ tư lệnh Công binh.",
+    "namSinh": "1943",
+    "namMat": "1968",
+    "ten": "Bùi Ngọc Dương"
+  },
+  {
+    "queQuan": "quê gốc ở huyện Hải Hậu, tỉnh Nam Định",
+    "ghiChu": "Vũ Xuân Thiều (1945-1972), Anh hùng lực lượng vũ trang nhân dân (truy tặng năm 1994), quê gốc ở huyện Hải Hậu, tỉnh Nam Định; đang học năm thứ ba khoa Vô tuyến điện trường Đại học Bách khoa tình nguyện nhập ngũ năm 1965, được tuyển đi học lái máy bay ở Liên Xô.",
+    "namSinh": "1945",
+    "namMat": "1972",
+    "ten": "Vũ Xuân Thiều"
+  },
+  {
+    "queQuan": "quê xã Chi Long, huyện Nam Xương (nay là huyện Lý Nhân), tỉnh Hà Nam",
+    "ghiChu": "Nguyễn Phúc Lai (1928-1947), quê xã Chi Long, huyện Nam Xương (nay là huyện Lý Nhân), tỉnh Hà Nam. Ông sống ở Hà Nội, nhập ngũ Vệ quốc đoàn tháng 4/1946.",
+    "namSinh": "1928",
+    "namMat": "1947",
+    "ten": "Nguyễn Phúc Lai"
+  },
+  {
+    "queQuan": "quê xã Diễn Yên, huyện Diễn Châu, tỉnh Nghệ An",
+    "ghiChu": "Phùng Chí Kiên ( 1901-1941), có tên là Nguyễn Vĩ, quê xã Diễn Yên, huyện Diễn Châu, tỉnh Nghệ An; đảng viên Đảng Cộng sản Việt Nam (1930).",
+    "namSinh": " 1901",
+    "namMat": "1941",
+    "ten": "Phùng Chí Kiên"
+  },
+  {
+    "queQuan": "quê xã Nông Trường, huyện Triệu Sơn, tỉnh Thanh Hóa",
+    "ghiChu": "Tô Vĩnh Diện (1924-1954), Anh hùng lực lượng vũ trang nhân dân (truy tặng năm 1956), quê xã Nông Trường, huyện Triệu Sơn, tỉnh Thanh Hóa; nhập ngũ năm 1949, đảng viên ĐCS VN (1949); khi hy sinh là khẩu đội trưởng pháo phòng không, Đại đội 827, Tiểu đoàn 394, Trung đoàn 367.",
+    "namSinh": "1924",
+    "namMat": "1954",
+    "ten": "Tô Vĩnh Diện"
+  },
+  {
+    "queQuan": "quê xã Cẩm Quan, huyện Cẩm Xuyên, tỉnh Hà Tĩnh",
+    "ghiChu": "Phan Đình Giót (1922-1954), Anh hùng lực lượng vũ trang nhân dân (truy tặng năm 1955), quê xã Cẩm Quan, huyện Cẩm Xuyên, tỉnh Hà Tĩnh; nhập ngũ năm 1950, đảng viên ĐCS VN (1952); khi hy sinh là tiểu đội phó thuộc Đại đội 58, Tiểu đoàn 428, Trung đoàn 141, Sư đoàn 312.",
+    "namSinh": "1922",
+    "namMat": "1954",
+    "ten": "Phan Đình Giót"
+  },
+  {
+    "queQuan": "quê xã Quỳnh Đôi, huyện Quỳnh Lưu, tỉnh Nghệ An",
+    "ghiChu": "Cù Chính Lan (1930-1951), Anh hùng lực lượng vũ trang nhân dân (truy tặng năm 1952); quê xã Quỳnh Đôi, huyện Quỳnh Lưu, tỉnh Nghệ An; nhập ngũ năm 1946, đảng viên ĐCS VN (1951); khi hy sinh là tiểu đội trưởng thuộc Tiểu đoàn 353, Đại đoàn 304.",
+    "namSinh": "1930",
+    "namMat": "1951",
+    "ten": "Cù Chính Lan"
+  },
+  {
+    "queQuan": "quê Cống Thôn, xã Yên Viên, huyện Gia Lâm, Hà Nội",
+    "ghiChu": "Ngô Xuân Quảng (1945-1972), quê Cống Thôn, xã Yên Viên, huyện Gia Lâm, Hà Nội; liệt sĩ được truy tặng Anh hùng lực lượng vũ trang nhân dân; nhập ngũ năm 1965.",
+    "namSinh": "1945",
+    "namMat": "1972",
+    "ten": "Ngô Xuân Quảng"
+  },
+  {
+    "queQuan": "Quê xã Văn Hóa, huyện Tuyên Hóa, tỉnh Quảng Bình.",
+    "ghiChu": "Hoàng Sâm (1915-1968), tên thật là Trần Văn Kỳ, đội trưởng đầu tiên Đội Việt Nam tuyên truyền giải phóng quân. Quê xã Văn Hóa, huyện Tuyên Hóa, tỉnh Quảng Bình.",
+    "namSinh": "1915",
+    "namMat": "1968",
+    "ten": "Hoàng Sâm"
+  },
+  {
+    "queQuan": "quê xã Đại Kim, huyện Thanh Trì, Hà Nội",
+    "ghiChu": "Hoàng Đạo Thúy (1900-1994), Cục trưởng đầu tiên Cục Thông tin liên lạc Bộ Quốc phòng; quê xã Đại Kim, huyện Thanh Trì, Hà Nội; tham gia cách mạng năm 1944, nhập ngũ 1945, đảng viên ĐCS VN (1947), đại tá (1958).",
+    "namSinh": "1900",
+    "namMat": "1994",
+    "ten": "Hoàng Đạo Thúy"
+  },
+  {
+    "queQuan": "quê xã Quảng Thọ, huyện Quảng Điền, tỉnh Thừa Thiên - Huế",
+    "ghiChu": "Nguyễn Chí Thanh (1914-1967), tên thật là Nguyễn Vịnh, quê xã Quảng Thọ, huyện Quảng Điền, tỉnh Thừa Thiên - Huế; tham gia cách mạng 1934, vào Đảng Cộng sản Đông Dương năm 1937.",
+    "namSinh": "1914",
+    "namMat": "1967",
+    "ten": "Nguyễn Chí Thanh"
+  },
+  {
+    "queQuan": "quê xã Tây An, huyện Tiền Hải, tỉnh Thái Bình",
+    "ghiChu": "Hoàng Văn Thái (1915-1986), Tổng Tham mưu trưởng đầu tiên của Quân đội Nhân dân Việt Nam (1945-1953), tên thật là Hoàng Văn Xiêm, quê xã Tây An, huyện Tiền Hải, tỉnh Thái Bình; tham gia cách mạng năm 1936, nhập ngũ năm 1944, đảng viên Đảng Cộng sản Việt Nam năm 1938.",
+    "namSinh": "1915",
+    "namMat": "1986",
+    "ten": "Hoàng Văn Thái"
+  },
+  {
+    "queQuan": "quê xã Yên Nghĩa, huyện Hoài Đức, Hà Nội",
+    "ghiChu": "Lê Trọng Tấn (1914-1986), tên thật là Lê Trọng Tố, quê xã Yên Nghĩa, huyện Hoài Đức, Hà Nội; tham gia cách mạng năm 1944, nhập ngũ tháng 8/1945, đảng viên Đảng Cộng sản Việt Nam năm 1945.",
+    "namSinh": "1914",
+    "namMat": "1986",
+    "ten": "Lê Trọng Tấn"
+  },
+  {
+    "queQuan": "quê xã Vĩnh Quỳnh, huyện Thanh Trì, Hà Nội",
+    "ghiChu": "Vương Thừa Vũ (1910-1980), tên thật là Nguyễn Văn Đồi, quê xã Vĩnh Quỳnh, huyện Thanh Trì, Hà Nội; đảng viên Đảng Cộng sản Việt Nam năm 1943, nhập ngũ tháng 8/1945.",
+    "namSinh": "1910",
+    "namMat": "1980",
+    "ten": "Vương Thừa Vũ"
+  },
+  {
+    "queQuan": "quê xã Kiêu Kỵ, huyện Gia Lâm, Hà Nội",
+    "ghiChu": "Nguyễn Sơn (1908-1956), tên thật là Vũ Nguyên Bác, quê xã Kiêu Kỵ, huyện Gia Lâm, Hà Nội; tham gia cách mạng 1925, đảng viên Đảng Cộng sản Việt Nam.",
+    "namSinh": "1908",
+    "namMat": "1956",
+    "ten": "Nguyễn Sơn"
+  },
+  {
+    "queQuan": "quê xã Quảng Phú Cầu, huyện Ứng Hòa, Hà Nội",
+    "ghiChu": "Trần Đăng Ninh (1910-1955), Chủ nhiệm Tổng cục cung cấp (Chủ nhiệm đầu tiên của ngành hậu cần Quân đội nhân dân Việt Nam) giai đoạn 1950-1955; quê xã Quảng Phú Cầu, huyện Ứng Hòa, Hà Nội; tham gia cách mạng năm 1930, đảng viên ĐCS VN năm 1936, nhập ngũ năm 1950.",
+    "namSinh": "1910",
+    "namMat": "1955",
+    "ten": "Trần Đăng Ninh"
+  },
+  {
+    "queQuan": "quê xã Ngũ Kiên, huyện Vĩnh Tường, tỉnh Vĩnh Phúc",
+    "ghiChu": "Nguyễn Viết Xuân (1934-1964), Anh hùng lực lượng vũ trang nhân dân (truy tặng năm 1967), quê xã Ngũ Kiên, huyện Vĩnh Tường, tỉnh Vĩnh Phúc; nhập ngũ năm 1952, thiếu úy (1964), đảng viên ĐCS VN (1956); khi hy sinh là chính trị viên Đại đội 3, Tiểu đoàn pháo phòng không 14 thuộc Sư đoàn 325.",
+    "namSinh": "1934",
+    "namMat": "1964",
+    "ten": "Nguyễn Viết Xuân"
+  },
+  {
+    "queQuan": "quê phường Thịnh Liệt, quận Hoàng Mai, Hà Nội",
+    "ghiChu": "Bùi Ngọc Dương (1943-1968), Anh hùng lực lượng vũ trang nhân dân (truy tặng năm 1969), quê phường Thịnh Liệt, quận Hoàng Mai, Hà Nội; nhập ngũ năm 1967, đảng viên Đảng Cộng sản Việt Nam (năm 1968); khi hy sinh là chuẩn úy, trung đội phó thuộc Trung đoàn 7, Bộ tư lệnh Công binh.",
+    "namSinh": "1943",
+    "namMat": "1968",
+    "ten": "Bùi Ngọc Dương"
+  },
+  {
+    "queQuan": "quê gốc ở huyện Hải Hậu, tỉnh Nam Định",
+    "ghiChu": "Vũ Xuân Thiều (1945-1972), Anh hùng lực lượng vũ trang nhân dân (truy tặng năm 1994), quê gốc ở huyện Hải Hậu, tỉnh Nam Định; đang học năm thứ ba khoa Vô tuyến điện trường Đại học Bách khoa tình nguyện nhập ngũ năm 1965, được tuyển đi học lái máy bay ở Liên Xô.",
+    "namSinh": "1945",
+    "namMat": "1972",
+    "ten": "Vũ Xuân Thiều"
+  },
+  {
+    "queQuan": "quê xã Chi Long, huyện Nam Xương (nay là huyện Lý Nhân), tỉnh Hà Nam",
+    "ghiChu": "Nguyễn Phúc Lai (1928-1947), quê xã Chi Long, huyện Nam Xương (nay là huyện Lý Nhân), tỉnh Hà Nam. Ông sống ở Hà Nội, nhập ngũ Vệ quốc đoàn tháng 4/1946.",
+    "namSinh": "1928",
+    "namMat": "1947",
+    "ten": "Nguyễn Phúc Lai"
+  },
+  {
+    "queQuan": "quê xã Diễn Yên, huyện Diễn Châu, tỉnh Nghệ An",
+    "ghiChu": "Phùng Chí Kiên ( 1901-1941), có tên là Nguyễn Vĩ, quê xã Diễn Yên, huyện Diễn Châu, tỉnh Nghệ An; đảng viên Đảng Cộng sản Việt Nam (1930).",
+    "namSinh": " 1901",
+    "namMat": "1941",
+    "ten": "Phùng Chí Kiên"
+  },
+  {
+    "queQuan": "quê xã Nông Trường, huyện Triệu Sơn, tỉnh Thanh Hóa",
+    "ghiChu": "Tô Vĩnh Diện (1924-1954), Anh hùng lực lượng vũ trang nhân dân (truy tặng năm 1956), quê xã Nông Trường, huyện Triệu Sơn, tỉnh Thanh Hóa; nhập ngũ năm 1949, đảng viên ĐCS VN (1949); khi hy sinh là khẩu đội trưởng pháo phòng không, Đại đội 827, Tiểu đoàn 394, Trung đoàn 367.",
+    "namSinh": "1924",
+    "namMat": "1954",
+    "ten": "Tô Vĩnh Diện"
+  },
+  {
+    "queQuan": "quê xã Cẩm Quan, huyện Cẩm Xuyên, tỉnh Hà Tĩnh",
+    "ghiChu": "Phan Đình Giót (1922-1954), Anh hùng lực lượng vũ trang nhân dân (truy tặng năm 1955), quê xã Cẩm Quan, huyện Cẩm Xuyên, tỉnh Hà Tĩnh; nhập ngũ năm 1950, đảng viên ĐCS VN (1952); khi hy sinh là tiểu đội phó thuộc Đại đội 58, Tiểu đoàn 428, Trung đoàn 141, Sư đoàn 312.",
+    "namSinh": "1922",
+    "namMat": "1954",
+    "ten": "Phan Đình Giót"
+  },
+  {
+    "queQuan": "quê xã Quỳnh Đôi, huyện Quỳnh Lưu, tỉnh Nghệ An",
+    "ghiChu": "Cù Chính Lan (1930-1951), Anh hùng lực lượng vũ trang nhân dân (truy tặng năm 1952); quê xã Quỳnh Đôi, huyện Quỳnh Lưu, tỉnh Nghệ An; nhập ngũ năm 1946, đảng viên ĐCS VN (1951); khi hy sinh là tiểu đội trưởng thuộc Tiểu đoàn 353, Đại đoàn 304.",
+    "namSinh": "1930",
+    "namMat": "1951",
+    "ten": "Cù Chính Lan"
+  },
+  {
+    "queQuan": "quê Cống Thôn, xã Yên Viên, huyện Gia Lâm, Hà Nội",
+    "ghiChu": "Ngô Xuân Quảng (1945-1972), quê Cống Thôn, xã Yên Viên, huyện Gia Lâm, Hà Nội; liệt sĩ được truy tặng Anh hùng lực lượng vũ trang nhân dân; nhập ngũ năm 1965.",
+    "namSinh": "1945",
+    "namMat": "1972",
+    "ten": "Ngô Xuân Quảng"
+  },
+  {
+    "queQuan": "Quê xã Văn Hóa, huyện Tuyên Hóa, tỉnh Quảng Bình.",
+    "ghiChu": "Hoàng Sâm (1915-1968), tên thật là Trần Văn Kỳ, đội trưởng đầu tiên Đội Việt Nam tuyên truyền giải phóng quân. Quê xã Văn Hóa, huyện Tuyên Hóa, tỉnh Quảng Bình.",
+    "namSinh": "1915",
+    "namMat": "1968",
+    "ten": "Hoàng Sâm"
+  },
+  {
+    "queQuan": "quê xã Đại Kim, huyện Thanh Trì, Hà Nội",
+    "ghiChu": "Hoàng Đạo Thúy (1900-1994), Cục trưởng đầu tiên Cục Thông tin liên lạc Bộ Quốc phòng; quê xã Đại Kim, huyện Thanh Trì, Hà Nội; tham gia cách mạng năm 1944, nhập ngũ 1945, đảng viên ĐCS VN (1947), đại tá (1958).",
+    "namSinh": "1900",
+    "namMat": "1994",
+    "ten": "Hoàng Đạo Thúy"
+  }
+]

@@ -21,9 +21,9 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
-public class WikipediaFigure extends BasicWebScraper implements IScraping {
+public class FindKing extends BasicWebScraper implements IScraping {
 	private ArrayList<String> figures = new ArrayList<String>();
-	public WikipediaFigure() {
+	public FindKing() {
 		String url = "https://vi.wikipedia.org/wiki/Vua_Vi%E1%BB%87t_Nam";
 		this.setUrl(url);
 		connect();
@@ -34,24 +34,11 @@ public class WikipediaFigure extends BasicWebScraper implements IScraping {
 	}
 	@Override
 	public void scraping() {
-		Element mainPage = this.doc.getElementsByClass("container textview").get(0);
-//		Elements headers = mainPage.getElementsByTag("h2");
-		Elements paragraphs = mainPage.getElementsByTag("p");
-		for (Element p: paragraphs) {
-			String context = p.html();
-			if (context.contains("<br>")) {
-				String[] t = context.split("<br>");
-				for (String tmp : t) {
-					if (tmp.contains("(") && tmp.length() < 80) {
-						figures.add(tmp);
-					}
-				}
-			}
-		}
+		
 	}
 	
 	public static void main(String[] args) {
-		WikipediaFigure obj = new WikipediaFigure();
+		FindKing obj = new FindKing();
 		ArrayList<King> kings = new ArrayList<King>();
 		Document doc = obj.getDoc();
 		Elements firstTable = doc.select("table.toccolours");
