@@ -17,7 +17,7 @@ public class ReadJson {
     private ObservableList<King> kingList = FXCollections.observableArrayList();
 
     public ObservableList<King> getKingList() {
-        readData("D:/HK2022.1/OOP/MidtermPrj/BTL_OOP/king.json");
+        readData("E:/OOP/BTL_OOP/king.json");
         return kingList;
     }
 
