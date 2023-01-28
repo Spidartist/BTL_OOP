@@ -1,6 +1,12 @@
 package objects.figure;
 
-public class King extends HistoricalFigure {
+import org.json.simple.JSONObject;
+
+import com.google.gson.JsonObject;
+
+import objects.ParseJSON;
+
+public class King extends HistoricalFigure implements ParseJSON {
 	private String paperURL;
 	private String mieuHieu;
 	private String thuyHieu;
@@ -35,6 +41,9 @@ public class King extends HistoricalFigure {
 
 	public King(String ten) {
 		super(ten);
+	}
+
+	public King() {
 	}
 
 	public String getPaperURL() {
@@ -93,4 +102,18 @@ public class King extends HistoricalFigure {
 		this.namTriVi = namTriVi;
 	}
 
+	@Override
+	public King parseDataObject(JSONObject king) {
+		String paperURL = (String) king.get("paperURL");
+		// System.out.println(paperURL);
+		String mieuHieu = (String) king.get("mieuHieu");
+		String thuyHieu = (String) king.get("thuyHieu");
+		String nienHieu = (String) king.get("nienHieu");
+		String tenHuy = (String) king.get("tenHuy");
+		String theThu = (String) king.get("theThu");
+		String namTriVi = (String) king.get("namTriVi");
+		String ten = (String) king.get("ten");
+		King newKing = new King(paperURL, mieuHieu, thuyHieu, nienHieu, tenHuy, theThu, namTriVi, ten);
+		return newKing;
+	}
 }
