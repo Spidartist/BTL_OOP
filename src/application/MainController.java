@@ -49,78 +49,30 @@ public class MainController {
 
                 // TableView<King> table = new TableView<>();
                 table.getColumns().clear();
+                String[] kingStr = { "ten", "mieuHieu", "thuyHieu", "nienHieu", "tenHuy", "theThu", "namTriVi" };
+                for (int i = 0; i < kingStr.length; i++) {
+                    TableColumn<King, String> ColKing = new TableColumn<King, String>(kingStr[i]);
+                    ColKing.prefWidthProperty().bind(table.widthProperty().multiply(0.143));
+                    ColKing.setCellValueFactory(new PropertyValueFactory<>(kingStr[i]));
+                    table.getColumns().add(ColKing);
+                }
 
-                // TableColumn<King, String> Col1 = new TableColumn<King, String>("paperURL");
-                // Col1.prefWidthProperty().bind(table.widthProperty().multiply(0.125));
-                // Col1.setCellValueFactory(new PropertyValueFactory<>("paperURL"));
-                TableColumn<King, String> ColKing2 = new TableColumn<King, String>("mieuHieu");
-                ColKing2.prefWidthProperty().bind(table.widthProperty().multiply(0.143));
-                ColKing2.setCellValueFactory(new PropertyValueFactory<>("mieuHieu"));
-
-                TableColumn<King, String> ColKing3 = new TableColumn<King, String>("thuyHieu");
-                ColKing3.prefWidthProperty().bind(table.widthProperty().multiply(0.142));
-                ColKing3.setCellValueFactory(new PropertyValueFactory<>("thuyHieu"));
-
-                TableColumn<King, String> ColKing4 = new TableColumn<King, String>("nienHieu");
-                ColKing4.prefWidthProperty().bind(table.widthProperty().multiply(0.142));
-                ColKing4.setCellValueFactory(new PropertyValueFactory<>("nienHieu"));
-
-                TableColumn<King, String> ColKing5 = new TableColumn<King, String>("tenHuy");
-                ColKing5.prefWidthProperty().bind(table.widthProperty().multiply(0.142));
-                ColKing5.setCellValueFactory(new PropertyValueFactory<>("tenHuy"));
-
-                TableColumn<King, String> ColKing6 = new TableColumn<King, String>("theThu");
-                ColKing6.prefWidthProperty().bind(table.widthProperty().multiply(0.142));
-                ColKing6.setCellValueFactory(new PropertyValueFactory<>("theThu"));
-
-                TableColumn<King, String> ColKing7 = new TableColumn<King, String>("namTriVi");
-                ColKing7.prefWidthProperty().bind(table.widthProperty().multiply(0.142));
-                ColKing7.setCellValueFactory(new PropertyValueFactory<>("namTriVi"));
-
-                TableColumn<King, String> ColKing8 = new TableColumn<King, String>("ten");
-                ColKing8.prefWidthProperty().bind(table.widthProperty().multiply(0.142));
-                ColKing8.setCellValueFactory(new PropertyValueFactory<>("ten"));
-
-                table.getColumns().addAll(ColKing8, ColKing2, ColKing3, ColKing4, ColKing5, ColKing6, ColKing7);
                 reader.getKingList().forEach(elm -> table.getItems().add(elm));
                 break;
             case "Nhân Vật Lịch Sử":
                 // TableView<King> table = new TableView<>();
                 table.getColumns().clear();
-                // TableColumn<King, String> Col1 = new TableColumn<King, String>("paperURL");
-                // Col1.prefWidthProperty().bind(table.widthProperty().multiply(0.125));
-                // Col1.setCellValueFactory(new PropertyValueFactory<>("paperURL"));
-                double wid = 1 / 7;
-                TableColumn<Figure, String> ColFigure2 = new TableColumn<Figure, String>("mieuHieu");
-                ColFigure2.prefWidthProperty().bind(table.widthProperty().multiply(0.143));
-                ColFigure2.setCellValueFactory(new PropertyValueFactory<>("mieuHieu"));
+                String[] figureStr = { "ten", "queQuan", "danToc", "namNhapNgu", "namSinh", "namMat", "ghiChu" };
+                for (int i = 0; i < figureStr.length; i++) {
+                    TableColumn<King, String> ColFigure = new TableColumn<King, String>(figureStr[i]);
+                    ColFigure.prefWidthProperty().bind(table.widthProperty().multiply(0.143));
+                    ColFigure.setCellValueFactory(new PropertyValueFactory<>(figureStr[i]));
+                    table.getColumns().add(ColFigure);
+                }
 
-                TableColumn<Figure, String> ColFigure3 = new TableColumn<Figure, String>("thuyHieu");
-                ColFigure3.prefWidthProperty().bind(table.widthProperty().multiply(0.142));
-                ColFigure3.setCellValueFactory(new PropertyValueFactory<>("thuyHieu"));
-
-                TableColumn<Figure, String> ColFigure4 = new TableColumn<Figure, String>("nienHieu");
-                ColFigure4.prefWidthProperty().bind(table.widthProperty().multiply(0.142));
-                ColFigure4.setCellValueFactory(new PropertyValueFactory<>("nienHieu"));
-
-                TableColumn<Figure, String> ColFigure5 = new TableColumn<Figure, String>("tenHuy");
-                ColFigure5.prefWidthProperty().bind(table.widthProperty().multiply(0.142));
-                ColFigure5.setCellValueFactory(new PropertyValueFactory<>("tenHuy"));
-
-                TableColumn<Figure, String> ColFigure6 = new TableColumn<Figure, String>("theThu");
-                ColFigure6.prefWidthProperty().bind(table.widthProperty().multiply(0.142));
-                ColFigure6.setCellValueFactory(new PropertyValueFactory<>("theThu"));
-
-                TableColumn<Figure, String> ColFigure7 = new TableColumn<Figure, String>("namTriVi");
-                ColFigure7.prefWidthProperty().bind(table.widthProperty().multiply(0.142));
-                ColFigure7.setCellValueFactory(new PropertyValueFactory<>("namTriVi"));
-
-                TableColumn<Figure, String> ColFigure8 = new TableColumn<Figure, String>("ten");
-                ColFigure8.prefWidthProperty().bind(table.widthProperty().multiply(0.142));
-                ColFigure8.setCellValueFactory(new PropertyValueFactory<>("ten"));
-
-                table.getColumns().addAll(ColFigure8, ColFigure2, ColFigure3, ColFigure4, ColFigure5, ColFigure6,
-                        ColFigure7);
+                // table.getColumns().addAll(ColFigure8, ColFigure2, ColFigure3, ColFigure4,
+                // ColFigure5, ColFigure6,
+                // ColFigure7);
                 reader.getKingList().forEach(elm -> table.getItems().add(elm));
                 break;
             case "Sự kiện lịch sử":
