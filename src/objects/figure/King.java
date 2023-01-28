@@ -103,16 +103,16 @@ public class King extends HistoricalFigure implements ParseJSON {
 	}
 
 	@Override
-	public King parseDataObject(JSONObject king) {
-		String paperURL = (String) king.get("paperURL");
+	public King parseDataObject(JSONObject data) {
+		String paperURL = (String) data.get("paperURL");
 		// System.out.println(paperURL);
-		String mieuHieu = (String) king.get("mieuHieu");
-		String thuyHieu = (String) king.get("thuyHieu");
-		String nienHieu = (String) king.get("nienHieu");
-		String tenHuy = (String) king.get("tenHuy");
-		String theThu = (String) king.get("theThu");
-		String namTriVi = (String) king.get("namTriVi");
-		String ten = (String) king.get("ten");
+		String mieuHieu = (String) data.get("mieuHieu");
+		String thuyHieu = (String) data.get("thuyHieu");
+		String nienHieu = (String) data.get("nienHieu");
+		String tenHuy = (String) data.get("tenHuy");
+		String theThu = (String) data.get("theThu");
+		String namTriVi = (String) data.get("namTriVi");
+		String ten = (String) data.get("ten");
 		King newKing = new King(paperURL, mieuHieu, thuyHieu, nienHieu, tenHuy, theThu, namTriVi, ten);
 		return newKing;
 	}

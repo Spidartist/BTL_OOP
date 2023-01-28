@@ -25,9 +25,12 @@
          <children>
             <MenuButton fx:id="searchField" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefWidth="150.0" text="Tìm kiếm theo">
               <items>
-                <MenuItem fx:id="menuItem1" mnemonicParsing="false" onAction="#clickMenuItem" text="Nhân vật lịch sử" />
-                <MenuItem fx:id="menuItem2" mnemonicParsing="false" onAction="#clickMenuItem" text="Di tích lịch sử" />
-                  <MenuItem fx:id="menuItem3" mnemonicParsing="false" onAction="#clickMenuItem" text="Sự kiện lịch sử" />
+               <MenuItem fx:id="menuItem1" mnemonicParsing="false" onAction="#clickMenuItem" text="Vua" />
+               <MenuItem fx:id="menuItem2" mnemonicParsing="false" onAction="#clickMenuItem" text="Nhân Vật Lịch Sử" />
+               <MenuItem fx:id="menuItem3" mnemonicParsing="false" onAction="#clickMenuItem" text="Lễ Hội Văn Hóa" />
+               <MenuItem fx:id="menuItem4" mnemonicParsing="false" onAction="#clickMenuItem" text="Triều Đại Lịch Sử" />
+               <MenuItem fx:id="menuItem5" mnemonicParsing="false" onAction="#clickMenuItem" text="Di tích lịch sử" />
+               <MenuItem fx:id="menuItem6" mnemonicParsing="false" onAction="#clickMenuItem" text="Sự kiện lịch sử" />
               </items>
             </MenuButton>
             <TextField fx:id="textField" onKeyPressed="#pressEnter" promptText="Key words" GridPane.columnIndex="1" />
