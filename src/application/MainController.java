@@ -1,5 +1,7 @@
 package application;
 
+import javafx.collections.transformation.FilteredList;
+import javafx.collections.transformation.SortedList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.MenuButton;
@@ -11,6 +13,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.layout.BorderPane;
 import objects.figure.Figure;
 import objects.figure.King;
 
@@ -26,13 +29,10 @@ public class MainController {
     private MenuItem menuItem3;
 
     @FXML
-    private ScrollPane pane;
+    private BorderPane borderPane;
 
     @FXML
     private MenuButton searchField;
-
-    @FXML
-    private TableView<King> table;
 
     @FXML
     private TextField textField;
@@ -46,34 +46,64 @@ public class MainController {
         ReadJson reader = new ReadJson();
         switch (lableSelecItem) {
             case "Vua":
-
-                // TableView<King> table = new TableView<>();
-                table.getColumns().clear();
+                TableView<King> tableKingView = new TableView<>();
+                tableKingView.getColumns().clear();
                 String[] kingStr = { "ten", "mieuHieu", "thuyHieu", "nienHieu", "tenHuy", "theThu", "namTriVi" };
                 for (int i = 0; i < kingStr.length; i++) {
                     TableColumn<King, String> ColKing = new TableColumn<King, String>(kingStr[i]);
-                    ColKing.prefWidthProperty().bind(table.widthProperty().multiply(0.143));
+                    ColKing.prefWidthProperty().bind(tableKingView.widthProperty().multiply(0.143));
                     ColKing.setCellValueFactory(new PropertyValueFactory<>(kingStr[i]));
-                    table.getColumns().add(ColKing);
+                    tableKingView.getColumns().add(ColKing);
                 }
+                reader.getKingList().forEach(elm -> tableKingView.getItems().add(elm));
+                borderPane.setCenter(tableKingView);
+                // Search
+                FilteredList<King> filteredData = new FilteredList<>(reader.getKingList(), b -> true);
+                textField.textProperty().addListener((observable, oldValue, newValue) -> {
+                    filteredData.setPredicate(King -> {
+                        // If filter text is empty, display all persons.
 
-                reader.getKingList().forEach(elm -> table.getItems().add(elm));
+                        if (newValue == null || newValue.isEmpty()) {
+                            return true;
+                        }
+
+                        // Compare first name and last name of every person with filter text.
+                        String lowerCaseFilter = newValue.toLowerCase();
+
+                        if (King.getTheThu().toLowerCase().indexOf(lowerCaseFilter) != -1) {
+                            return true; // Filter matches first name.
+                        } else if (King.getMieuHieu().toLowerCase().indexOf(lowerCaseFilter) != -1) {
+                            return true; // Filter matches last name.
+                        } else if (King.getThuyHieu().toLowerCase().indexOf(lowerCaseFilter) != -1) {
+                            return true; // Filter matches last name.
+                        } else if (King.getNienHieu().toLowerCase().indexOf(lowerCaseFilter) != -1) {
+                            return true; // Filter matches last name.
+                        } else if (King.getTenHuy().toLowerCase().indexOf(lowerCaseFilter) != -1) {
+                            return true; // Filter matches last name.
+                        } else if (King.getNamTriVi().toLowerCase().indexOf(lowerCaseFilter) != -1) {
+                            return true; // Filter matches last name.
+                        } else if (String.valueOf(King.getTheThu()).indexOf(lowerCaseFilter) != -1)
+                            return true;
+                        else
+                            return false; // Does not match.
+                    });
+                });
+                // SortedList<King> sortedData = new SortedList<>(filteredData);
+                // sortedData.comparatorProperty().bind(tableKingView.comparatorProperty());
+                tableKingView.setItems(filteredData);
                 break;
             case "Nhân Vật Lịch Sử":
-                // TableView<King> table = new TableView<>();
-                table.getColumns().clear();
+                TableView<Figure> tableFigureView = new TableView<>();
+                tableFigureView.getColumns().clear();
                 String[] figureStr = { "ten", "queQuan", "danToc", "namNhapNgu", "namSinh", "namMat", "ghiChu" };
                 for (int i = 0; i < figureStr.length; i++) {
-                    TableColumn<King, String> ColFigure = new TableColumn<King, String>(figureStr[i]);
-                    ColFigure.prefWidthProperty().bind(table.widthProperty().multiply(0.143));
+                    TableColumn<Figure, String> ColFigure = new TableColumn<Figure, String>(figureStr[i]);
+                    ColFigure.prefWidthProperty().bind(tableFigureView.widthProperty().multiply(0.143));
                     ColFigure.setCellValueFactory(new PropertyValueFactory<>(figureStr[i]));
-                    table.getColumns().add(ColFigure);
+                    tableFigureView.getColumns().add(ColFigure);
                 }
-
-                // table.getColumns().addAll(ColFigure8, ColFigure2, ColFigure3, ColFigure4,
-                // ColFigure5, ColFigure6,
-                // ColFigure7);
-                reader.getKingList().forEach(elm -> table.getItems().add(elm));
+                reader.getFigureList().forEach(elm -> tableFigureView.getItems().add(elm));
+                borderPane.setCenter(tableFigureView);
                 break;
             case "Sự kiện lịch sử":
 
