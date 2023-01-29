@@ -11,26 +11,26 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-import objects.dynasty.HistoricalDynasty;
+import objects.dynasty.Dynasty;
+
 public class TomTatLichSu {
-	
-	
+
 	public static void main(String[] args) {
 		String url = "https://nguoikesu.com/tu-lieu/tom-luoc-lich-su-viet-nam";
 		Document doc;
-		ArrayList<HistoricalDynasty> list = new ArrayList<HistoricalDynasty>();
+		ArrayList<Dynasty> list = new ArrayList<Dynasty>();
 		try {
 			doc = Jsoup.connect(url).get();
 			Element mainTag = doc.getElementsByClass("item-page").get(0);
 			Elements mainParagraphs = mainTag.getElementsByTag("p");
-			
-			for (Element t: mainParagraphs ) {
+
+			for (Element t : mainParagraphs) {
 				Element time = t.getElementsByTag("strong").get(0);
-				HistoricalDynasty infor = new HistoricalDynasty(time.text());
+				Dynasty infor = new Dynasty(time.text());
 				Elements links = t.select("a[href]");
 				if (links != null) {
 					for (Element link : links) {
-						infor.setNhanVat(link.text());
+						// infor.setNhanVat(link.text());
 					}
 				}
 				list.add(infor);
@@ -38,11 +38,11 @@ public class TomTatLichSu {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		for (HistoricalDynasty l : list) {
-			System.out.println(l.getNienDai());
+		for (Dynasty l : list) {
+			System.out.println("");
 		}
 	}
-	
+
 	public static void getInfor(Element firstPara) {
 		String name = firstPara.select("b").first().text();
 		String text = firstPara.text();
@@ -51,9 +51,9 @@ public class TomTatLichSu {
 		int start = text.indexOf(", ");
 		int end = text.indexOf(" - ");
 		int close = text.indexOf(")");
-		String namSinh = text.substring(start+2, end);
-		String namMat = text.substring(end+3,close);
-		System.out.println(namSinh+".");
-		System.out.println(namMat+".");		
+		String namSinh = text.substring(start + 2, end);
+		String namMat = text.substring(end + 3, close);
+		System.out.println(namSinh + ".");
+		System.out.println(namMat + ".");
 	}
 }

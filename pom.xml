@@ -6,7 +6,6 @@
   <name>webScraper</name>
   <description>webScaper 1.0
 </description>
-  <description>webScaper 1.0</description>
   <dependencies>
     <dependency>
       <groupId>org.openjfx</groupId>
