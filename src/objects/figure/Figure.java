@@ -122,6 +122,8 @@ public class Figure extends HistoricalFigure implements ParseJSON {
 		String namNhapNgu = (String) data.get("namNhapNgu");
 		String ghiChu = (String) data.get("ghiChu");
 		String namDoTrangNguyen = (String) data.get("namDoTrangNguyen");
+		String namSinh = (String) data.get("namSinh");
+		String namMat = (String) data.get("namMat");
 		Figure newFigure = new Figure(ten, namSinh, namMat, queQuan, danToc, namNhapNgu, ghiChu, namDoTrangNguyen);
 		return newFigure;
 	}
