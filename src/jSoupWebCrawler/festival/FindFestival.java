@@ -24,8 +24,8 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.nodes.Node;
 import org.jsoup.select.Elements;
-public class Vinpearl extends BasicWebScraper implements IScraping {
-	public Vinpearl() {
+public class FindFestival extends BasicWebScraper implements IScraping {
+	public FindFestival() {
 		String url = "https://vinpearl.com/vi/top-12-le-hoi-mua-xuan-dac-sac-o-3-mien";
 		this.url = url;
 		connect();
