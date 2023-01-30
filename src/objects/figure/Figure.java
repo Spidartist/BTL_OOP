@@ -13,6 +13,15 @@ public class Figure extends HistoricalFigure implements ParseJSON {
 	private String namNhapNgu;
 	private String ghiChu;
 	private String namDoTrangNguyen;
+	private String tenKhac;
+	public String getTenKhac() {
+		return tenKhac;
+	}
+
+	public void setTenKhac(String tenKhac) {
+		this.tenKhac = tenKhac;
+	}
+
 	private King doiVua;
 	private ArrayList<Dynasty> trieuDai = new ArrayList<Dynasty>();
 
