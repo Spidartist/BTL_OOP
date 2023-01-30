@@ -1,8 +1,11 @@
 package objects.figure;
 
+import java.util.ArrayList;
+
 import org.json.simple.JSONObject;
 
 import objects.ParseJSON;
+import objects.dynasty.Dynasty;
 
 public class Figure extends HistoricalFigure implements ParseJSON {
 	private String queQuan;
@@ -11,6 +14,7 @@ public class Figure extends HistoricalFigure implements ParseJSON {
 	private String ghiChu;
 	private String namDoTrangNguyen;
 	private King doiVua;
+	private ArrayList<Dynasty> trieuDai = new ArrayList<Dynasty>();
 
 	public Figure(String ten, String namSinh, String namMat, String queQuan, String danToc, String namNhapNgu,
 			String ghiChu, String namDoTrangNguyen, King doiVua) {
@@ -112,6 +116,9 @@ public class Figure extends HistoricalFigure implements ParseJSON {
 	public void setGhiChu(String ghiChu) {
 		this.ghiChu = ghiChu;
 	}
+	public ArrayList<Dynasty> getTrieuDai() {
+		return trieuDai;
+	}
 
 	@Override
 	public Figure parseDataObject(JSONObject data) {
@@ -124,6 +131,7 @@ public class Figure extends HistoricalFigure implements ParseJSON {
 		String namDoTrangNguyen = (String) data.get("namDoTrangNguyen");
 		String namSinh = (String) data.get("namSinh");
 		String namMat = (String) data.get("namMat");
+		
 		Figure newFigure = new Figure(ten, namSinh, namMat, queQuan, danToc, namNhapNgu, ghiChu, namDoTrangNguyen);
 		return newFigure;
 	}

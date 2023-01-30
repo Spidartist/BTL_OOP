@@ -21,9 +21,9 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
-public class WikipediaFigure extends BasicWebScraper implements IScraping {
+public class FindKing extends BasicWebScraper implements IScraping {
 	private ArrayList<String> figures = new ArrayList<String>();
-	public WikipediaFigure() {
+	public FindKing() {
 		String url = "https://vi.wikipedia.org/wiki/Vua_Vi%E1%BB%87t_Nam";
 		this.setUrl(url);
 		connect();
@@ -51,7 +51,7 @@ public class WikipediaFigure extends BasicWebScraper implements IScraping {
 	}
 	
 	public static void main(String[] args) {
-		WikipediaFigure obj = new WikipediaFigure();
+		FindKing obj = new FindKing();
 		ArrayList<King> kings = new ArrayList<King>();
 		Document doc = obj.getDoc();
 		Elements firstTable = doc.select("table.toccolours");
@@ -119,17 +119,18 @@ public class WikipediaFigure extends BasicWebScraper implements IScraping {
 				else continue;
 			}
 		}
-		String filePath = "D:\\webCrawler\\jSoupWebCrawler\\src\\jSoupWebCrawler\\jsonFiles\\king.json";
-		JSONArray jarray = new JSONArray();
-		Gson gson = new GsonBuilder().setPrettyPrinting().create();
-		String test = gson.toJson(kings);
-//		System.out.println(test);
-		try {
-            FileWriter writer = new FileWriter(new File(filePath));
-            gson.toJson(kings, writer);
-            writer.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+		System.out.println(kings.size());
+//		String filePath = "D:\\webCrawler\\jSoupWebCrawler\\src\\jSoupWebCrawler\\jsonFiles\\king.json";
+//		JSONArray jarray = new JSONArray();
+//		Gson gson = new GsonBuilder().setPrettyPrinting().create();
+//		String test = gson.toJson(kings);
+////		System.out.println(test);
+//		try {
+//            FileWriter writer = new FileWriter(new File(filePath));
+//            gson.toJson(kings, writer);
+//            writer.close();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
 	}
 }

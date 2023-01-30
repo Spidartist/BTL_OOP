@@ -55,14 +55,15 @@ public class FindFestival extends BasicWebScraper implements IScraping {
 		list.addAll(anGiang.getList());
 		list.addAll(daNang.getList());
 		list.addAll(obj.getList());
-		String filePath = "D:\\webCrawler\\jSoupWebCrawler\\src\\jSoupWebCrawler\\jsonFiles\\festival.json";
-		Gson gson = new GsonBuilder().setPrettyPrinting().create();
-		try {
-            FileWriter writer = new FileWriter(new File(filePath));
-            gson.toJson(list, writer);
-            writer.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+//		String filePath = "D:\\webCrawler\\jSoupWebCrawler\\src\\jSoupWebCrawler\\jsonFiles\\festival.json";
+//		Gson gson = new GsonBuilder().setPrettyPrinting().create();
+//		try {
+//            FileWriter writer = new FileWriter(new File(filePath));
+//            gson.toJson(list, writer);
+//            writer.close();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+		System.out.println(list.size());
 	}
 }
