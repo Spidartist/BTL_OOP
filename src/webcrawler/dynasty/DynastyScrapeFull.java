@@ -105,7 +105,7 @@ public class DynastyScrapeFull {
 	}
 
 	public void toJson() throws JsonIOException, IOException {
-		String filePath = "D:\\webCrawler\\jSoupWebCrawler\\src\\jSoupWebCrawler\\jsonFiles\\dynasty.json";
+		String filePath = "D:\\dynasty.json";
 		Gson gson = new GsonBuilder().setPrettyPrinting().create();
 		try {
 			FileWriter writer = new FileWriter(new File(filePath));
