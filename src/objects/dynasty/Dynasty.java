@@ -1,20 +1,21 @@
 package objects.dynasty;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 
 public class Dynasty {
 	private String startYear; // co ve de
 	private String endYear;   // chua code
 	private String name;   // xong, day la base
-	private ArrayList<String> kings; // 1 phan, 8 ban ghi
+	private LinkedList<String> kings; // 1 phan, 8 ban ghi
 	private String capital; // co ve day la thu do thi hop ly hon
-	private ArrayList<String> events;
+	private LinkedList<String> events;
 	private String founder;  // done 
 	public Dynasty() {
 		
 	}
 
-	public Dynasty(String startYear, String endYear, String name, ArrayList<String> kings, String location, String founder) {
+	public Dynasty(String startYear, String endYear, String name, LinkedList<String> kings, String location, String founder) {
 		super();
 		this.startYear = startYear;
 		this.endYear = endYear;
@@ -31,8 +32,8 @@ public class Dynasty {
 	
 
 
-	public Dynasty(String startYear, String endYear, String name, ArrayList<String> kings, String location,
-			ArrayList<String> events, String founder) {
+	public Dynasty(String startYear, String endYear, String name, LinkedList<String> kings, String location,
+			LinkedList<String> events, String founder) {
 		super();
 		this.startYear = startYear;
 		this.endYear = endYear;
@@ -46,7 +47,7 @@ public class Dynasty {
 
 
 
-	public Dynasty(String startYear, String endYear, String name, ArrayList<String> kings) {
+	public Dynasty(String startYear, String endYear, String name, LinkedList<String> kings) {
 		super();
 		this.startYear = startYear;
 		this.endYear = endYear;
@@ -62,8 +63,8 @@ public class Dynasty {
 	}
 
 
-	public Dynasty(String startYear, String endYear, String name, ArrayList<String> kings, String location,
-			ArrayList<String> events) {
+	public Dynasty(String startYear, String endYear, String name, LinkedList<String> kings, String location,
+			LinkedList<String> events) {
 		super();
 		this.startYear = startYear;
 		this.endYear = endYear;
@@ -75,7 +76,7 @@ public class Dynasty {
 
 
 
-	public Dynasty(String startYear, String endYear, String name, ArrayList<String> kings, String location) {
+	public Dynasty(String startYear, String endYear, String name, LinkedList<String> kings, String location) {
 		super();
 		this.startYear = startYear;
 		this.endYear = endYear;
@@ -114,11 +115,11 @@ public class Dynasty {
 		this.name = name;
 	}
 
-	public ArrayList<String> getKings() {
+	public LinkedList<String> getKings() {
 		return kings;
 	}
 
-	public void setKings(ArrayList<String> kings) {
+	public void setKings(LinkedList<String> kings) {
 		this.kings = kings;
 	}
 

@@ -1,27 +1,12 @@
 package webcrawler.dynasty;
 
 import java.util.ArrayList;
-import org.jsoup.Jsoup;
 
-import java.awt.desktop.ScreenSleepEvent;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.ArrayList;
-
-import org.json.simple.JSONArray;
-import org.jsoup.Connection;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-
+import objects.dynasty.Dynasty;
 import webcrawler.parent.BasicWebScraper;
 import webcrawler.parent.IScraping;
-import objects.dynasty.Dynasty;
-import objects.figure.Figure;
 
 public class DynastyScrapeWikiYear extends BasicWebScraper implements IScraping {
 	private String tenTrieuDai;
@@ -35,8 +20,20 @@ public class DynastyScrapeWikiYear extends BasicWebScraper implements IScraping 
 		connect();
 	}
 
-	private String nameToUrl(String tenTrieuDai) {
+	private String nameToUrl(String tenTrieuDaiCu) {
 		String baseUrl = "https://vi.wikipedia.org/wiki/";
+		String tenTrieuDai;
+		if (tenTrieuDaiCu.equals("Bắc thuộc lần I")) {
+			tenTrieuDai = "Thời kỳ Bắc thuộc lần thứ nhất";
+		}else if (tenTrieuDaiCu.equals("Bắc thuộc lần II")){
+			tenTrieuDai = "Thời kỳ Bắc thuộc lần thứ hai";
+		}else if (tenTrieuDaiCu.equals("Bắc thuộc lần III")){
+			tenTrieuDai = "Thời kỳ Bắc thuộc lần thứ ba";
+		}else if (tenTrieuDaiCu.equals("Bắc thuộc lần IV")){
+			tenTrieuDai = "Thời kỳ Bắc thuộc lần thứ tư";
+		}else {
+			tenTrieuDai = tenTrieuDaiCu;
+		}
 		String[] arrOfStr = tenTrieuDai.split(" ");
 		StringBuffer b = new StringBuffer();
 		b.append(baseUrl);
@@ -81,8 +78,16 @@ public class DynastyScrapeWikiYear extends BasicWebScraper implements IScraping 
 			allYears = years.text();
 		} else if (this.tenTrieuDai.equals("Nhà Hậu Lê")) {
 			allYears = "1427–1789";
+		} else if (this.tenTrieuDai.equals("Họ Khúc")) {
+			allYears = "923–930";
 		} else if (this.tenTrieuDai.equals("Hồng Bàng thị")) {
 			allYears = "2879 TCN–258 TCN";
+		} else if (this.tenTrieuDai.equals("Tự chủ")) {
+			allYears = "905–938";
+		} else if (this.tenTrieuDai.equals("Nhà Thục")) {
+			allYears = "257 TCN–179 TCN";
+		} else if (this.tenTrieuDai.equals("Bắc thuộc lần IV")) {
+			allYears = "1407–1427";
 		} else {
 			Elements years = this.getDoc()
 					.select("#mw-content-text > div.mw-parser-output > table.infobox > tbody > tr:nth-child(2) > td");

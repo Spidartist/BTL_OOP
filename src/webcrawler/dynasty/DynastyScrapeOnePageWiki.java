@@ -1,29 +1,15 @@
 package webcrawler.dynasty;
 
-import java.util.ArrayList;
-import org.jsoup.Jsoup;
+import java.util.LinkedList;
 
-import java.awt.desktop.ScreenSleepEvent;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.ArrayList;
-
-import org.json.simple.JSONArray;
-import org.jsoup.Connection;
-import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-
 import webcrawler.parent.BasicWebScraper;
 import webcrawler.parent.IScraping;
-import objects.figure.Figure;
 
 public class DynastyScrapeOnePageWiki extends BasicWebScraper implements IScraping {
-	private ArrayList<String> kingNames;
+	private LinkedList<String> kingNames;
 
 	public void scraping() {
 		Elements kings = this.getDoc().select("#mw-content-text > div.mw-parser-output > table.infobox > tbody > tr");
@@ -56,12 +42,12 @@ public class DynastyScrapeOnePageWiki extends BasicWebScraper implements IScrapi
 	}
 
 	public DynastyScrapeOnePageWiki(String url) {
-		this.kingNames = new ArrayList<String>();
+		this.kingNames = new LinkedList<String>();
 		this.setUrl(url);
 		connect();
 	}
 
-	public ArrayList<String> getKingNames() {
+	public LinkedList<String> getKingNames() {
 		return kingNames;
 	}
 

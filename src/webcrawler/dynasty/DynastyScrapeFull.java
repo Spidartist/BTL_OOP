@@ -1,28 +1,16 @@
 package webcrawler.dynasty;
 
-import java.util.ArrayList;
-import org.jsoup.Jsoup;
-
-import java.awt.desktop.ScreenSleepEvent;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
-
-import org.json.simple.JSONArray;
-import org.jsoup.Connection;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
+import java.util.LinkedList;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonIOException;
 
-import webcrawler.parent.BasicWebScraper;
-import webcrawler.parent.IScraping;
 import objects.dynasty.Dynasty;
-import objects.figure.Figure;
 
 public class DynastyScrapeFull {
 	private DynastyScrapeName crawlNames;
@@ -42,7 +30,7 @@ public class DynastyScrapeFull {
 		crawlFounder = new DynastyScrapeWikiFounder();
 		crawlFounder.scraping();
 
-		ArrayList<String> dynastyNames = crawlNames.getDynasty_names();
+		LinkedList<String> dynastyNames = crawlNames.getDynasty_names();
 
 		for (String name : dynastyNames) {
 			// System.out.println(name);
@@ -80,8 +68,9 @@ public class DynastyScrapeFull {
 				DynastyScrapeWikiWandKings d_w = new DynastyScrapeWikiWandKings(d.getName());
 				d_w.scraping();
 
-				// System.out.println("** " + d.getName());
-				// System.out.println(d_w.getKings().size());
+				System.out.println("** " + d.getName());
+				System.out.println(d_w.getKings().size());
+				
 				d.setKings(d_w.getKings());
 			}
 

@@ -8,6 +8,14 @@
     "founder": "Unknown"
   },
   {
+    "startYear": "111 TCN",
+    "endYear": "40",
+    "name": "Bắc thuộc lần I",
+    "kings": [],
+    "capital": "Không",
+    "founder": "Unknown"
+  },
+  {
     "startYear": "204 TCN",
     "endYear": "111 TCN",
     "name": "Nhà Triệu",
@@ -32,6 +40,14 @@
     "founder": "Trưng Trắc"
   },
   {
+    "startYear": "43",
+    "endYear": "544",
+    "name": "Bắc thuộc lần II",
+    "kings": [],
+    "capital": "Không",
+    "founder": "Unknown"
+  },
+  {
     "startYear": "544",
     "endYear": "602",
     "name": "Nhà Tiền Lý",
@@ -42,6 +58,48 @@
     ],
     "capital": "Long Biên",
     "founder": "Lý Bí"
+  },
+  {
+    "startYear": "603",
+    "endYear": "905 hoặc",
+    "name": "Bắc thuộc lần III",
+    "kings": [
+      "Mai Hắc Đế",
+      "Mai Thiếu Đế",
+      "Bạch Đầu Đế",
+      "Bố Cái Đại Vương",
+      "Phùng An"
+    ],
+    "capital": "Không",
+    "founder": "Unknown"
+  },
+  {
+    "startYear": "905",
+    "endYear": "938",
+    "name": "Tự chủ",
+    "kings": [
+      "Khúc Tiên Chủ",
+      "Khúc Trung Chủ",
+      "Khúc Hậu Chủ",
+      "Dương Đình Nghệ",
+      "Kiều Công Tiễn"
+    ],
+    "capital": "Không",
+    "founder": "Unknown"
+  },
+  {
+    "startYear": "923",
+    "endYear": "930",
+    "name": "Họ Khúc",
+    "kings": [
+      "Khúc Tiên Chủ",
+      "Khúc Trung Chủ",
+      "Khúc Hậu Chủ",
+      "Dương Đình Nghệ",
+      "Kiều Công Tiễn"
+    ],
+    "capital": "Đại La",
+    "founder": "Khúc Thừa Dụ"
   },
   {
     "startYear": "939",
@@ -130,6 +188,14 @@
     ],
     "capital": "Tây Đô",
     "founder": "Hồ Quý Ly"
+  },
+  {
+    "startYear": "1407",
+    "endYear": "1427",
+    "name": "Bắc thuộc lần IV",
+    "kings": [],
+    "capital": "Không",
+    "founder": "Unknown"
   },
   {
     "startYear": "1407",
@@ -382,5 +448,15 @@
     ],
     "capital": "Phú Xuân",
     "founder": "Nguyễn Kim"
+  },
+  {
+    "startYear": "257 TCN",
+    "endYear": "179 TCN",
+    "name": "Nhà Thục",
+    "kings": [
+      "An Dương Vương"
+    ],
+    "capital": "Cổ Loa",
+    "founder": "Thục Phán"
   }
 ]
