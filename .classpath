@@ -34,16 +34,9 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JavaFX"/>
-	<classpathentry kind="lib" path="D:/Downloads_D/gson-2.10.1.jar"/>
-	<classpathentry kind="lib" path="D:/Downloads_D/json-simple-1.1.1.jar"/>
-	<classpathentry kind="lib" path="D:/Downloads_D/jsoup-1.15.3.jar"/>
-	<classpathentry kind="lib" path="D:/AimsProject/javafx-sdk-19/javafx-sdk-20/lib/javafx.base.jar"/>
-	<classpathentry kind="lib" path="D:/AimsProject/javafx-sdk-19/javafx-sdk-20/lib/javafx.controls.jar"/>
-	<classpathentry kind="lib" path="D:/AimsProject/javafx-sdk-19/javafx-sdk-20/lib/javafx.fxml.jar"/>
-	<classpathentry kind="lib" path="D:/AimsProject/javafx-sdk-19/javafx-sdk-20/lib/javafx.graphics.jar"/>
-	<classpathentry kind="lib" path="D:/AimsProject/javafx-sdk-19/javafx-sdk-20/lib/javafx.media.jar"/>
-	<classpathentry kind="lib" path="D:/AimsProject/javafx-sdk-19/javafx-sdk-20/lib/javafx.swing.jar"/>
-	<classpathentry kind="lib" path="D:/AimsProject/javafx-sdk-19/javafx-sdk-20/lib/javafx.web.jar"/>
-	<classpathentry kind="lib" path="D:/AimsProject/javafx-sdk-19/javafx-sdk-20/lib/javafx-swt.jar"/>
+	<classpathentry kind="lib" path="C:/Users/DaoMinh/Downloads/drive-download-20230124T102840Z-001/gson-2.10.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/DaoMinh/Downloads/drive-download-20230124T102840Z-001/json-simple-1.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/DaoMinh/Downloads/drive-download-20230124T102840Z-001/jsoup-1.15.3.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
+	
 </classpath>
