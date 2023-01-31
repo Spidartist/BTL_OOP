@@ -33,7 +33,7 @@ import org.jsoup.select.Elements;
 
 public class VanSuCrawler {
 	public static void main(String[] args) {
-		int pageIndex = 2101;
+		int pageIndex = 1901;
 		String urlFirstHalf = "https://vansu.vn/viet-nam/viet-nam-nhan-vat/";
 		LinkedList<Figure> list = new LinkedList<Figure>();
 		int lastIndex = 2300;
