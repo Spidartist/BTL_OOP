@@ -14,16 +14,17 @@ public class Figure extends HistoricalFigure implements ParseJSON {
 	private String ghiChu;
 	private String namDoTrangNguyen;
 	private String tenKhac;
+	private King doiVua;
+
 	public String getTenKhac() {
 		return tenKhac;
 	}
 
+	private ArrayList<Dynasty> trieuDai = new ArrayList<Dynasty>();
+
 	public void setTenKhac(String tenKhac) {
 		this.tenKhac = tenKhac;
 	}
-
-	private King doiVua;
-	private ArrayList<Dynasty> trieuDai = new ArrayList<Dynasty>();
 
 	public Figure(String ten, String namSinh, String namMat, String queQuan, String danToc, String namNhapNgu,
 			String ghiChu, String namDoTrangNguyen, King doiVua) {
@@ -125,6 +126,7 @@ public class Figure extends HistoricalFigure implements ParseJSON {
 	public void setGhiChu(String ghiChu) {
 		this.ghiChu = ghiChu;
 	}
+
 	public ArrayList<Dynasty> getTrieuDai() {
 		return trieuDai;
 	}
@@ -132,16 +134,14 @@ public class Figure extends HistoricalFigure implements ParseJSON {
 	@Override
 	public Figure parseDataObject(JSONObject data) {
 		String ten = (String) data.get("ten");
-		// System.out.println(paperURL);
 		String queQuan = (String) data.get("queQuan");
-		String danToc = (String) data.get("danToc");
-		String namNhapNgu = (String) data.get("namNhapNgu");
+		String tenKhac = (String) data.get("tenKhac");
 		String ghiChu = (String) data.get("ghiChu");
 		String namDoTrangNguyen = (String) data.get("namDoTrangNguyen");
 		String namSinh = (String) data.get("namSinh");
 		String namMat = (String) data.get("namMat");
-		
-		Figure newFigure = new Figure(ten, namSinh, namMat, queQuan, danToc, namNhapNgu, ghiChu, namDoTrangNguyen);
+
+		Figure newFigure = new Figure(ten, namSinh, namMat, queQuan, tenKhac, namNhapNgu, ghiChu, namDoTrangNguyen);
 		return newFigure;
 	}
 }
