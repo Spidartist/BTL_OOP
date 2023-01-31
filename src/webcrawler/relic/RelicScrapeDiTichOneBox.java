@@ -7,17 +7,22 @@ import webcrawler.parent.BasicWebScraper;
 import webcrawler.parent.IScraping;
 
 public class RelicScrapeDiTichOneBox extends BasicWebScraper implements IScraping {
-
+	private String type;
+	private String rank;
+	private String person;
+	private String name;
+	private String address;
+	
 	public RelicScrapeDiTichOneBox(String url) {
 		this.setUrl(url);
 		connect();
 	}
 
 	public void scraping() {
-		String name = this.getDoc().select("#block-harvard-content > article > div > section > div > div.hl__library-info__features > section > h2").text();
+		this.name = this.getDoc().select("#block-harvard-content > article > div > section > div > div.hl__library-info__features > section > h2").text();
 		System.out.println(name);
 		
-		String address = this.getDoc().select("#block-harvard-content > article > div > section > div > div.hl__library-info__sidebar > div:nth-child(1) > section > div > div > div.hl__contact-info__address > span").text();
+		this.address = this.getDoc().select("#block-harvard-content > article > div > section > div > div.hl__library-info__sidebar > div:nth-child(1) > section > div > div > div.hl__contact-info__address > span").text();
 		System.out.println(address);
 		
 		StringBuilder personB = new StringBuilder();
@@ -36,27 +41,26 @@ public class RelicScrapeDiTichOneBox extends BasicWebScraper implements IScrapin
 				}
 			}
 		}
-		String type;
-		String rank;
-		String person;
+		
 		
 		if (typeB.length() == 0){
-			type = "Unknown";
+			this.type = "Unknown";
 		}else {
-			type = typeB.toString().replace("Loại hình di tích: ", "");
+			this.type = typeB.toString().replace("Loại hình di tích: ", "");
 		}
 		
 		if (rankB.length() == 0){
-			rank = "Unknown";
+			this.rank = "Unknown";
 		}else {
-			rank = rankB.toString().replace("Xếp hạng: ", "");
+			this.rank = rankB.toString().replace("Xếp hạng: ", "");
 		}
 		
 		if (personB.length() == 0){
-			person = "Unknown";
+			this.person = "Unknown";
 		}else {
-			person = personB.toString().replace("Đối tượng thờ: ", "");
+			this.person = personB.toString().replace("Đối tượng thờ: ", "");
 		}
+		
 		
 		System.out.println(person);
 		System.out.println(rank);
@@ -65,6 +69,26 @@ public class RelicScrapeDiTichOneBox extends BasicWebScraper implements IScrapin
 		
 	}
 	
+	public String getType() {
+		return type;
+	}
+
+	public String getRank() {
+		return rank;
+	}
+
+	public String getPerson() {
+		return person;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
 	public static void main(String[] args) {
 		String baseUrl = "http://ditich.vn/FrontEnd/DiTich/Form?do=&ItemId="; // 6193 - 1865
 		for (int i = 1865;i<=6139;i++) {

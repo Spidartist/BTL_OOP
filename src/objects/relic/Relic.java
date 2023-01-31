@@ -2,8 +2,7 @@ package objects.relic;
 
 import java.util.ArrayList;
 
-public class Relic {
-	private String name;
+public class Relic extends AbstractRelic{
 	private String location;
 	private String type;
 	private String rank;
@@ -11,13 +10,18 @@ public class Relic {
 	private ArrayList<String> dynastys;
 	private ArrayList<String> events;
 	private String desc;
+	private int yearEngage;
 
-	public String getName() {
-		return name;
+	public int getYearEngage() {
+		return yearEngage;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public String getType() {
+		return type;
+	}
+
+	public String getRank() {
+		return rank;
 	}
 
 	public String getLocation() {
@@ -58,6 +62,17 @@ public class Relic {
 
 	public void setDesc(String desc) {
 		this.desc = desc;
+	}
+	
+	
+	
+	public Relic(String name, String location, String type, String rank, ArrayList<String> people) {
+		super();
+		this.name = name;
+		this.location = location;
+		this.type = type;
+		this.rank = rank;
+		this.people = people;
 	}
 
 	public Relic(String name, String location) {
