@@ -58,7 +58,7 @@ public class FindFestival extends BasicWebScraper implements IScraping {
 		list.addAll(anGiang.getList());
 		list.addAll(daNang.getList());
 		list.addAll(obj.getList());
-		String filePath = "D:\\webCrawler\\webcrawler\\src\\webcrawler\\jsonFiles\\festival.json";
+		String filePath = "D:\\webCrawler\\jSoupWebCrawler\\src\\webcrawler\\jsonFiles\\festival.json";
 		Gson gson = new GsonBuilder().setPrettyPrinting().create();
 		try {
 			FileWriter writer = new FileWriter(new File(filePath));

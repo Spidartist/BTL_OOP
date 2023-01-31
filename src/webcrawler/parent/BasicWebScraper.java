@@ -28,7 +28,7 @@ public abstract class BasicWebScraper {
 
 	protected void connect() {
 		try {
-			doc = Jsoup.connect(this.url).userAgent("Mozilla/5.0").get();
+			doc = Jsoup.connect(this.url).timeout(10*1000).userAgent("Mozilla/5.0").get();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
