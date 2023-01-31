@@ -14,6 +14,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.BorderPane;
+import objects.dynasty.Dynasty;
 import objects.figure.Figure;
 import objects.figure.King;
 
@@ -95,12 +96,20 @@ public class MainController {
             case "Nhân Vật Lịch Sử":
                 TableView<Figure> tableFigureView = new TableView<>();
                 tableFigureView.getColumns().clear();
-                String[] figureStr = { "ten", "queQuan", "danToc", "namNhapNgu", "namSinh", "namMat", "ghiChu" };
+                String[] figureStr = { "ten", "queQuan", "trieuDai", "namSinh", "namMat", "ghiChu" };
                 for (int i = 0; i < figureStr.length; i++) {
-                    TableColumn<Figure, String> ColFigure = new TableColumn<Figure, String>(figureStr[i]);
-                    ColFigure.prefWidthProperty().bind(tableFigureView.widthProperty().multiply(0.143));
-                    ColFigure.setCellValueFactory(new PropertyValueFactory<>(figureStr[i]));
-                    tableFigureView.getColumns().add(ColFigure);
+                    if (figureStr[i] == "trieuDai"){
+                        TableColumn<Figure, String> ColFigure = new TableColumn<Figure, String>(figureStr[i]);
+                        ColFigure.prefWidthProperty().bind(tableFigureView.widthProperty().multiply(0.143));
+                        ColFigure.setCellValueFactory(new PropertyValueFactory<>(figureStr[i]));
+                        tableFigureView.getColumns().add(ColFigure);
+                    }
+                    else{
+                        TableColumn<Figure, String> ColFigure = new TableColumn<Figure, String>(figureStr[i]);
+                        ColFigure.prefWidthProperty().bind(tableFigureView.widthProperty().multiply(0.143));
+                        ColFigure.setCellValueFactory(new PropertyValueFactory<>(figureStr[i]));
+                        tableFigureView.getColumns().add(ColFigure);
+                    }
                 }
                 reader.getFigureList().forEach(elm -> tableFigureView.getItems().add(elm));
                 borderPane.setCenter(tableFigureView);
@@ -111,10 +120,19 @@ public class MainController {
             case "Di tích lịch sử":
 
                 break;
-            // case "Nhân vật lịch sử":
-
-            // break;
-
+            case "Triều Đại Lịch Sử":
+                TableView<Dynasty> tableDynastyView = new TableView<>();
+                tableDynastyView.getColumns().clear();
+                String[] dynastyStr = { "startYear", "endYear", "kings", "capital", "founder" };
+                for (int i = 0; i < dynastyStr.length; i++) {
+                    TableColumn<Dynasty, String> colDynasty = new TableColumn<Dynasty, String>(dynastyStr[i]);
+                    colDynasty.prefWidthProperty().bind(tableDynastyView.widthProperty().multiply(0.143));
+                    colDynasty.setCellValueFactory(new PropertyValueFactory<>(dynastyStr[i]));
+                    tableDynastyView.getColumns().add(colDynasty);
+                }
+                reader.getDinastyList().forEach(elm -> tableDynastyView.getItems().add(elm));
+                borderPane.setCenter(tableDynastyView);
+                break;
             default:
                 break;
         }
