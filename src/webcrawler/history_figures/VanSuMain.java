@@ -2,6 +2,7 @@ package webcrawler.history_figures;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.JsonParser;
 
 import webcrawler.parent.BasicWebScraper;
 import webcrawler.parent.IScraping;
@@ -57,6 +58,7 @@ public class VanSuMain {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		
 	}
 	
 	public static String replaceTrieuDai(String original) {

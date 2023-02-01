@@ -18,7 +18,6 @@ public class Figure extends HistoricalFigure implements ParseJSON {
 	private String namDoTrangNguyen;
 	private String tenKhac;
 	private King doiVua;
-
 	public String getTenKhac() {
 		return tenKhac;
 	}
@@ -144,7 +143,9 @@ public class Figure extends HistoricalFigure implements ParseJSON {
 	public ArrayList<Dynasty> getTrieuDai() {
 		return trieuDai;
 	}
-
+	public void setTrieuDai(ArrayList<Dynasty> trieuDai) {
+		this.trieuDai = trieuDai;
+	}
 	@Override
 	public Figure parseDataObject(JSONObject data) {
 		String ten = (String) data.get("ten");
@@ -162,9 +163,15 @@ public class Figure extends HistoricalFigure implements ParseJSON {
 		// System.out.println(trieuDai);
 		String namSinh = (String) data.get("namSinh");
 		String namMat = (String) data.get("namMat");
+<<<<<<< HEAD
 
 		Figure newFigure = new Figure(ten, namSinh, namMat, queQuan, ghiChu, tenKhac,
 				trieuDai);
+=======
+		ArrayList<Dynasty> trieuDai = (ArrayList<Dynasty>) data.get("trieuDai");
+		Figure newFigure = new Figure(ten, namSinh, namMat, queQuan, tenKhac, namNhapNgu, ghiChu, namDoTrangNguyen);
+		newFigure.setTrieuDai(trieuDai);
+>>>>>>> de7f197fed000cce8ebd0a85ee1c027b4d48c811
 		return newFigure;
 	}
 
