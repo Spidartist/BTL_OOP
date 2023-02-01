@@ -17,7 +17,7 @@
             "request": "launch",
             "mainClass": "application.Main",
             "projectName": "jSoupWebCrawler",
-            "vmArgs": "--module-path \"C:\\Program Files\\javafx-sdk-19\\lib\" --add-modules javafx.controls,javafx.fxml",
+            "vmArgs": "--module-path \"C:\\Program Files\\Java\\javafx-sdk-19\\lib\" --add-modules javafx.controls,javafx.fxml",
         },
         {
             "type": "java",
