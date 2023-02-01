@@ -1,5 +1,4 @@
 /target/
 .classpath
 output.txt
-javafx-sdk-19
-javafx-sdk-20
+javafx-sdk-19/javafx-sdk-20/
