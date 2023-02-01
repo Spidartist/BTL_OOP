@@ -50,11 +50,11 @@ public class LeHoiGoDongDa extends BasicWebScraper implements IScraping {
 		int startFigure = mainText.indexOf("vua");
 		int endFigure = mainText.indexOf(" - ");
 		String nameFigure = mainText.substring(startFigure, endFigure);
-		System.out.println(nameFigure);
+//		System.out.println(nameFigure);
 		King king = new King(nameFigure);
 
 		goDongDa = new Festival(tenLeHoi, thoiGian, diaDiem);
-		goDongDa.setFigure(king);
+		goDongDa.setFigure(nameFigure);
 		String noiDung = mainText.substring(endDiaDiem + 2, mainText.length());
 		goDongDa.setNoiDung(noiDung);
 	}

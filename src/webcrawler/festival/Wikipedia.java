@@ -109,8 +109,7 @@ public class Wikipedia extends BasicWebScraper implements IScraping {
 					// System.out.println("Thoi gian: "+thoiGian);
 					// System.out.println("Dia Diem: "+que);
 					Festival festival = new Festival(tenLeHoi, thoiGian, diaDiem);
-					Figure figure = new Figure("");
-					festival.setFigure(figure);
+
 					festival.setNoiDung("");
 					list.add(festival);
 				} // end for 2

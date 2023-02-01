@@ -97,8 +97,8 @@ public class LeHoiDaNang extends BasicWebScraper implements IScraping {
 			System.out.printf("%s %s %s\n", thoiGian, diaDiem, noiDung);
 			Festival festival = new Festival(tenLeHoi, thoiGian, diaDiem);
 			festival.setNoiDung(noiDung);
-			Figure figure = new Figure(nhanVat);
-			festival.setFigure(figure);
+//			Figure figure = new Figure(nhanVat);
+			festival.setFigure(nhanVat);
 			list.add(festival);
 		} // end for 2
 	}
