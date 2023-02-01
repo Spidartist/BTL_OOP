@@ -11,15 +11,17 @@ import org.json.simple.parser.ParseException;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import objects.dynasty.Dynasty;
 import objects.figure.Figure;
 import objects.figure.King;
 
 public class ReadJson {
     private ObservableList<King> kingList = FXCollections.observableArrayList();
     private ObservableList<Figure> figureList = FXCollections.observableArrayList();
+    private ObservableList<Dynasty> dynastyList = FXCollections.observableArrayList();
 
     public ObservableList<King> getKingList() {
-        JSONArray dataList = readData("src/jSoupWebCrawler/jsonFiles/king.json");
+        JSONArray dataList = readData("src/data/king.json");
         for (int i = 0; i < dataList.size(); i++) {
             kingList.add(new King().parseDataObject((JSONObject) dataList.get(i)));
         }
@@ -32,6 +34,14 @@ public class ReadJson {
             figureList.add(new Figure().parseDataObject((JSONObject) dataList.get(i)));
         }
         return figureList;
+    }
+
+    public ObservableList<Dynasty> getDinastyList() {
+        JSONArray dataList = readData("src/data/dynastys.json");
+        for (int i = 0; i < dataList.size(); i++) {
+            dynastyList.add(new Dynasty().parseDataObject((JSONObject) dataList.get(i)));
+        }
+        return dynastyList;
     }
 
     @SuppressWarnings("unchecked")

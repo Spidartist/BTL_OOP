@@ -2,9 +2,9 @@ package objects.figure;
 
 import org.json.simple.JSONObject;
 
-import com.google.gson.JsonObject;
-
+import javafx.collections.ObservableList;
 import objects.ParseJSON;
+import objects.dynasty.Dynasty;
 
 public class King extends HistoricalFigure implements ParseJSON {
 	private String paperURL;
@@ -116,4 +116,5 @@ public class King extends HistoricalFigure implements ParseJSON {
 		King newKing = new King(paperURL, mieuHieu, thuyHieu, nienHieu, tenHuy, theThu, namTriVi, ten);
 		return newKing;
 	}
+
 }
