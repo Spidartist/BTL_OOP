@@ -1,1 +1,21 @@
 /* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+/* .root{
+    
+    -fx-background-color: rgba(153,51,255,0.6);    
+}*/
+
+.table-view {
+    -fx-background-color: rgba(153,51,255,0.6);
+}
+
+
+.table-row-cell {
+    -fx-background-color: rgba(0,0,0,0.7);
+    -fx-font-weight:bold;
+    -fx-text-fill: whitesmoke;
+}
+
+.table-column {
+     -fx-alignment: CENTER;
+     -fx-text-fill: whitesmoke;
+}
