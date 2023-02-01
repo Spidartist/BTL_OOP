@@ -2,6 +2,7 @@ package objects.figure;
 
 import java.util.ArrayList;
 
+import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
 import objects.ParseJSON;
@@ -14,6 +15,7 @@ public class Figure extends HistoricalFigure implements ParseJSON {
 	private String ghiChu;
 	private String namDoTrangNguyen;
 	private String tenKhac;
+
 	public String getTenKhac() {
 		return tenKhac;
 	}
@@ -125,6 +127,7 @@ public class Figure extends HistoricalFigure implements ParseJSON {
 	public void setGhiChu(String ghiChu) {
 		this.ghiChu = ghiChu;
 	}
+
 	public ArrayList<Dynasty> getTrieuDai() {
 		return trieuDai;
 	}
@@ -132,16 +135,19 @@ public class Figure extends HistoricalFigure implements ParseJSON {
 	@Override
 	public Figure parseDataObject(JSONObject data) {
 		String ten = (String) data.get("ten");
-		// System.out.println(paperURL);
 		String queQuan = (String) data.get("queQuan");
-		String danToc = (String) data.get("danToc");
-		String namNhapNgu = (String) data.get("namNhapNgu");
+		String tenKhac = (String) data.get("tenKhac");
 		String ghiChu = (String) data.get("ghiChu");
-		String namDoTrangNguyen = (String) data.get("namDoTrangNguyen");
+		JSONArray trieuDais = (JSONArray) data.get("trieuDai");
+		for (int i = 0; i < trieuDais.size(); i++) {
+			JSONObject trieuDai = (JSONObject) trieuDais.get(i);
+
+			System.out.println("Name: " + trieuDai.get("name"));
+		}
 		String namSinh = (String) data.get("namSinh");
 		String namMat = (String) data.get("namMat");
-		
-		Figure newFigure = new Figure(ten, namSinh, namMat, queQuan, danToc, namNhapNgu, ghiChu, namDoTrangNguyen);
+
+		Figure newFigure = new Figure(ten, namSinh, namMat, queQuan, tenKhac, namNhapNgu, ghiChu, namDoTrangNguyen);
 		return newFigure;
 	}
 }

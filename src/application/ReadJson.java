@@ -27,7 +27,7 @@ public class ReadJson {
     }
 
     public ObservableList<Figure> getFigureList() {
-        JSONArray dataList = readData("src/jSoupWebCrawler/jsonFiles/figure.json");
+        JSONArray dataList = readData("src/data/figureUpdate.json");
         for (int i = 0; i < dataList.size(); i++) {
             figureList.add(new Figure().parseDataObject((JSONObject) dataList.get(i)));
         }
