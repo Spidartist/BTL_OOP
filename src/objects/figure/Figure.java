@@ -163,15 +163,9 @@ public class Figure extends HistoricalFigure implements ParseJSON {
 		// System.out.println(trieuDai);
 		String namSinh = (String) data.get("namSinh");
 		String namMat = (String) data.get("namMat");
-<<<<<<< HEAD
 
 		Figure newFigure = new Figure(ten, namSinh, namMat, queQuan, ghiChu, tenKhac,
 				trieuDai);
-=======
-		ArrayList<Dynasty> trieuDai = (ArrayList<Dynasty>) data.get("trieuDai");
-		Figure newFigure = new Figure(ten, namSinh, namMat, queQuan, tenKhac, namNhapNgu, ghiChu, namDoTrangNguyen);
-		newFigure.setTrieuDai(trieuDai);
->>>>>>> de7f197fed000cce8ebd0a85ee1c027b4d48c811
 		return newFigure;
 	}
 
