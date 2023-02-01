@@ -1,4 +1,7 @@
 /target/
 .classpath
+<<<<<<< HEAD
 output.txt
 javafx-sdk-19/
+=======
+>>>>>>> a8d0616d20aa54c08abe03f89ad0154602d7fd4c
