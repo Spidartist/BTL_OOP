@@ -317,7 +317,10 @@
     "startYear": "1945",
     "endYear": "1976",
     "name": "Việt Nam Dân chủ Cộng hòa",
-    "kings": [],
+    "kings": [
+      "Hồ Chí Minh",
+      "Tôn Đức Thắng"
+    ],
     "capital": "Hà Nội",
     "founder": "Unknown"
   },
@@ -346,10 +349,22 @@
     "founder": "Unknown"
   },
   {
-    "startYear": "1945",
+    "startYear": "1976",
     "endYear": "nay",
     "name": "Cộng hòa Xã hội Chủ nghĩa Việt Nam",
-    "kings": [],
+    "kings": [
+      "Tôn Đức Thắng",
+      "Nguyễn Hữu Thọ",
+      "Đặng Xuân Khu",
+      "Võ Chí Công",
+      "Lê Đức Anh",
+      "Trần Đức Lương",
+      "Nguyễn Minh Triết",
+      "Trương Tấn Sang",
+      "Trần Đại Quang",
+      "Đặng Thị Ngọc Thịnh",
+      "Nguyễn Phú Trọng"
+    ],
     "capital": "Hà Nội",
     "founder": "Unknown"
   },
