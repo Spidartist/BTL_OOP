@@ -19,7 +19,7 @@ public class ReadJson {
     private ObservableList<Figure> figureList = FXCollections.observableArrayList();
 
     public ObservableList<King> getKingList() {
-        JSONArray dataList = readData("src/jSoupWebCrawler/jsonFiles/king.json");
+        JSONArray dataList = readData("src/data/king.json");
         for (int i = 0; i < dataList.size(); i++) {
             kingList.add(new King().parseDataObject((JSONObject) dataList.get(i)));
         }
@@ -27,7 +27,7 @@ public class ReadJson {
     }
 
     public ObservableList<Figure> getFigureList() {
-        JSONArray dataList = readData("src/jSoupWebCrawler/jsonFiles/figure.json");
+        JSONArray dataList = readData("src/data/figure.json");
         for (int i = 0; i < dataList.size(); i++) {
             figureList.add(new Figure().parseDataObject((JSONObject) dataList.get(i)));
         }

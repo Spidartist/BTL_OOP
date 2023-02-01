@@ -100,8 +100,8 @@ public class LeHoiAnGiang extends BasicWebScraper implements IScraping {
 				}
 				Festival festival = new Festival(tenLeHoi, thoiGian, diaDiem);
 				festival.setNoiDung(noiDung);
-				Figure figure = new Figure(nhanVat);
-				festival.setFigure(figure);
+//				Figure figure = new Figure(nhanVat);
+				festival.setFigure(nhanVat);
 				list.add(festival);
 			}
 		}

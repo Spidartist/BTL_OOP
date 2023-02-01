@@ -6,7 +6,7 @@ public class Festival {
 	private String tenLeHoi;
 	private String thoigian;
 	private String diaDiem;
-	private HistoricalFigure figure;
+	private String figure;
 	private String noiDung;
 	public Festival(String tenLehoi,String thoiGian, String diaDiem) {
 		this.tenLeHoi = tenLehoi;
@@ -31,10 +31,10 @@ public class Festival {
 	public void setDiaDiem(String diaDiem) {
 		this.diaDiem = diaDiem;
 	}
-	public HistoricalFigure getFigure() {
+	public String getFigure() {
 		return figure;
 	}
-	public void setFigure(HistoricalFigure figure) {
+	public void setFigure(String figure) {
 		this.figure = figure;
 	}
 	public String getNoiDung() {
