@@ -4,10 +4,6 @@ import java.util.ArrayList;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
-
-import com.google.gson.JsonArray;
-
-import javafx.collections.ObservableList;
 import objects.ParseJSON;
 
 public class Dynasty implements ParseJSON {
