@@ -1,14 +1,11 @@
 package application;
 
-import java.beans.EventHandler;
-
+import application.popup.PopUpWinDow;
 import javafx.collections.transformation.FilteredList;
-import javafx.collections.transformation.SortedList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.MenuButton;
 import javafx.scene.control.MenuItem;
-import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -139,6 +136,13 @@ public class MainController {
                 break;
             case "Triều Đại Lịch Sử":
                 TableView<Dynasty> tableDynastyView = new TableView<>();
+                tableDynastyView.addEventHandler(MouseEvent.MOUSE_CLICKED, (MouseEvent e) -> {
+                    if (e.getClickCount() > 1) {
+                        Dynasty demo = tableDynastyView.getSelectionModel().getSelectedItem();
+                        System.out.println(demo.getFounder());
+                        newPopUp.getPopUpWindow(demo);
+                    }
+                });
                 tableDynastyView.getColumns().clear();
                 String[] dynastyStr = { "startYear", "endYear", "kings", "capital", "founder" };
                 for (int i = 0; i < dynastyStr.length; i++) {

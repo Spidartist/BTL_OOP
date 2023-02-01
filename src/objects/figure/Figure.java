@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
-import javafx.collections.ObservableList;
 // import javafx.scene.chart.Axis.TickMark;
 import objects.ParseJSON;
 import objects.dynasty.Dynasty;
@@ -17,6 +16,10 @@ public class Figure extends HistoricalFigure implements ParseJSON {
 	private String ghiChu;
 	private String namDoTrangNguyen;
 	private String tenKhac;
+<<<<<<< HEAD
+=======
+	private King doiVua;
+>>>>>>> 7bc157d3c9cb58b81ed5a7eb1a8402467ad66271
 
 	public String getTenKhac() {
 		return tenKhac;
