@@ -3,6 +3,7 @@ package application.popup.details;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.layout.StackPane;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import objects.dynasty.Dynasty;
 
@@ -14,6 +15,7 @@ public class DynastyDetails {
         Scene secondScene = new Scene(secondaryLayout, 230, 100);
         Stage newWindow = new Stage();
         // newWindow.initModality(Modality.WINDOW_MODAL);
+        // newWindow.initModality(Modality.APPLICATION_MODAL);
         newWindow.setTitle("King details");
         newWindow.setScene(secondScene);
         // newWindow.setWidth(200);
