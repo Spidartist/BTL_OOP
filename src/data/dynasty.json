@@ -5,7 +5,9 @@
     "name": "Thời tiền sử",
     "kings": [],
     "capital": "Không",
-    "founder": "Unknown"
+    "founder": {
+      "ten": "Unknown"
+    }
   },
   {
     "startYear": "111 TCN",
@@ -13,31 +15,49 @@
     "name": "Bắc thuộc lần I",
     "kings": [],
     "capital": "Không",
-    "founder": "Unknown"
+    "founder": {
+      "ten": "Unknown"
+    }
   },
   {
     "startYear": "204 TCN",
     "endYear": "111 TCN",
     "name": "Nhà Triệu",
     "kings": [
-      "Vũ đế",
-      "Văn đế",
-      "Minh đế",
-      "Ai đế",
-      "Dương đế"
+      {
+        "ten": "Vũ đế"
+      },
+      {
+        "ten": "Văn đế"
+      },
+      {
+        "ten": "Minh đế"
+      },
+      {
+        "ten": "Ai đế"
+      },
+      {
+        "ten": "Dương đế"
+      }
     ],
     "capital": "Phiên Ngung",
-    "founder": "Triệu Đà"
+    "founder": {
+      "ten": "Triệu Đà"
+    }
   },
   {
     "startYear": "40",
     "endYear": "43",
     "name": "Hai Bà Trưng",
     "kings": [
-      "Trưng Nữ Vương"
+      {
+        "ten": "Trưng Nữ Vương"
+      }
     ],
     "capital": "Mê Linh",
-    "founder": "Trưng Trắc"
+    "founder": {
+      "ten": "Trưng Trắc"
+    }
   },
   {
     "startYear": "43",
@@ -45,149 +65,275 @@
     "name": "Bắc thuộc lần II",
     "kings": [],
     "capital": "Không",
-    "founder": "Unknown"
+    "founder": {
+      "ten": "Unknown"
+    }
   },
   {
     "startYear": "544",
     "endYear": "602",
     "name": "Nhà Tiền Lý",
     "kings": [
-      "Lý Nam Đế",
-      "Triệu Việt Vương",
-      "Lý Phật Tử"
+      {
+        "ten": "Lý Nam Đế"
+      },
+      {
+        "ten": "Triệu Việt Vương"
+      },
+      {
+        "ten": "Lý Phật Tử"
+      }
     ],
     "capital": "Long Biên",
-    "founder": "Lý Bí"
+    "founder": {
+      "ten": "Lý Bí"
+    }
   },
   {
     "startYear": "603",
     "endYear": "905 hoặc",
     "name": "Bắc thuộc lần III",
     "kings": [
-      "Mai Hắc Đế",
-      "Mai Thiếu Đế",
-      "Bạch Đầu Đế",
-      "Bố Cái Đại Vương",
-      "Phùng An"
+      {
+        "ten": "Mai Hắc Đế"
+      },
+      {
+        "ten": "Mai Thiếu Đế"
+      },
+      {
+        "ten": "Bạch Đầu Đế"
+      },
+      {
+        "ten": "Bố Cái Đại Vương"
+      },
+      {
+        "ten": "Phùng An"
+      }
     ],
     "capital": "Không",
-    "founder": "Unknown"
+    "founder": {
+      "ten": "Unknown"
+    }
   },
   {
     "startYear": "905",
     "endYear": "938",
     "name": "Tự chủ",
     "kings": [
-      "Khúc Tiên Chủ",
-      "Khúc Trung Chủ",
-      "Khúc Hậu Chủ",
-      "Dương Đình Nghệ",
-      "Kiều Công Tiễn"
+      {
+        "ten": "Khúc Tiên Chủ"
+      },
+      {
+        "ten": "Khúc Trung Chủ"
+      },
+      {
+        "ten": "Khúc Hậu Chủ"
+      },
+      {
+        "ten": "Dương Đình Nghệ"
+      },
+      {
+        "ten": "Kiều Công Tiễn"
+      }
     ],
     "capital": "Không",
-    "founder": "Unknown"
+    "founder": {
+      "ten": "Unknown"
+    }
   },
   {
     "startYear": "923",
     "endYear": "930",
     "name": "Họ Khúc",
     "kings": [
-      "Khúc Tiên Chủ",
-      "Khúc Trung Chủ",
-      "Khúc Hậu Chủ",
-      "Dương Đình Nghệ",
-      "Kiều Công Tiễn"
+      {
+        "ten": "Khúc Tiên Chủ"
+      },
+      {
+        "ten": "Khúc Trung Chủ"
+      },
+      {
+        "ten": "Khúc Hậu Chủ"
+      },
+      {
+        "ten": "Dương Đình Nghệ"
+      },
+      {
+        "ten": "Kiều Công Tiễn"
+      }
     ],
     "capital": "Đại La",
-    "founder": "Khúc Thừa Dụ"
+    "founder": {
+      "ten": "Khúc Thừa Dụ"
+    }
   },
   {
     "startYear": "939",
     "endYear": "965",
     "name": "Nhà Ngô",
     "kings": [
-      "Ngô Quyền",
-      "Dương Tam Kha",
-      "Ngô Xương Xí"
+      {
+        "ten": "Ngô Quyền"
+      },
+      {
+        "ten": "Dương Tam Kha"
+      },
+      {
+        "ten": "Ngô Xương Xí"
+      }
     ],
     "capital": "Cổ Loa",
-    "founder": "Ngô Quyền"
+    "founder": {
+      "ten": "Ngô Quyền"
+    }
   },
   {
     "startYear": "968",
     "endYear": "980",
     "name": "Nhà Đinh",
     "kings": [
-      "Đinh Tiên Hoàng",
-      "Đinh Phế Đế"
+      {
+        "ten": "Đinh Tiên Hoàng"
+      },
+      {
+        "ten": "Đinh Phế Đế"
+      }
     ],
     "capital": "Hoa Lư",
-    "founder": "Đinh Bộ Lĩnh"
+    "founder": {
+      "ten": "Đinh Bộ Lĩnh"
+    }
   },
   {
     "startYear": "980",
     "endYear": "1009",
     "name": "Nhà Tiền Lê",
     "kings": [
-      "Lê Đại Hành",
-      "Lê Trung Tông",
-      "Lê Ngọa Triều"
+      {
+        "ten": "Lê Đại Hành"
+      },
+      {
+        "ten": "Lê Trung Tông"
+      },
+      {
+        "ten": "Lê Ngọa Triều"
+      }
     ],
     "capital": "Hoa Lư",
-    "founder": "Lê Hoàn"
+    "founder": {
+      "ten": "Lê Hoàn"
+    }
   },
   {
     "startYear": "1009",
     "endYear": "1225",
     "name": "Nhà Lý",
     "kings": [
-      "Lý Thái Tổ",
-      "Lý Thái Tông",
-      "Lý Thánh Tông",
-      "Lý Nhân Tông",
-      "Lý Thần Tông",
-      "Lý Anh Tông",
-      "Lý Cao Tông",
-      "Lý Thẩm",
-      "Lý Huệ Tông",
-      "Lý Nguyên Vương",
-      "Lý Chiêu Hoàng"
+      {
+        "ten": "Lý Thái Tổ"
+      },
+      {
+        "ten": "Lý Thái Tông"
+      },
+      {
+        "ten": "Lý Thánh Tông"
+      },
+      {
+        "ten": "Lý Nhân Tông"
+      },
+      {
+        "ten": "Lý Thần Tông"
+      },
+      {
+        "ten": "Lý Anh Tông"
+      },
+      {
+        "ten": "Lý Cao Tông"
+      },
+      {
+        "ten": "Lý Thẩm"
+      },
+      {
+        "ten": "Lý Huệ Tông"
+      },
+      {
+        "ten": "Lý Nguyên Vương"
+      },
+      {
+        "ten": "Lý Chiêu Hoàng"
+      }
     ],
     "capital": "Hoa Lư",
-    "founder": "Lý Công Uẩn"
+    "founder": {
+      "ten": "Lý Công Uẩn"
+    }
   },
   {
     "startYear": "1226",
     "endYear": "1400",
     "name": "Nhà Trần",
     "kings": [
-      "Trần Thái Tông",
-      "Trần Thánh Tông",
-      "Trần Nhân Tông",
-      "Trần Anh Tông",
-      "Trần Minh Tông",
-      "Trần Hiến Tông",
-      "Trần Dụ Tông",
-      "Dương Nhật Lễ",
-      "Trần Nghệ Tông",
-      "Trần Duệ Tông",
-      "Trần Phế Đế",
-      "Trần Thuận Tông",
-      "Trần Thiếu Đế"
+      {
+        "ten": "Trần Thái Tông"
+      },
+      {
+        "ten": "Trần Thánh Tông"
+      },
+      {
+        "ten": "Trần Nhân Tông"
+      },
+      {
+        "ten": "Trần Anh Tông"
+      },
+      {
+        "ten": "Trần Minh Tông"
+      },
+      {
+        "ten": "Trần Hiến Tông"
+      },
+      {
+        "ten": "Trần Dụ Tông"
+      },
+      {
+        "ten": "Dương Nhật Lễ"
+      },
+      {
+        "ten": "Trần Nghệ Tông"
+      },
+      {
+        "ten": "Trần Duệ Tông"
+      },
+      {
+        "ten": "Trần Phế Đế"
+      },
+      {
+        "ten": "Trần Thuận Tông"
+      },
+      {
+        "ten": "Trần Thiếu Đế"
+      }
     ],
     "capital": "Thăng Long",
-    "founder": "Trần Thủ Độ"
+    "founder": {
+      "ten": "Trần Thủ Độ"
+    }
   },
   {
     "startYear": "1400",
     "endYear": "1407",
     "name": "Nhà Hồ",
     "kings": [
-      "Hồ Quý Ly",
-      "Hồ Hán Thương"
+      {
+        "ten": "Hồ Quý Ly"
+      },
+      {
+        "ten": "Hồ Hán Thương"
+      }
     ],
     "capital": "Tây Đô",
-    "founder": "Hồ Quý Ly"
+    "founder": {
+      "ten": "Hồ Quý Ly"
+    }
   },
   {
     "startYear": "1407",
@@ -195,115 +341,237 @@
     "name": "Bắc thuộc lần IV",
     "kings": [],
     "capital": "Không",
-    "founder": "Unknown"
+    "founder": {
+      "ten": "Unknown"
+    }
   },
   {
     "startYear": "1407",
     "endYear": "1414",
     "name": "Nhà Hậu Trần",
     "kings": [
-      "Giản Định Đế",
-      "Trùng Quang Đế",
-      "Trần Cảo"
+      {
+        "ten": "Giản Định Đế"
+      },
+      {
+        "ten": "Trùng Quang Đế"
+      },
+      {
+        "ten": "Trần Cảo"
+      }
     ],
     "capital": "Mô Độ",
-    "founder": "Trần Ngỗi"
+    "founder": {
+      "ten": "Trần Ngỗi"
+    }
   },
   {
     "startYear": "1427",
     "endYear": "1789",
     "name": "Nhà Hậu Lê",
     "kings": [
-      "Lê Trang Tông",
-      "Lê Trung Tông",
-      "Lê Anh Tông",
-      "Lê Thế Tông",
-      "Lê Kính Tông",
-      "Lê Thần Tông",
-      "Lê Chân Tông",
-      "Lê Huyền Tông",
-      "Lê Gia Tông",
-      "Lê Hy Tông",
-      "Lê Dụ Tông",
-      "Lê Duy Phường",
-      "Lê Thuần Tông",
-      "Lê Ý Tông",
-      "Lê Hiển Tông",
-      "Lê Mẫn Đế"
+      {
+        "ten": "Lê Trang Tông"
+      },
+      {
+        "ten": "Lê Trung Tông"
+      },
+      {
+        "ten": "Lê Anh Tông"
+      },
+      {
+        "ten": "Lê Thế Tông"
+      },
+      {
+        "ten": "Lê Kính Tông"
+      },
+      {
+        "ten": "Lê Thần Tông"
+      },
+      {
+        "ten": "Lê Chân Tông"
+      },
+      {
+        "ten": "Lê Huyền Tông"
+      },
+      {
+        "ten": "Lê Gia Tông"
+      },
+      {
+        "ten": "Lê Hy Tông"
+      },
+      {
+        "ten": "Lê Dụ Tông"
+      },
+      {
+        "ten": "Lê Duy Phường"
+      },
+      {
+        "ten": "Lê Thuần Tông"
+      },
+      {
+        "ten": "Lê Ý Tông"
+      },
+      {
+        "ten": "Lê Hiển Tông"
+      },
+      {
+        "ten": "Lê Mẫn Đế"
+      }
     ],
     "capital": "Đông Kinh",
-    "founder": "Lê Lợi"
+    "founder": {
+      "ten": "Lê Lợi"
+    }
   },
   {
     "startYear": "1428",
     "endYear": "1527",
     "name": "Nhà Lê sơ",
     "kings": [
-      "Lê Thái Tổ",
-      "Lê Thái Tông",
-      "Lê Nhân Tông",
-      "Lê Nghi Dân",
-      "Lê Thánh Tông",
-      "Lê Hiến Tông",
-      "Lê Túc Tông",
-      "Lê Uy Mục",
-      "Lê Tương Dực",
-      "Lê Quang Trị",
-      "Lê Chiêu Tông",
-      "Lê Bảng",
-      "Lê Do",
-      "Lê Cung Hoàng"
+      {
+        "ten": "Lê Thái Tổ"
+      },
+      {
+        "ten": "Lê Thái Tông"
+      },
+      {
+        "ten": "Lê Nhân Tông"
+      },
+      {
+        "ten": "Lê Nghi Dân"
+      },
+      {
+        "ten": "Lê Thánh Tông"
+      },
+      {
+        "ten": "Lê Hiến Tông"
+      },
+      {
+        "ten": "Lê Túc Tông"
+      },
+      {
+        "ten": "Lê Uy Mục"
+      },
+      {
+        "ten": "Lê Tương Dực"
+      },
+      {
+        "ten": "Lê Quang Trị"
+      },
+      {
+        "ten": "Lê Chiêu Tông"
+      },
+      {
+        "ten": "Lê Bảng"
+      },
+      {
+        "ten": "Lê Do"
+      },
+      {
+        "ten": "Lê Cung Hoàng"
+      }
     ],
     "capital": "Đông Kinh",
-    "founder": "Lê Lợi"
+    "founder": {
+      "ten": "Lê Lợi"
+    }
   },
   {
     "startYear": "1527",
     "endYear": "1677",
     "name": "Nhà Mạc",
     "kings": [
-      "Thái Tổ",
-      "Mạc Mậu Hợp",
-      "Mạc Toàn",
-      "Mạc Kính Cung",
-      "Mạc Kính Vũ"
+      {
+        "ten": "Thái Tổ"
+      },
+      {
+        "ten": "Mạc Mậu Hợp"
+      },
+      {
+        "ten": "Mạc Toàn"
+      },
+      {
+        "ten": "Mạc Kính Cung"
+      },
+      {
+        "ten": "Mạc Kính Vũ"
+      }
     ],
     "capital": "Đông Kinh",
-    "founder": "Mạc Đăng Dung"
+    "founder": {
+      "ten": "Mạc Đăng Dung"
+    }
   },
   {
     "startYear": "1778",
     "endYear": "1802",
     "name": "Nhà Tây Sơn",
     "kings": [
-      "Nguyễn Nhạc",
-      "Nguyễn Huệ",
-      "Nguyễn Quang Toản"
+      {
+        "ten": "Nguyễn Nhạc"
+      },
+      {
+        "ten": "Nguyễn Huệ"
+      },
+      {
+        "ten": "Nguyễn Quang Toản"
+      }
     ],
     "capital": "Qui Nhơn",
-    "founder": "Nguyễn Nhạc"
+    "founder": {
+      "ten": "Nguyễn Nhạc"
+    }
   },
   {
     "startYear": "1802",
     "endYear": "1945",
     "name": "Nhà Nguyễn",
     "kings": [
-      "Gia Long",
-      "Minh Mạng",
-      "Thiệu Trị",
-      "Tự Đức",
-      "Dục Đức",
-      "Hiệp Hoà",
-      "Kiến Phúc",
-      "Hàm Nghi",
-      "Đồng Khánh",
-      "Thành Thái",
-      "Duy Tân",
-      "Khải Định",
-      "Bảo Đại"
+      {
+        "ten": "Gia Long"
+      },
+      {
+        "ten": "Minh Mạng"
+      },
+      {
+        "ten": "Thiệu Trị"
+      },
+      {
+        "ten": "Tự Đức"
+      },
+      {
+        "ten": "Dục Đức"
+      },
+      {
+        "ten": "Hiệp Hoà"
+      },
+      {
+        "ten": "Kiến Phúc"
+      },
+      {
+        "ten": "Hàm Nghi"
+      },
+      {
+        "ten": "Đồng Khánh"
+      },
+      {
+        "ten": "Thành Thái"
+      },
+      {
+        "ten": "Duy Tân"
+      },
+      {
+        "ten": "Khải Định"
+      },
+      {
+        "ten": "Bảo Đại"
+      }
     ],
     "capital": "Huế",
-    "founder": "Nguyễn Ánh"
+    "founder": {
+      "ten": "Nguyễn Ánh"
+    }
   },
   {
     "startYear": "1945",
@@ -311,18 +579,26 @@
     "name": "Đế quốc Việt Nam",
     "kings": [],
     "capital": "Huế",
-    "founder": "Unknown"
+    "founder": {
+      "ten": "Unknown"
+    }
   },
   {
     "startYear": "1945",
     "endYear": "1976",
     "name": "Việt Nam Dân chủ Cộng hòa",
     "kings": [
-      "Hồ Chí Minh",
-      "Tôn Đức Thắng"
+      {
+        "ten": "Hồ Chí Minh"
+      },
+      {
+        "ten": "Tôn Đức Thắng"
+      }
     ],
     "capital": "Hà Nội",
-    "founder": "Unknown"
+    "founder": {
+      "ten": "Unknown"
+    }
   },
   {
     "startYear": "1949",
@@ -330,7 +606,9 @@
     "name": "Quốc gia Việt Nam",
     "kings": [],
     "capital": "Sài Gòn",
-    "founder": "Unknown"
+    "founder": {
+      "ten": "Unknown"
+    }
   },
   {
     "startYear": "1955",
@@ -338,7 +616,9 @@
     "name": "Việt Nam Cộng hòa",
     "kings": [],
     "capital": "Sài Gòn",
-    "founder": "Unknown"
+    "founder": {
+      "ten": "Unknown"
+    }
   },
   {
     "startYear": "1969",
@@ -346,132 +626,290 @@
     "name": "Cộng hòa Miền Nam Việt Nam",
     "kings": [],
     "capital": "Tây Ninh",
-    "founder": "Unknown"
+    "founder": {
+      "ten": "Unknown"
+    }
   },
   {
     "startYear": "1976",
     "endYear": "nay",
     "name": "Cộng hòa Xã hội Chủ nghĩa Việt Nam",
     "kings": [
-      "Tôn Đức Thắng",
-      "Nguyễn Hữu Thọ",
-      "Đặng Xuân Khu",
-      "Võ Chí Công",
-      "Lê Đức Anh",
-      "Trần Đức Lương",
-      "Nguyễn Minh Triết",
-      "Trương Tấn Sang",
-      "Trần Đại Quang",
-      "Đặng Thị Ngọc Thịnh",
-      "Nguyễn Phú Trọng"
+      {
+        "ten": "Tôn Đức Thắng"
+      },
+      {
+        "ten": "Nguyễn Hữu Thọ"
+      },
+      {
+        "ten": "Đặng Xuân Khu"
+      },
+      {
+        "ten": "Võ Chí Công"
+      },
+      {
+        "ten": "Lê Đức Anh"
+      },
+      {
+        "ten": "Trần Đức Lương"
+      },
+      {
+        "ten": "Nguyễn Minh Triết"
+      },
+      {
+        "ten": "Trương Tấn Sang"
+      },
+      {
+        "ten": "Trần Đại Quang"
+      },
+      {
+        "ten": "Đặng Thị Ngọc Thịnh"
+      },
+      {
+        "ten": "Nguyễn Phú Trọng"
+      }
     ],
     "capital": "Hà Nội",
-    "founder": "Unknown"
+    "founder": {
+      "ten": "Unknown"
+    }
   },
   {
     "startYear": "2879 TCN",
     "endYear": "258 TCN",
     "name": "Hồng Bàng thị",
     "kings": [
-      "Kinh Dương Vương",
-      "Lạc Long Quân",
-      "Hùng Quốc Vương",
-      "Hùng Hiền Vương",
-      "Hùng Lân Vương",
-      "Hùng Diệp vương",
-      "Hùng Hi vương",
-      "Hùng Huy vương",
-      "Hùng Chiêu vương",
-      "Hùng Vĩ vương",
-      "Hùng Định Vương",
-      "Hùng Uy vương",
-      "Hùng Trinh vương",
-      "Hùng Vũ vương",
-      "Hùng Việt vương",
-      "Hùng Anh vương",
-      "Hùng Triêu vương",
-      "Hùng Tạo vương",
-      "Hùng Nghị vương",
-      "Hùng Duệ Vương"
+      {
+        "ten": "Kinh Dương Vương"
+      },
+      {
+        "ten": "Lạc Long Quân"
+      },
+      {
+        "ten": "Hùng Quốc Vương"
+      },
+      {
+        "ten": "Hùng Hiền Vương"
+      },
+      {
+        "ten": "Hùng Lân Vương"
+      },
+      {
+        "ten": "Hùng Diệp vương"
+      },
+      {
+        "ten": "Hùng Hi vương"
+      },
+      {
+        "ten": "Hùng Huy vương"
+      },
+      {
+        "ten": "Hùng Chiêu vương"
+      },
+      {
+        "ten": "Hùng Vĩ vương"
+      },
+      {
+        "ten": "Hùng Định Vương"
+      },
+      {
+        "ten": "Hùng Uy vương"
+      },
+      {
+        "ten": "Hùng Trinh vương"
+      },
+      {
+        "ten": "Hùng Vũ vương"
+      },
+      {
+        "ten": "Hùng Việt vương"
+      },
+      {
+        "ten": "Hùng Anh vương"
+      },
+      {
+        "ten": "Hùng Triêu vương"
+      },
+      {
+        "ten": "Hùng Tạo vương"
+      },
+      {
+        "ten": "Hùng Nghị vương"
+      },
+      {
+        "ten": "Hùng Duệ Vương"
+      }
     ],
     "capital": "Phong Châu",
-    "founder": "Lộc Tục"
+    "founder": {
+      "ten": "Lộc Tục"
+    }
   },
   {
     "startYear": "1533",
     "endYear": "1789",
     "name": "Nhà Lê trung hưng",
     "kings": [
-      "Lê Trang Tông",
-      "Lê Trung Tông",
-      "Lê Anh Tông",
-      "Lê Thế Tông",
-      "Lê Kính Tông",
-      "Lê Thần Tông",
-      "Lê Chân Tông",
-      "Lê Huyền Tông",
-      "Lê Gia Tông",
-      "Lê Hy Tông",
-      "Lê Dụ Tông",
-      "Lê Duy Phường",
-      "Lê Thuần Tông",
-      "Lê Ý Tông",
-      "Lê Hiển Tông",
-      "Lê Mẫn Đế"
+      {
+        "ten": "Lê Trang Tông"
+      },
+      {
+        "ten": "Lê Trung Tông"
+      },
+      {
+        "ten": "Lê Anh Tông"
+      },
+      {
+        "ten": "Lê Thế Tông"
+      },
+      {
+        "ten": "Lê Kính Tông"
+      },
+      {
+        "ten": "Lê Thần Tông"
+      },
+      {
+        "ten": "Lê Chân Tông"
+      },
+      {
+        "ten": "Lê Huyền Tông"
+      },
+      {
+        "ten": "Lê Gia Tông"
+      },
+      {
+        "ten": "Lê Hy Tông"
+      },
+      {
+        "ten": "Lê Dụ Tông"
+      },
+      {
+        "ten": "Lê Duy Phường"
+      },
+      {
+        "ten": "Lê Thuần Tông"
+      },
+      {
+        "ten": "Lê Ý Tông"
+      },
+      {
+        "ten": "Lê Hiển Tông"
+      },
+      {
+        "ten": "Lê Mẫn Đế"
+      }
     ],
     "capital": "Đông Kinh",
-    "founder": "Lê Duy Ninh"
+    "founder": {
+      "ten": "Lê Duy Ninh"
+    }
   },
   {
     "startYear": "1545",
     "endYear": "1787",
     "name": "Chúa Trịnh",
     "kings": [
-      "Trịnh Kiểm",
-      "Trịnh Cối",
-      "Trịnh Tùng",
-      "Trịnh Tráng",
-      "Trịnh Tạc",
-      "Trịnh Căn",
-      "Trịnh Cương",
-      "Trịnh Giang",
-      "Trịnh Doanh",
-      "Trịnh Sâm",
-      "Trịnh Cán",
-      "Trịnh Khải",
-      "Trịnh Bồng"
+      {
+        "ten": "Trịnh Kiểm"
+      },
+      {
+        "ten": "Trịnh Cối"
+      },
+      {
+        "ten": "Trịnh Tùng"
+      },
+      {
+        "ten": "Trịnh Tráng"
+      },
+      {
+        "ten": "Trịnh Tạc"
+      },
+      {
+        "ten": "Trịnh Căn"
+      },
+      {
+        "ten": "Trịnh Cương"
+      },
+      {
+        "ten": "Trịnh Giang"
+      },
+      {
+        "ten": "Trịnh Doanh"
+      },
+      {
+        "ten": "Trịnh Sâm"
+      },
+      {
+        "ten": "Trịnh Cán"
+      },
+      {
+        "ten": "Trịnh Khải"
+      },
+      {
+        "ten": "Trịnh Bồng"
+      }
     ],
     "capital": "Đông Kinh",
-    "founder": "Trịnh Kiểm"
+    "founder": {
+      "ten": "Trịnh Kiểm"
+    }
   },
   {
     "startYear": "1558",
     "endYear": "1777",
     "name": "Chúa Nguyễn",
     "kings": [
-      "Nguyễn Hoàng",
-      "Nguyễn Phúc Nguyên",
-      "Nguyễn Phúc Lan",
-      "Nguyễn Phúc Tần",
-      "Nguyễn Phúc Thái",
-      "Nguyễn Phúc Chu",
-      "Nguyễn Phúc Chú",
-      "Nguyễn Phúc Khoát",
-      "Nguyễn Phúc Thuần",
-      "Nguyễn Phúc Dương",
-      "Nguyễn Phúc Ánh"
+      {
+        "ten": "Nguyễn Hoàng"
+      },
+      {
+        "ten": "Nguyễn Phúc Nguyên"
+      },
+      {
+        "ten": "Nguyễn Phúc Lan"
+      },
+      {
+        "ten": "Nguyễn Phúc Tần"
+      },
+      {
+        "ten": "Nguyễn Phúc Thái"
+      },
+      {
+        "ten": "Nguyễn Phúc Chu"
+      },
+      {
+        "ten": "Nguyễn Phúc Chú"
+      },
+      {
+        "ten": "Nguyễn Phúc Khoát"
+      },
+      {
+        "ten": "Nguyễn Phúc Thuần"
+      },
+      {
+        "ten": "Nguyễn Phúc Dương"
+      },
+      {
+        "ten": "Nguyễn Phúc Ánh"
+      }
     ],
     "capital": "Phú Xuân",
-    "founder": "Nguyễn Kim"
+    "founder": {
+      "ten": "Nguyễn Kim"
+    }
   },
   {
     "startYear": "257 TCN",
     "endYear": "179 TCN",
     "name": "Nhà Thục",
     "kings": [
-      "An Dương Vương"
+      {
+        "ten": "An Dương Vương"
+      }
     ],
     "capital": "Cổ Loa",
-    "founder": "Thục Phán"
+    "founder": {
+      "ten": "Thục Phán"
+    }
   }
 ]

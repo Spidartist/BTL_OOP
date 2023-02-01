@@ -6,12 +6,13 @@ import java.util.LinkedList;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
+import objects.figure.King;
 import webcrawler.parent.BasicWebScraper;
 import webcrawler.parent.IScraping;
 
 public class DynastyScrapeWikiWandKings extends BasicWebScraper implements IScraping {
 	private String tenTrieuDai;
-	private LinkedList<String> kings;
+	private LinkedList<King> kings;
 
 	public String getTenTrieuDai() {
 		return tenTrieuDai;
@@ -19,7 +20,7 @@ public class DynastyScrapeWikiWandKings extends BasicWebScraper implements IScra
 
 	public DynastyScrapeWikiWandKings(String tenTrieuDai) {
 		this.tenTrieuDai = tenTrieuDai;
-		this.kings = new LinkedList<String>();
+		this.kings = new LinkedList<King>();
 		String url = "https://www.wikiwand.com/vi/B%E1%BA%A3n_m%E1%BA%ABu:Danh_s%C3%A1ch_vua_v%C3%A0_ho%C3%A0ng_%C4%91%E1%BA%BF_Vi%E1%BB%87t_Nam";
 		this.setUrl(url);
 		connect();
@@ -36,7 +37,7 @@ public class DynastyScrapeWikiWandKings extends BasicWebScraper implements IScra
 					|| (this.tenTrieuDai.equals("Bắc thuộc lần III") && thData.text().contains("Bắc thuộc lần ba"))) {
 				// System.out.println(this.tenTrieuDai);
 				for (Element e1 : tdData) {
-					kings.add(e1.text());
+					kings.add(new King(e1.text()));
 				}
 				// System.out.println(kings.size());
 			}
@@ -44,7 +45,7 @@ public class DynastyScrapeWikiWandKings extends BasicWebScraper implements IScra
 
 	}
 
-	public LinkedList<String> getKings() {
+	public LinkedList<King> getKings() {
 		return kings;
 	}
 

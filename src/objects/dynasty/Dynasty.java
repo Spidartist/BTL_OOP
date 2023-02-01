@@ -1,58 +1,35 @@
 package objects.dynasty;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
+
+import objects.figure.King;
 
 public class Dynasty {
 	private String startYear; // co ve de
-	private String endYear;   // chua code
-	private String name;   // xong, day la base
-	private LinkedList<String> kings; // 1 phan, 8 ban ghi
+	private String endYear; // chua code
+	private String name; // xong, day la base
+	private LinkedList<King> kings; // 1 phan, 8 ban ghi
 	private String capital; // co ve day la thu do thi hop ly hon
-	private LinkedList<String> events;
-	private String founder;  // done 
+	private King founder; // done
+
 	public Dynasty() {
-		
+
 	}
 
-	public Dynasty(String startYear, String endYear, String name, LinkedList<String> kings, String location, String founder) {
-		super();
-		this.startYear = startYear;
-		this.endYear = endYear;
-		this.name = name;
-		this.kings = kings;
-		this.capital = location;
-		this.founder = founder;
-	}
-	
 	public Dynasty(String name) {
 		super();
 		this.name = name;
 	}
-	
 
-
-	public Dynasty(String startYear, String endYear, String name, LinkedList<String> kings, String location,
-			LinkedList<String> events, String founder) {
+	public Dynasty(String startYear, String endYear, String name, LinkedList<King> kings, String capital,
+			King founder) {
 		super();
 		this.startYear = startYear;
 		this.endYear = endYear;
 		this.name = name;
 		this.kings = kings;
-		this.capital = location;
-		this.events = events;
+		this.capital = capital;
 		this.founder = founder;
-	}
-
-
-
-
-	public Dynasty(String startYear, String endYear, String name, LinkedList<String> kings) {
-		super();
-		this.startYear = startYear;
-		this.endYear = endYear;
-		this.name = name;
-		this.kings = kings;
 	}
 
 	public Dynasty(String startYear, String endYear, String name) {
@@ -62,35 +39,14 @@ public class Dynasty {
 		this.name = name;
 	}
 
-
-	public Dynasty(String startYear, String endYear, String name, LinkedList<String> kings, String location,
-			LinkedList<String> events) {
-		super();
-		this.startYear = startYear;
-		this.endYear = endYear;
-		this.name = name;
-		this.kings = kings;
-		this.capital = location;
-		this.events = events;
-	}
-
-
-
-	public Dynasty(String startYear, String endYear, String name, LinkedList<String> kings, String location) {
-		super();
-		this.startYear = startYear;
-		this.endYear = endYear;
-		this.name = name;
-		this.kings = kings;
-		this.capital = location;
-	}
-	public String getFounder() {
+	public King getFounder() {
 		return founder;
 	}
 
-	public void setFounder(String founder) {
+	public void setFounder(King founder) {
 		this.founder = founder;
 	}
+
 	public String getStartYear() {
 		return startYear;
 	}
@@ -115,11 +71,11 @@ public class Dynasty {
 		this.name = name;
 	}
 
-	public LinkedList<String> getKings() {
+	public LinkedList<King> getKings() {
 		return kings;
 	}
 
-	public void setKings(LinkedList<String> kings) {
+	public void setKings(LinkedList<King> kings) {
 		this.kings = kings;
 	}
 

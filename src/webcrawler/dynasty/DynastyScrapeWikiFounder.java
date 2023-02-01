@@ -6,6 +6,7 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import objects.dynasty.Dynasty;
+import objects.figure.King;
 import webcrawler.parent.BasicWebScraper;
 import webcrawler.parent.IScraping;
 
@@ -34,19 +35,19 @@ public class DynastyScrapeWikiFounder extends BasicWebScraper implements IScrapi
 			Elements founder_name = e.select("td:nth-child(2) > a:nth-child(1)");
 			if (names.getDynasty_names().contains(dynasty_name.text())) {
 				Dynasty dynasty = new Dynasty(dynasty_name.text());
-				dynasty.setFounder(founder_name.text());
+				dynasty.setFounder(new King(founder_name.text()));
 				System.out.println(dynasty_name.text());
 				this.dynastys.add(dynasty);
 			}
 
 			Dynasty d = new Dynasty("Hai Bà Trưng");
-			d.setFounder("Trưng Trắc");
+			d.setFounder(new King("Trưng Trắc"));
 			this.dynastys.add(d);
 			d = new Dynasty("Nhà Lê sơ");
-			d.setFounder("Lê Lợi");
+			d.setFounder(new King("Lê Lợi"));
 			this.dynastys.add(d);
 			d = new Dynasty("Nhà Lê trung hưng");
-			d.setFounder("Lê Duy Ninh");
+			d.setFounder(new King("Lê Duy Ninh"));
 			this.dynastys.add(d);
 		}
 

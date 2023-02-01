@@ -2,13 +2,15 @@ package objects.relic;
 
 import java.util.ArrayList;
 
+import objects.dynasty.Dynasty;
+import objects.figure.HistoricalFigure;
+
 public class Relic extends AbstractRelic{
 	private String location;
 	private String type;
 	private String rank;
-	private ArrayList<String> people;
-	private ArrayList<String> dynastys;
-	private ArrayList<String> events;
+	private ArrayList<HistoricalFigure> people;
+	private ArrayList<Dynasty> dynastys;
 	private String desc;
 	private int yearEngage;
 

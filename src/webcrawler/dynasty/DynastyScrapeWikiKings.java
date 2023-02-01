@@ -22,7 +22,7 @@ public class DynastyScrapeWikiKings extends BasicWebScraper implements IScraping
 		Elements canCrawlNames = this.getDoc()
 				.select("#mw-content-text > div.mw-parser-output > ul:nth-child(6) > li > a");
 		for (Element e : canCrawlNames) {
-			if (this.names.getDynasty_names().contains(e.text())) {
+			if (names.getDynasty_names().contains(e.text())) {
 				if (!this.blackList.contains(e.text())) {
 					Dynasty dynasty = new Dynasty(e.text());
 					String absHref = e.attr("abs:href");

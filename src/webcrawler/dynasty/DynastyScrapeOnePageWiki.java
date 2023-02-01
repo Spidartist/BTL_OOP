@@ -5,11 +5,12 @@ import java.util.LinkedList;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
+import objects.figure.King;
 import webcrawler.parent.BasicWebScraper;
 import webcrawler.parent.IScraping;
 
 public class DynastyScrapeOnePageWiki extends BasicWebScraper implements IScraping {
-	private LinkedList<String> kingNames;
+	private LinkedList<King> kingNames;
 
 	public void scraping() {
 		Elements kings = this.getDoc().select("#mw-content-text > div.mw-parser-output > table.infobox > tbody > tr");
@@ -36,18 +37,18 @@ public class DynastyScrapeOnePageWiki extends BasicWebScraper implements IScrapi
 			}
 			if (aData.size() > 0 && flag && !aData.get(aData.size() - 1).text().equals("")
 					&& !aData.get(aData.size() - 1).text().matches(".*[0-9].*")) {
-				kingNames.add(aData.get(aData.size() - 1).text());
+				kingNames.add(new King(aData.get(aData.size() - 1).text()));
 			}
 		}
 	}
 
 	public DynastyScrapeOnePageWiki(String url) {
-		this.kingNames = new LinkedList<String>();
+		this.kingNames = new LinkedList<King>();
 		this.setUrl(url);
 		connect();
 	}
 
-	public LinkedList<String> getKingNames() {
+	public LinkedList<King> getKingNames() {
 		return kingNames;
 	}
 

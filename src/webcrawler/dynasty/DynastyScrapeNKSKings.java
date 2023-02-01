@@ -9,6 +9,7 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import objects.dynasty.Dynasty;
+import objects.figure.King;
 import webcrawler.parent.BasicWebScraper;
 import webcrawler.parent.IScraping;
 
@@ -51,12 +52,12 @@ public class DynastyScrapeNKSKings extends BasicWebScraper implements IScraping{
 		}
 		
 		for (int i=0;i<dynastys.size();i++) {
-			LinkedList<String> kings = new LinkedList<String>();
+			LinkedList<King> kings = new LinkedList<King>();
 			Element nextE = els.get(i).nextElementSibling();
 			while (!nextE.text().contains(".")) {
 				
 				if (!nextE.select("a:nth-child(1)").text().equals("")) {
-					kings.add(nextE.select("a:nth-child(1)").text());
+					kings.add(new King(nextE.select("a:nth-child(1)").text()));
 				}
 				
 				nextE = nextE.nextElementSibling();
@@ -70,7 +71,7 @@ public class DynastyScrapeNKSKings extends BasicWebScraper implements IScraping{
 		
 		System.out.println(this.dynastys.size());
 	}
-	
+
 	public LinkedList<Dynasty> getDynastys() {
 		return dynastys;
 	}

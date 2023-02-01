@@ -3,7 +3,6 @@ package webcrawler.dynasty;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.LinkedList;
 
 import com.google.gson.Gson;
@@ -11,16 +10,17 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.JsonIOException;
 
 import objects.dynasty.Dynasty;
+import objects.figure.King;
 
 public class DynastyScrapeFull {
 	private DynastyScrapeName crawlNames;
 	private DynastyScrapeWikiFounder crawlFounder;
 	private DynastyScrapeWikiKings firstKings;
-	private ArrayList<Dynasty> dynastys;
+	private LinkedList<Dynasty> dynastys;
 	private DynastyScrapeNKSKings remainedKings;
 
 	public DynastyScrapeFull() {
-		dynastys = new ArrayList<Dynasty>();
+		dynastys = new LinkedList<Dynasty>();
 
 		firstKings = new DynastyScrapeWikiKings();
 		firstKings.scraping();
@@ -72,7 +72,7 @@ public class DynastyScrapeFull {
 
 		for (Dynasty d_1 : dynastys) {
 			if (d_1.getFounder() == null) {
-				d_1.setFounder("Unknown");
+				d_1.setFounder(new King("Unknown"));
 			}
 			System.out.println("* " + d_1.getName() + "-" + d_1.getFounder());
 		}

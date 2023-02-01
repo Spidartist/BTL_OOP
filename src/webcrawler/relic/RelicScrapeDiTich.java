@@ -9,6 +9,8 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonIOException;
 
+import objects.figure.Figure;
+import objects.figure.HistoricalFigure;
 import objects.relic.Relic1;
 
 public class RelicScrapeDiTich{
@@ -21,7 +23,9 @@ public class RelicScrapeDiTich{
 			String url = baseUrl + Integer.toString(i);
 			RelicScrapeDiTichOneBox r = new RelicScrapeDiTichOneBox(url);
 			r.scraping();
-			Relic1 r1 = new Relic1(r.getName(), r.getAddress(), r.getType(), r.getRank(), r.getPerson());
+			LinkedList<HistoricalFigure> h = new LinkedList<HistoricalFigure>();
+			h.add(new Figure(r.getPerson())); // chua xong
+			Relic1 r1 = new Relic1(r.getName(), r.getAddress(), r.getType(), r.getRank(), h);
 			relics.add(r1);
 		}
 	}
