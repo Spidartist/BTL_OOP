@@ -63,7 +63,7 @@ public class DynastyScrapeWikiYear extends BasicWebScraper implements IScraping 
 		// System.out.println(this.url);
 		String allYears;
 		if (this.tenTrieuDai.equals("Cộng hòa Xã hội Chủ nghĩa Việt Nam")) {
-			allYears = "1945–nay";
+			allYears = "1976–nay";
 		} else if (this.tenTrieuDai.equals("Thời tiền sử")) {
 			allYears = "đầu–3100 TCN";
 		} else if (this.tenTrieuDai.equals("Hai Bà Trưng")) {

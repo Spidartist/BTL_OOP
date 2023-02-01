@@ -17,6 +17,7 @@ public class DynastyScrapeFull {
 	private DynastyScrapeWikiFounder crawlFounder;
 	private DynastyScrapeWikiKings firstKings;
 	private ArrayList<Dynasty> dynastys;
+	private DynastyScrapeNKSKings remainedKings;
 
 	public DynastyScrapeFull() {
 		dynastys = new ArrayList<Dynasty>();
@@ -30,6 +31,9 @@ public class DynastyScrapeFull {
 		crawlFounder = new DynastyScrapeWikiFounder();
 		crawlFounder.scraping();
 
+		remainedKings = new DynastyScrapeNKSKings();
+		remainedKings.scraping();
+		
 		LinkedList<String> dynastyNames = crawlNames.getDynasty_names();
 
 		for (String name : dynastyNames) {
@@ -46,6 +50,16 @@ public class DynastyScrapeFull {
 				}
 			}
 		}
+		
+		for (Dynasty d_1 : remainedKings.getDynastys()) {
+			for (Dynasty d_2 : dynastys) {
+				if (d_1.getName().equals(d_2.getName())) {
+					// System.out.println("* " + d_1.getName());
+					d_2.setKings(d_1.getKings());
+				}
+			}
+		}
+		
 
 		for (Dynasty d_1 : crawlFounder.getDynastys()) {
 			for (Dynasty d_2 : dynastys) {
