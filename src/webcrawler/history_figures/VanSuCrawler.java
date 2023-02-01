@@ -33,37 +33,60 @@ import org.jsoup.select.Elements;
 
 public class VanSuCrawler {
 	public static void main(String[] args) {
-		int pageIndex = 1901;
-		String urlFirstHalf = "https://vansu.vn/viet-nam/viet-nam-nhan-vat/";
-		LinkedList<Figure> list = new LinkedList<Figure>();
-		int lastIndex = 2300;
-		while (pageIndex <= lastIndex) {
-			String url = urlFirstHalf + Integer.toString(pageIndex);
-			VanSu vanSu = new VanSu(url);
-			vanSu.scraping();
-			list.add(vanSu.getFigure());
-			pageIndex += 1;
-		}
-
-		System.out.println("num of mem: " + list.size());
-		for (Figure figure:list) {
-			ArrayList<Dynasty> dynastyList = figure.getTrieuDai();
-			for (Dynasty dynasty : dynastyList) {
-				String name = dynasty.getName();
-				dynasty.setName(replaceTrieuDai(name));
-			}
-		}
+//		int pageIndex = 1901;
+//		String urlFirstHalf = "https://vansu.vn/viet-nam/viet-nam-nhan-vat/";
+//		LinkedList<Figure> list = new LinkedList<Figure>();
+//		int lastIndex = 2300;
+//		while (pageIndex <= lastIndex) {
+//			String url = urlFirstHalf + Integer.toString(pageIndex);
+//			VanSu vanSu = new VanSu(url);
+//			vanSu.scraping();
+//			list.add(vanSu.getFigure());
+//			pageIndex += 1;
+//		}
+//
+//		System.out.println("num of mem: " + list.size());
+//		for (Figure figure:list) {
+//			ArrayList<Dynasty> dynastyList = figure.getTrieuDai();
+//			for (Dynasty dynasty : dynastyList) {
+//				String name = dynasty.getName();
+//				dynasty.setName(replaceTrieuDai(name));
+//			}
+//		}
 		String filePath = "D:\\webCrawler\\jSoupWebCrawler\\src\\data\\figureUpdate.json";
 		Gson gson = new GsonBuilder().setPrettyPrinting().create();
-		JSONArray dataList = readData("src/data/figureUpdate.json");
-		LinkedList<Figure> originalList = new LinkedList<Figure>();
-		for (int i = 0; i < dataList.size(); i++) {
-            originalList.add(new Figure().parseDataObject((JSONObject) dataList.get(i)));
+		JSONArray figureDataList = readData("src/data/figureUpdate.json");
+		LinkedList<Figure> figureList = new LinkedList<Figure>();
+		for (int i = 0; i < figureDataList.size(); i++) {
+            figureList.add(new Figure().parseDataObject((JSONObject) figureDataList.get(i)));
         }
-		originalList.addAll(list);
+		
+		JSONArray dynastyDataList = readData("src/data/dynastys.json");
+		LinkedList<Dynasty> dynastyList = new LinkedList<Dynasty>();
+		for (int i = 0; i < dynastyDataList.size(); i++) {
+            dynastyList.add(new Dynasty().parseDataObject((JSONObject) dynastyDataList.get(i)));
+        }
+		System.out.println(dynastyList.size());
+		System.out.println(figureList.size());
+		
+		for (int i=0;i<figureList.size();i++) {
+			ArrayList<Dynasty> dynasty = figureList.get(i).getTrieuDai();
+			for (int j=0;j<dynasty.size();j++) {
+				String name = dynasty.get(j).getName();
+				System.out.println(name);
+				Dynasty matchedDynasty = findDynasty(name, dynastyList);
+				
+				if (matchedDynasty != null) {
+					Dynasty tmp = dynasty.remove(j);
+					dynasty.add(j,matchedDynasty);
+				}
+			}
+			figureList.get(i).setTrieuDai(dynasty);
+		}
+
 		try {
 			FileWriter writer = new FileWriter(new File(filePath));
-			gson.toJson(originalList, writer);
+			gson.toJson(figureList, writer);
 			writer.close();
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -145,5 +168,14 @@ public class VanSuCrawler {
         return dataList;
         // System.out.println(kingList.get(0).getMieuHieu());
     }
+	
+	public static Dynasty findDynasty(String name,LinkedList<Dynasty> dynastyList) {
+		for (int i=0;i<dynastyList.size();i++) {
+			if(dynastyList.get(i).getName().contains(name)) {
+				return dynastyList.get(i);
+			}
+		}
+		return null;
+	}
 }
 

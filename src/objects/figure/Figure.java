@@ -158,9 +158,9 @@ public class Figure extends HistoricalFigure implements ParseJSON {
 		JSONArray trieuDais = (JSONArray) data.get("trieuDai");
 		for (int i = 0; i < trieuDais.size(); i++) {
 			JSONObject TD = (JSONObject) trieuDais.get(i);
-			// Dynasty newDynasty = new Dynasty((String) TD.get("name"));
-			// trieuDai.add(newDynasty);
-			TD.get("name");
+			 Dynasty newDynasty = new Dynasty((String) TD.get("name"));
+			 trieuDai.add(newDynasty);
+//			TD.get("name");
 		}
 		// System.out.println(trieuDai);
 		String namSinh = (String) data.get("namSinh");
