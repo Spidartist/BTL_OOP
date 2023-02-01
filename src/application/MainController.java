@@ -1,7 +1,12 @@
 package application;
 
+import java.util.function.Predicate;
+
 import application.popup.PopUpWinDow;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
+import javafx.collections.transformation.SortedList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.MenuButton;
@@ -67,39 +72,18 @@ public class MainController {
                 reader.getKingList().forEach(elm -> tableKingView.getItems().add(elm));
                 borderPane.setCenter(tableKingView);
                 // Search
-                FilteredList<King> filteredData = new FilteredList<>(reader.getKingList(), b -> true);
+                reader.getKingList().remove(0, reader.getKingList().size());
+                final ObservableList<King> dataListKing = FXCollections.observableArrayList();
+                dataListKing.addAll(reader.getKingList());
+                FilteredList<King> filteredDataKing = new FilteredList<>(dataListKing, b -> true);
+                //Search text
                 textField.textProperty().addListener((observable, oldValue, newValue) -> {
-                    filteredData.setPredicate(King -> {
-                        // If filter text is empty, display all persons.
-
-                        if (newValue == null || newValue.isEmpty()) {
-                            return true;
-                        }
-
-                        // Compare first name and last name of every person with filter text.
-                        String lowerCaseFilter = newValue.toLowerCase();
-
-                        if (King.getTheThu().toLowerCase().indexOf(lowerCaseFilter) != -1) {
-                            return true; // Filter matches first name.
-                        } else if (King.getMieuHieu().toLowerCase().indexOf(lowerCaseFilter) != -1) {
-                            return true; // Filter matches last name.
-                        } else if (King.getThuyHieu().toLowerCase().indexOf(lowerCaseFilter) != -1) {
-                            return true; // Filter matches last name.
-                        } else if (King.getNienHieu().toLowerCase().indexOf(lowerCaseFilter) != -1) {
-                            return true; // Filter matches last name.
-                        } else if (King.getTenHuy().toLowerCase().indexOf(lowerCaseFilter) != -1) {
-                            return true; // Filter matches last name.
-                        } else if (King.getNamTriVi().toLowerCase().indexOf(lowerCaseFilter) != -1) {
-                            return true; // Filter matches last name.
-                        } else if (String.valueOf(King.getTheThu()).indexOf(lowerCaseFilter) != -1)
-                            return true;
-                        else
-                            return false; // Does not match.
-                    });
-                });
-                // SortedList<King> sortedData = new SortedList<>(filteredData);
-                // sortedData.comparatorProperty().bind(tableKingView.comparatorProperty());
-                tableKingView.setItems(filteredData);
+        			filteredDataKing.setPredicate(
+        				createPredicateKing(newValue)
+        			);
+        		});
+                tableKingView.setItems(filteredDataKing);
+//                SortedKing(filteredData,tableKingView);
                 break;
             case "Nhân Vật Lịch Sử":
                 TableView<Figure> tableFigureView = new TableView<>();
@@ -127,6 +111,17 @@ public class MainController {
                 }
                 reader.getFigureList().forEach(elm -> tableFigureView.getItems().add(elm));
                 borderPane.setCenter(tableFigureView);
+                //Code thêm đoạn search
+                reader.getFigureList().remove(0, reader.getFigureList().size());
+                final ObservableList<Figure> dataListFigure = FXCollections.observableArrayList();
+                dataListFigure.addAll(reader.getFigureList());
+                FilteredList<Figure> filteredDataFigure = new FilteredList<>(dataListFigure, b -> true);
+                textField.textProperty().addListener((observable, oldValue, newValue) -> {
+        			filteredDataFigure.setPredicate(
+        				createPredicateFigure(newValue)
+        			);
+        		});
+                tableFigureView.setItems(filteredDataFigure);
                 break;
             case "Sự kiện lịch sử":
 
@@ -136,6 +131,7 @@ public class MainController {
                 break;
             case "Triều Đại Lịch Sử":
                 TableView<Dynasty> tableDynastyView = new TableView<>();
+                tableDynastyView.getColumns().clear();
                 tableDynastyView.addEventHandler(MouseEvent.MOUSE_CLICKED, (MouseEvent e) -> {
                     if (e.getClickCount() > 1) {
                         Dynasty demo = tableDynastyView.getSelectionModel().getSelectedItem();
@@ -143,7 +139,7 @@ public class MainController {
                         newPopUp.getPopUpWindow(demo);
                     }
                 });
-                tableDynastyView.getColumns().clear();
+//                tableDynastyView.getColumns().clear();
                 String[] dynastyStr = { "startYear", "endYear", "kings", "capital", "founder" };
                 for (int i = 0; i < dynastyStr.length; i++) {
                     TableColumn<Dynasty, String> colDynasty = new TableColumn<Dynasty, String>(dynastyStr[i]);
@@ -153,7 +149,17 @@ public class MainController {
                 }
                 reader.getDinastyList().forEach(elm -> tableDynastyView.getItems().add(elm));
                 borderPane.setCenter(tableDynastyView);
-                break;
+
+                reader.getDinastyList().remove(0, reader.getDinastyList().size());
+                final ObservableList<Dynasty> dataListDynasty = FXCollections.observableArrayList();
+                dataListDynasty.addAll(reader.getDinastyList());
+                FilteredList<Dynasty> filteredDataDynasty = new FilteredList<>(dataListDynasty, b -> true);
+                textField.textProperty().addListener((observable, oldValue, newValue) -> {
+                	filteredDataDynasty.setPredicate(
+                		createPredicateDynastry(newValue)
+        			);
+        		});
+                tableDynastyView.setItems(filteredDataDynasty);
             default:
                 break;
         }
@@ -174,6 +180,73 @@ public class MainController {
         if (event.getCode().equals(KeyCode.ENTER)) {
             search(null);
         }
+    }
+    
+    private boolean searchFindsKing(King king, String newValue) {
+    	String lowerCaseFilter = newValue.toLowerCase();
+		if ((king.getTheThu().toLowerCase().indexOf(lowerCaseFilter) != -1) ||
+		   (king.getMieuHieu().toLowerCase().indexOf(lowerCaseFilter) != -1) ||
+		   (king.getThuyHieu().toLowerCase().indexOf(lowerCaseFilter) != -1) ||
+		   (king.getMieuHieu().toLowerCase().indexOf(lowerCaseFilter) != -1) ||
+		   (king.getTenHuy().toLowerCase().indexOf(lowerCaseFilter) != -1) ||
+		   (king.getNamTriVi().toLowerCase().indexOf(lowerCaseFilter) != -1) ||
+		   (king.getTheThu().toLowerCase().indexOf(lowerCaseFilter) != -1 )) {
+			return true ;
+		}
+		return false;
+	}
+    private Predicate<King> createPredicateKing(String newValue){
+        return King -> {
+            if (newValue == null || newValue.isEmpty())// If filter text is empty, display all persons.
+            	return true;
+            return searchFindsKing(King, newValue);
+        };
+    }
+//    @SuppressWarnings("unlikely-arg-type")
+	private boolean searchFindsFigure(Figure figure, String newValue) {
+    	String lowerCaseFilter = newValue.toLowerCase();
+		if ((figure.getTen().toLowerCase().indexOf(lowerCaseFilter) != -1) ||
+		   (figure.getQueQuan().toLowerCase().indexOf(lowerCaseFilter) != -1) ||
+//		   (figure.getTrieuDai().indexOf(lowerCaseFilter) != -1) ||
+//		   (figure.getNamSinh().toLowerCase().indexOf(lowerCaseFilter) != -1) ||
+//		   (figure.getNamMat().toLowerCase().indexOf(lowerCaseFilter) != -1) ||
+		   (figure.getGhiChu().toLowerCase().indexOf(lowerCaseFilter) != -1) ) {
+			return true ;
+		}
+		return false;
+	}
+    private Predicate<Figure> createPredicateFigure(String newValue){
+        return Figure -> {
+            if (newValue == null || newValue.isEmpty())// If filter text is empty, display all persons.
+            	return true;
+            return searchFindsFigure(Figure, newValue);
+        };
+    }
+    
+    private boolean searchFindsDynasty(Dynasty dynasty, String newValue) {
+    	String lowerCaseFilter = newValue.toLowerCase();
+		if ((dynasty.getStartYear().toLowerCase().indexOf(lowerCaseFilter) != -1) ||
+		   (dynasty.getEndYear().toLowerCase().indexOf(lowerCaseFilter) != -1) ||
+		   (dynasty.getCapital().toLowerCase().indexOf(lowerCaseFilter) != -1) ||
+		   (dynasty.getName().toLowerCase().indexOf(lowerCaseFilter) != -1) ||
+		   (dynasty.getFounder().toLowerCase().indexOf(lowerCaseFilter) != -1) ||
+		   (dynasty.getKings().contains(newValue)) ) {
+			return true ;
+		}
+		return false;
+	}
+    private Predicate<Dynasty> createPredicateDynastry(String newValue){
+        return Dynasty -> {
+            if (newValue == null || newValue.isEmpty())// If filter text is empty, display all persons.
+            	return true;
+            return searchFindsDynasty(Dynasty, newValue);
+        };
+    }
+//    Show data King after search and sort
+    void SortedKing(FilteredList<King> filteredData , TableView<King> table) {
+    	SortedList<King> sortedData = new SortedList<>(filteredData);
+    	sortedData.comparatorProperty().bind(table.comparatorProperty());
+    	table.setItems(filteredData);
     }
 }
 // package application;
