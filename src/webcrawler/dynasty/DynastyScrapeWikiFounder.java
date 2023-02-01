@@ -10,7 +10,6 @@ import webcrawler.parent.BasicWebScraper;
 import webcrawler.parent.IScraping;
 
 public class DynastyScrapeWikiFounder extends BasicWebScraper implements IScraping {
-	private DynastyScrapeName names;
 	private LinkedList<Dynasty> dynastys;
 
 	public DynastyScrapeWikiFounder() {
@@ -18,8 +17,7 @@ public class DynastyScrapeWikiFounder extends BasicWebScraper implements IScrapi
 		this.setUrl(url);
 		connect();
 		this.dynastys = new LinkedList<Dynasty>();
-		this.names = new DynastyScrapeName();
-		this.names.scraping();
+		
 	}
 
 	public LinkedList<Dynasty> getDynastys() {
@@ -27,6 +25,9 @@ public class DynastyScrapeWikiFounder extends BasicWebScraper implements IScrapi
 	}
 
 	public void scraping() {
+		DynastyScrapeName names;
+		names = new DynastyScrapeName();
+		names.scraping();
 		Elements data = this.getDoc().select("#mw-content-text > div.mw-parser-output > table > tbody > tr");
 		for (Element e : data) {
 			Elements dynasty_name = e.select("td:nth-child(1) > a");
