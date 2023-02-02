@@ -3,6 +3,8 @@ package webcrawler.history_figures;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+import application.readdata.ReadData;
+import javafx.collections.ObservableList;
 import webcrawler.parent.BasicWebScraper;
 import webcrawler.parent.IScraping;
 import objects.dynasty.Dynasty;
@@ -32,7 +34,7 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 public class VanSuCrawler {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		int pageIndex = 1901;
 		String urlFirstHalf = "https://vansu.vn/viet-nam/viet-nam-nhan-vat/";
 		LinkedList<Figure> list = new LinkedList<Figure>();
@@ -46,7 +48,7 @@ public class VanSuCrawler {
 		}
 
 		System.out.println("num of mem: " + list.size());
-		for (Figure figure:list) {
+		for (Figure figure : list) {
 			ArrayList<Dynasty> dynastyList = figure.getTrieuDai();
 			for (Dynasty dynasty : dynastyList) {
 				String name = dynasty.getName();
@@ -55,11 +57,12 @@ public class VanSuCrawler {
 		}
 		String filePath = "D:\\webCrawler\\jSoupWebCrawler\\src\\data\\figureUpdate.json";
 		Gson gson = new GsonBuilder().setPrettyPrinting().create();
-		JSONArray dataList = readData("src/data/figureUpdate.json");
+		ObservableList<Figure> listObservablesFigure = new ReadData<Figure>()
+				.FromJsonToArray("src/data/figureUpdate.json", Figure.class);
 		LinkedList<Figure> originalList = new LinkedList<Figure>();
-		for (int i = 0; i < dataList.size(); i++) {
-            originalList.add(new Figure().parseDataObject((JSONObject) dataList.get(i)));
-        }
+		for (int i = 0; i < listObservablesFigure.size(); i++) {
+			originalList.add(listObservablesFigure.get(i));
+		}
 		originalList.addAll(list);
 		try {
 			FileWriter writer = new FileWriter(new File(filePath));
@@ -69,81 +72,82 @@ public class VanSuCrawler {
 			e.printStackTrace();
 		}
 	}
+
 	public static String replaceTrieuDai(String original) {
 		String trieuDai = "";
-		switch(original) {
-			case "Bắc thuộc lần 1":{
+		switch (original) {
+			case "Bắc thuộc lần 1": {
 				trieuDai = trieuDai.concat("Nhà Triệu");
 				break;
 			}
-			case "Trưng Nữ Vương":{
+			case "Trưng Nữ Vương": {
 				trieuDai = trieuDai.concat("Hai Bà Trưng");
 				break;
 			}
-			case "Nhà Tiền Lý, Triệu":{
+			case "Nhà Tiền Lý, Triệu": {
 				trieuDai = trieuDai.concat("Nhà Tiền Lý");
 				break;
 			}
-			case "Hậu Trần":{
+			case "Hậu Trần": {
 				trieuDai = trieuDai.concat("Nhà Hậu Trần");
 				break;
 			}
-			case "Trịnh - Nguyễn":{
+			case "Trịnh - Nguyễn": {
 				trieuDai = trieuDai.concat("Nhà Hậu Lê");
 				break;
 			}
-			case "Triều Lê Sơ":{
+			case "Triều Lê Sơ": {
 				trieuDai = trieuDai.concat("Nhà Lê sơ");
 				break;
 			}
-			case "Nam - Bắc Triều":{
+			case "Nam - Bắc Triều": {
 				trieuDai = trieuDai.concat("Nhà Mạc");
 				break;
 			}
-			case "Nhà Nguyễn độc lập":{
+			case "Nhà Nguyễn độc lập": {
 				trieuDai = trieuDai.concat("Nhà Nguyễn");
 				break;
 			}
-			case "Pháp đô hộ":{
+			case "Pháp đô hộ": {
 				trieuDai = trieuDai.concat("Đế quốc Việt Nam");
 				break;
 			}
-			case "Nước Việt Nam mới":{
+			case "Nước Việt Nam mới": {
 				trieuDai = trieuDai.concat("Việt Nam Dân chủ Cộng hòa");
 				break;
 			}
-			case "Dựng nước":{
+			case "Dựng nước": {
 				trieuDai = trieuDai.concat("Hồng Bàng thị");
 				break;
 			}
-			default:{
+			default: {
 				trieuDai = trieuDai.concat(original);
 			}
 		}
 		return trieuDai;
 	}
+
 	@SuppressWarnings("unchecked")
-    public static JSONArray readData(String path) {
-        // JSON parser object to parse read file
-        JSONParser jsonParser = new JSONParser();
-        JSONArray dataList = null;
-        try (FileReader reader = new FileReader(path)) {
-            // Read JSON file
-            Object obj = jsonParser.parse(reader);
-            dataList = (JSONArray) obj;
+	public static JSONArray readData(String path) {
+		// JSON parser object to parse read file
+		JSONParser jsonParser = new JSONParser();
+		JSONArray dataList = null;
+		try (FileReader reader = new FileReader(path)) {
+			// Read JSON file
+			Object obj = jsonParser.parse(reader);
+			dataList = (JSONArray) obj;
 
-            // System.out.println(employeeList);
+			// System.out.println(employeeList);
 
-            // Iterate over employee array
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-        return dataList;
-        // System.out.println(kingList.get(0).getMieuHieu());
-    }
+			// Iterate over employee array
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		return dataList;
+		// System.out.println(kingList.get(0).getMieuHieu());
+	}
 }
-

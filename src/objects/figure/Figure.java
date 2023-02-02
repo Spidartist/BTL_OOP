@@ -2,14 +2,11 @@ package objects.figure;
 
 import java.util.ArrayList;
 
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
-
 // import javafx.scene.chart.Axis.TickMark;
-import objects.ParseJSON;
+
 import objects.dynasty.Dynasty;
 
-public class Figure extends HistoricalFigure implements ParseJSON {
+public class Figure extends HistoricalFigure {
 	private String queQuan;
 	private String danToc;
 	private String namNhapNgu;
@@ -146,29 +143,6 @@ public class Figure extends HistoricalFigure implements ParseJSON {
 
 	public void setTrieuDai(ArrayList<Dynasty> trieuDai) {
 		this.trieuDai = trieuDai;
-	}
-
-	@Override
-	public Figure parseDataObject(JSONObject data) {
-		String ten = (String) data.get("ten");
-		String queQuan = (String) data.get("queQuan");
-		String tenKhac = (String) data.get("tenKhac");
-		String ghiChu = (String) data.get("ghiChu");
-		ArrayList<Dynasty> trieuDai = new ArrayList<Dynasty>();
-		JSONArray trieuDais = (JSONArray) data.get("trieuDai");
-		for (int i = 0; i < trieuDais.size(); i++) {
-			JSONObject TD = (JSONObject) trieuDais.get(i);
-			// Dynasty newDynasty = new Dynasty((String) TD.get("name"));
-			// trieuDai.add(newDynasty);
-			TD.get("name");
-		}
-		// System.out.println(trieuDai);
-		String namSinh = (String) data.get("namSinh");
-		String namMat = (String) data.get("namMat");
-
-		Figure newFigure = new Figure(ten, namSinh, namMat, queQuan, ghiChu, tenKhac,
-				trieuDai);
-		return newFigure;
 	}
 
 }

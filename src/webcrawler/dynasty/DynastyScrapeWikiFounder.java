@@ -1,65 +1,53 @@
 package webcrawler.dynasty;
 
-import java.util.ArrayList;
-import org.jsoup.Jsoup;
+import java.util.LinkedList;
 
-import java.awt.desktop.ScreenSleepEvent;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.ArrayList;
-
-import org.json.simple.JSONArray;
-import org.jsoup.Connection;
-import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-
+import objects.dynasty.Dynasty;
+import objects.figure.King;
 import webcrawler.parent.BasicWebScraper;
 import webcrawler.parent.IScraping;
-import objects.dynasty.Dynasty;
-import objects.figure.Figure;
 
 public class DynastyScrapeWikiFounder extends BasicWebScraper implements IScraping {
-	private DynastyScrapeName names;
-	private ArrayList<Dynasty> dynastys;
+	private LinkedList<Dynasty> dynastys;
 
 	public DynastyScrapeWikiFounder() {
 		String url = "https://vi.wikipedia.org/wiki/Vua_Vi%E1%BB%87t_Nam";
 		this.setUrl(url);
 		connect();
-		this.dynastys = new ArrayList<Dynasty>();
-		this.names = new DynastyScrapeName();
-		this.names.scraping();
+		this.dynastys = new LinkedList<Dynasty>();
+		
 	}
 
-	public ArrayList<Dynasty> getDynastys() {
+	public LinkedList<Dynasty> getDynastys() {
 		return dynastys;
 	}
 
 	public void scraping() {
+		DynastyScrapeName names;
+		names = new DynastyScrapeName();
+		names.scraping();
 		Elements data = this.getDoc().select("#mw-content-text > div.mw-parser-output > table > tbody > tr");
 		for (Element e : data) {
 			Elements dynasty_name = e.select("td:nth-child(1) > a");
 			Elements founder_name = e.select("td:nth-child(2) > a:nth-child(1)");
 			if (names.getDynasty_names().contains(dynasty_name.text())) {
 				Dynasty dynasty = new Dynasty(dynasty_name.text());
-				dynasty.setFounder(founder_name.text());
+				dynasty.setFounder(new King(founder_name.text()));
 				System.out.println(dynasty_name.text());
 				this.dynastys.add(dynasty);
 			}
 
 			Dynasty d = new Dynasty("Hai Bà Trưng");
-			d.setFounder("Trưng Trắc");
+			d.setFounder(new King("Trưng Trắc"));
 			this.dynastys.add(d);
 			d = new Dynasty("Nhà Lê sơ");
-			d.setFounder("Lê Lợi");
+			d.setFounder(new King("Lê Lợi"));
 			this.dynastys.add(d);
 			d = new Dynasty("Nhà Lê trung hưng");
-			d.setFounder("Lê Duy Ninh");
+			d.setFounder(new King("Lê Duy Ninh"));
 			this.dynastys.add(d);
 		}
 
