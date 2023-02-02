@@ -57,8 +57,8 @@ public class MainController {
                 .FromJsonToArray("src/data/king.json", King.class);
         ObservableList<Dynasty> listObservablesDynasty = new ReadData<Dynasty>()
                 .FromJsonToArray("src/data/dynastys.json", Dynasty.class);
-        ObservableList<Festival> listObservablesFestival = new ReadData<Festival>() // Dynasty>()
-                .FromJsonToArray("src/data/festival.json", Festival.class);
+         ObservableList<Festival> listObservablesFestival = new ReadData<Festival>()
+         .FromJsonToArray("src/data/festival.json", Festival.class);
 
         switch (lableSelecItem) {
             case "Vua":
