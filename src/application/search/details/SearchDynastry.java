@@ -5,6 +5,10 @@ import java.util.function.Predicate;
 import objects.dynasty.Dynasty;
 
 public class SearchDynastry {
+	public SearchDynastry() {
+		super();
+	}
+
 	private boolean searchFindsDynasty(Dynasty dynasty, String newValue) {
 		String lowerCaseFilter = newValue.toLowerCase();
 		if ((dynasty.getStartYear().toLowerCase().indexOf(lowerCaseFilter) != -1) ||

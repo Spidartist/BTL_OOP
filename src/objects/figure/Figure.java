@@ -2,14 +2,11 @@ package objects.figure;
 
 import java.util.ArrayList;
 
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
-
 // import javafx.scene.chart.Axis.TickMark;
-import objects.ParseJSON;
+
 import objects.dynasty.Dynasty;
 
-public class Figure extends HistoricalFigure implements ParseJSON {
+public class Figure extends HistoricalFigure {
 	private String queQuan;
 	private String danToc;
 	private String namNhapNgu;
@@ -147,6 +144,7 @@ public class Figure extends HistoricalFigure implements ParseJSON {
 		this.trieuDai = trieuDai;
 	}
 
+<<<<<<< HEAD
 	@Override
 	public Figure parseDataObject(JSONObject data) {
 		String ten = (String) data.get("ten");
@@ -170,4 +168,6 @@ public class Figure extends HistoricalFigure implements ParseJSON {
 		return newFigure;
 	}
 
+=======
+>>>>>>> f704fee497142ed078ff21c034fa0cae23ec55f8
 }

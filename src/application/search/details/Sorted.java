@@ -10,4 +10,8 @@ public class Sorted<X> {
     	sortedData.comparatorProperty().bind(table.comparatorProperty());
     	table.setItems(filteredData);
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> f704fee497142ed078ff21c034fa0cae23ec55f8

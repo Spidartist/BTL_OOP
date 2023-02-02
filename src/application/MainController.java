@@ -1,5 +1,6 @@
 package application;
 
+<<<<<<< HEAD
 import java.util.ArrayList;
 import java.util.function.Predicate;
 
@@ -9,6 +10,14 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
 import javafx.collections.transformation.SortedList;
+=======
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+import application.popup.PopUpWinDow;
+import application.readdata.ReadData;
+import javafx.collections.ObservableList;
+>>>>>>> f704fee497142ed078ff21c034fa0cae23ec55f8
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.MenuButton;
@@ -22,6 +31,7 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import objects.dynasty.Dynasty;
+import objects.festival.Festival;
 import objects.figure.Figure;
 import objects.figure.King;
 
@@ -47,16 +57,26 @@ public class MainController {
 
     // Xử lý sự kiện chọn trường để search
     @FXML
-    void clickMenuItem(ActionEvent event) {
+    void clickMenuItem(ActionEvent event) throws IOException {
         MenuItem menuItem = (MenuItem) event.getSource();
         String lableSelecItem = menuItem.getText();
         PopUpWinDow newPopUp = new PopUpWinDow();
         searchField.setText(menuItem.getText());
-        ReadJson reader = new ReadJson();
+
+        ObservableList<Figure> listObservablesFigure = new ReadData<Figure>()
+                .FromJsonToArray("src/data/figureUpdate.json", Figure.class);
+        ObservableList<King> listObservablesKing = new ReadData<King>()
+                .FromJsonToArray("src/data/king.json", King.class);
+        ObservableList<Dynasty> listObservablesDynasty = new ReadData<Dynasty>()
+                .FromJsonToArray("src/data/dynastys.json", Dynasty.class);
+        ObservableList<Festival> listObservablesFestival = new ReadData<Festival>() // Dynasty>()
+                .FromJsonToArray("src/data/festival.json", Festival.class);
+
         switch (lableSelecItem) {
             case "Vua":
-                TableView<King> tableKingView = new TableView<>();
+                TableView<King> tableKingView = new TableView<King>();
                 tableKingView.getColumns().clear();
+                // xu ly xu kien click row pop up window
                 tableKingView.addEventHandler(MouseEvent.MOUSE_CLICKED, (MouseEvent e) -> {
                     if (e.getClickCount() > 1) {
                         King demo = tableKingView.getSelectionModel().getSelectedItem();
@@ -64,15 +84,27 @@ public class MainController {
                         newPopUp.getPopUpWindow(demo);
                     }
                 });
-                String[] kingStr = { "ten", "mieuHieu", "thuyHieu", "nienHieu", "tenHuy", "theThu", "namTriVi" };
+
+                String[] kingStr = { "mieuHieu", "thuyHieu", "nienHieu", "tenHuy", "theThu", "namTriVi" };
                 for (int i = 0; i < kingStr.length; i++) {
                     TableColumn<King, String> ColKing = new TableColumn<King, String>(kingStr[i]);
                     ColKing.prefWidthProperty().bind(tableKingView.widthProperty().multiply(0.143));
-                    ColKing.setCellValueFactory(new PropertyValueFactory<>(kingStr[i]));
+                    ColKing.setCellValueFactory(new PropertyValueFactory<King, String>(kingStr[i]));
                     tableKingView.getColumns().add(ColKing);
                 }
-                reader.getKingList().forEach(elm -> tableKingView.getItems().add(elm));
+
+                // System.out.println(reader.getKingList());
+                // for (King elm : readerDataKing) {
+                // System.out.println(elm.getTen());
+                // King newKing = new King(elm.getTen());
+                // }
+                tableKingView.setItems(listObservablesKing);
+                // readerDataKing.forEach(elm -> tableKingView.getItems().add(elm));
+                // for (int i = 0; i < readerDataKing.size(); i++) {
+
+                // }
                 borderPane.setCenter(tableKingView);
+<<<<<<< HEAD
                 // Search
                 reader.getKingList().remove(0, reader.getKingList().size());
                 final ObservableList<King> dataListKing = FXCollections.observableArrayList();
@@ -85,6 +117,9 @@ public class MainController {
                 });
                 tableKingView.setItems(filteredDataKing);
                 // SortedKing(filteredData,tableKingView);
+=======
+
+>>>>>>> f704fee497142ed078ff21c034fa0cae23ec55f8
                 break;
             case "Nhân Vật Lịch Sử":
                 TableView<Figure> tableFigureView = new TableView<>();
@@ -97,6 +132,7 @@ public class MainController {
                         newPopUp.getPopUpWindow(demo);
                     }
                 });
+<<<<<<< HEAD
 //                String[] figureStr = { "ten", "queQuan", "trieuDai", "namSinh", "namMat", "ghiChu" };
 //                for (int i = 0; i < figureStr.length; i++) {
 //                    if (figureStr[i] == "trieuDai") {
@@ -144,6 +180,24 @@ public class MainController {
                 for (Figure figure : figureList) {
                 	tableFigureView.getItems().add(figure);
                 }
+=======
+                String[] figureStr = { "ten", "queQuan", "namSinh", "namMat" };
+                for (int i = 0; i < figureStr.length; i++) {
+                    if (figureStr[i] == "trieuDai") {
+                        TableColumn<Figure, String> ColFigure = new TableColumn<Figure, String>(figureStr[i]);
+                        ColFigure.prefWidthProperty().bind(tableFigureView.widthProperty().multiply(0.25));
+                        ColFigure.setCellValueFactory(new PropertyValueFactory<>((String) figureStr[i]));
+                        tableFigureView.getColumns().add(ColFigure);
+                    } else {
+                        TableColumn<Figure, String> ColFigure = new TableColumn<Figure, String>(figureStr[i]);
+                        ColFigure.prefWidthProperty().bind(tableFigureView.widthProperty().multiply(0.25));
+                        ColFigure.setCellValueFactory(new PropertyValueFactory<>(figureStr[i]));
+                        tableFigureView.getColumns().add(ColFigure);
+                    }
+                }
+                // readerDataFigure.forEach(elm -> tableFigureView.getItems().add(elm));
+                tableFigureView.setItems(listObservablesFigure);
+>>>>>>> f704fee497142ed078ff21c034fa0cae23ec55f8
                 borderPane.setCenter(tableFigureView);
                 // Code thêm đoạn search
                 reader.getFigureList().remove(0, reader.getFigureList().size());
@@ -172,15 +226,21 @@ public class MainController {
                         newPopUp.getPopUpWindow(demo);
                     }
                 });
+<<<<<<< HEAD
                 // tableDynastyView.getColumns().clear();
                 String[] dynastyStr = { "startYear", "endYear", "kings", "capital", "founder" };
+=======
+                tableDynastyView.getColumns().clear();
+                String[] dynastyStr = { "name", "startYear", "endYear", "capital", "founder" };
+>>>>>>> f704fee497142ed078ff21c034fa0cae23ec55f8
                 for (int i = 0; i < dynastyStr.length; i++) {
                     TableColumn<Dynasty, String> colDynasty = new TableColumn<Dynasty, String>(dynastyStr[i]);
-                    colDynasty.prefWidthProperty().bind(tableDynastyView.widthProperty().multiply(0.143));
+                    colDynasty.prefWidthProperty().bind(tableDynastyView.widthProperty().multiply(0.2));
                     colDynasty.setCellValueFactory(new PropertyValueFactory<>(dynastyStr[i]));
                     tableDynastyView.getColumns().add(colDynasty);
                 }
-                reader.getDinastyList().forEach(elm -> tableDynastyView.getItems().add(elm));
+                // readerDataDynasty.forEach(elm -> tableDynastyView.getItems().add(elm));
+                tableDynastyView.setItems(listObservablesDynasty);
                 borderPane.setCenter(tableDynastyView);
 
                 reader.getDinastyList().remove(0, reader.getDinastyList().size());
@@ -199,12 +259,12 @@ public class MainController {
 
     @FXML
     void search(ActionEvent event) {
-        ReadJson reader = new ReadJson();
+        // ReadJson reader = new ReadJson();
         System.out.println(textField.getText());
         // tableView.setDisable(false);
         // TableColumn column = new TableColumn<>("colunm 1");
         // tableView.getColumns().add(column);
-        System.out.println(reader.getKingList().get(0).getMieuHieu());
+        // System.out.println(reader.getKingList().get(0).getMieuHieu());
     }
 
     @FXML

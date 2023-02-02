@@ -2,9 +2,8 @@ package objects.figure;
 
 import org.json.simple.JSONObject;
 
-import objects.ParseJSON;
 
-public class King extends HistoricalFigure implements ParseJSON {
+public class King extends HistoricalFigure {
 	private String paperURL;
 	private String mieuHieu;
 	private String thuyHieu;
@@ -100,6 +99,7 @@ public class King extends HistoricalFigure implements ParseJSON {
 		this.namTriVi = namTriVi;
 	}
 
+<<<<<<< HEAD
 	@Override
 	public King parseDataObject(JSONObject data) {
 		String paperURL = (String) data.get("paperURL");
@@ -121,4 +121,6 @@ public class King extends HistoricalFigure implements ParseJSON {
 		return newKing;
 	}
 
+=======
+>>>>>>> f704fee497142ed078ff21c034fa0cae23ec55f8
 }

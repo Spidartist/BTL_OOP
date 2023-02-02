@@ -3,7 +3,6 @@ package application.popup.details;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.layout.StackPane;
-import javafx.stage.Modality;
 import javafx.stage.Stage;
 import objects.dynasty.Dynasty;
 
