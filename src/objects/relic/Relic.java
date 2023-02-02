@@ -1,6 +1,6 @@
 package objects.relic;
 
-import java.util.ArrayList;
+import java.util.LinkedList;
 
 import objects.dynasty.Dynasty;
 import objects.figure.HistoricalFigure;
@@ -9,8 +9,8 @@ public class Relic extends AbstractRelic{
 	private String location;
 	private String type;
 	private String rank;
-	private ArrayList<HistoricalFigure> people;
-	private ArrayList<Dynasty> dynastys;
+	private LinkedList<HistoricalFigure> people;
+	private LinkedList<Dynasty> dynastys;
 	private String desc;
 	private int yearEngage;
 
@@ -34,28 +34,20 @@ public class Relic extends AbstractRelic{
 		this.location = location;
 	}
 
-	public ArrayList<String> getPeople() {
+	public LinkedList<HistoricalFigure> getPeople() {
 		return people;
 	}
 
-	public void setPeople(ArrayList<String> people) {
+	public void setPeople(LinkedList<HistoricalFigure> people) {
 		this.people = people;
 	}
 
-	public ArrayList<String> getDynastys() {
+	public LinkedList<Dynasty> getDynastys() {
 		return dynastys;
 	}
 
-	public void setDynastys(ArrayList<String> dynastys) {
+	public void setDynastys(LinkedList<Dynasty> dynastys) {
 		this.dynastys = dynastys;
-	}
-
-	public ArrayList<String> getEvents() {
-		return events;
-	}
-
-	public void setEvents(ArrayList<String> events) {
-		this.events = events;
 	}
 
 	public String getDesc() {
@@ -68,13 +60,12 @@ public class Relic extends AbstractRelic{
 	
 	
 	
-	public Relic(String name, String location, String type, String rank, ArrayList<String> people) {
+	public Relic(String name, String location, String type, String rank) {
 		super();
 		this.name = name;
 		this.location = location;
 		this.type = type;
 		this.rank = rank;
-		this.people = people;
 	}
 
 	public Relic(String name, String location) {
