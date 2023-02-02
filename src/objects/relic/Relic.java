@@ -3,16 +3,18 @@ package objects.relic;
 import java.util.ArrayList;
 
 import objects.dynasty.Dynasty;
-import objects.figure.HistoricalFigure;
+import objects.figure.Figure;
 
-public class Relic extends AbstractRelic{
+public class Relic extends AbstractRelic {
 	private String location;
 	private String type;
 	private String rank;
-	private ArrayList<HistoricalFigure> people;
+	private ArrayList<Figure> people;
 	private ArrayList<Dynasty> dynastys;
 	private String desc;
 	private int yearEngage;
+
+	private ArrayList<String> events;
 
 	public int getYearEngage() {
 		return yearEngage;
@@ -34,19 +36,19 @@ public class Relic extends AbstractRelic{
 		this.location = location;
 	}
 
-	public ArrayList<String> getPeople() {
+	public ArrayList<Figure> getPeople() {
 		return people;
 	}
 
-	public void setPeople(ArrayList<String> people) {
+	public void setPeople(ArrayList<Figure> people) {
 		this.people = people;
 	}
 
-	public ArrayList<String> getDynastys() {
+	public ArrayList<Dynasty> getDynastys() {
 		return dynastys;
 	}
 
-	public void setDynastys(ArrayList<String> dynastys) {
+	public void setDynastys(ArrayList<Dynasty> dynastys) {
 		this.dynastys = dynastys;
 	}
 
@@ -65,10 +67,8 @@ public class Relic extends AbstractRelic{
 	public void setDesc(String desc) {
 		this.desc = desc;
 	}
-	
-	
-	
-	public Relic(String name, String location, String type, String rank, ArrayList<String> people) {
+
+	public Relic(String name, String location, String type, String rank, ArrayList<Figure> people) {
 		super();
 		this.name = name;
 		this.location = location;

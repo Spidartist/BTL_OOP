@@ -9,7 +9,7 @@ import objects.dynasty.Dynasty;
 
 public class DynastyDetails {
     public DynastyDetails(Dynasty curSelect) {
-        Label secondLabel = new Label(curSelect.getFounder());
+        Label secondLabel = new Label(curSelect.getFounder().getTen());
         StackPane secondaryLayout = new StackPane();
         secondaryLayout.getChildren().add(secondLabel);
         Scene secondScene = new Scene(secondaryLayout, 230, 100);

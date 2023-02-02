@@ -1,5 +1,6 @@
 package objects.dynasty;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 
 import objects.figure.King;
@@ -12,55 +13,28 @@ public class Dynasty implements ParseJSON {
 	private String startYear; // co ve de
 	private String endYear; // chua code
 	private String name; // xong, day la base
-<<<<<<< HEAD
-	private ArrayList<String> kings; // 1 phan, 8 ban ghi
-	private String capital; // co ve day la thu do thi hop ly hon
-	// private ArrayList<String> events;
-	private String founder; // done
-=======
-	private LinkedList<King> kings; // 1 phan, 8 ban ghi
+	private ArrayList<King> kings; // 1 phan, 8 ban ghi
 	private String capital; // co ve day la thu do thi hop ly hon
 	private King founder; // done
->>>>>>> cfbd4ef8d55749a3d21506ff2bc503dc5f8687c5
 
 	public Dynasty() {
 
 	}
 
-<<<<<<< HEAD
-	public Dynasty(String startYear, String endYear, String name, ArrayList<String> kings, String capital,
-			String founder) {
-		this.startYear = startYear;
-		this.endYear = endYear;
-		this.name = name;
-		this.kings = kings;
-		this.capital = capital;
-		this.founder = founder;
-	}
-
-=======
->>>>>>> cfbd4ef8d55749a3d21506ff2bc503dc5f8687c5
 	public Dynasty(String name) {
 		super();
 		this.name = name;
 	}
 
-<<<<<<< HEAD
-	public Dynasty(String startYear, String endYear, String name, ArrayList<String> kings) {
-=======
-	public Dynasty(String startYear, String endYear, String name, LinkedList<King> kings, String capital,
+	public Dynasty(String startYear, String endYear, String name, ArrayList<King> kings, String capital,
 			King founder) {
->>>>>>> cfbd4ef8d55749a3d21506ff2bc503dc5f8687c5
 		super();
 		this.startYear = startYear;
 		this.endYear = endYear;
 		this.name = name;
 		this.kings = kings;
-<<<<<<< HEAD
-=======
 		this.capital = capital;
 		this.founder = founder;
->>>>>>> cfbd4ef8d55749a3d21506ff2bc503dc5f8687c5
 	}
 
 	public Dynasty(String startYear, String endYear, String name) {
@@ -70,20 +44,7 @@ public class Dynasty implements ParseJSON {
 		this.name = name;
 	}
 
-<<<<<<< HEAD
-	public Dynasty(String startYear, String endYear, String name, ArrayList<String> kings, String location) {
-		super();
-		this.startYear = startYear;
-		this.endYear = endYear;
-		this.name = name;
-		this.kings = kings;
-		this.capital = location;
-	}
-
-	public String getFounder() {
-=======
 	public King getFounder() {
->>>>>>> cfbd4ef8d55749a3d21506ff2bc503dc5f8687c5
 		return founder;
 	}
 
@@ -115,11 +76,11 @@ public class Dynasty implements ParseJSON {
 		this.name = name;
 	}
 
-	public LinkedList<King> getKings() {
+	public ArrayList<King> getKings() {
 		return kings;
 	}
 
-	public void setKings(LinkedList<King> kings) {
+	public void setKings(ArrayList<King> kings) {
 		this.kings = kings;
 	}
 
@@ -138,11 +99,14 @@ public class Dynasty implements ParseJSON {
 		String name = (String) data.get("name");
 
 		String capital = (String) data.get("capital");
-		String founder = (String) data.get("founder");
-		ArrayList<String> kings = new ArrayList<String>();
+		JSONObject founderJSon = (JSONObject)data.get("founder");
+		King founder = new King((String)founderJSon.get("ten"));
+		ArrayList<King> kings = new ArrayList<King>();
 		JSONArray listKing = (JSONArray) data.get("kings");
 		for (int i = 0; i < listKing.size(); i++) {
-			kings.add((String) listKing.get(i));
+			JSONObject king = (JSONObject) listKing.get(i);
+			 King newKing = new King((String) king.get("ten"));
+			kings.add(newKing);
 		}
 		// kings.forEach(elm -> ());
 		// Figure newFigure = new Figure(ten, namSinh, namMat, queQuan, tenKhac,
@@ -152,5 +116,4 @@ public class Dynasty implements ParseJSON {
 		return newDynasty;
 	}
 
-	
 }

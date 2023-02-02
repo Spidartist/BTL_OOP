@@ -24,7 +24,7 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 public class FindKing extends BasicWebScraper implements IScraping {
-	private ArrayList<String> figures = new ArrayList<String>();
+	private ArrayList<King> kings = new ArrayList<King>();
 
 	public FindKing() {
 		String url = "https://vi.wikipedia.org/wiki/Vua_Vi%E1%BB%87t_Nam";
@@ -35,30 +35,17 @@ public class FindKing extends BasicWebScraper implements IScraping {
 	public Document getDoc() {
 		return this.doc;
 	}
+	public ArrayList<King> getKings() {
+		return kings;
+	}
+
+	public void setKings(ArrayList<King> kings) {
+		this.kings = kings;
+	}
 
 	@Override
 	public void scraping() {
-		Element mainPage = this.doc.getElementsByClass("container textview").get(0);
-		// Elements headers = mainPage.getElementsByTag("h2");
-		Elements paragraphs = mainPage.getElementsByTag("p");
-		for (Element p : paragraphs) {
-			String context = p.html();
-			if (context.contains("<br>")) {
-				String[] t = context.split("<br>");
-				for (String tmp : t) {
-					if (tmp.contains("(") && tmp.length() < 80) {
-						figures.add(tmp);
-					}
-				}
-			}
-		}
-	}
-
-	public static void main(String[] args) {
-		FindKing obj = new FindKing();
-		ArrayList<King> kings = new ArrayList<King>();
-		Document doc = obj.getDoc();
-		Elements firstTable = doc.select("table.toccolours");
+		Elements firstTable = this.doc.select("table.toccolours");
 		Elements tables = doc.select("table");
 		for (Element t : firstTable) {
 			if (tables.contains(t)) {
@@ -76,35 +63,41 @@ public class FindKing extends BasicWebScraper implements IScraping {
 				Elements datas = row.getElementsByTag("td");
 				if (datas.size() >= 10 && datas.size() < 18) {
 					String name = datas.get(1).text();
+					name = cleanData(name);
 					// name = name.replaceAll(openRegEx, "");
 					King king = new King(name);
 					Element attr = datas.get(1).select("a").first();
 					if (attr != null) {
-						String url = attr.attr("href");
+						String url = attr.absUrl("href");
 						System.out.println(url);
 						king.setPaperURL(url);
 					}
 
 					String mieuHieu = datas.get(2).text();
+					mieuHieu = cleanData(mieuHieu);
 					// mieuHieu = mieuHieu.replaceAll(openRegEx,"");
 
 					king.setMieuHieu(mieuHieu);
 					String thuyHieu = datas.get(3).text();
+					thuyHieu = cleanData(thuyHieu);
 					// thuyHieu = thuyHieu.replaceAll(openRegEx,"");
 
 					king.setThuyHieu(thuyHieu);
 					String nienHieu = datas.get(4).text();
 					// nienHieu = nienHieu.replaceAll(openRegEx,"");
-
+					nienHieu = cleanData(nienHieu);
 					king.setNienHieu(nienHieu);
 					String tenHuy = datas.get(5).text();
+					tenHuy = cleanData(tenHuy);
 					king.setTenHuy(tenHuy);
+					
 					// tenHuy = tenHuy.replaceAll(openRegEx,"");
 
 					String theThu = datas.get(6).text();
-					theThu.replace("[^\\[a-z\\]]", "");
-					theThu = theThu.replaceAll(strRegEx, "");
-					theThu = theThu.replaceAll(attrRegEx, "");
+//					theThu.replace("[^\\[a-z\\]]", "");
+//					theThu = theThu.replaceAll(strRegEx, "");
+//					theThu = theThu.replaceAll(attrRegEx, "");
+					theThu = cleanData(theThu);
 					king.setTheThu(theThu);
 					String namTriVi = datas.get(7).html();
 
@@ -116,6 +109,7 @@ public class FindKing extends BasicWebScraper implements IScraping {
 					namTriVi = namTriVi.concat(ngang);
 					namTriVi = namTriVi.concat(end);
 					namTriVi = namTriVi.replaceAll(attrRegEx, "");
+					namTriVi = cleanData(namTriVi);
 					// System.out.println(namTriVi);
 					king.setNamTriVi(namTriVi);
 					kings.add(king);
@@ -123,8 +117,26 @@ public class FindKing extends BasicWebScraper implements IScraping {
 					continue;
 			}
 		}
+	}
+	public String cleanData(String sample) {
+		String data = new String(sample);
+		int index = data.indexOf("[");
+		while (index != -1) {
+			int close = data.indexOf("]");
+			String tmp = data.substring(index, close+1);
+			data= data.replace(tmp, "");
+			index = data.indexOf("[");
+		}
+		return data;
+	}
+
+	public static void main(String[] args) {
+		FindKing obj = new FindKing();
+		ArrayList<King> kings = new ArrayList<King>();
+		obj.scraping();
+		kings.addAll(obj.getKings());
 		System.out.println(kings.size());
-		String filePath = "D:\\webCrawler\\webcrawler\\src\\webcrawler\\jsonFiles\\king.json";
+		String filePath = "D:\\webCrawler\\jSoupWebCrawler\\src\\data\\king.json";
 		JSONArray jarray = new JSONArray();
 		Gson gson = new GsonBuilder().setPrettyPrinting().create();
 		String test = gson.toJson(kings);
@@ -137,4 +149,5 @@ public class FindKing extends BasicWebScraper implements IScraping {
 			e.printStackTrace();
 		}
 	}
+	
 }

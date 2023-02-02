@@ -61,7 +61,7 @@ public class VanSuCrawler {
             figureList.add(new Figure().parseDataObject((JSONObject) figureDataList.get(i)));
         }
 		
-		JSONArray dynastyDataList = readData("src/data/dynastys.json");
+		JSONArray dynastyDataList = readData("src/data/dynasty.json");
 		LinkedList<Dynasty> dynastyList = new LinkedList<Dynasty>();
 		for (int i = 0; i < dynastyDataList.size(); i++) {
             dynastyList.add(new Dynasty().parseDataObject((JSONObject) dynastyDataList.get(i)));

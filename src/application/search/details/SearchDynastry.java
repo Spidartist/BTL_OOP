@@ -6,22 +6,23 @@ import objects.dynasty.Dynasty;
 
 public class SearchDynastry {
 	private boolean searchFindsDynasty(Dynasty dynasty, String newValue) {
-    	String lowerCaseFilter = newValue.toLowerCase();
+		String lowerCaseFilter = newValue.toLowerCase();
 		if ((dynasty.getStartYear().toLowerCase().indexOf(lowerCaseFilter) != -1) ||
-		   (dynasty.getEndYear().toLowerCase().indexOf(lowerCaseFilter) != -1) ||
-		   (dynasty.getCapital().toLowerCase().indexOf(lowerCaseFilter) != -1) ||
-		   (dynasty.getName().toLowerCase().indexOf(lowerCaseFilter) != -1) ||
-		   (dynasty.getFounder().toLowerCase().indexOf(lowerCaseFilter) != -1) ||
-		   (dynasty.getKings().contains(newValue)) ) {
-			return true ;
+				(dynasty.getEndYear().toLowerCase().indexOf(lowerCaseFilter) != -1) ||
+				(dynasty.getCapital().toLowerCase().indexOf(lowerCaseFilter) != -1) ||
+				(dynasty.getName().toLowerCase().indexOf(lowerCaseFilter) != -1) ||
+				(dynasty.getFounder().getTen().toLowerCase().indexOf(lowerCaseFilter) != -1) ||
+				(dynasty.getKings().contains(newValue))) {
+			return true;
 		}
 		return false;
 	}
-    private Predicate<Dynasty> createPredicateDynastry(String newValue){
-        return Dynasty -> {
-            if (newValue == null || newValue.isEmpty())// If filter text is empty, display all persons.
-            	return true;
-            return searchFindsDynasty(Dynasty, newValue);
-        };
-    }
+
+	private Predicate<Dynasty> createPredicateDynastry(String newValue) {
+		return Dynasty -> {
+			if (newValue == null || newValue.isEmpty())// If filter text is empty, display all persons.
+				return true;
+			return searchFindsDynasty(Dynasty, newValue);
+		};
+	}
 }

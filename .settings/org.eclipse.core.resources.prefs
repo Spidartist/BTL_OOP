@@ -1,3 +1,6 @@
+=\=\=\=\=\=\=
+<<<<<<<=HEAD
+>>>>>>>=cfbd4ef8d55749a3d21506ff2bc503dc5f8687c5
 eclipse.preferences.version=1
 encoding//src/webcrawler/CrawlerPrototype.java=UTF-8
 encoding//src/webcrawler/TomTatLichSu.java=UTF-8
@@ -5,10 +8,6 @@ encoding//src/webcrawler/VnDoc.java=UTF-8
 encoding//src/webcrawler/dynasty/DynastyScrapeFull.java=UTF-8
 encoding//src/webcrawler/dynasty/DynastyScrapeName.java=UTF-8
 encoding//src/webcrawler/dynasty/DynastyScrapeOnePageWiki.java=UTF-8
-<<<<<<< HEAD
-encoding//src/webcrawler/dynasty/DynastyScrapeVYCTKings.java=UTF-8
-=======
->>>>>>> cfbd4ef8d55749a3d21506ff2bc503dc5f8687c5
 encoding//src/webcrawler/dynasty/DynastyScrapeWikiCapital.java=UTF-8
 encoding//src/webcrawler/dynasty/DynastyScrapeWikiFounder.java=UTF-8
 encoding//src/webcrawler/dynasty/DynastyScrapeWikiKings.java=UTF-8

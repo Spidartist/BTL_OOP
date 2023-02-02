@@ -18,16 +18,15 @@ public class Figure extends HistoricalFigure implements ParseJSON {
 	private String tenKhac;
 	private King doiVua;
 
-	public String getTenKhac() {
-		return tenKhac;
-	}
 
 	private ArrayList<Dynasty> trieuDai = new ArrayList<Dynasty>();
 
 	public void setTenKhac(String tenKhac) {
 		this.tenKhac = tenKhac;
 	}
-
+	public String getTenKhac() {
+		return tenKhac;
+	}
 	// public Figure(String ten, String namSinh, String namMat, String queQuan,
 	// String danToc, String namNhapNgu,
 	// String ghiChu, String namDoTrangNguyen, King doiVua) {

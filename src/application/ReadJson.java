@@ -21,11 +21,7 @@ public class ReadJson {
     private ObservableList<Dynasty> dynastyList = FXCollections.observableArrayList();
 
     public ObservableList<King> getKingList() {
-<<<<<<< HEAD
         JSONArray dataList = readData("src/data/king.json");
-=======
-        JSONArray dataList = readData("src/webcrawler/jsonFiles/king.json");
->>>>>>> cfbd4ef8d55749a3d21506ff2bc503dc5f8687c5
         for (int i = 0; i < dataList.size(); i++) {
             kingList.add(new King().parseDataObject((JSONObject) dataList.get(i)));
         }
@@ -33,11 +29,7 @@ public class ReadJson {
     }
 
     public ObservableList<Figure> getFigureList() {
-<<<<<<< HEAD
         JSONArray dataList = readData("src/data/figureUpdate.json");
-=======
-        JSONArray dataList = readData("src/webcrawler/jsonFiles/figure.json");
->>>>>>> cfbd4ef8d55749a3d21506ff2bc503dc5f8687c5
         for (int i = 0; i < dataList.size(); i++) {
             figureList.add(new Figure().parseDataObject((JSONObject) dataList.get(i)));
         }
@@ -45,7 +37,7 @@ public class ReadJson {
     }
 
     public ObservableList<Dynasty> getDinastyList() {
-        JSONArray dataList = readData("src/data/dynastys.json");
+        JSONArray dataList = readData("src/data/dynasty.json");
         for (int i = 0; i < dataList.size(); i++) {
             dynastyList.add(new Dynasty().parseDataObject((JSONObject) dataList.get(i)));
         }

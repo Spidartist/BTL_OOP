@@ -114,5 +114,11 @@ public class King extends HistoricalFigure implements ParseJSON {
 		King newKing = new King(paperURL, mieuHieu, thuyHieu, nienHieu, tenHuy, theThu, namTriVi, ten);
 		return newKing;
 	}
+	public King parseDataObjectUsingName(JSONObject data) {
+		
+		String ten = (String) data.get("ten");
+		King newKing = new King(ten);
+		return newKing;
+	}
 
 }

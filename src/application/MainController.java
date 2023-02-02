@@ -1,8 +1,10 @@
 package application;
 
+import java.util.ArrayList;
 import java.util.function.Predicate;
 
 import application.popup.PopUpWinDow;
+import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
@@ -76,17 +78,17 @@ public class MainController {
                 final ObservableList<King> dataListKing = FXCollections.observableArrayList();
                 dataListKing.addAll(reader.getKingList());
                 FilteredList<King> filteredDataKing = new FilteredList<>(dataListKing, b -> true);
-                //Search text
+                // Search text
                 textField.textProperty().addListener((observable, oldValue, newValue) -> {
-        			filteredDataKing.setPredicate(
-        				createPredicateKing(newValue)
-        			);
-        		});
+                    filteredDataKing.setPredicate(
+                            createPredicateKing(newValue));
+                });
                 tableKingView.setItems(filteredDataKing);
-//                SortedKing(filteredData,tableKingView);
+                // SortedKing(filteredData,tableKingView);
                 break;
             case "Nhân Vật Lịch Sử":
                 TableView<Figure> tableFigureView = new TableView<>();
+
                 tableFigureView.getColumns().clear();
                 tableFigureView.addEventHandler(MouseEvent.MOUSE_CLICKED, (MouseEvent e) -> {
                     if (e.getClickCount() > 1) {
@@ -95,32 +97,63 @@ public class MainController {
                         newPopUp.getPopUpWindow(demo);
                     }
                 });
-                String[] figureStr = { "ten", "queQuan", "trieuDai", "namSinh", "namMat", "ghiChu" };
-                for (int i = 0; i < figureStr.length; i++) {
-                    if (figureStr[i] == "trieuDai") {
-                        TableColumn<Figure, String> ColFigure = new TableColumn<Figure, String>(figureStr[i]);
-                        ColFigure.prefWidthProperty().bind(tableFigureView.widthProperty().multiply(0.143));
-                        ColFigure.setCellValueFactory(new PropertyValueFactory<>((String) figureStr[i]));
-                        tableFigureView.getColumns().add(ColFigure);
-                    } else {
-                        TableColumn<Figure, String> ColFigure = new TableColumn<Figure, String>(figureStr[i]);
-                        ColFigure.prefWidthProperty().bind(tableFigureView.widthProperty().multiply(0.143));
-                        ColFigure.setCellValueFactory(new PropertyValueFactory<>(figureStr[i]));
-                        tableFigureView.getColumns().add(ColFigure);
-                    }
+//                String[] figureStr = { "ten", "queQuan", "trieuDai", "namSinh", "namMat", "ghiChu" };
+//                for (int i = 0; i < figureStr.length; i++) {
+//                    if (figureStr[i] == "trieuDai") {
+//                        TableColumn<Figure, String> ColFigure = new TableColumn<Figure, String>(figureStr[i]);
+//                        ColFigure.prefWidthProperty().bind(tableFigureView.widthProperty().multiply(0.143));
+//                        ColFigure.setCellValueFactory(new PropertyValueFactory<>( figureStr[i]));
+//                        tableFigureView.getColumns().add(ColFigure);
+//                    } else {
+//                        TableColumn<Figure, String> ColFigure = new TableColumn<Figure, String>(figureStr[i]);
+//                        ColFigure.prefWidthProperty().bind(tableFigureView.widthProperty().multiply(0.143));
+//                        ColFigure.setCellValueFactory(new PropertyValueFactory<>(figureStr[i]));
+//                        tableFigureView.getColumns().add(ColFigure);
+//                    }
+//                }
+//                reader.getFigureList().forEach(elm -> tableFigureView.getItems().add(elm));
+                
+                TableColumn<Figure, String> tenCol = new TableColumn<Figure,String>("ten");
+                tenCol.setCellValueFactory(new PropertyValueFactory<>("ten"));
+                TableColumn<Figure, String> queQuanCol = new TableColumn<Figure,String>("Que Quan");
+                queQuanCol.setCellValueFactory(new PropertyValueFactory<>("queQuan"));
+                TableColumn<Figure, String> trieuDaiCol = new TableColumn<Figure,String>("Trieu Dai");
+                trieuDaiCol.setCellValueFactory(cellData -> {
+                	ArrayList<Dynasty> dynasty = cellData.getValue().getTrieuDai();
+                	String trieuDai = "";
+                	for (Dynasty d : dynasty) {
+                		trieuDai = trieuDai.concat(d.getName());
+                		trieuDai = trieuDai.concat(" ");
+                	}
+                	return new SimpleStringProperty(trieuDai);
+                });
+                TableColumn<Figure, String> namSinhCol = new TableColumn<Figure,String>("Nam Sinh");
+                namSinhCol.setCellValueFactory(new PropertyValueFactory<>("namSinh"));
+                TableColumn<Figure, String> namMatCol = new TableColumn<Figure,String>("Nam Mat");
+                namMatCol.setCellValueFactory(new PropertyValueFactory<>("namMat"));
+                TableColumn<Figure, String> ghiChuCol = new TableColumn<Figure,String>("Ghi Chu");
+                ghiChuCol.setCellValueFactory(new PropertyValueFactory<>("ghiChu"));
+                ObservableList<Figure> figureList = reader.getFigureList();
+                tableFigureView.getColumns().add(tenCol);
+                
+                tableFigureView.getColumns().add(queQuanCol);
+                tableFigureView.getColumns().add(trieuDaiCol);
+                tableFigureView.getColumns().add(namSinhCol);
+                tableFigureView.getColumns().add(namMatCol);
+                tableFigureView.getColumns().add(ghiChuCol);
+                for (Figure figure : figureList) {
+                	tableFigureView.getItems().add(figure);
                 }
-                reader.getFigureList().forEach(elm -> tableFigureView.getItems().add(elm));
                 borderPane.setCenter(tableFigureView);
-                //Code thêm đoạn search
+                // Code thêm đoạn search
                 reader.getFigureList().remove(0, reader.getFigureList().size());
                 final ObservableList<Figure> dataListFigure = FXCollections.observableArrayList();
                 dataListFigure.addAll(reader.getFigureList());
                 FilteredList<Figure> filteredDataFigure = new FilteredList<>(dataListFigure, b -> true);
                 textField.textProperty().addListener((observable, oldValue, newValue) -> {
-        			filteredDataFigure.setPredicate(
-        				createPredicateFigure(newValue)
-        			);
-        		});
+                    filteredDataFigure.setPredicate(
+                            createPredicateFigure(newValue));
+                });
                 tableFigureView.setItems(filteredDataFigure);
                 break;
             case "Sự kiện lịch sử":
@@ -139,7 +172,7 @@ public class MainController {
                         newPopUp.getPopUpWindow(demo);
                     }
                 });
-//                tableDynastyView.getColumns().clear();
+                // tableDynastyView.getColumns().clear();
                 String[] dynastyStr = { "startYear", "endYear", "kings", "capital", "founder" };
                 for (int i = 0; i < dynastyStr.length; i++) {
                     TableColumn<Dynasty, String> colDynasty = new TableColumn<Dynasty, String>(dynastyStr[i]);
@@ -155,10 +188,9 @@ public class MainController {
                 dataListDynasty.addAll(reader.getDinastyList());
                 FilteredList<Dynasty> filteredDataDynasty = new FilteredList<>(dataListDynasty, b -> true);
                 textField.textProperty().addListener((observable, oldValue, newValue) -> {
-                	filteredDataDynasty.setPredicate(
-                		createPredicateDynastry(newValue)
-        			);
-        		});
+                    filteredDataDynasty.setPredicate(
+                            createPredicateDynastry(newValue));
+                });
                 tableDynastyView.setItems(filteredDataDynasty);
             default:
                 break;
@@ -181,72 +213,77 @@ public class MainController {
             search(null);
         }
     }
-    
+
     private boolean searchFindsKing(King king, String newValue) {
-    	String lowerCaseFilter = newValue.toLowerCase();
-		if ((king.getTheThu().toLowerCase().indexOf(lowerCaseFilter) != -1) ||
-		   (king.getMieuHieu().toLowerCase().indexOf(lowerCaseFilter) != -1) ||
-		   (king.getThuyHieu().toLowerCase().indexOf(lowerCaseFilter) != -1) ||
-		   (king.getMieuHieu().toLowerCase().indexOf(lowerCaseFilter) != -1) ||
-		   (king.getTenHuy().toLowerCase().indexOf(lowerCaseFilter) != -1) ||
-		   (king.getNamTriVi().toLowerCase().indexOf(lowerCaseFilter) != -1) ||
-		   (king.getTheThu().toLowerCase().indexOf(lowerCaseFilter) != -1 )) {
-			return true ;
-		}
-		return false;
-	}
-    private Predicate<King> createPredicateKing(String newValue){
+        String lowerCaseFilter = newValue.toLowerCase();
+        if ((king.getTheThu().toLowerCase().indexOf(lowerCaseFilter) != -1) ||
+                (king.getMieuHieu().toLowerCase().indexOf(lowerCaseFilter) != -1) ||
+                (king.getThuyHieu().toLowerCase().indexOf(lowerCaseFilter) != -1) ||
+                (king.getMieuHieu().toLowerCase().indexOf(lowerCaseFilter) != -1) ||
+                (king.getTenHuy().toLowerCase().indexOf(lowerCaseFilter) != -1) ||
+                (king.getNamTriVi().toLowerCase().indexOf(lowerCaseFilter) != -1) ||
+                (king.getTheThu().toLowerCase().indexOf(lowerCaseFilter) != -1)) {
+            return true;
+        }
+        return false;
+    }
+
+    private Predicate<King> createPredicateKing(String newValue) {
         return King -> {
             if (newValue == null || newValue.isEmpty())// If filter text is empty, display all persons.
-            	return true;
+                return true;
             return searchFindsKing(King, newValue);
         };
     }
-//    @SuppressWarnings("unlikely-arg-type")
-	private boolean searchFindsFigure(Figure figure, String newValue) {
-    	String lowerCaseFilter = newValue.toLowerCase();
-		if ((figure.getTen().toLowerCase().indexOf(lowerCaseFilter) != -1) ||
-		   (figure.getQueQuan().toLowerCase().indexOf(lowerCaseFilter) != -1) ||
-//		   (figure.getTrieuDai().indexOf(lowerCaseFilter) != -1) ||
-//		   (figure.getNamSinh().toLowerCase().indexOf(lowerCaseFilter) != -1) ||
-//		   (figure.getNamMat().toLowerCase().indexOf(lowerCaseFilter) != -1) ||
-		   (figure.getGhiChu().toLowerCase().indexOf(lowerCaseFilter) != -1) ) {
-			return true ;
-		}
-		return false;
-	}
-    private Predicate<Figure> createPredicateFigure(String newValue){
+
+    // @SuppressWarnings("unlikely-arg-type")
+    private boolean searchFindsFigure(Figure figure, String newValue) {
+        String lowerCaseFilter = newValue.toLowerCase();
+        if ((figure.getTen().toLowerCase().indexOf(lowerCaseFilter) != -1) ||
+                (figure.getQueQuan().toLowerCase().indexOf(lowerCaseFilter) != -1) ||
+                // (figure.getTrieuDai().indexOf(lowerCaseFilter) != -1) ||
+                // (figure.getNamSinh().toLowerCase().indexOf(lowerCaseFilter) != -1) ||
+                // (figure.getNamMat().toLowerCase().indexOf(lowerCaseFilter) != -1) ||
+                (figure.getGhiChu().toLowerCase().indexOf(lowerCaseFilter) != -1)) {
+            return true;
+        }
+        return false;
+    }
+
+    private Predicate<Figure> createPredicateFigure(String newValue) {
         return Figure -> {
             if (newValue == null || newValue.isEmpty())// If filter text is empty, display all persons.
-            	return true;
+                return true;
             return searchFindsFigure(Figure, newValue);
         };
     }
-    
+
     private boolean searchFindsDynasty(Dynasty dynasty, String newValue) {
-    	String lowerCaseFilter = newValue.toLowerCase();
-		if ((dynasty.getStartYear().toLowerCase().indexOf(lowerCaseFilter) != -1) ||
-		   (dynasty.getEndYear().toLowerCase().indexOf(lowerCaseFilter) != -1) ||
-		   (dynasty.getCapital().toLowerCase().indexOf(lowerCaseFilter) != -1) ||
-		   (dynasty.getName().toLowerCase().indexOf(lowerCaseFilter) != -1) ||
-		   (dynasty.getFounder().toLowerCase().indexOf(lowerCaseFilter) != -1) ||
-		   (dynasty.getKings().contains(newValue)) ) {
-			return true ;
-		}
-		return false;
-	}
-    private Predicate<Dynasty> createPredicateDynastry(String newValue){
+        String lowerCaseFilter = newValue.toLowerCase();
+        if ((dynasty.getStartYear().toLowerCase().indexOf(lowerCaseFilter) != -1) ||
+                (dynasty.getEndYear().toLowerCase().indexOf(lowerCaseFilter) != -1) ||
+                (dynasty.getCapital().toLowerCase().indexOf(lowerCaseFilter) != -1) ||
+                (dynasty.getName().toLowerCase().indexOf(lowerCaseFilter) != -1) ||
+                (dynasty.getFounder().getTen().toLowerCase().indexOf(lowerCaseFilter) != -1) ||
+                (dynasty.getKings().contains(newValue))) {
+            return true;
+        }
+        return false;
+    }
+
+    private Predicate<Dynasty> createPredicateDynastry(String newValue) {
         return Dynasty -> {
             if (newValue == null || newValue.isEmpty())// If filter text is empty, display all persons.
-            	return true;
+                return true;
             return searchFindsDynasty(Dynasty, newValue);
         };
     }
-//    Show data King after search and sort
-    void SortedKing(FilteredList<King> filteredData , TableView<King> table) {
-    	SortedList<King> sortedData = new SortedList<>(filteredData);
-    	sortedData.comparatorProperty().bind(table.comparatorProperty());
-    	table.setItems(filteredData);
+
+    // Show data King after search and sort
+    void SortedKing(FilteredList<King> filteredData, TableView<King> table) {
+        SortedList<King> sortedData = new SortedList<>(filteredData);
+        sortedData.comparatorProperty().bind(table.comparatorProperty());
+        table.setItems(filteredData);
     }
 }
 // package application;

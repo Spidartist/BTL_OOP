@@ -88,6 +88,7 @@ public class LeHoiAnGiang extends BasicWebScraper implements IScraping {
 							}
 							nhanVat = nhanVat.concat(noiDungChinh);
 							nhanVat = nhanVat.trim();
+							
 							break;
 						}
 						case " Đặc điểm": {
