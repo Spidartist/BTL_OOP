@@ -2,11 +2,7 @@ package objects.dynasty;
 
 import java.util.ArrayList;
 
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
-import objects.ParseJSON;
-
-public class Dynasty implements ParseJSON {
+public class Dynasty {
 	private String startYear; // co ve de
 	private String endYear; // chua code
 	private String name; // xong, day la base
@@ -106,26 +102,4 @@ public class Dynasty implements ParseJSON {
 		this.capital = location;
 	}
 
-	@Override
-	public Dynasty parseDataObject(JSONObject data) {
-		String startYear = (String) data.get("startYear");
-		String endYear = (String) data.get("endYear");
-		String name = (String) data.get("name");
-
-		String capital = (String) data.get("capital");
-		String founder = (String) data.get("founder");
-		ArrayList<String> kings = new ArrayList<String>();
-		JSONArray listKing = (JSONArray) data.get("kings");
-		for (int i = 0; i < listKing.size(); i++) {
-			kings.add((String) listKing.get(i));
-		}
-		// kings.forEach(elm -> ());
-		// Figure newFigure = new Figure(ten, namSinh, namMat, queQuan, tenKhac,
-		// namNhapNgu, ghiChu, namDoTrangNguyen);
-		Dynasty newDynasty = new Dynasty(startYear, endYear, name, kings, capital,
-				founder);
-		return newDynasty;
-	}
-
-	
 }

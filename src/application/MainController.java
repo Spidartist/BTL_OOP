@@ -1,7 +1,11 @@
 package application;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
 import application.popup.PopUpWinDow;
-import javafx.collections.transformation.FilteredList;
+import application.readdata.ReadData;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.MenuButton;
@@ -15,6 +19,7 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import objects.dynasty.Dynasty;
+import objects.festival.Festival;
 import objects.figure.Figure;
 import objects.figure.King;
 
@@ -40,16 +45,26 @@ public class MainController {
 
     // Xử lý sự kiện chọn trường để search
     @FXML
-    void clickMenuItem(ActionEvent event) {
+    void clickMenuItem(ActionEvent event) throws IOException {
         MenuItem menuItem = (MenuItem) event.getSource();
         String lableSelecItem = menuItem.getText();
         PopUpWinDow newPopUp = new PopUpWinDow();
         searchField.setText(menuItem.getText());
-        ReadJson reader = new ReadJson();
+
+        ObservableList<Figure> listObservablesFigure = new ReadData<Figure>()
+                .FromJsonToArray("src/data/figureUpdate.json", Figure.class);
+        ObservableList<King> listObservablesKing = new ReadData<King>()
+                .FromJsonToArray("src/data/king.json", King.class);
+        ObservableList<Dynasty> listObservablesDynasty = new ReadData<Dynasty>()
+                .FromJsonToArray("src/data/dynastys.json", Dynasty.class);
+        ObservableList<Festival> listObservablesFestival = new ReadData<Festival>() // Dynasty>()
+                .FromJsonToArray("src/data/festival.json", Festival.class);
+
         switch (lableSelecItem) {
             case "Vua":
-                TableView<King> tableKingView = new TableView<>();
+                TableView<King> tableKingView = new TableView<King>();
                 tableKingView.getColumns().clear();
+                // xu ly xu kien click row pop up window
                 tableKingView.addEventHandler(MouseEvent.MOUSE_CLICKED, (MouseEvent e) -> {
                     if (e.getClickCount() > 1) {
                         King demo = tableKingView.getSelectionModel().getSelectedItem();
@@ -57,49 +72,27 @@ public class MainController {
                         newPopUp.getPopUpWindow(demo);
                     }
                 });
-                String[] kingStr = { "ten", "mieuHieu", "thuyHieu", "nienHieu", "tenHuy", "theThu", "namTriVi" };
+
+                String[] kingStr = { "mieuHieu", "thuyHieu", "nienHieu", "tenHuy", "theThu", "namTriVi" };
                 for (int i = 0; i < kingStr.length; i++) {
                     TableColumn<King, String> ColKing = new TableColumn<King, String>(kingStr[i]);
                     ColKing.prefWidthProperty().bind(tableKingView.widthProperty().multiply(0.143));
-                    ColKing.setCellValueFactory(new PropertyValueFactory<>(kingStr[i]));
+                    ColKing.setCellValueFactory(new PropertyValueFactory<King, String>(kingStr[i]));
                     tableKingView.getColumns().add(ColKing);
                 }
-                reader.getKingList().forEach(elm -> tableKingView.getItems().add(elm));
+
+                // System.out.println(reader.getKingList());
+                // for (King elm : readerDataKing) {
+                // System.out.println(elm.getTen());
+                // King newKing = new King(elm.getTen());
+                // }
+                tableKingView.setItems(listObservablesKing);
+                // readerDataKing.forEach(elm -> tableKingView.getItems().add(elm));
+                // for (int i = 0; i < readerDataKing.size(); i++) {
+
+                // }
                 borderPane.setCenter(tableKingView);
-                // Search
-                FilteredList<King> filteredData = new FilteredList<>(reader.getKingList(), b -> true);
-                textField.textProperty().addListener((observable, oldValue, newValue) -> {
-                    filteredData.setPredicate(King -> {
-                        // If filter text is empty, display all persons.
 
-                        if (newValue == null || newValue.isEmpty()) {
-                            return true;
-                        }
-
-                        // Compare first name and last name of every person with filter text.
-                        String lowerCaseFilter = newValue.toLowerCase();
-
-                        if (King.getTheThu().toLowerCase().indexOf(lowerCaseFilter) != -1) {
-                            return true; // Filter matches first name.
-                        } else if (King.getMieuHieu().toLowerCase().indexOf(lowerCaseFilter) != -1) {
-                            return true; // Filter matches last name.
-                        } else if (King.getThuyHieu().toLowerCase().indexOf(lowerCaseFilter) != -1) {
-                            return true; // Filter matches last name.
-                        } else if (King.getNienHieu().toLowerCase().indexOf(lowerCaseFilter) != -1) {
-                            return true; // Filter matches last name.
-                        } else if (King.getTenHuy().toLowerCase().indexOf(lowerCaseFilter) != -1) {
-                            return true; // Filter matches last name.
-                        } else if (King.getNamTriVi().toLowerCase().indexOf(lowerCaseFilter) != -1) {
-                            return true; // Filter matches last name.
-                        } else if (String.valueOf(King.getTheThu()).indexOf(lowerCaseFilter) != -1)
-                            return true;
-                        else
-                            return false; // Does not match.
-                    });
-                });
-                // SortedList<King> sortedData = new SortedList<>(filteredData);
-                // sortedData.comparatorProperty().bind(tableKingView.comparatorProperty());
-                tableKingView.setItems(filteredData);
                 break;
             case "Nhân Vật Lịch Sử":
                 TableView<Figure> tableFigureView = new TableView<>();
@@ -111,21 +104,22 @@ public class MainController {
                         newPopUp.getPopUpWindow(demo);
                     }
                 });
-                String[] figureStr = { "ten", "queQuan", "trieuDai", "namSinh", "namMat", "ghiChu" };
+                String[] figureStr = { "ten", "queQuan", "namSinh", "namMat" };
                 for (int i = 0; i < figureStr.length; i++) {
                     if (figureStr[i] == "trieuDai") {
                         TableColumn<Figure, String> ColFigure = new TableColumn<Figure, String>(figureStr[i]);
-                        ColFigure.prefWidthProperty().bind(tableFigureView.widthProperty().multiply(0.143));
+                        ColFigure.prefWidthProperty().bind(tableFigureView.widthProperty().multiply(0.25));
                         ColFigure.setCellValueFactory(new PropertyValueFactory<>((String) figureStr[i]));
                         tableFigureView.getColumns().add(ColFigure);
                     } else {
                         TableColumn<Figure, String> ColFigure = new TableColumn<Figure, String>(figureStr[i]);
-                        ColFigure.prefWidthProperty().bind(tableFigureView.widthProperty().multiply(0.143));
+                        ColFigure.prefWidthProperty().bind(tableFigureView.widthProperty().multiply(0.25));
                         ColFigure.setCellValueFactory(new PropertyValueFactory<>(figureStr[i]));
                         tableFigureView.getColumns().add(ColFigure);
                     }
                 }
-                reader.getFigureList().forEach(elm -> tableFigureView.getItems().add(elm));
+                // readerDataFigure.forEach(elm -> tableFigureView.getItems().add(elm));
+                tableFigureView.setItems(listObservablesFigure);
                 borderPane.setCenter(tableFigureView);
                 break;
             case "Sự kiện lịch sử":
@@ -144,14 +138,15 @@ public class MainController {
                     }
                 });
                 tableDynastyView.getColumns().clear();
-                String[] dynastyStr = { "startYear", "endYear", "kings", "capital", "founder" };
+                String[] dynastyStr = { "name", "startYear", "endYear", "capital", "founder" };
                 for (int i = 0; i < dynastyStr.length; i++) {
                     TableColumn<Dynasty, String> colDynasty = new TableColumn<Dynasty, String>(dynastyStr[i]);
-                    colDynasty.prefWidthProperty().bind(tableDynastyView.widthProperty().multiply(0.143));
+                    colDynasty.prefWidthProperty().bind(tableDynastyView.widthProperty().multiply(0.2));
                     colDynasty.setCellValueFactory(new PropertyValueFactory<>(dynastyStr[i]));
                     tableDynastyView.getColumns().add(colDynasty);
                 }
-                reader.getDinastyList().forEach(elm -> tableDynastyView.getItems().add(elm));
+                // readerDataDynasty.forEach(elm -> tableDynastyView.getItems().add(elm));
+                tableDynastyView.setItems(listObservablesDynasty);
                 borderPane.setCenter(tableDynastyView);
                 break;
             default:
@@ -161,12 +156,12 @@ public class MainController {
 
     @FXML
     void search(ActionEvent event) {
-        ReadJson reader = new ReadJson();
+        // ReadJson reader = new ReadJson();
         System.out.println(textField.getText());
         // tableView.setDisable(false);
         // TableColumn column = new TableColumn<>("colunm 1");
         // tableView.getColumns().add(column);
-        System.out.println(reader.getKingList().get(0).getMieuHieu());
+        // System.out.println(reader.getKingList().get(0).getMieuHieu());
     }
 
     @FXML

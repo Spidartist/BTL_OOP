@@ -2,24 +2,18 @@ package objects.figure;
 
 import java.util.ArrayList;
 
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
-
 // import javafx.scene.chart.Axis.TickMark;
-import objects.ParseJSON;
+
 import objects.dynasty.Dynasty;
 
-public class Figure extends HistoricalFigure implements ParseJSON {
+public class Figure extends HistoricalFigure {
 	private String queQuan;
 	private String danToc;
 	private String namNhapNgu;
 	private String ghiChu;
 	private String namDoTrangNguyen;
 	private String tenKhac;
-<<<<<<< HEAD
-=======
 	private King doiVua;
->>>>>>> 7bc157d3c9cb58b81ed5a7eb1a8402467ad66271
 
 	public String getTenKhac() {
 		return tenKhac;
@@ -149,20 +143,6 @@ public class Figure extends HistoricalFigure implements ParseJSON {
 
 	public void setTrieuDai(ArrayList<Dynasty> trieuDai) {
 		this.trieuDai = trieuDai;
-	}
-
-	@Override
-	public Figure parseDataObject(JSONObject data) {
-		String ten = (String) data.get("ten");
-		String queQuan = (String) data.get("queQuan");
-		String tenKhac = (String) data.get("tenKhac");
-		String ghiChu = (String) data.get("ghiChu");
-		String namDoTrangNguyen = (String) data.get("namDoTrangNguyen");
-		String namSinh = (String) data.get("namSinh");
-		String namMat = (String) data.get("namMat");
-
-		Figure newFigure = new Figure(ten, namSinh, namMat, queQuan, danToc, namNhapNgu, ghiChu, namDoTrangNguyen);
-		return newFigure;
 	}
 
 }
