@@ -3,6 +3,7 @@ package webcrawler.festival;
 import webcrawler.parent.BasicWebScraper;
 import webcrawler.parent.IScraping;
 import objects.festival.Festival;
+import objects.figure.Figure;
 import objects.figure.HistoricalFigure;
 import objects.figure.King;
 import webcrawler.parent.BasicWebScraper;
@@ -51,7 +52,7 @@ public class LeHoiGoDongDa extends BasicWebScraper implements IScraping {
 		int endFigure = mainText.indexOf(" - ");
 		String nameFigure = mainText.substring(startFigure, endFigure);
 		System.out.println(nameFigure);
-		King king = new King(nameFigure);
+		Figure king = new Figure(nameFigure);
 
 		goDongDa = new Festival(tenLeHoi, thoiGian, diaDiem);
 		goDongDa.setFigure(king);
