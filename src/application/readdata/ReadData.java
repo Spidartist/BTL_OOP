@@ -45,10 +45,10 @@ public class ReadData<T> {
         ObservableList<T> result = FXCollections.observableList(objects);
         return result;
     }
-    
+
     public static void main(String[] args) throws IOException {
         ReadData<Figure> reader = new ReadData<Figure>();
         ObservableList<Figure> list = reader.FromJsonToArray("src/data/figureUpdate.json", Figure.class);
-        System.out.println(list);
+        System.out.println(list.size());
     }
 }

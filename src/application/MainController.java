@@ -43,6 +43,10 @@ public class MainController {
     @FXML
     private TextField textField;
 
+    public void handlePopupWindow() {
+
+    }
+
     // Xử lý sự kiện chọn trường để search
     @FXML
     void clickMenuItem(ActionEvent event) throws IOException {
@@ -57,9 +61,8 @@ public class MainController {
                 .FromJsonToArray("src/data/king.json", King.class);
         ObservableList<Dynasty> listObservablesDynasty = new ReadData<Dynasty>()
                 .FromJsonToArray("src/data/dynastys.json", Dynasty.class);
-        ObservableList<Festival> listObservablesFestival = new ReadData<Festival>() // Dynasty>()
-                .FromJsonToArray("src/data/festival.json", Festival.class);
-
+        // ObservableList<Festival> listObservablesFestival = new ReadData<Festival>()
+        // .FromJsonToArray("src/data/festival.json", Festival.class);
         switch (lableSelecItem) {
             case "Vua":
                 TableView<King> tableKingView = new TableView<King>();
@@ -95,6 +98,7 @@ public class MainController {
 
                 break;
             case "Nhân Vật Lịch Sử":
+            String[] figureStr = { "ten", "queQuan", "namSinh", "namMat" };
                 TableView<Figure> tableFigureView = new TableView<>();
                 tableFigureView.getColumns().clear();
                 tableFigureView.addEventHandler(MouseEvent.MOUSE_CLICKED, (MouseEvent e) -> {
@@ -104,7 +108,7 @@ public class MainController {
                         newPopUp.getPopUpWindow(demo);
                     }
                 });
-                String[] figureStr = { "ten", "queQuan", "namSinh", "namMat" };
+                
                 for (int i = 0; i < figureStr.length; i++) {
                     if (figureStr[i] == "trieuDai") {
                         TableColumn<Figure, String> ColFigure = new TableColumn<Figure, String>(figureStr[i]);

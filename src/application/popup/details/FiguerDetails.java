@@ -1,36 +1,59 @@
 package application.popup.details;
 
+import java.lang.Thread.State;
+
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import objects.figure.Figure;
 
 public class FiguerDetails {
 
     public FiguerDetails(Figure curSelect) {
-        BorderPane popupBorderPane = new BorderPane();
-        Scene secondScene = new Scene(popupBorderPane, 500, 500);
-        ImageView img = new ImageView(
-                "https://images.squarespace-cdn.com/content/v1/54b7b93ce4b0a3e130d5d232/1519987020970-8IQ7F6Z61LLBCX85A65S/icon.png?format=1000w");
-        double imgWidth = secondScene.getWidth() / 2;
-        double imgHeight = secondScene.getHeight() / 2;
-        img.setFitWidth(imgWidth);
-        img.setFitHeight(imgHeight);
-        popupBorderPane.setLeft(img);
-        Label secondLabel = new Label(curSelect.getTen());
-        popupBorderPane.setCenter(secondLabel);
-        // StackPane secondaryLayout = new StackPane();
-        // secondaryLayout.getChildren().add(secondLabel);
-        Stage newWindow = new Stage();
-        // // newWindow.initModality(Modality.WINDOW_MODAL);
-        // newWindow.setTitle("Figure");
-        newWindow.setScene(secondScene);
-        // newWindow.setWidth(200);
-        // newWindow.setHeight(200);
-        newWindow.show();
+        BorderPane borderPane = new BorderPane();
+        Stage stage = new Stage();
+        stage.setTitle("Figure Detail");
+        Image image = new Image(
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSufu-xJiSOxynzT2dbbwlAGaP5Gm-TnGM2IA&usqp=CAU");
+        ImageView imageView = new ImageView(image);
+        borderPane.setLeft(imageView);
+
+        BorderPane.setAlignment(imageView, Pos.CENTER);
+
+        Label ten = new Label("Họ và Tên:" + curSelect.getTen());
+        Label queQuan = new Label("Quê Quán:" + curSelect.getQueQuan());
+        Label namSinh = new Label("Năm sinh:" + curSelect.getNamSinh());
+        Label namMat = new Label("Năm mất:" + curSelect.getNamMat());
+        String strTrieuDai = "";
+        for (int i = 0; i < curSelect.getTrieuDai().size(); i++) {
+            strTrieuDai += curSelect.getTrieuDai().get(i).getName() + ",";
+        }
+        Label trieuDai = new Label("Triều đại: " + strTrieuDai);
+        Label ghiChu = new Label("Ghi chú:" + curSelect.getGhiChu());
+        ghiChu.setWrapText(true);
+        VBox contentText = new VBox(10);
+        contentText.setPadding(new Insets(20, 20, 20, 20));
+        contentText.setAlignment(Pos.CENTER);
+        contentText.getChildren().add(ten);
+        contentText.getChildren().add(queQuan);
+        contentText.getChildren().add(namSinh);
+        contentText.getChildren().add(namMat);
+        contentText.getChildren().add(trieuDai);
+        contentText.getChildren().add(ghiChu);
+        borderPane.setCenter(contentText);
+        // BorderPane.setAlignment(contentText, Pos.CENTER);
+
+        Scene scene = new Scene(borderPane, 800, 600);
+        stage.setScene(scene);
+        stage.show();
     }
 
 }
