@@ -63,8 +63,8 @@ public class RelicScrapeDiTichOneBox extends BasicWebScraper implements IScrapin
 		
 		
 		System.out.println(person);
-		System.out.println(rank);
-		System.out.println(type);
+//		System.out.println(rank);
+//		System.out.println(type);
 		
 		
 	}

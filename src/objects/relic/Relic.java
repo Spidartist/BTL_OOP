@@ -44,8 +44,9 @@ public class Relic extends AbstractRelic{
 		this.location = location;
 	}
 
-	public Relic(String location, String type, String rank, LinkedList<Figure> figures, LinkedList<King> kings) {
+	public Relic(String name, String location, String type, String rank, LinkedList<Figure> figures, LinkedList<King> kings) {
 		super();
+		this.name = name;
 		this.location = location;
 		this.type = type;
 		this.rank = rank;
