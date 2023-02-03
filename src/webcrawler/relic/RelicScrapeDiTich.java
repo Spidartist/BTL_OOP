@@ -11,9 +11,11 @@ import com.google.gson.JsonIOException;
 
 import application.readdata.ReadData;
 import javafx.collections.ObservableList;
+import objects.dynasty.Dynasty;
 import objects.figure.Figure;
 import objects.figure.King;
 import objects.relic.Relic;
+import webcrawler.relic.RelicScrapeDiTichOneBox;
 
 public class RelicScrapeDiTich {
 	LinkedList<Relic> relics;
@@ -40,6 +42,9 @@ public class RelicScrapeDiTich {
 			
 			LinkedList<Figure> figures = new LinkedList<Figure>();
 			LinkedList<King> kings = new LinkedList<King>();
+			LinkedList<Dynasty> dynastys = new LinkedList<Dynasty>();
+			
+			LinkedList<String> added = new LinkedList<String>();
 			
 			String tenNguoiTho = r.getPerson();
 			
@@ -80,6 +85,13 @@ public class RelicScrapeDiTich {
 						|| tenNguoiTho.toLowerCase().contains(f.getTenKhac().toLowerCase())) {
 					figures.add(new Figure(f.getTen()));
 				}
+				for (Dynasty d: f.getTrieuDai()) {
+					if (!added.contains(d.getName())) {
+						added.add(d.getName());
+						dynastys.add(new Dynasty(d.getName()));
+					}
+				}
+				
 			}
 
 			if (figures.size() != 0) {
@@ -98,7 +110,8 @@ public class RelicScrapeDiTich {
 				}
 			}
 			
-			Relic r1 = new Relic(r.getName(), r.getAddress(), r.getType(), r.getRank(), figures, kings);
+			Relic r1 = new Relic(r.getName(), r.getAddress(), r.getType()
+					, r.getRank(), tenNguoiTho, figures, kings, dynastys);
 			relics.add(r1);
 		}
 		

@@ -2,6 +2,7 @@ package objects.relic;
 
 import java.util.LinkedList;
 
+import objects.dynasty.Dynasty;
 import objects.figure.Figure;
 import objects.figure.King;
 
@@ -9,8 +10,10 @@ public class Relic extends AbstractRelic{
 	private String location;
 	private String type;
 	private String rank;
+	private String desc;
 	private LinkedList<Figure> figures;
 	private LinkedList<King> kings;
+	private LinkedList<Dynasty> dynastys;
 	
 	public LinkedList<Figure> getFigures() {
 		return figures;
@@ -44,15 +47,44 @@ public class Relic extends AbstractRelic{
 		this.location = location;
 	}
 
-	public Relic(String name, String location, String type, String rank, LinkedList<Figure> figures, LinkedList<King> kings) {
+	public String getDesc() {
+		return desc;
+	}
+
+	public void setDesc(String desc) {
+		this.desc = desc;
+	}
+
+	public LinkedList<Dynasty> getDynastys() {
+		return dynastys;
+	}
+
+	public void setDynastys(LinkedList<Dynasty> dynastys) {
+		this.dynastys = dynastys;
+	}
+
+	public void setType(String type) {
+		this.type = type;
+	}
+
+	public void setRank(String rank) {
+		this.rank = rank;
+	}
+
+	public Relic(String name, String location, String type, String rank, String desc, LinkedList<Figure> figures,
+			LinkedList<King> kings, LinkedList<Dynasty> dynastys) {
 		super();
 		this.name = name;
 		this.location = location;
 		this.type = type;
 		this.rank = rank;
+		this.desc = desc;
 		this.figures = figures;
 		this.kings = kings;
+		this.dynastys = dynastys;
 	}
+
+	
 
 	
 
