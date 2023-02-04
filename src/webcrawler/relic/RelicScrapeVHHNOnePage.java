@@ -1,16 +1,24 @@
 package webcrawler.relic;
 
 import java.io.IOException;
+import java.util.LinkedList;
 
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
+import objects.relic.Relic;
 import webcrawler.parent.BasicWebScraper;
 import webcrawler.parent.IScraping;
 
 public class RelicScrapeVHHNOnePage extends BasicWebScraper implements IScraping{
+	private LinkedList<Relic> relics;
+	
+	public LinkedList<Relic> getRelics() {
+		return relics;
+	}
 
 	public RelicScrapeVHHNOnePage(int i) {
+		relics = new LinkedList<Relic>();
 		String baseUrl = "http://ditichlichsu-vanhoahanoi.com/category/2dtlsvh/page/";
 		String url = baseUrl + Integer.toString(i) + "/";
 		this.setUrl(url);
@@ -25,6 +33,7 @@ public class RelicScrapeVHHNOnePage extends BasicWebScraper implements IScraping
 			System.out.println(boxUrl);
 			RelicScrapeVHHNOneBox h = new RelicScrapeVHHNOneBox(boxUrl);
 			h.scraping();
+			relics.add(h.getRelic());
 		}
 	}
 	

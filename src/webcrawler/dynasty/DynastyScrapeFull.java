@@ -11,8 +11,9 @@ import com.google.gson.JsonIOException;
 
 import objects.dynasty.Dynasty;
 import objects.figure.King;
+import webcrawler.combine.CombineData;
 
-public class DynastyScrapeFull {
+public class DynastyScrapeFull  implements CombineData{
 	private DynastyScrapeName crawlNames;
 	private DynastyScrapeWikiFounder crawlFounder;
 	private DynastyScrapeWikiKings firstKings;
@@ -21,7 +22,29 @@ public class DynastyScrapeFull {
 
 	public DynastyScrapeFull() {
 		dynastys = new LinkedList<Dynasty>();
+	}
 
+	public void toJson() throws JsonIOException, IOException {
+		String filePath = "D:\\dynasty_2.json";
+		Gson gson = new GsonBuilder().setPrettyPrinting().create();
+		try {
+			FileWriter writer = new FileWriter(new File(filePath));
+			gson.toJson(dynastys, writer);
+			writer.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+
+		}
+	}
+
+	public static void main(String[] args) throws JsonIOException, IOException {
+		DynastyScrapeFull f = new DynastyScrapeFull();
+		f.combine();
+		f.toJson();
+	}
+	
+	@Override
+	public void combine() throws IOException {
 		firstKings = new DynastyScrapeWikiKings();
 		firstKings.scraping();
 
@@ -41,7 +64,7 @@ public class DynastyScrapeFull {
 			Dynasty d = new Dynasty(name);
 			dynastys.add(d);
 		}
-
+		firstKings.getDynastys().addAll(remainedKings.getDynastys());
 		for (Dynasty d_1 : firstKings.getDynastys()) {
 			for (Dynasty d_2 : dynastys) {
 				if (d_1.getName().equals(d_2.getName())) {
@@ -51,16 +74,6 @@ public class DynastyScrapeFull {
 			}
 		}
 		
-		for (Dynasty d_1 : remainedKings.getDynastys()) {
-			for (Dynasty d_2 : dynastys) {
-				if (d_1.getName().equals(d_2.getName())) {
-					// System.out.println("* " + d_1.getName());
-					d_2.setKings(d_1.getKings());
-				}
-			}
-		}
-		
-
 		for (Dynasty d_1 : crawlFounder.getDynastys()) {
 			for (Dynasty d_2 : dynastys) {
 				if (d_1.getName().equals(d_2.getName())) {
@@ -104,24 +117,6 @@ public class DynastyScrapeFull {
 			// System.out.println(d.getName() + " " + d.getCapital());
 
 		}
-
-	}
-
-	public void toJson() throws JsonIOException, IOException {
-		String filePath = "D:\\dynasty.json";
-		Gson gson = new GsonBuilder().setPrettyPrinting().create();
-		try {
-			FileWriter writer = new FileWriter(new File(filePath));
-			gson.toJson(dynastys, writer);
-			writer.close();
-		} catch (IOException e) {
-			e.printStackTrace();
-
-		}
-	}
-
-	public static void main(String[] args) throws JsonIOException, IOException {
-		DynastyScrapeFull f = new DynastyScrapeFull();
-		f.toJson();
+		
 	}
 }

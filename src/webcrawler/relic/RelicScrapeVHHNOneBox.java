@@ -35,8 +35,10 @@ public class RelicScrapeVHHNOneBox extends BasicWebScraper implements IScraping 
 		
 		if (title.contains("La Khê")) {
 			location = "Hà Đông";
-		} else {
+		} else if (title.split(" \\(").length > 1) {
 			location = title.split(" \\(")[1].replace(")", "");
+		} else {
+			location = "Hà Nội";
 		}
 		if (name.contains("Đình")) {
 			type = "Đình";
