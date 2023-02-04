@@ -16,101 +16,105 @@ import objects.event.*;
 
 public class TranDanhLon extends BasicWebScraper implements IScraping {
 	private ArrayList<SuKien> TranDanh = new ArrayList<SuKien>();
-	public ArrayList<SuKien> getList(){
+
+	public ArrayList<SuKien> getList() {
 		return TranDanh;
 	}
-	
-	TranDanhLon(){
+
+	TranDanhLon() {
 		String url = "https://vi.wikipedia.org/wiki/Danh_s%C3%A1ch_tr%E1%BA%ADn_%C4%91%C3%A1nh_trong_l%E1%BB%8Bch_s%E1%BB%AD_Vi%E1%BB%87t_Nam";
 		this.url = url;
 		connect();
 	}
-	//kiem tra xem trong phan element co chua 3 hoac 4 ki tu chu so lien tuc hay khong
+
+	// kiem tra xem trong phan element co chua 3 hoac 4 ki tu chu so lien tuc hay
+	// khong
 	private String CaoThoiGian(String DuLieuTho) {
 		DuLieuTho = DuLieuTho.replaceAll("[^0-9]", "#");
 		String[] arr = DuLieuTho.split("#");
-		
+
 		boolean LaMotNam = false;
 		int SoNamTrongDuLieu = 0;
-		StringBuilder ThoiGianTraVe = new StringBuilder(); 
-		
-		for(String s: arr) {
-			if(s.matches("[0-9]{3}$") || s.matches("[0-9]{4}$")) {
+		StringBuilder ThoiGianTraVe = new StringBuilder();
+
+		for (String s : arr) {
+			if (s.matches("[0-9]{3}$") || s.matches("[0-9]{4}$")) {
 				LaMotNam = true;
 				SoNamTrongDuLieu++;
-				if(SoNamTrongDuLieu > 1)
+				if (SoNamTrongDuLieu > 1)
 					ThoiGianTraVe.append(" - ");
 				ThoiGianTraVe.append(s);
 			}
 		}
-		
-		if(!LaMotNam)
+
+		if (!LaMotNam)
 			return "";
 		return ThoiGianTraVe.toString();
 	}
-	
+
 	private String CaoDiaDiem(String DuLieuTho, String KyTuCanXoa) {
-		//StringBuilder s = new StringBuilder();
-		final String[] tukhoa = new String[] {"Trận ", "Chiến dịch ", "Biến cố "};
+		// StringBuilder s = new StringBuilder();
+		final String[] tukhoa = new String[] { "Trận ", "Chiến dịch ", "Biến cố " };
 		boolean CanChinhSua = false;
 		DuLieuTho = DuLieuTho.replace(KyTuCanXoa, "");
-		
+
 		for (int i = 0; i < tukhoa.length; i++) {
-			if(DuLieuTho.contains(tukhoa[i])) {
+			if (DuLieuTho.contains(tukhoa[i])) {
 				CanChinhSua = true;
 				DuLieuTho = DuLieuTho.replace(tukhoa[i], "");
 				DuLieuTho = DuLieuTho.replaceAll("[-()]", "");
 			}
 		}
-		if(CanChinhSua)
+		if (CanChinhSua)
 			return DuLieuTho;
 		return "";
 	}
-	
+
 	private String CaoNhanVat(String DuLieuTho, String KyTuCanXoa) {
-		if(DuLieuTho.contains("Dẹp Loạn")) {
+		if (DuLieuTho.contains("Dẹp Loạn")) {
 			DuLieuTho = DuLieuTho.replace("Dẹp Loạn ", "");
 			DuLieuTho = DuLieuTho.replace(KyTuCanXoa, "");
 			return DuLieuTho;
 		}
 		return "";
 	}
+
 	public void scraping() {
 		String TamNhoGiaTriThoiGian = "";
 		Element noi_dung_chinh = this.doc.getElementById("bodyContent");
 		Elements danh_sach_tran_danh = noi_dung_chinh.select("li");
-		for(Element e: danh_sach_tran_danh) {
+		for (Element e : danh_sach_tran_danh) {
 			String tran_danh = e.text();
-			if(tran_danh.contains("1988")) //cao bang tay =))
+			if (tran_danh.contains("1988")) // cao bang tay =))
 				break;
 			String thoi_gian = CaoThoiGian(e.text());
-			if(thoi_gian.length() != 0) {
+			if (thoi_gian.length() != 0) {
 				TamNhoGiaTriThoiGian = thoi_gian;
 			}
 			SuKien s = new SuKien();
 			s.setTen(tran_danh);
 			s.setThoi_gian(TamNhoGiaTriThoiGian);
 			s.setDia_diem(CaoDiaDiem(tran_danh, TamNhoGiaTriThoiGian));
-			s.setNhan_vat_lien_quan(CaoNhanVat(tran_danh, TamNhoGiaTriThoiGian), "", "");
+			s.setNhan_vat_lien_quan(CaoNhanVat(tran_danh, TamNhoGiaTriThoiGian));
 			TranDanh.add(s);
 			System.out.println(TamNhoGiaTriThoiGian + ": " + tran_danh);
 		}
-		
+
 	}
 
 	public static void main(String args[]) {
 		TranDanhLon trandanh = new TranDanhLon();
-		trandanh.Scraping();
+		trandanh.scraping();
 		String JsonURL = "C:\\Users\\lemin\\OneDrive\\Documents\\New Java projects\\webCrawler\\src\\TranDanhLon.json";
 		Gson gson = new GsonBuilder().setPrettyPrinting().create();
 		try {
-            FileWriter writer = new FileWriter(new File(JsonURL));
-            ArrayList<SuKien> DanhSachTranDanh = new ArrayList<SuKien>();
-            DanhSachTranDanh.addAll(trandanh.getList());
-            gson.toJson(DanhSachTranDanh, writer);
-            writer.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+			FileWriter writer = new FileWriter(new File(JsonURL));
+			ArrayList<SuKien> DanhSachTranDanh = new ArrayList<SuKien>();
+			DanhSachTranDanh.addAll(trandanh.getList());
+			gson.toJson(DanhSachTranDanh, writer);
+			writer.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 }

@@ -1,0 +1,632 @@
+[
+  {
+    "ten": "Kháng chiến chống quân xâm lược nhà Lương (545-550)",
+    "thoi_gian": "545 - 550",
+    "dia_diem": ""
+  },
+  {
+    "ten": "Chiến tranh Dã Năng-Vạn Xuân (557-571)",
+    "thoi_gian": "557 - 571",
+    "dia_diem": ""
+  },
+  {
+    "ten": "Trận Bạch Đằng, 938",
+    "thoi_gian": "938",
+    "dia_diem": "Bạch Đằng, "
+  },
+  {
+    "ten": "Loạn Dương Tam Kha (944-950)",
+    "thoi_gian": "944 - 950",
+    "dia_diem": ""
+  },
+  {
+    "ten": "Dẹp Loạn 12 sứ quân",
+    "thoi_gian": "944 - 950",
+    "dia_diem": ""
+  },
+  {
+    "ten": "Trận Bạch Đằng, 981",
+    "thoi_gian": "981",
+    "dia_diem": "Bạch Đằng, "
+  },
+  {
+    "ten": "Chiến dịch đánh Tống, 1075-1076",
+    "thoi_gian": "1075 - 1076",
+    "dia_diem": "đánh Tống, 10751076"
+  },
+  {
+    "ten": "Trận Như Nguyệt, 1077",
+    "thoi_gian": "1077",
+    "dia_diem": "Như Nguyệt, "
+  },
+  {
+    "ten": "Trận Đông Bộ Đầu (1258)",
+    "thoi_gian": "1258",
+    "dia_diem": "Đông Bộ Đầu "
+  },
+  {
+    "ten": "Trận Thăng Long(1285)",
+    "thoi_gian": "1285",
+    "dia_diem": "Thăng Long"
+  },
+  {
+    "ten": "Trận Hàm Tử - Tây Kết(1285)",
+    "thoi_gian": "1285",
+    "dia_diem": "Hàm Tử  Tây Kết"
+  },
+  {
+    "ten": "Trận Chương Dương Độ(1285)",
+    "thoi_gian": "1285",
+    "dia_diem": "Chương Dương Độ"
+  },
+  {
+    "ten": "Trận Bạch Đằng (1288)",
+    "thoi_gian": "1288",
+    "dia_diem": "Bạch Đằng "
+  },
+  {
+    "ten": "Chiến tranh Đại Việt- Chiêm Thành (1367-1396)",
+    "thoi_gian": "1367 - 1396",
+    "dia_diem": ""
+  },
+  {
+    "ten": "Chiến tranh Đại Ngu-Chiêm Thành (1400-1407)",
+    "thoi_gian": "1400 - 1407",
+    "dia_diem": ""
+  },
+  {
+    "ten": "Chiến tranh Đại Ngu-Minh Quốc (1406-1407)",
+    "thoi_gian": "1406 - 1407",
+    "dia_diem": ""
+  },
+  {
+    "ten": "Chiến dịch giải phóng Nghệ An",
+    "thoi_gian": "1406 - 1407",
+    "dia_diem": "giải phóng Nghệ An"
+  },
+  {
+    "ten": "Trận Tốt Động-Chúc Động - 1426 - Khởi nghĩa Lam Sơn",
+    "thoi_gian": "1426",
+    "dia_diem": "Tốt ĐộngChúc Động    Khởi nghĩa Lam Sơn"
+  },
+  {
+    "ten": "Trận Chi Lăng - Xương Giang - 1427 - Khởi nghĩa Lam Sơn",
+    "thoi_gian": "1427",
+    "dia_diem": "Chi Lăng  Xương Giang    Khởi nghĩa Lam Sơn"
+  },
+  {
+    "ten": "Chiến tranh Đại Việt- Chiêm Thành (1446)",
+    "thoi_gian": "1446",
+    "dia_diem": ""
+  },
+  {
+    "ten": "Chiến tranh Đại Việt -Chiêm Thành (1471)",
+    "thoi_gian": "1471",
+    "dia_diem": ""
+  },
+  {
+    "ten": "Chiến tranh Lang Xang-Đại Việt (1478-1480)",
+    "thoi_gian": "1478 - 1480",
+    "dia_diem": ""
+  },
+  {
+    "ten": "Trận Thăng Long (1516)",
+    "thoi_gian": "1516",
+    "dia_diem": "Thăng Long "
+  },
+  {
+    "ten": "Trận Thăng Long (1551)",
+    "thoi_gian": "1551",
+    "dia_diem": "Thăng Long "
+  },
+  {
+    "ten": "Trận Thuận Hoá (1554)",
+    "thoi_gian": "1554",
+    "dia_diem": "Thuận Hoá "
+  },
+  {
+    "ten": "Trận sông Đại Lại (1555)",
+    "thoi_gian": "1555",
+    "dia_diem": "sông Đại Lại "
+  },
+  {
+    "ten": "Trận sông Giao Thủy (1557)",
+    "thoi_gian": "1557",
+    "dia_diem": "sông Giao Thủy "
+  },
+  {
+    "ten": "Trận Tam Điệp (1589)",
+    "thoi_gian": "1589",
+    "dia_diem": "Tam Điệp "
+  },
+  {
+    "ten": "Trận Thăng Long (1592)",
+    "thoi_gian": "1592",
+    "dia_diem": "Thăng Long "
+  },
+  {
+    "ten": "Trận cảng Eo (1643)",
+    "thoi_gian": "1643",
+    "dia_diem": "cảng Eo "
+  },
+  {
+    "ten": "Chiến dịch Lũy Thầy (1671 - 1672)",
+    "thoi_gian": "1671 - 1672",
+    "dia_diem": "Lũy Thầy "
+  },
+  {
+    "ten": "Chiến dịch diệt họ Mạc ở Cao Bằng (1677)",
+    "thoi_gian": "1677",
+    "dia_diem": "diệt họ Mạc ở Cao Bằng "
+  },
+  {
+    "ten": "Chiến dịch diệt họ Vũ ở Tuyên Quang (1699)",
+    "thoi_gian": "1699",
+    "dia_diem": "diệt họ Vũ ở Tuyên Quang "
+  },
+  {
+    "ten": "Trận Cẩm Sa (1775)",
+    "thoi_gian": "1775",
+    "dia_diem": "Cẩm Sa "
+  },
+  {
+    "ten": "Trận Ngã bảy (1782)",
+    "thoi_gian": "1782",
+    "dia_diem": "Ngã bảy "
+  },
+  {
+    "ten": "Trận Rạch Gầm - Xoài Mút (1785)",
+    "thoi_gian": "1785",
+    "dia_diem": "Rạch Gầm  Xoài Mút "
+  },
+  {
+    "ten": "Chiến dịch Phú Xuân (1786)",
+    "thoi_gian": "1786",
+    "dia_diem": "Phú Xuân "
+  },
+  {
+    "ten": "Chiến dịch Thăng Long (1786)",
+    "thoi_gian": "1786",
+    "dia_diem": "Thăng Long "
+  },
+  {
+    "ten": "Trận Mục Sơn (1787).",
+    "thoi_gian": "1787",
+    "dia_diem": "Mục Sơn ."
+  },
+  {
+    "ten": "Trận Ngọc Hồi - Đống Đa (1789)",
+    "thoi_gian": "1789",
+    "dia_diem": "Ngọc Hồi  Đống Đa "
+  },
+  {
+    "ten": "Trận Thi Nại (1792)",
+    "thoi_gian": "1792",
+    "dia_diem": "Thi Nại "
+  },
+  {
+    "ten": "Trận Thị Nại (1801)",
+    "thoi_gian": "1801",
+    "dia_diem": "Thị Nại "
+  },
+  {
+    "ten": "Trận Trấn Ninh (1802)",
+    "thoi_gian": "1802",
+    "dia_diem": "Trấn Ninh "
+  },
+  {
+    "ten": "",
+    "thoi_gian": "1802",
+    "dia_diem": ""
+  },
+  {
+    "ten": "Dẹp Loạn Lê Duy Lương",
+    "thoi_gian": "1802",
+    "dia_diem": ""
+  },
+  {
+    "ten": "Dẹp Loạn Nông Văn Vân",
+    "thoi_gian": "1802",
+    "dia_diem": ""
+  },
+  {
+    "ten": "Dẹp Loạn Cao Bá Quát",
+    "thoi_gian": "1802",
+    "dia_diem": ""
+  },
+  {
+    "ten": "Dẹp Loạn Lê Văn Khôi",
+    "thoi_gian": "1802",
+    "dia_diem": ""
+  },
+  {
+    "ten": "Chiến tranh Đại Nam- Xiêm La (1833-1834)",
+    "thoi_gian": "1833 - 1834",
+    "dia_diem": ""
+  },
+  {
+    "ten": "Chiến tranh Đại Nam- Xiêm La (1841-1845)",
+    "thoi_gian": "1841 - 1845",
+    "dia_diem": ""
+  },
+  {
+    "ten": "Chiến dịch Nam Kỳ",
+    "thoi_gian": "1841 - 1845",
+    "dia_diem": "Nam Kỳ"
+  },
+  {
+    "ten": "Trận Đà Nẵng (1858-1859)",
+    "thoi_gian": "1858 - 1859",
+    "dia_diem": "Đà Nẵng 18581859"
+  },
+  {
+    "ten": "Trận Phước Thắng",
+    "thoi_gian": "1858 - 1859",
+    "dia_diem": "Phước Thắng"
+  },
+  {
+    "ten": "Trận thành Gia Định, 1859",
+    "thoi_gian": "1859",
+    "dia_diem": "thành Gia Định, "
+  },
+  {
+    "ten": "Trận Đại đồn Chí Hòa",
+    "thoi_gian": "1859",
+    "dia_diem": "Đại đồn Chí Hòa"
+  },
+  {
+    "ten": "Trận Định Tường (1861)",
+    "thoi_gian": "1861",
+    "dia_diem": "Định Tường "
+  },
+  {
+    "ten": "Trận Biên Hòa (1861-1862)",
+    "thoi_gian": "1861 - 1862",
+    "dia_diem": "Biên Hòa 18611862"
+  },
+  {
+    "ten": "Trận Vĩnh Long",
+    "thoi_gian": "1861 - 1862",
+    "dia_diem": "Vĩnh Long"
+  },
+  {
+    "ten": "Trận Đà Nẵng (1859-1860)",
+    "thoi_gian": "1859 - 1860",
+    "dia_diem": "Đà Nẵng 18591860"
+  },
+  {
+    "ten": "Trận Vĩnh Long",
+    "thoi_gian": "1859 - 1860",
+    "dia_diem": "Vĩnh Long"
+  },
+  {
+    "ten": "Trận An Giang (1867)",
+    "thoi_gian": "1867",
+    "dia_diem": "An Giang "
+  },
+  {
+    "ten": "Trận Hà Tiên (1867)",
+    "thoi_gian": "1867",
+    "dia_diem": "Hà Tiên "
+  },
+  {
+    "ten": "Biến cố Bắc Kỳ 1873",
+    "thoi_gian": "1873",
+    "dia_diem": "Bắc Kỳ "
+  },
+  {
+    "ten": "Trận thành Hà Nội (1873)",
+    "thoi_gian": "1873",
+    "dia_diem": "thành Hà Nội "
+  },
+  {
+    "ten": "Trận Hưng Yên (1873)",
+    "thoi_gian": "1873",
+    "dia_diem": "Hưng Yên "
+  },
+  {
+    "ten": "Trận Phủ Lý (1873)",
+    "thoi_gian": "1873",
+    "dia_diem": "Phủ Lý "
+  },
+  {
+    "ten": "Trận Hải Dương (1873)",
+    "thoi_gian": "1873",
+    "dia_diem": "Hải Dương "
+  },
+  {
+    "ten": "Trận Ninh Bình (1873)",
+    "thoi_gian": "1873",
+    "dia_diem": "Ninh Bình "
+  },
+  {
+    "ten": "Trận Nam Định (1873)",
+    "thoi_gian": "1873",
+    "dia_diem": "Nam Định "
+  },
+  {
+    "ten": "Trận Cầu Giấy (1873)",
+    "thoi_gian": "1873",
+    "dia_diem": "Cầu Giấy "
+  },
+  {
+    "ten": "Chiến dịch Bắc Kỳ",
+    "thoi_gian": "1873",
+    "dia_diem": "Bắc Kỳ"
+  },
+  {
+    "ten": "Trận thành Hà Nội (1882)",
+    "thoi_gian": "1882",
+    "dia_diem": "thành Hà Nội "
+  },
+  {
+    "ten": "Trận Hồng Gai (1883)",
+    "thoi_gian": "1883",
+    "dia_diem": "Hồng Gai "
+  },
+  {
+    "ten": "Trận Quảng Yên (1883)",
+    "thoi_gian": "1883",
+    "dia_diem": "Quảng Yên "
+  },
+  {
+    "ten": "Trận Nam Định (1883)",
+    "thoi_gian": "1883",
+    "dia_diem": "Nam Định "
+  },
+  {
+    "ten": "Trận Gia Quất-Gia Lâm",
+    "thoi_gian": "1883",
+    "dia_diem": "Gia QuấtGia Lâm"
+  },
+  {
+    "ten": "Trận Cầu Giấy",
+    "thoi_gian": "1883",
+    "dia_diem": "Cầu Giấy"
+  },
+  {
+    "ten": "Trận Phủ Hoài",
+    "thoi_gian": "1883",
+    "dia_diem": "Phủ Hoài"
+  },
+  {
+    "ten": "Trận Cửa Thuận An",
+    "thoi_gian": "1883",
+    "dia_diem": "Cửa Thuận An"
+  },
+  {
+    "ten": "Trận Sơn Tây (1883)",
+    "thoi_gian": "1883",
+    "dia_diem": "Sơn Tây "
+  },
+  {
+    "ten": "Trận Bắc Ninh (1884)",
+    "thoi_gian": "1884",
+    "dia_diem": "Bắc Ninh "
+  },
+  {
+    "ten": "Trận Hưng Hóa (1884)",
+    "thoi_gian": "1884",
+    "dia_diem": "Hưng Hóa "
+  },
+  {
+    "ten": "Trận Tuyên Quang (1884)",
+    "thoi_gian": "1884",
+    "dia_diem": "Tuyên Quang "
+  },
+  {
+    "ten": "Trận Bắc Lệ",
+    "thoi_gian": "1884",
+    "dia_diem": "Bắc Lệ"
+  },
+  {
+    "ten": "Trận Lạng Sơn (1885)",
+    "thoi_gian": "1885",
+    "dia_diem": "Lạng Sơn "
+  },
+  {
+    "ten": "Trận Kinh thành Huế 1885",
+    "thoi_gian": "1885",
+    "dia_diem": "Kinh thành Huế "
+  },
+  {
+    "ten": "Trận Hà Nội 1946",
+    "thoi_gian": "1946",
+    "dia_diem": "Hà Nội "
+  },
+  {
+    "ten": "Chiến dịch Việt Bắc - 1947",
+    "thoi_gian": "1947",
+    "dia_diem": "Việt Bắc  "
+  },
+  {
+    "ten": "Chiến dịch Biên giới - 1950",
+    "thoi_gian": "1950",
+    "dia_diem": "Biên giới  "
+  },
+  {
+    "ten": "Chiến dịch Trần Hưng Đạo 1951",
+    "thoi_gian": "1951",
+    "dia_diem": "Trần Hưng Đạo "
+  },
+  {
+    "ten": "Chiến dịch Hoàng Hoa Thám 1951",
+    "thoi_gian": "1951",
+    "dia_diem": "Hoàng Hoa Thám "
+  },
+  {
+    "ten": "Chiến dịch Quang Trung 1951",
+    "thoi_gian": "1951",
+    "dia_diem": "Quang Trung "
+  },
+  {
+    "ten": "Chiến dịch Hòa Bình 1951",
+    "thoi_gian": "1951",
+    "dia_diem": "Hòa Bình "
+  },
+  {
+    "ten": "Chiến dịch Tây Bắc 1952",
+    "thoi_gian": "1952",
+    "dia_diem": "Tây Bắc "
+  },
+  {
+    "ten": "Chiến dịch Thượng Lào 1953",
+    "thoi_gian": "1953",
+    "dia_diem": "Thượng Lào "
+  },
+  {
+    "ten": "Chiến dịch Điện Biên Phủ - 1954",
+    "thoi_gian": "1954",
+    "dia_diem": "Điện Biên Phủ  "
+  },
+  {
+    "ten": "Chiến dịch Hoàng Diệu",
+    "thoi_gian": "1954",
+    "dia_diem": "Hoàng Diệu"
+  },
+  {
+    "ten": "Trận Ấp Bắc",
+    "thoi_gian": "1954",
+    "dia_diem": "Ấp Bắc"
+  },
+  {
+    "ten": "Trận Ia Đrăng",
+    "thoi_gian": "1954",
+    "dia_diem": "Ia Đrăng"
+  },
+  {
+    "ten": "Chiến dịch Ba Gia",
+    "thoi_gian": "1954",
+    "dia_diem": "Ba Gia"
+  },
+  {
+    "ten": "Trận Vạn Tường",
+    "thoi_gian": "1954",
+    "dia_diem": "Vạn Tường"
+  },
+  {
+    "ten": "Trận Bình Giã",
+    "thoi_gian": "1954",
+    "dia_diem": "Bình Giã"
+  },
+  {
+    "ten": "Trận Đồng Xoài",
+    "thoi_gian": "1954",
+    "dia_diem": "Đồng Xoài"
+  },
+  {
+    "ten": "Trận Pleime (1965)",
+    "thoi_gian": "1965",
+    "dia_diem": "Pleime "
+  },
+  {
+    "ten": "Trận Đức Cơ",
+    "thoi_gian": "1965",
+    "dia_diem": "Đức Cơ"
+  },
+  {
+    "ten": "Trận Long Tân",
+    "thoi_gian": "1965",
+    "dia_diem": "Long Tân"
+  },
+  {
+    "ten": "Chiến dịch Đắk Tô-Tân Cảnh (1967)",
+    "thoi_gian": "1967",
+    "dia_diem": "Đắk TôTân Cảnh "
+  },
+  {
+    "ten": "Trận Ông Thành",
+    "thoi_gian": "1967",
+    "dia_diem": "Ông Thành"
+  },
+  {
+    "ten": "Chiến dịch Đường 9 - Khe Sanh",
+    "thoi_gian": "1967",
+    "dia_diem": "Đường 9  Khe Sanh"
+  },
+  {
+    "ten": "Trận Mậu Thân tại Huế",
+    "thoi_gian": "1967",
+    "dia_diem": "Mậu Thân tại Huế"
+  },
+  {
+    "ten": "Trận Đồi Thịt Băm",
+    "thoi_gian": "1967",
+    "dia_diem": "Đồi Thịt Băm"
+  },
+  {
+    "ten": "Trận Đồi 723",
+    "thoi_gian": "723",
+    "dia_diem": "Đồi "
+  },
+  {
+    "ten": "Chiến dịch Lam Sơn - 719",
+    "thoi_gian": "719",
+    "dia_diem": "Lam Sơn  "
+  },
+  {
+    "ten": "Trận Bản Đông",
+    "thoi_gian": "719",
+    "dia_diem": "Bản Đông"
+  },
+  {
+    "ten": "Chiến dịch Đắc Tô",
+    "thoi_gian": "719",
+    "dia_diem": "Đắc Tô"
+  },
+  {
+    "ten": "Trận Thành cổ Quảng Trị",
+    "thoi_gian": "719",
+    "dia_diem": "Thành cổ Quảng Trị"
+  },
+  {
+    "ten": "Chiến dịch Linebacker II",
+    "thoi_gian": "719",
+    "dia_diem": "Linebacker II"
+  },
+  {
+    "ten": "Chiến dịch Xuân Hè 1972",
+    "thoi_gian": "1972",
+    "dia_diem": "Xuân Hè "
+  },
+  {
+    "ten": "Chiến dịch Trị Thiên",
+    "thoi_gian": "1972",
+    "dia_diem": "Trị Thiên"
+  },
+  {
+    "ten": "Chiến dịch Bắc Tây Nguyên",
+    "thoi_gian": "1972",
+    "dia_diem": "Bắc Tây Nguyên"
+  },
+  {
+    "ten": "Chiến dịch Nguyễn Huệ",
+    "thoi_gian": "1972",
+    "dia_diem": "Nguyễn Huệ"
+  },
+  {
+    "ten": "Chiến dịch Đường 14 - Phước Long",
+    "thoi_gian": "1972",
+    "dia_diem": "Đường 14  Phước Long"
+  },
+  {
+    "ten": "Chiến dịch Tây Nguyên",
+    "thoi_gian": "1972",
+    "dia_diem": "Tây Nguyên"
+  },
+  {
+    "ten": "Chiến dịch Mùa Xuân 1975",
+    "thoi_gian": "1975",
+    "dia_diem": "Mùa Xuân "
+  },
+  {
+    "ten": "Chiến dịch phản công biên giới Tây-Nam Việt Nam",
+    "thoi_gian": "1975",
+    "dia_diem": "phản công biên giới TâyNam Việt Nam"
+  },
+  {
+    "ten": "Chiến tranh biên giới Việt–Trung 1979",
+    "thoi_gian": "1979",
+    "dia_diem": ""
+  }
+]
