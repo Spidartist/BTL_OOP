@@ -6,7 +6,7 @@ import objects.dynasty.Dynasty;
 import objects.figure.Figure;
 import objects.figure.King;
 
-public class Relic extends AbstractRelic{
+public class Relic{
 	private String location;
 	private String type;
 	private String rank;
@@ -14,6 +14,15 @@ public class Relic extends AbstractRelic{
 	private LinkedList<Figure> figures;
 	private LinkedList<King> kings;
 	private LinkedList<Dynasty> dynastys;
+	private String name;
+	
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
 	
 	public LinkedList<Figure> getFigures() {
 		return figures;
