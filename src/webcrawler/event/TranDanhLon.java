@@ -100,7 +100,7 @@ public class TranDanhLon extends BasicWebScraper implements IScraping {
 
 	public static void main(String args[]) {
 		TranDanhLon trandanh = new TranDanhLon();
-		trandanh.Scraping();
+		trandanh.scraping();
 		String JsonURL = "C:\\Users\\lemin\\OneDrive\\Documents\\New Java projects\\webCrawler\\src\\TranDanhLon.json";
 		Gson gson = new GsonBuilder().setPrettyPrinting().create();
 		try {

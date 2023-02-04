@@ -2,6 +2,9 @@ package objects.figure;
 
 import java.util.ArrayList;
 
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+
 // import javafx.scene.chart.Axis.TickMark;
 
 import objects.dynasty.Dynasty;
@@ -15,16 +18,15 @@ public class Figure extends HistoricalFigure {
 	private String tenKhac;
 	private King doiVua;
 
-	public String getTenKhac() {
-		return tenKhac;
-	}
-
 	private ArrayList<Dynasty> trieuDai = new ArrayList<Dynasty>();
 
 	public void setTenKhac(String tenKhac) {
 		this.tenKhac = tenKhac;
 	}
 
+	public String getTenKhac() {
+		return tenKhac;
+	}
 	// public Figure(String ten, String namSinh, String namMat, String queQuan,
 	// String danToc, String namNhapNgu,
 	// String ghiChu, String namDoTrangNguyen, King doiVua) {
@@ -143,6 +145,29 @@ public class Figure extends HistoricalFigure {
 
 	public void setTrieuDai(ArrayList<Dynasty> trieuDai) {
 		this.trieuDai = trieuDai;
+	}
+
+	@Override
+	public Figure parseDataObject(JSONObject data) {
+		String ten = (String) data.get("ten");
+		String queQuan = (String) data.get("queQuan");
+		String tenKhac = (String) data.get("tenKhac");
+		String ghiChu = (String) data.get("ghiChu");
+		ArrayList<Dynasty> trieuDai = new ArrayList<Dynasty>();
+		JSONArray trieuDais = (JSONArray) data.get("trieuDai");
+		for (int i = 0; i < trieuDais.size(); i++) {
+			JSONObject TD = (JSONObject) trieuDais.get(i);
+			Dynasty newDynasty = new Dynasty((String) TD.get("name"));
+			trieuDai.add(newDynasty);
+			// TD.get("name");
+		}
+		// System.out.println(trieuDai);
+		String namSinh = (String) data.get("namSinh");
+		String namMat = (String) data.get("namMat");
+
+		Figure newFigure = new Figure(ten, namSinh, namMat, queQuan, ghiChu, tenKhac,
+				trieuDai);
+		return newFigure;
 	}
 
 }
