@@ -6,24 +6,24 @@ import org.jsoup.select.Elements;
 import webcrawler.parent.BasicWebScraper;
 import webcrawler.parent.IScraping;
 
-public class RelicScrapeDiTichOneBox extends BasicWebScraper implements IScraping {
+public class RelicScrapeDiTichOnePage extends BasicWebScraper implements IScraping {
 	private String type;
 	private String rank;
 	private String person;
 	private String name;
 	private String address;
 	
-	public RelicScrapeDiTichOneBox(String url) {
+	public RelicScrapeDiTichOnePage(String url) {
 		this.setUrl(url);
 		connect();
 	}
 
 	public void scraping() {
 		this.name = this.getDoc().select("#block-harvard-content > article > div > section > div > div.hl__library-info__features > section > h2").text();
-		System.out.println(name);
+//		System.out.println(name);
 		
 		this.address = this.getDoc().select("#block-harvard-content > article > div > section > div > div.hl__library-info__sidebar > div:nth-child(1) > section > div > div > div.hl__contact-info__address > span").text();
-		System.out.println(address);
+//		System.out.println(address);
 		
 		StringBuilder personB = new StringBuilder();
 		StringBuilder rankB = new StringBuilder();
@@ -62,7 +62,7 @@ public class RelicScrapeDiTichOneBox extends BasicWebScraper implements IScrapin
 		}
 		
 		
-		System.out.println(person);
+//		System.out.println(person);
 //		System.out.println(rank);
 //		System.out.println(type);
 		
@@ -94,7 +94,7 @@ public class RelicScrapeDiTichOneBox extends BasicWebScraper implements IScrapin
 		for (int i = 1865;i<=6139;i++) {
 			System.out.println(i);
 			String url = baseUrl + Integer.toString(i);
-			RelicScrapeDiTichOneBox r = new RelicScrapeDiTichOneBox(url);
+			RelicScrapeDiTichOnePage r = new RelicScrapeDiTichOnePage(url);
 //			System.out.println(i);
 			r.scraping();
 		}
