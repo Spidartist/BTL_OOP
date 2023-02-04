@@ -35,6 +35,7 @@ public class FindKing extends BasicWebScraper implements IScraping {
 	public Document getDoc() {
 		return this.doc;
 	}
+
 	public ArrayList<King> getKings() {
 		return kings;
 	}
@@ -90,13 +91,13 @@ public class FindKing extends BasicWebScraper implements IScraping {
 					String tenHuy = datas.get(5).text();
 					tenHuy = cleanData(tenHuy);
 					king.setTenHuy(tenHuy);
-					
+
 					// tenHuy = tenHuy.replaceAll(openRegEx,"");
 
 					String theThu = datas.get(6).text();
-//					theThu.replace("[^\\[a-z\\]]", "");
-//					theThu = theThu.replaceAll(strRegEx, "");
-//					theThu = theThu.replaceAll(attrRegEx, "");
+					// theThu.replace("[^\\[a-z\\]]", "");
+					// theThu = theThu.replaceAll(strRegEx, "");
+					// theThu = theThu.replaceAll(attrRegEx, "");
 					theThu = cleanData(theThu);
 					king.setTheThu(theThu);
 					String namTriVi = datas.get(7).html();
@@ -120,17 +121,19 @@ public class FindKing extends BasicWebScraper implements IScraping {
 			}
 		}
 	}
+
 	public String cleanData(String sample) {
 		String data = new String(sample);
 		int index = data.indexOf("[");
 		while (index != -1) {
 			int close = data.indexOf("]");
-			String tmp = data.substring(index, close+1);
-			data= data.replace(tmp, "");
+			String tmp = data.substring(index, close + 1);
+			data = data.replace(tmp, "");
 			index = data.indexOf("[");
 		}
 		return data;
 	}
+
 	public static void main(String[] args) {
 		FindKing obj = new FindKing();
 		ArrayList<King> kings = new ArrayList<King>();
