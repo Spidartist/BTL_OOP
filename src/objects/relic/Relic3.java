@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import objects.dynasty.Dynasty;
 import objects.figure.HistoricalFigure;
 
-public class Relic3 extends AbstractRelic{
+public class Relic3{
 	private String location;
 	private String type;
 	private String rank;

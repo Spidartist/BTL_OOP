@@ -1,6 +1,6 @@
 package objects.relic;
 
-public class Relic2 extends AbstractRelic{
+public class Relic2{
 	private String location;
 	private String desc;
 	private String type;

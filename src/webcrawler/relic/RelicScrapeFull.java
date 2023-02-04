@@ -12,26 +12,25 @@ import com.google.gson.JsonIOException;
 import objects.relic.Relic;
 import webcrawler.combine.CombineData;
 
-public class RelicScrapeVHHN implements CombineData{
-	
+public class RelicScrapeFull implements CombineData{
 	private LinkedList<Relic> relics;
-	
-	public RelicScrapeVHHN() throws IOException {
+	public RelicScrapeFull() {
 		relics = new LinkedList<Relic>();
 	}
 
-	public LinkedList<Relic> getRelics() {
-		return relics;
-	}
-	
-	public static void main(String[] args) throws IOException {
-		RelicScrapeVHHN r = new RelicScrapeVHHN();
-		r.combine();
-		r.toJson();
+	@Override
+	public void combine() throws IOException {
+		RelicScrapeDiTich r_d = new RelicScrapeDiTich();
+		r_d.combine();
+		relics.addAll(r_d.getRelics());
+		
+		RelicScrapeVHHN r_h = new RelicScrapeVHHN();
+		r_h.combine();
+		relics.addAll(r_h.getRelics());
 	}
 	
 	public void toJson() throws JsonIOException, IOException {
-		String filePath = "D:\\relic_new_1.json";
+		String filePath = "D:\\relic_new_2.json";
 		Gson gson = new GsonBuilder().setPrettyPrinting().create();
 		try {
 			FileWriter writer = new FileWriter(new File(filePath));
@@ -39,19 +38,14 @@ public class RelicScrapeVHHN implements CombineData{
 			writer.close();
 		} catch (IOException e) {
 			e.printStackTrace();
+
 		}
 	}
 	
-	@Override
-	public void combine() throws IOException {
-		int cnt = 0;
-		for (int i=1;i<=44;i++) {
-			RelicScrapeVHHNOnePage r_one = new RelicScrapeVHHNOnePage(i);
-			r_one.scraping();
-			cnt += r_one.getRelics().size();
-			relics.addAll(r_one.getRelics());
-		}
-		System.out.println(cnt);
+	public static void main(String[] args) throws IOException {
+		RelicScrapeFull r_f = new RelicScrapeFull();
+		r_f.combine();
+		r_f.toJson();
 	}
 
 }
