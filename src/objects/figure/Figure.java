@@ -2,9 +2,6 @@ package objects.figure;
 
 import java.util.ArrayList;
 
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
-
 // import javafx.scene.chart.Axis.TickMark;
 
 import objects.dynasty.Dynasty;

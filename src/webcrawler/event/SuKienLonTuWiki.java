@@ -1,18 +1,24 @@
 package webcrawler.event;
 
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.lang.reflect.Type;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.reflect.TypeToken;
 
 import webcrawler.parent.*;
 import objects.event.*;
+import objects.figure.*;
+import objects.dynasty.*;
 
 public class SuKienLonTuWiki extends BasicWebScraper implements IScraping {
 	private ArrayList<SuKien> SuKienWiki = new ArrayList<SuKien>();
@@ -46,20 +52,85 @@ public class SuKienLonTuWiki extends BasicWebScraper implements IScraping {
 
 		for (String s : arr) {
 			if (s.matches("[0-9]{3}$") || s.matches("[0-9]{4}$"))
-				if (s.matches("[0-9]{3}$") || s.matches("[0-9]{4}$")) {
-					LaMotNam = true;
-					SoNamTrongDuLieu++;
-					if (SoNamTrongDuLieu > 1)
-						ThoiGianTraVe.append(" - ");
-					ThoiGianTraVe.append(s);
-				}
+				LaMotNam = true;
+				SoNamTrongDuLieu++;
+				if (SoNamTrongDuLieu > 1)
+					ThoiGianTraVe.append(" - ");
+				ThoiGianTraVe.append(s);
 		}
 
 		if (!LaMotNam)
 			return "";
 		return ThoiGianTraVe.toString();
 	}
+	
+	private String LayNam(String thoi_gian) {
+		thoi_gian = thoi_gian.replaceAll("[^0-9]", "#");
+		String[] arr = thoi_gian.split("#");
+		for (String s : arr) {
+			if (s.matches("[0-9]{3}$") || s.matches("[0-9]{4}$")) {
+				return s;
+			}
+		}
+		return "";
+	}
+	
+	private String CaoDiaDiem(String DuLieuTho, String KyTuCanXoa) {
+		// StringBuilder s = new StringBuilder();
+		final String[] tukhoa = new String[] { "Trận ", "Chiến dịch ", "Biến cố ", "Chiến tranh ", "Văn hóa "};
+		boolean CanChinhSua = false;
+		DuLieuTho = DuLieuTho.replace(KyTuCanXoa, "");
 
+		for (int i = 0; i < tukhoa.length; i++) {
+			if (DuLieuTho.contains(tukhoa[i])) {
+				CanChinhSua = true;
+				DuLieuTho = DuLieuTho.replace(tukhoa[i], "");
+				DuLieuTho = DuLieuTho.replaceAll("[-()]", "");
+			}
+		}
+		if (CanChinhSua)
+			return DuLieuTho;
+		return "";
+	}
+
+	private String CaoNhanVat(String DuLieuTho, String KyTuCanXoa) {
+		if (DuLieuTho.contains("Dẹp Loạn")) {
+			DuLieuTho = DuLieuTho.replace("Dẹp Loạn ", "");
+			DuLieuTho = DuLieuTho.replace(KyTuCanXoa, "");
+			return DuLieuTho;
+		}
+		return "";
+	}
+/*
+	private Dynasty CaoTrieuDai(String thoi_gian) {
+		int moc = 0, startY = 0, endY = 0;
+		String JsonURL = "C:\\Users\\lemin\\OneDrive\\Documents\\New Java projects\\BTL_OOP\\BTL_OOP\\src\\objects\\dynasty\\dynasty.json";
+		Gson gson = new Gson();
+		ArrayList<Dynasty> trieu_dai = new ArrayList<Dynasty>();
+		try {
+			FileReader reader = new FileReader(JsonURL);
+			Type type = new TypeToken<ArrayList<Dynasty>>() {}.getType();
+			trieu_dai = gson.fromJson(reader, type);
+		}
+		catch(FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		for(Dynasty d: trieu_dai) {
+			try {
+				moc = Integer.parseInt(LayNam(thoi_gian));
+				startY = Integer.parseInt(d.getStartYear());
+				endY = Integer.parseInt(d.getEndYear());
+			}
+			catch(NumberFormatException e) {
+				e.printStackTrace();
+			}
+			if(moc >= startY && moc <= endY) {
+				return d;
+			}
+		}
+		return new Dynasty();
+	}
+*/
 	public void scraping() {
 		String TamNhoGiaTriThoiGian = "";
 		Element noi_dung_chinh = this.doc.getElementById("bodyContent");
@@ -81,7 +152,9 @@ public class SuKienLonTuWiki extends BasicWebScraper implements IScraping {
 			SuKien s = new SuKien();
 			s.setTen(ten);
 			s.setThoi_gian(thoi_gian);
-
+			s.setDia_diem(CaoDiaDiem(ten, thoi_gian));
+			s.setNhan_vat_lien_quan(CaoNhanVat(ten, thoi_gian));
+			//s.setNien_dai(CaoTrieuDai(thoi_gian));
 			SuKienWiki.add(s);
 			System.out.println(thoi_gian + ": " + ten);
 		}
@@ -91,7 +164,7 @@ public class SuKienLonTuWiki extends BasicWebScraper implements IScraping {
 		SuKienLonTuWiki sukien = new SuKienLonTuWiki();
 		sukien.scraping();
 		// can chinh sua khi len remote
-		String JsonURL = "C:\\Users\\lemin\\OneDrive\\Documents\\New Java projects\\webCrawler\\src\\SuKienLon.json";
+		String JsonURL = "C:\\Users\\lemin\\OneDrive\\Documents\\New Java projects\\BTL_OOP\\BTL_OOP\\src\\objects\\event\\SuKienLon.json";
 		Gson gson = new GsonBuilder().setPrettyPrinting().create();
 		try {
 			FileWriter writer = new FileWriter(new File(JsonURL));

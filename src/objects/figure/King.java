@@ -1,8 +1,5 @@
 package objects.figure;
 
-import org.json.simple.JSONObject;
-
-
 public class King extends HistoricalFigure {
 	private String paperURL;
 	private String mieuHieu;
@@ -24,8 +21,8 @@ public class King extends HistoricalFigure {
 		this.namTriVi = namTriVi;
 	}
 
-	public King(String paperURL, String mieuHieu, String thuyHieu,
-			String nienHieu, String tenHuy, String theThu, String namTriVi, String ten) {
+	public King(String paperURL, String mieuHieu, String thuyHieu, String nienHieu, String tenHuy, String theThu,
+			String namTriVi, String ten) {
 		super(ten);
 		this.paperURL = paperURL;
 		this.mieuHieu = mieuHieu;

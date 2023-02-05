@@ -1,6 +1,6 @@
 package objects.festival;
 
-import objects.figure.Figure;
+import src.objects.figure.Figure;
 
 public class Festival {
 	private String tenLeHoi;
