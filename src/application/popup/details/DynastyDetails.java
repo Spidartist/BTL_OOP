@@ -1,6 +1,5 @@
 package application.popup.details;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
 
 import javafx.collections.ObservableList;
@@ -19,7 +18,6 @@ import javafx.scene.layout.BackgroundRepeat;
 import javafx.scene.layout.BackgroundSize;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import objects.dynasty.Dynasty;
@@ -30,10 +28,12 @@ public class DynastyDetails {
         BorderPane borderPane = new BorderPane();
         Stage stage = new Stage();
         stage.setTitle("Figure Detail");
-        Image imagebackground = new Image("https://media.discordapp.net/attachments/755083836169257062/1071699179488944128/image.png?width=1190&height=670");
-        BackgroundImage backgroundImage = new BackgroundImage(imagebackground, BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.CENTER, BackgroundSize.DEFAULT);
+        Image imagebackground = new Image(
+                "https://media.discordapp.net/attachments/755083836169257062/1071699179488944128/image.png?width=1190&height=670");
+        BackgroundImage backgroundImage = new BackgroundImage(imagebackground, BackgroundRepeat.NO_REPEAT,
+                BackgroundRepeat.NO_REPEAT, BackgroundPosition.CENTER, BackgroundSize.DEFAULT);
         borderPane.setBackground(new Background(backgroundImage));
-        
+
         Image image = new Image(
                 "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSufu-xJiSOxynzT2dbbwlAGaP5Gm-TnGM2IA&usqp=CAU");
         ImageView imageView = new ImageView(image);
@@ -58,7 +58,7 @@ public class DynastyDetails {
         Label kings = new Label(strKing);
         curSelect.setKings(newKing);
         kings.setWrapText(true);
-        
+
         name.getStyleClass().add("text-color");
         startYear.getStyleClass().add("text-color");
         endYear.getStyleClass().add("text-color");
@@ -66,20 +66,21 @@ public class DynastyDetails {
         founder.getStyleClass().add("text-color");
 
         HBox hbox = new HBox();
-        hbox.setPadding(new Insets(20,20,20,20));
+        hbox.setPadding(new Insets(20, 20, 20, 20));
         hbox.setSpacing(25);
         HBox picturebox = new HBox();
-        
-        //picturebox.setSpacing(20);
+
+        // picturebox.setSpacing(20);
         picturebox.getChildren().add(imageView);
-        //picturebox.setStyle("-fx-border-color: white; -fx-border-width: 3px; -fx-effect : dropshadow(one-pass-box,white, 5, 5, 0, 0);");
-        
+        // picturebox.setStyle("-fx-border-color: white; -fx-border-width: 3px;
+        // -fx-effect : dropshadow(one-pass-box,white, 5, 5, 0, 0);");
+
         VBox labelbox = new VBox();
-        //labelbox.setSpacing(20);
-        labelbox.getChildren().addAll(name,startYear,endYear,capital,founder);
-        
-        hbox.getChildren().addAll(picturebox,labelbox);
-        
+        // labelbox.setSpacing(20);
+        labelbox.getChildren().addAll(name, startYear, endYear, capital, founder);
+
+        hbox.getChildren().addAll(picturebox, labelbox);
+
         borderPane.setCenter(hbox);
         picturebox.setAlignment(Pos.CENTER_LEFT);
         labelbox.setAlignment(Pos.CENTER_LEFT);
