@@ -1,1 +1,78 @@
 /* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.root {
+    -fx-padding: 15; 
+  }
+  
+  .table-view {
+      -fx-background-color: #cd853F;
+      -fx-background-radius: 5
+  }
+  
+  .grid-pane {
+    -fx-hgap: 0;
+    -fx-vgap: 0;
+    -fx-background-color: lightgray;
+    -fx-alignment: center;
+    /*-fx-padding: 10px;*/
+  }
+  
+  .table-row-cell:nth-child(1) {
+      -fx-background-color: #805d49;
+  }
+  
+  .table-row-cell {
+      -fx-background-color: rgba(0,0,0,0.7);
+      -fx-font-weight:bold;
+      -fx-text-fill: #f0e68c;
+  }
+  
+  .table-column {
+       -fx-alignment: CENTER;
+       -fx-text-fill: #f0e68c;
+  }
+  
+  .menu-button {
+      -fx-background-color: b8860b;
+      -fx-alignment: center;
+        -fx-content-display: center;
+        -fx-background-radius: 10;
+       -fx-background-insets: 0;
+  }
+  
+  /* .menu-button > .arrow-button > .arrow {
+      -fx-background-color: transparent;
+      -fx-background-image: url("https://media.discordapp.net/attachments/918059639088771112/1071457796756865084/reverse-icon-png-15.jpg");
+      -fx-background-position: right;
+      -fx-background-repeat: no-repeat;
+      -fx-background-size : 30 30;
+  }*/
+  
+  .context-menu .menu-item {
+      -fx-alignment: center;
+        -fx-content-display: center;
+        /*-fx-text-fill : #f0e68c;*/
+      -fx-background-color: #b8860b;
+  }
+  
+  .text-field {
+      -fx-prompt-text-margin-left : 50px;
+      -fx-prompt-text-fill: #615552;
+      -fx-background-color: #ebe7e1;
+      -fx-background-radius: 10;
+       -fx-background-insets: 0 0 0 0;
+       -fx-background-image: url("https://media.discordapp.net/attachments/918059639088771112/1071443969927565332/search_icon_125165.png");
+       -fx-background-size: 25 25;
+      -fx-background-repeat: no-repeat;
+      -fx-background-position: left;
+      -fx-pref-width: 100%;
+  }
+  
+  /* .text-field:focused .prompt {
+    -fx-text-fill: red;
+  }*/
+  
+  #Textcss{
+      -fx-fill : yellow;
+      -fx-font-size : 60 viewport width;
+      -fx-effect : dropshadow(two-pass-box,black, 10, 10, 0, 0);
+  }
