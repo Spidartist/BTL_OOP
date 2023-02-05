@@ -147,7 +147,9 @@ public class MainController {
                     tableFestivalView.getColumns().add(ColFestival);
 
                 }
-                tableFestivalView.setItems(listObservablesFestival);
+                Search<Festival> searchFestival = new Search<Festival>();
+                tableFestivalView
+                        .setItems(searchFestival.demoSearch(listObservablesFestival, textField, Festival.class));
                 borderPane.setCenter(tableFestivalView);
                 break;
             case "Triều Đại Lịch Sử":
