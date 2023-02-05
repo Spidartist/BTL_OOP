@@ -24,8 +24,7 @@ import org.jsoup.select.Elements;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 public class Wikipedia extends BasicFindFestival  {
-	private ArrayList<Festival> list = new ArrayList<Festival>() ;
-	
+
 	
 	public Wikipedia() {
 		String url = "https://vi.wikipedia.org/wiki/L%E1%BB%85_h%E1%BB%99i_Vi%E1%BB%87t_Nam";
@@ -112,9 +111,7 @@ public class Wikipedia extends BasicFindFestival  {
 		}//end for 1
 	}
 	
-	public ArrayList<Festival> getList(){
-		return this.list;
-	}
+
 	private String modify(String diaDiem, String festivalNames) {
 		String names = festivalNames;
 		switch(diaDiem) {
