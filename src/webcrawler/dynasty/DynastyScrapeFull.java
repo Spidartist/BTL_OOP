@@ -14,7 +14,7 @@ import objects.figure.King;
 import webcrawler.combine.ICombineData;
 import webcrawler.tojson.IWriteJson;
 
-public class DynastyScrapeFull  implements ICombineData, IWriteJson{
+public class DynastyScrapeFull implements ICombineData, IWriteJson {
 	private DynastyScrapeName crawlNames;
 	private DynastyScrapeWikiFounder crawlFounder;
 	private DynastyScrapeWikiKings firstKings;
@@ -25,7 +25,7 @@ public class DynastyScrapeFull  implements ICombineData, IWriteJson{
 		dynastys = new LinkedList<Dynasty>();
 	}
 
-	public void writeJson() throws JsonIOException, IOException {
+	public void writeJSon() throws JsonIOException, IOException {
 		String filePath = "\\data\\dynasty.json";
 		Gson gson = new GsonBuilder().setPrettyPrinting().create();
 		try {
@@ -41,9 +41,9 @@ public class DynastyScrapeFull  implements ICombineData, IWriteJson{
 	public static void main(String[] args) throws JsonIOException, IOException {
 		DynastyScrapeFull f = new DynastyScrapeFull();
 		f.combine();
-		f.writeJson();
+		f.writeJSon();
 	}
-	
+
 	@Override
 	public void combine() throws IOException {
 		firstKings = new DynastyScrapeWikiKings();
@@ -57,7 +57,7 @@ public class DynastyScrapeFull  implements ICombineData, IWriteJson{
 
 		remainedKings = new DynastyScrapeNKSKings();
 		remainedKings.scraping();
-		
+
 		LinkedList<String> dynastyNames = crawlNames.getDynasty_names();
 
 		for (String name : dynastyNames) {
@@ -74,7 +74,7 @@ public class DynastyScrapeFull  implements ICombineData, IWriteJson{
 				}
 			}
 		}
-		
+
 		for (Dynasty d_1 : crawlFounder.getDynastys()) {
 			for (Dynasty d_2 : dynastys) {
 				if (d_1.getName().equals(d_2.getName())) {
@@ -98,7 +98,7 @@ public class DynastyScrapeFull  implements ICombineData, IWriteJson{
 
 				System.out.println("** " + d.getName());
 				System.out.println(d_w.getKings().size());
-				
+
 				d.setKings(d_w.getKings());
 			}
 
@@ -118,6 +118,6 @@ public class DynastyScrapeFull  implements ICombineData, IWriteJson{
 			// System.out.println(d.getName() + " " + d.getCapital());
 
 		}
-		
+
 	}
 }

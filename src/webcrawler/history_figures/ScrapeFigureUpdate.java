@@ -8,7 +8,7 @@ import application.readdata.ReadData;
 import javafx.collections.ObservableList;
 import webcrawler.parent.BasicWebScraper;
 import webcrawler.parent.IScraping;
-import webcrawler.tojson.ICombine;
+import webcrawler.combine.ICombineData;
 import webcrawler.tojson.IWriteJson;
 import objects.dynasty.Dynasty;
 import objects.figure.Figure;
@@ -36,8 +36,9 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-public class ScrapeFigureUpdate implements IWriteJson,ICombine {
+public class ScrapeFigureUpdate implements IWriteJson, ICombineData {
 	private LinkedList<Figure> list = new LinkedList<Figure>();
+
 	public static void main(String[] args) {
 		ScrapeFigureUpdate figure = new ScrapeFigureUpdate();
 		figure.combine();
@@ -150,7 +151,7 @@ public class ScrapeFigureUpdate implements IWriteJson,ICombine {
 				String name = dynasty.getName();
 				dynasty.setName(replaceTrieuDai(name));
 			}
-		}	
+		}
 	}
 
 	@Override

@@ -11,10 +11,10 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.JsonIOException;
 
 import objects.event.SuKien;
-import webcrawler.tojson.ICombine;
+import webcrawler.combine.ICombineData;
 import webcrawler.tojson.IWriteJson;
 
-public class ScrapeEvent implements IWriteJson,ICombine {
+public class ScrapeEvent implements IWriteJson,ICombineData {
 	private LinkedList<SuKien> list = new LinkedList<SuKien>();
 	public static void main(String[] args) {
 		ScrapeEvent event = new ScrapeEvent();

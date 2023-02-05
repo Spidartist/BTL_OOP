@@ -17,14 +17,15 @@ import webcrawler.combine.ICombineData;
 import webcrawler.linkdata.LinkRelicWithFigureAndDynasty;
 import webcrawler.tojson.IWriteJson;
 
-public class RelicScrapeDiTich implements ICombineData, IWriteJson{
+public class RelicScrapeDiTich implements ICombineData, IWriteJson {
+
 	LinkedList<Relic> relics;
 
 	public RelicScrapeDiTich() throws IOException {
 		relics = new LinkedList<Relic>();
 	}
 
-	public void writeJson() throws JsonIOException, IOException {
+	public void writeJSon() throws JsonIOException, IOException {
 		String filePath = "D:\\relic_new.json";
 		Gson gson = new GsonBuilder().setPrettyPrinting().create();
 		try {
@@ -40,11 +41,9 @@ public class RelicScrapeDiTich implements ICombineData, IWriteJson{
 	public static void main(String[] args) throws JsonIOException, IOException {
 		RelicScrapeDiTich rd = new RelicScrapeDiTich();
 		rd.combine();
-		rd.writeJson();
+		rd.writeJSon();
 	}
-	
-	
-	
+
 	public LinkedList<Relic> getRelics() {
 		return relics;
 	}
@@ -56,7 +55,7 @@ public class RelicScrapeDiTich implements ICombineData, IWriteJson{
 		String baseUrl = "http://ditich.vn/FrontEnd/DiTich/Form?do=&ItemId="; // 6193 - 1865
 		int lienKet = 0;
 		for (int i = 1865; i <= 6139; i++) {
-			
+
 			String url = baseUrl + Integer.toString(i);
 			RelicScrapeDiTichOnePage r = new RelicScrapeDiTichOnePage(url);
 			r.scraping();
@@ -66,21 +65,21 @@ public class RelicScrapeDiTich implements ICombineData, IWriteJson{
 				System.out.println(r.getAddress());
 				System.out.println(r.getPerson());
 				String tenNguoiTho = r.getPerson();
-				
+
 				linkRelic.genLink(tenNguoiTho);
 				LinkedList<Figure> figures = linkRelic.getFigures();
 				LinkedList<King> kings = linkRelic.getKings();
 				LinkedList<Dynasty> dynastys = linkRelic.getDynastys();
-				
+
 				lienKet += linkRelic.getLienKet();
-				
-				Relic r1 = new Relic(r.getName(), r.getAddress(), r.getType()
-						, r.getRank(), tenNguoiTho, figures, kings, dynastys);
+
+				Relic r1 = new Relic(r.getName(), r.getAddress(), r.getType(), r.getRank(), tenNguoiTho, figures, kings,
+						dynastys);
 				relics.add(r1);
 			}
-			
+
 		}
-		
+
 		System.out.println(lienKet);
 	}
 }

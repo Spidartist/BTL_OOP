@@ -59,7 +59,7 @@ public class MainController {
         ObservableList<King> listObservablesKing = new ReadData<King>()
                 .FromJsonToArray("src/data/king.json", King.class);
         ObservableList<Dynasty> listObservablesDynasty = new ReadData<Dynasty>()
-                .FromJsonToArray("src/data/dynastys.json", Dynasty.class);
+                .FromJsonToArray("src/data/dynasty.json", Dynasty.class);
         ObservableList<Festival> listObservablesFestival = new ReadData<Festival>()
                 .FromJsonToArray("src/data/festival.json", Festival.class);
 

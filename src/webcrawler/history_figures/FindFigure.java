@@ -19,12 +19,13 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.JsonIOException;
 
 import webcrawler.parent.BasicWebScraper;
-import webcrawler.tojson.ICombine;
+import webcrawler.combine.ICombineData;
 import webcrawler.tojson.IWriteJson;
 import objects.figure.Figure;
 
-public class FindFigure implements ICombine,IWriteJson {
+public class FindFigure implements ICombineData, IWriteJson {
 	private ArrayList<Figure> list = new ArrayList<Figure>();
+
 	public static void main(String[] args) {
 		FindFigure findFigure = new FindFigure();
 		findFigure.combine();
