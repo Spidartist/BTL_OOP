@@ -7,6 +7,7 @@ import application.popup.details.FestivalDetails;
 import application.popup.details.FigureDetails;
 import application.popup.details.KingDetails;
 import application.popup.details.RelicDetails;
+import application.popup.details.SuKienDetails;
 import application.readdata.ReadData;
 import application.search.Search;
 import javafx.collections.ObservableList;
@@ -23,6 +24,7 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import objects.dynasty.Dynasty;
+import objects.event.SuKien;
 import objects.festival.Festival;
 import objects.figure.Figure;
 import objects.figure.King;
@@ -66,6 +68,8 @@ public class MainController {
                 .FromJsonToArray("src/data/festival.json", Festival.class);
         ObservableList<Relic> listObservablesRelic = new ReadData<Relic>()
                 .FromJsonToArray("src/data/relic.json", Relic.class);
+        ObservableList<SuKien> listObservablesSuKien = new ReadData<SuKien>()
+                .FromJsonToArray("src/data/event.json", SuKien.class);
 
         switch (lableSelecItem) {
             case "Vua":
@@ -87,12 +91,6 @@ public class MainController {
                     ColKing.setCellValueFactory(new PropertyValueFactory<King, String>(kingStr[i]));
                     tableKingView.getColumns().add(ColKing);
                 }
-
-                // System.out.println(reader.getKingList());
-                // for (King elm : readerDataKing) {
-                // System.out.println(elm.getTen());
-                // King newKing = new King(elm.getTen());
-                // }
                 Search<King> searchKing = new Search<King>();
                 tableKingView.setItems(searchKing.searchList(listObservablesKing, textField, King.class));
                 borderPane.setCenter(tableKingView);
@@ -121,14 +119,34 @@ public class MainController {
                 borderPane.setCenter(tableFigureView);
                 break;
             case "Sự kiện lịch sử":
-
+                TableView<SuKien> tableSuKienView = new TableView<SuKien>();
+                tableSuKienView.getColumns().clear();
+                // xu ly xu kien click row pop up window
+                tableSuKienView.addEventHandler(MouseEvent.MOUSE_CLICKED, (MouseEvent e) -> {
+                    if (e.getClickCount() > 1) {
+                        SuKien demo = tableSuKienView.getSelectionModel().getSelectedItem();
+                        System.out.println(demo.getTen());
+                        new SuKienDetails(demo);
+                    }
+                });
+                String[] nameColSuKien = { "Tên sự kiện", "Thời gian diễn ra", "Địa điểm" };
+                String[] SuKienStr = { "ten", "thoi_gian", "dia_diem" };
+                for (int i = 0; i < SuKienStr.length; i++) {
+                    TableColumn<SuKien, String> ColSuKien = new TableColumn<SuKien, String>(nameColSuKien[i]);
+                    ColSuKien.prefWidthProperty().bind(tableSuKienView.widthProperty().multiply(0.33));
+                    ColSuKien.setCellValueFactory(new PropertyValueFactory<SuKien, String>(SuKienStr[i]));
+                    tableSuKienView.getColumns().add(ColSuKien);
+                }
+                Search<SuKien> searchSuKien = new Search<SuKien>();
+                tableSuKienView.setItems(searchSuKien.searchList(listObservablesSuKien, textField, SuKien.class));
+                borderPane.setCenter(tableSuKienView);
                 break;
+
             case "Di tích lịch sử":
                 TableView<Relic> tableRelicView = new TableView<>();
                 tableRelicView.addEventHandler(MouseEvent.MOUSE_CLICKED, (MouseEvent e) -> {
                     if (e.getClickCount() > 1) {
                         Relic demo = tableRelicView.getSelectionModel().getSelectedItem();
-
                         new RelicDetails(demo, listObservablesFigure, listObservablesKing, listObservablesDynasty);
                     }
                 });
