@@ -13,7 +13,7 @@ import objects.figure.Figure;
 import objects.figure.King;
 
 public class Search<T> {
-    public ObservableList<T> demoSearch(ObservableList<T> data, TextField textField, Class<T> type) {
+    public ObservableList<T> searchList(ObservableList<T> data, TextField textField, Class<T> type) {
         FilteredList<T> filteredData = new FilteredList<>(data, b -> true);
         textField.textProperty().addListener((observable, oldValue, newValue) -> {
             filteredData.setPredicate(obj -> {

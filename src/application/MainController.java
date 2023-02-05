@@ -94,7 +94,7 @@ public class MainController {
                 // King newKing = new King(elm.getTen());
                 // }
                 Search<King> searchKing = new Search<King>();
-                tableKingView.setItems(searchKing.demoSearch(listObservablesKing, textField, King.class));
+                tableKingView.setItems(searchKing.searchList(listObservablesKing, textField, King.class));
                 borderPane.setCenter(tableKingView);
                 break;
             case "Nhân Vật Lịch Sử":
@@ -117,7 +117,7 @@ public class MainController {
                 }
                 // readerDataFigure.forEach(elm -> tableFigureView.getItems().add(elm));
                 Search<Figure> searchFigure = new Search<Figure>();
-                tableFigureView.setItems(searchFigure.demoSearch(listObservablesFigure, textField, Figure.class));
+                tableFigureView.setItems(searchFigure.searchList(listObservablesFigure, textField, Figure.class));
                 borderPane.setCenter(tableFigureView);
                 break;
             case "Sự kiện lịch sử":
@@ -143,7 +143,7 @@ public class MainController {
                 }
                 // readerDataRelic.forEach(elm -> tableRelicView.getItems().add(elm));
                 Search<Relic> searchRelic = new Search<Relic>();
-                tableRelicView.setItems(searchRelic.demoSearch(listObservablesRelic, textField, Relic.class));
+                tableRelicView.setItems(searchRelic.searchList(listObservablesRelic, textField, Relic.class));
                 borderPane.setCenter(tableRelicView);
                 break;
             case "Lễ Hội Văn Hóa":
@@ -168,7 +168,7 @@ public class MainController {
                 }
                 Search<Festival> searchFestival = new Search<Festival>();
                 tableFestivalView
-                        .setItems(searchFestival.demoSearch(listObservablesFestival, textField, Festival.class));
+                        .setItems(searchFestival.searchList(listObservablesFestival, textField, Festival.class));
                 borderPane.setCenter(tableFestivalView);
                 break;
             case "Triều Đại Lịch Sử":
@@ -191,7 +191,7 @@ public class MainController {
                 }
                 // readerDataDynasty.forEach(elm -> tableDynastyView.getItems().add(elm));
                 Search<Dynasty> searchDynasty = new Search<Dynasty>();
-                tableDynastyView.setItems(searchDynasty.demoSearch(listObservablesDynasty, textField, Dynasty.class));
+                tableDynastyView.setItems(searchDynasty.searchList(listObservablesDynasty, textField, Dynasty.class));
                 borderPane.setCenter(tableDynastyView);
                 break;
             default:
