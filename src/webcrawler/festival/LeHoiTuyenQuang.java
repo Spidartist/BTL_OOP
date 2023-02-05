@@ -9,17 +9,13 @@ import objects.festival.Festival;
 import objects.figure.Figure;
 import org.jsoup.select.Elements;
 
-public class LeHoiTuyenQuang extends BasicWebScraper implements IScraping {
-	private ArrayList<Festival> list = new ArrayList<Festival>();
+public class LeHoiTuyenQuang extends BasicFindFestival{
+	
 
 	public LeHoiTuyenQuang() {
 		String url = "https://alltours.vn/tuyen-quang/cac-le-hoi-o-tuyen-quang.html";
 		this.url = url;
 		connect();
-	}
-
-	public ArrayList<Festival> getList() {
-		return list;
 	}
 
 	@Override
