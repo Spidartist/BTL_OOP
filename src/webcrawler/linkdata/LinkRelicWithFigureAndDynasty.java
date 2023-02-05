@@ -2,9 +2,9 @@ package webcrawler.linkdata;
 
 import java.io.IOException;
 import java.util.LinkedList;
+import java.util.List;
 
 import application.readdata.ReadData;
-import javafx.collections.ObservableList;
 import objects.dynasty.Dynasty;
 import objects.figure.Figure;
 import objects.figure.King;
@@ -14,8 +14,8 @@ public class LinkRelicWithFigureAndDynasty {
 	private LinkedList<King> kings;
 	private LinkedList<Dynasty> dynastys;
 	private LinkedList<String> added;
-	private ObservableList<Figure> listObservablesFigure;
-	private ObservableList<King> listObservablesKing;
+	private List<Figure> listObservablesFigure;
+	private List<King> listObservablesKing;
 	private int lienKet = 0;
 	
 	public LinkRelicWithFigureAndDynasty() throws IOException {

@@ -10,9 +10,9 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.JsonIOException;
 
 import objects.relic.Relic;
-import webcrawler.combine.CombineData;
+import webcrawler.combine.ICombineData;
 
-public class RelicScrapeVHHN implements CombineData{
+public class RelicScrapeVHHN implements ICombineData{
 	
 	private LinkedList<Relic> relics;
 	
@@ -31,7 +31,7 @@ public class RelicScrapeVHHN implements CombineData{
 	}
 	
 	public void toJson() throws JsonIOException, IOException {
-		String filePath = "D:\\relic_new_1.json";
+		String filePath = "D:\\relic_test.json";
 		Gson gson = new GsonBuilder().setPrettyPrinting().create();
 		try {
 			FileWriter writer = new FileWriter(new File(filePath));

@@ -2,6 +2,6 @@ package webcrawler.combine;
 
 import java.io.IOException;
 
-public interface CombineData {
+public interface ICombineData {
 	public void combine() throws IOException;
 }

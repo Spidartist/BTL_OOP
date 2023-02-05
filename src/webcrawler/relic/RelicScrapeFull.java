@@ -10,9 +10,9 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.JsonIOException;
 
 import objects.relic.Relic;
-import webcrawler.combine.CombineData;
+import webcrawler.combine.ICombineData;
 
-public class RelicScrapeFull implements CombineData{
+public class RelicScrapeFull implements ICombineData{
 	private LinkedList<Relic> relics;
 	public RelicScrapeFull() {
 		relics = new LinkedList<Relic>();

@@ -92,11 +92,4 @@ public class Relic{
 		this.kings = kings;
 		this.dynastys = dynastys;
 	}
-
-	
-
-	
-
-	
-
 }

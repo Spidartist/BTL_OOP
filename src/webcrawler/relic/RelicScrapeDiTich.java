@@ -13,10 +13,10 @@ import objects.dynasty.Dynasty;
 import objects.figure.Figure;
 import objects.figure.King;
 import objects.relic.Relic;
-import webcrawler.combine.CombineData;
+import webcrawler.combine.ICombineData;
 import webcrawler.linkdata.LinkRelicWithFigureAndDynasty;
 
-public class RelicScrapeDiTich implements CombineData{
+public class RelicScrapeDiTich implements ICombineData{
 	LinkedList<Relic> relics;
 
 	public RelicScrapeDiTich() throws IOException {

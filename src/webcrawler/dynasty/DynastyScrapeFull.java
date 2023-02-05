@@ -11,9 +11,9 @@ import com.google.gson.JsonIOException;
 
 import objects.dynasty.Dynasty;
 import objects.figure.King;
-import webcrawler.combine.CombineData;
+import webcrawler.combine.ICombineData;
 
-public class DynastyScrapeFull  implements CombineData{
+public class DynastyScrapeFull  implements ICombineData{
 	private DynastyScrapeName crawlNames;
 	private DynastyScrapeWikiFounder crawlFounder;
 	private DynastyScrapeWikiKings firstKings;
