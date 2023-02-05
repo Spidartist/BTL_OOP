@@ -1,26 +1,10 @@
 package webcrawler.dynasty;
 
-import java.util.ArrayList;
-import org.jsoup.Jsoup;
-
-import java.awt.desktop.ScreenSleepEvent;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.ArrayList;
-
-import org.json.simple.JSONArray;
-import org.jsoup.Connection;
-import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-
 import webcrawler.parent.BasicWebScraper;
 import webcrawler.parent.IScraping;
-import objects.figure.Figure;
 
 public class DynastyScrapeWikiCapital extends BasicWebScraper implements IScraping {
 	private String capital;
@@ -36,7 +20,10 @@ public class DynastyScrapeWikiCapital extends BasicWebScraper implements IScrapi
 	public void scraping() {
 		Elements capitals = this.getDoc()
 				.select("#mw-content-text > div.mw-parser-output > table.wikitable > tbody > tr");
-		if (this.tenTrieuDai.equals("Nhà Tiền Lê") || this.tenTrieuDai.equals("Nhà Lý")) {
+		if (this.tenTrieuDai.contains("Bắc thuộc") || this.tenTrieuDai.equals("Tự chủ")) {
+			this.capital = "Không";
+			System.out.println(this.tenTrieuDai + "-" + this.capital);
+		} else if (this.tenTrieuDai.equals("Nhà Tiền Lê") || this.tenTrieuDai.equals("Nhà Lý")) {
 			this.capital = "Hoa Lư";
 			System.out.println(this.tenTrieuDai + "-" + this.capital);
 		} else if (this.tenTrieuDai.equals("Nhà Trần")) {
