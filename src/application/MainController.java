@@ -79,10 +79,10 @@ public class MainController {
                         new KingDetails(demo);
                     }
                 });
-
+                String[] nameColKing  = {"Tên Vua", "Năm trị vì", "Miếu hiệu", "Thụy hiệu", "Niên hiệu"};
                 String[] kingStr = { "ten", "namTriVi", "mieuHieu", "thuyHieu", "nienHieu" };
                 for (int i = 0; i < kingStr.length; i++) {
-                    TableColumn<King, String> ColKing = new TableColumn<King, String>(kingStr[i]);
+                    TableColumn<King, String> ColKing = new TableColumn<King, String>(nameColKing[i]);
                     ColKing.prefWidthProperty().bind(tableKingView.widthProperty().multiply(0.2));
                     ColKing.setCellValueFactory(new PropertyValueFactory<King, String>(kingStr[i]));
                     tableKingView.getColumns().add(ColKing);
@@ -107,19 +107,13 @@ public class MainController {
                         new FigureDetails(demo, listObservablesDynasty, listObservablesKing);
                     }
                 });
+                String[] nameColFigure  = {"Tên Nhân Vật", "Quê quán", "Năm sinh", "Năm mất"};
                 String[] figureStr = { "ten", "queQuan", "namSinh", "namMat" };
                 for (int i = 0; i < figureStr.length; i++) {
-                    if (figureStr[i] == "trieuDai") {
-                        TableColumn<Figure, String> ColFigure = new TableColumn<Figure, String>(figureStr[i]);
-                        ColFigure.prefWidthProperty().bind(tableFigureView.widthProperty().multiply(0.25));
-                        ColFigure.setCellValueFactory(new PropertyValueFactory<>((String) figureStr[i]));
-                        tableFigureView.getColumns().add(ColFigure);
-                    } else {
-                        TableColumn<Figure, String> ColFigure = new TableColumn<Figure, String>(figureStr[i]);
-                        ColFigure.prefWidthProperty().bind(tableFigureView.widthProperty().multiply(0.25));
-                        ColFigure.setCellValueFactory(new PropertyValueFactory<>(figureStr[i]));
-                        tableFigureView.getColumns().add(ColFigure);
-                    }
+                    TableColumn<Figure, String> ColFigure = new TableColumn<Figure, String>(nameColFigure[i]);
+                    ColFigure.prefWidthProperty().bind(tableFigureView.widthProperty().multiply(0.25));
+                    ColFigure.setCellValueFactory(new PropertyValueFactory<>(figureStr[i]));
+                    tableFigureView.getColumns().add(ColFigure);
                 }
                 // readerDataFigure.forEach(elm -> tableFigureView.getItems().add(elm));
                 Search<Figure> searchFigure = new Search<Figure>();
@@ -140,9 +134,10 @@ public class MainController {
                     }
                 });
                 tableRelicView.getColumns().clear();
+                String[] nameColRelic  = {"Tên Di tích", "Địa điểm", "Thể loại", "Xếp hạng"};
                 String[] RelicStr = { "name", "location", "type", "rank" };
                 for (int i = 0; i < RelicStr.length; i++) {
-                    TableColumn<Relic, String> colRelic = new TableColumn<Relic, String>(RelicStr[i]);
+                    TableColumn<Relic, String> colRelic = new TableColumn<Relic, String>(nameColRelic[i]);
                     colRelic.prefWidthProperty().bind(tableRelicView.widthProperty().multiply(0.25));
                     colRelic.setCellValueFactory(new PropertyValueFactory<>(RelicStr[i]));
                     tableRelicView.getColumns().add(colRelic);
@@ -162,10 +157,11 @@ public class MainController {
                         new FestivalDetails(demo, listObservablesFigure, listObservablesDynasty, listObservablesKing);
                     }
                 });
+                String[] nameColFestival  = {"Tên Lễ hội", "Thời gian", "Địa điểm"};
                 String[] festivalStr = { "tenLeHoi", "thoigian", "diaDiem" };
                 for (int i = 0; i < festivalStr.length; i++) {
 
-                    TableColumn<Festival, String> ColFestival = new TableColumn<Festival, String>(festivalStr[i]);
+                    TableColumn<Festival, String> ColFestival = new TableColumn<Festival, String>(nameColFestival[i]);
                     ColFestival.prefWidthProperty().bind(tableFestivalView.widthProperty().multiply(0.33));
                     ColFestival.setCellValueFactory(new PropertyValueFactory<>(festivalStr[i]));
                     tableFestivalView.getColumns().add(ColFestival);
@@ -186,9 +182,10 @@ public class MainController {
                     }
                 });
                 tableDynastyView.getColumns().clear();
+                String[] nameColDynasty = {"Tên Triều đại", "Năm bất đầu", "Năm kết thúc", "Kinh đô"};
                 String[] dynastyStr = { "name", "startYear", "endYear", "capital" };
                 for (int i = 0; i < dynastyStr.length; i++) {
-                    TableColumn<Dynasty, String> colDynasty = new TableColumn<Dynasty, String>(dynastyStr[i]);
+                    TableColumn<Dynasty, String> colDynasty = new TableColumn<Dynasty, String>(nameColDynasty[i]);
                     colDynasty.prefWidthProperty().bind(tableDynastyView.widthProperty().multiply(0.25));
                     colDynasty.setCellValueFactory(new PropertyValueFactory<>(dynastyStr[i]));
                     tableDynastyView.getColumns().add(colDynasty);

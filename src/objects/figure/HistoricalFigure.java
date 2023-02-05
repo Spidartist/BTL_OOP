@@ -19,7 +19,7 @@ public abstract class HistoricalFigure {
 	}
 
 	public String getNamSinh() {
-		return namSinh == null ? "Chưa rõ" : namSinh;
+		return (namSinh == null || namSinh.strip().equals("...") || namSinh.strip().equals("…")) ? "Chưa rõ" : namSinh;
 	}
 
 	public void setNamSinh(String namSinh) {
@@ -27,7 +27,7 @@ public abstract class HistoricalFigure {
 	}
 
 	public String getNamMat() {
-		return namMat == null ? ("Chưa rõ") : namMat;
+		return (namMat == null || namMat.strip().equals("...") || namMat.strip().equals("…")) ? "Chưa rõ" : namMat;
 	}
 
 	public void setNamMat(String namMat) {
