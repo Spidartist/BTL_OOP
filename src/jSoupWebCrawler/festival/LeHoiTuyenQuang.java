@@ -22,16 +22,13 @@ import org.jsoup.nodes.Element;
 import org.jsoup.nodes.Node;
 import org.jsoup.select.Elements;
 
-public class LeHoiTuyenQuang extends BasicWebScraper implements IScraping {
-	private ArrayList<Festival> list = new ArrayList<Festival>() ;
-	public LeHoiTuyenQuang() {
+public class LeHoiTuyenQuang extends BasicFindFestival  {
+		public LeHoiTuyenQuang() {
 		String url = "https://alltours.vn/tuyen-quang/cac-le-hoi-o-tuyen-quang.html";
 		this.url = url;
 		connect();
 	}
-	public ArrayList<Festival> getList() {
-		return list;
-	}
+	
 	@Override
 	public void scraping() {
 		Element mainContent = this.doc.getElementsByClass("single-blog-content entry clr").first();
