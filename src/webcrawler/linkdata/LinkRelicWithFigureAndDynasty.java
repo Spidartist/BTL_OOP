@@ -2,7 +2,6 @@ package webcrawler.linkdata;
 
 import java.io.IOException;
 import java.util.LinkedList;
-import java.util.List;
 
 import application.readdata.ReadData;
 import objects.dynasty.Dynasty;
@@ -14,7 +13,9 @@ public class LinkRelicWithFigureAndDynasty extends LinkData {
 	private LinkedList<King> kings;
 	private LinkedList<Dynasty> dynastys;
 	private LinkedList<String> added;
-	private int lienKet = 0;
+	private int lienKetKing = 0;
+	private int lienKetDynasty = 0;
+	private int lienKetFigure = 0;
 	
 	public LinkRelicWithFigureAndDynasty() throws IOException {
 		listObservablesFigure = new ReadData<Figure>()
@@ -82,7 +83,7 @@ public class LinkRelicWithFigureAndDynasty extends LinkData {
 		}
 		
 		if (figures.size() != 0) {
-			lienKet += figures.size();
+			lienKetFigure += figures.size();
 			System.out.println("Found!!!!!!");
 			for (int j=0;j<figures.size();j++) {
 				System.out.println(figures.get(j).getTen());
@@ -90,7 +91,7 @@ public class LinkRelicWithFigureAndDynasty extends LinkData {
 		}
 		
 		if (kings.size() != 0) {
-			lienKet += kings.size();
+			lienKetKing += kings.size();
 			System.out.println("Found King!!!!!!");
 			for (int j=0;j<kings.size();j++) {
 				System.out.println(kings.get(j).getTen());
@@ -98,20 +99,39 @@ public class LinkRelicWithFigureAndDynasty extends LinkData {
 		}
 		
 		if (dynastys.size() != 0) {
-			lienKet += dynastys.size();
+			lienKetDynasty += dynastys.size();
 			System.out.println("Found D!!!!!!");
 			for (int j=0;j<dynastys.size();j++) {
 				System.out.println(dynastys.get(j).getName());
 			}
 		}
 		
-		System.out.println(lienKet);
-		
 	}
 	
 	
-	public int getLienKet() {
-		return lienKet;
+
+	public void setLienKetKing(int lienKetKing) {
+		this.lienKetKing = lienKetKing;
+	}
+
+	public void setLienKetDynasty(int lienKetDynasty) {
+		this.lienKetDynasty = lienKetDynasty;
+	}
+
+	public void setLienKetFigure(int lienKetFigure) {
+		this.lienKetFigure = lienKetFigure;
+	}
+
+	public int getLienKetKing() {
+		return lienKetKing;
+	}
+
+	public int getLienKetDynasty() {
+		return lienKetDynasty;
+	}
+
+	public int getLienKetFigure() {
+		return lienKetFigure;
 	}
 
 	public LinkedList<Figure> getFigures() {
