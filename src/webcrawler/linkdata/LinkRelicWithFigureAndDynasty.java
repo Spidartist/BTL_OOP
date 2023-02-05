@@ -2,8 +2,6 @@ package webcrawler.linkdata;
 
 import java.io.IOException;
 import java.util.LinkedList;
-import java.util.List;
-
 import application.readdata.ReadData;
 import objects.dynasty.Dynasty;
 import objects.figure.Figure;
@@ -15,7 +13,7 @@ public class LinkRelicWithFigureAndDynasty extends LinkData {
 	private LinkedList<Dynasty> dynastys;
 	private LinkedList<String> added;
 	private int lienKet = 0;
-	
+
 	public LinkRelicWithFigureAndDynasty() throws IOException {
 		listObservablesFigure = new ReadData<Figure>()
 				.FromJsonToArray("src/data/figureUpdate.json", Figure.class);
@@ -23,7 +21,7 @@ public class LinkRelicWithFigureAndDynasty extends LinkData {
 		listObservablesKing = new ReadData<King>().FromJsonToArray("src/data/king.json",
 				King.class);
 	}
-	
+
 	@Override
 	public void genLink(String tenNguoiTho) {
 		this.figures = new LinkedList<Figure>();
@@ -80,36 +78,35 @@ public class LinkRelicWithFigureAndDynasty extends LinkData {
 			}
 
 		}
-		
+
 		if (figures.size() != 0) {
 			lienKet += figures.size();
 			System.out.println("Found!!!!!!");
-			for (int j=0;j<figures.size();j++) {
+			for (int j = 0; j < figures.size(); j++) {
 				System.out.println(figures.get(j).getTen());
 			}
 		}
-		
+
 		if (kings.size() != 0) {
 			lienKet += kings.size();
 			System.out.println("Found King!!!!!!");
-			for (int j=0;j<kings.size();j++) {
+			for (int j = 0; j < kings.size(); j++) {
 				System.out.println(kings.get(j).getTen());
 			}
 		}
-		
+
 		if (dynastys.size() != 0) {
 			lienKet += dynastys.size();
 			System.out.println("Found D!!!!!!");
-			for (int j=0;j<dynastys.size();j++) {
+			for (int j = 0; j < dynastys.size(); j++) {
 				System.out.println(dynastys.get(j).getName());
 			}
 		}
-		
+
 		System.out.println(lienKet);
-		
+
 	}
-	
-	
+
 	public int getLienKet() {
 		return lienKet;
 	}
