@@ -2,9 +2,11 @@ package webcrawler.history_figures;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.JsonIOException;
 
 import webcrawler.parent.BasicWebScraper;
 import webcrawler.parent.IScraping;
+import webcrawler.tojson.IWriteJson;
 import objects.figure.King;
 
 import java.io.BufferedReader;
@@ -23,7 +25,7 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-public class FindKing extends BasicWebScraper implements IScraping {
+public class FindKing extends BasicWebScraper implements IScraping,IWriteJson {
 	private ArrayList<King> kings = new ArrayList<King>();
 
 	public FindKing() {
@@ -35,6 +37,7 @@ public class FindKing extends BasicWebScraper implements IScraping {
 	public Document getDoc() {
 		return this.doc;
 	}
+
 	public ArrayList<King> getKings() {
 		return kings;
 	}
@@ -90,13 +93,13 @@ public class FindKing extends BasicWebScraper implements IScraping {
 					String tenHuy = datas.get(5).text();
 					tenHuy = cleanData(tenHuy);
 					king.setTenHuy(tenHuy);
-					
+
 					// tenHuy = tenHuy.replaceAll(openRegEx,"");
 
 					String theThu = datas.get(6).text();
-//					theThu.replace("[^\\[a-z\\]]", "");
-//					theThu = theThu.replaceAll(strRegEx, "");
-//					theThu = theThu.replaceAll(attrRegEx, "");
+					// theThu.replace("[^\\[a-z\\]]", "");
+					// theThu = theThu.replaceAll(strRegEx, "");
+					// theThu = theThu.replaceAll(attrRegEx, "");
 					theThu = cleanData(theThu);
 					king.setTheThu(theThu);
 					String namTriVi = datas.get(7).html();
@@ -120,23 +123,31 @@ public class FindKing extends BasicWebScraper implements IScraping {
 			}
 		}
 	}
+
 	public String cleanData(String sample) {
 		String data = new String(sample);
 		int index = data.indexOf("[");
 		while (index != -1) {
 			int close = data.indexOf("]");
-			String tmp = data.substring(index, close+1);
-			data= data.replace(tmp, "");
+			String tmp = data.substring(index, close + 1);
+			data = data.replace(tmp, "");
 			index = data.indexOf("[");
 		}
 		return data;
 	}
-	public static void main(String[] args) {
+
+	public static void main(String[] args) throws JsonIOException, IOException {
 		FindKing obj = new FindKing();
-		ArrayList<King> kings = new ArrayList<King>();
+//		ArrayList<King> kings = new ArrayList<King>();
 		obj.scraping();
-		kings.addAll(obj.getKings());
-		System.out.println(kings.size());
+		obj.writeJSon();
+//		kings.addAll(obj.getKings());
+//		System.out.println(kings.size());
+		
+	}
+
+	@Override
+	public void writeJSon() throws JsonIOException, IOException {
 		String filePath = "D:\\webCrawler\\jSoupWebCrawler\\src\\data\\king.json";
 		JSONArray jarray = new JSONArray();
 		Gson gson = new GsonBuilder().setPrettyPrinting().create();

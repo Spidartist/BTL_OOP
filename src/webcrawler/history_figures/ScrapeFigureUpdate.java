@@ -2,11 +2,14 @@ package webcrawler.history_figures;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.JsonIOException;
 
 import application.readdata.ReadData;
 import javafx.collections.ObservableList;
 import webcrawler.parent.BasicWebScraper;
 import webcrawler.parent.IScraping;
+import webcrawler.tojson.ICombine;
+import webcrawler.tojson.IWriteJson;
 import objects.dynasty.Dynasty;
 import objects.figure.Figure;
 import objects.figure.King;
@@ -33,42 +36,18 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-public class VanSuCrawler {
-	public static void main(String[] args) throws IOException {
-		int pageIndex = 1901;
-		String urlFirstHalf = "https://vansu.vn/viet-nam/viet-nam-nhan-vat/";
-		LinkedList<Figure> list = new LinkedList<Figure>();
-		int lastIndex = 2300;
-		while (pageIndex <= lastIndex) {
-			String url = urlFirstHalf + Integer.toString(pageIndex);
-			VanSu vanSu = new VanSu(url);
-			vanSu.scraping();
-			list.add(vanSu.getFigure());
-			pageIndex += 1;
-		}
-
-		System.out.println("num of mem: " + list.size());
-		for (Figure figure : list) {
-			ArrayList<Dynasty> dynastyList = figure.getTrieuDai();
-			for (Dynasty dynasty : dynastyList) {
-				String name = dynasty.getName();
-				dynasty.setName(replaceTrieuDai(name));
-			}
-		}
-		String filePath = "D:\\webCrawler\\jSoupWebCrawler\\src\\data\\figureUpdate.json";
-		Gson gson = new GsonBuilder().setPrettyPrinting().create();
-		ObservableList<Figure> listObservablesFigure = new ReadData<Figure>()
-				.FromJsonToArray("src/data/figureUpdate.json", Figure.class);
-		LinkedList<Figure> originalList = new LinkedList<Figure>();
-		for (int i = 0; i < listObservablesFigure.size(); i++) {
-			originalList.add(listObservablesFigure.get(i));
-		}
-		originalList.addAll(list);
+public class ScrapeFigureUpdate implements IWriteJson,ICombine {
+	private LinkedList<Figure> list = new LinkedList<Figure>();
+	public static void main(String[] args) {
+		ScrapeFigureUpdate figure = new ScrapeFigureUpdate();
+		figure.combine();
 		try {
-			FileWriter writer = new FileWriter(new File(filePath));
-			gson.toJson(originalList, writer);
-			writer.close();
+			figure.writeJSon();
+		} catch (JsonIOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		} catch (IOException e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
@@ -149,5 +128,48 @@ public class VanSuCrawler {
 		}
 		return dataList;
 		// System.out.println(kingList.get(0).getMieuHieu());
+	}
+
+	@Override
+	public void combine() {
+		int pageIndex = 1901;
+		String urlFirstHalf = "https://vansu.vn/viet-nam/viet-nam-nhan-vat/";
+		int lastIndex = 2300;
+		while (pageIndex <= lastIndex) {
+			String url = urlFirstHalf + Integer.toString(pageIndex);
+			VanSu vanSu = new VanSu(url);
+			vanSu.scraping();
+			list.add(vanSu.getFigure());
+			pageIndex += 1;
+		}
+
+		System.out.println("num of mem: " + list.size());
+		for (Figure figure : list) {
+			ArrayList<Dynasty> dynastyList = figure.getTrieuDai();
+			for (Dynasty dynasty : dynastyList) {
+				String name = dynasty.getName();
+				dynasty.setName(replaceTrieuDai(name));
+			}
+		}	
+	}
+
+	@Override
+	public void writeJSon() throws JsonIOException, IOException {
+		String filePath = "D:\\webCrawler\\jSoupWebCrawler\\src\\data\\figureUpdate.json";
+		Gson gson = new GsonBuilder().setPrettyPrinting().create();
+		ObservableList<Figure> listObservablesFigure = new ReadData<Figure>()
+				.FromJsonToArray("src/data/figureUpdate.json", Figure.class);
+		LinkedList<Figure> originalList = new LinkedList<Figure>();
+		for (int i = 0; i < listObservablesFigure.size(); i++) {
+			originalList.add(listObservablesFigure.get(i));
+		}
+		originalList.addAll(list);
+		try {
+			FileWriter writer = new FileWriter(new File(filePath));
+			gson.toJson(originalList, writer);
+			writer.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 }
