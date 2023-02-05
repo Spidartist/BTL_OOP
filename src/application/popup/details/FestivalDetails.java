@@ -48,7 +48,8 @@ public class FestivalDetails {
         }
 
         curSelect.setFigure(newFigure);
-        Label figure = new Label("Nhân vật liên quan: " + ("" == strFigure ? "Không có" : strFigure));
+        Label figure = new Label(
+                "Nhân vật liên quan: " + (curSelect.getFigure().getTen() == null ? "Không có" : strFigure));
         figure.setWrapText(true);
         VBox contentText = new VBox(10);
         contentText.setPadding(new Insets(20, 20, 20, 20));
