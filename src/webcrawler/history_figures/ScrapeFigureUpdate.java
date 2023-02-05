@@ -6,16 +6,10 @@ import com.google.gson.JsonIOException;
 
 import application.readdata.ReadData;
 import javafx.collections.ObservableList;
-import webcrawler.parent.BasicWebScraper;
-import webcrawler.parent.IScraping;
 import webcrawler.combine.ICombineData;
 import webcrawler.tojson.IWriteJson;
 import objects.dynasty.Dynasty;
 import objects.figure.Figure;
-import objects.figure.King;
-
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -23,18 +17,9 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.LinkedList;
-import java.util.List;
-
 import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
-import org.json.simple.JSONValue;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
-import org.jsoup.Connection;
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
 
 public class ScrapeFigureUpdate implements IWriteJson, ICombineData {
 	private LinkedList<Figure> list = new LinkedList<Figure>();
@@ -45,10 +30,8 @@ public class ScrapeFigureUpdate implements IWriteJson, ICombineData {
 		try {
 			figure.writeJSon();
 		} catch (JsonIOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
@@ -107,7 +90,6 @@ public class ScrapeFigureUpdate implements IWriteJson, ICombineData {
 		return trieuDai;
 	}
 
-	@SuppressWarnings("unchecked")
 	public static JSONArray readData(String path) {
 		// JSON parser object to parse read file
 		JSONParser jsonParser = new JSONParser();

@@ -1,24 +1,12 @@
 package webcrawler.history_figures;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
 import java.util.ArrayList;
 
-import org.json.simple.JSONArray;
-import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 
 import webcrawler.parent.BasicWebScraper;
 import webcrawler.parent.IScraping;
-import objects.festival.Festival;
 import objects.figure.Figure;
-import objects.figure.HistoricalFigure;
-import objects.figure.King;
-
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-import org.jsoup.nodes.Node;
 import org.jsoup.select.Elements;
 
 public class AnhHungLucLuong extends BasicWebScraper implements IScraping {

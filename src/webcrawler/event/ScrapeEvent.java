@@ -3,7 +3,6 @@ package webcrawler.event;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.LinkedList;
 
 import com.google.gson.Gson;
@@ -14,20 +13,21 @@ import objects.event.SuKien;
 import webcrawler.combine.ICombineData;
 import webcrawler.tojson.IWriteJson;
 
-public class ScrapeEvent implements IWriteJson,ICombineData {
+public class ScrapeEvent implements IWriteJson, ICombineData {
 	private LinkedList<SuKien> list = new LinkedList<SuKien>();
+
 	public static void main(String[] args) {
 		ScrapeEvent event = new ScrapeEvent();
 		event.combine();
 		try {
 			event.writeJSon();
 		} catch (JsonIOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 	}
+
 	@Override
 	public void combine() {
 		SuKienLonTuWiki sukien = new SuKienLonTuWiki();

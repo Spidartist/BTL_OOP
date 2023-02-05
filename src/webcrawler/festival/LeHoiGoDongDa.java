@@ -4,17 +4,7 @@ import webcrawler.parent.BasicWebScraper;
 import webcrawler.parent.IScraping;
 import objects.festival.Festival;
 import objects.figure.Figure;
-import objects.figure.HistoricalFigure;
-import objects.figure.King;
-import webcrawler.parent.BasicWebScraper;
-import webcrawler.parent.IScraping;
-
-import org.jsoup.Connection;
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
-import org.jsoup.nodes.Node;
-import org.jsoup.select.Elements;
 
 public class LeHoiGoDongDa extends BasicWebScraper implements IScraping {
 	private Festival goDongDa;

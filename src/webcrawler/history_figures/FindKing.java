@@ -9,18 +9,10 @@ import webcrawler.parent.IScraping;
 import webcrawler.tojson.IWriteJson;
 import objects.figure.King;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
-
-import org.json.simple.JSONArray;
-import org.json.simple.JSONValue;
-import org.jsoup.Connection;
-import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
@@ -59,7 +51,6 @@ public class FindKing extends BasicWebScraper implements IScraping,IWriteJson {
 		tables.remove(lastTable);
 		String strRegEx = "<sup[^?]*";
 		String attrRegEx = "<a[^?]*";
-		String openRegEx = "[1-9]*";
 		for (Element table : tables) {
 			Elements rows = table.select("tr");
 			for (Element row : rows) {
@@ -149,7 +140,6 @@ public class FindKing extends BasicWebScraper implements IScraping,IWriteJson {
 	@Override
 	public void writeJSon() throws JsonIOException, IOException {
 		String filePath = "D:\\webCrawler\\jSoupWebCrawler\\src\\data\\king.json";
-		JSONArray jarray = new JSONArray();
 		Gson gson = new GsonBuilder().setPrettyPrinting().create();
 		try {
 			FileWriter writer = new FileWriter(new File(filePath));
