@@ -86,7 +86,7 @@ public class RelicDetails {
         curSelect.setKings(newKings);
         curSelect.setFigures(newFigures);
         Label trieuDai = new Label(
-                "Triều đại: " + (strTrieuDai == "" ? "Không có" : strTrieuDai));
+                "Triều đại: " + (strTrieuDai == "" ? "Chưa rõ" : strTrieuDai));
         Label vua = new Label("Vua: " + (strKings == "" ? "Không có" : strKings));
         Label nhanVat = new Label(
                 "Nhân vật Lịch sử: " + (strFigures == "" ? "Không có" : strFigures));

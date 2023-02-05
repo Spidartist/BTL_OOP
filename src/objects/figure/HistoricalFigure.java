@@ -19,7 +19,7 @@ public abstract class HistoricalFigure {
 	}
 
 	public String getNamSinh() {
-		return namSinh;
+		return namSinh == null ? "Chưa rõ" : namSinh;
 	}
 
 	public void setNamSinh(String namSinh) {
@@ -27,7 +27,7 @@ public abstract class HistoricalFigure {
 	}
 
 	public String getNamMat() {
-		return namMat;
+		return namMat == null ? ("Chưa rõ") : namMat;
 	}
 
 	public void setNamMat(String namMat) {
