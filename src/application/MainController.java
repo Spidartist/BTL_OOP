@@ -1,6 +1,5 @@
 package application;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
 
 import application.popup.PopUpWinDow;
@@ -9,6 +8,7 @@ import application.popup.details.FestivalDetails;
 import application.popup.details.FigureDetails;
 import application.popup.details.KingDetails;
 import application.readdata.ReadData;
+import application.search.Search;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -84,10 +84,15 @@ public class MainController {
                     ColKing.setCellValueFactory(new PropertyValueFactory<King, String>(kingStr[i]));
                     tableKingView.getColumns().add(ColKing);
                 }
-                tableKingView.setItems(listObservablesKing);
 
+                // System.out.println(reader.getKingList());
+                // for (King elm : readerDataKing) {
+                // System.out.println(elm.getTen());
+                // King newKing = new King(elm.getTen());
+                // }
+                Search<King> searchKing = new Search<King>();
+                tableKingView.setItems(searchKing.demoSearch(listObservablesKing, textField, King.class));
                 borderPane.setCenter(tableKingView);
-
                 break;
             case "Nhân Vật Lịch Sử":
                 TableView<Figure> tableFigureView = new TableView<>();
@@ -114,8 +119,9 @@ public class MainController {
                     }
                 }
                 // readerDataFigure.forEach(elm -> tableFigureView.getItems().add(elm));
-                tableFigureView.setItems(listObservablesFigure);
-
+                Search<Figure> searchFigure = new Search<Figure>();
+                tableFigureView.setItems(searchFigure.demoSearch(listObservablesFigure, textField, Figure.class));
+                System.out.println("fig");
                 borderPane.setCenter(tableFigureView);
                 break;
             case "Sự kiện lịch sử":
@@ -163,7 +169,8 @@ public class MainController {
                     tableDynastyView.getColumns().add(colDynasty);
                 }
                 // readerDataDynasty.forEach(elm -> tableDynastyView.getItems().add(elm));
-                tableDynastyView.setItems(listObservablesDynasty);
+                Search<Dynasty> searchDynasty = new Search<Dynasty>();
+                tableDynastyView.setItems(searchDynasty.demoSearch(listObservablesDynasty, textField, Dynasty.class));
                 borderPane.setCenter(tableDynastyView);
                 break;
             default:
@@ -175,16 +182,14 @@ public class MainController {
     void search(ActionEvent event) {
         // ReadJson reader = new ReadJson();
         System.out.println(textField.getText());
-        // tableView.setDisable(false);
-        // TableColumn column = new TableColumn<>("colunm 1");
-        // tableView.getColumns().add(column);
-        // System.out.println(reader.getKingList().get(0).getMieuHieu());
     }
 
     @FXML
     void pressEnter(KeyEvent event) {
         if (event.getCode().equals(KeyCode.ENTER)) {
             search(null);
+        } else {
+
         }
     }
 }
