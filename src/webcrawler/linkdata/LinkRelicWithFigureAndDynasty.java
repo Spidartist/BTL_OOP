@@ -9,13 +9,11 @@ import objects.dynasty.Dynasty;
 import objects.figure.Figure;
 import objects.figure.King;
 
-public class LinkRelicWithFigureAndDynasty {
+public class LinkRelicWithFigureAndDynasty extends LinkData {
 	private LinkedList<Figure> figures;
 	private LinkedList<King> kings;
 	private LinkedList<Dynasty> dynastys;
 	private LinkedList<String> added;
-	private List<Figure> listObservablesFigure;
-	private List<King> listObservablesKing;
 	private int lienKet = 0;
 	
 	public LinkRelicWithFigureAndDynasty() throws IOException {
@@ -25,7 +23,8 @@ public class LinkRelicWithFigureAndDynasty {
 		listObservablesKing = new ReadData<King>().FromJsonToArray("src/data/king.json",
 				King.class);
 	}
-
+	
+	@Override
 	public void genLink(String tenNguoiTho) {
 		this.figures = new LinkedList<Figure>();
 		this.kings = new LinkedList<King>();
