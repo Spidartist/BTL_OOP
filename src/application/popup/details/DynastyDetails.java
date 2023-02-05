@@ -91,7 +91,7 @@ public class DynastyDetails {
         HBox moreInforContainer = new HBox();
         for (int i = 0; i < curSelect.getKings().size(); i++) {
             final int index = i;
-            Button moreInfoButton = new Button("More Info " + curSelect.getKings().get(index).getTen());
+            Button moreInfoButton = new Button("" + curSelect.getKings().get(index).getTen());
             moreInfoButton.addEventHandler(MouseEvent.MOUSE_CLICKED, (MouseEvent e) -> {
                 new KingDetails(curSelect.getKings().get(index));
             });

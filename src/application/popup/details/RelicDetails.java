@@ -164,7 +164,7 @@ public class RelicDetails {
             });
             moreInforContainer.getChildren().add(moreInfoButton);
         }
-
+        borderPane.setBottom(moreInforContainer);
         Scene scene = new Scene(borderPane, 800, 600);
         scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
         stage.setScene(scene);
