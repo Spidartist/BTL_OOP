@@ -23,17 +23,12 @@ import org.jsoup.select.Elements;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
-public class LeHoiBacNinh extends BasicWebScraper implements IScraping {
-	private ArrayList<Festival> list = new ArrayList<Festival>() ;
+public class LeHoiBacNinh extends BasicFindFestival  {
 	public LeHoiBacNinh() {
 		String url = "https://alltours.vn/bac-ninh/nhung-le-hoi-o-bac-ninh.html";
 		this.url = url;
 		connect();
 	}
-	public ArrayList<Festival> getList() {
-		return list;
-	}
-	
 	@Override
 	public void scraping() {
 		Element mainContent = this.doc.getElementsByClass("single-blog-content entry clr").first();
