@@ -11,9 +11,10 @@ import com.google.gson.JsonIOException;
 
 import objects.dynasty.Dynasty;
 import objects.figure.King;
-import webcrawler.tojson.*;
+import webcrawler.combine.ICombineData;
+import webcrawler.tojson.IWriteJson;
 
-public class DynastyScrapeFull implements IWriteJson,ICombine{
+public class DynastyScrapeFull  implements ICombineData, IWriteJson{
 	private DynastyScrapeName crawlNames;
 	private DynastyScrapeWikiFounder crawlFounder;
 	private DynastyScrapeWikiKings firstKings;
@@ -21,24 +22,11 @@ public class DynastyScrapeFull implements IWriteJson,ICombine{
 	private DynastyScrapeNKSKings remainedKings;
 
 	public DynastyScrapeFull() {
-		
-
+		dynastys = new LinkedList<Dynasty>();
 	}
 
-
-	public static void main(String[] args) {
-		DynastyScrapeFull f = new DynastyScrapeFull();
-		f.combine();
-		try {
-			f.writeJSon();
-		} catch (JsonIOException | IOException e) {
-			e.printStackTrace();
-		}
-	}
-
-	@Override
-	public void writeJSon() throws JsonIOException, IOException{
-		String filePath = "D:\\webCrawler\\jSoupWebCrawler\\src\\data\\dynastys.json";
+	public void writeJson() throws JsonIOException, IOException {
+		String filePath = "\\data\\dynasty.json";
 		Gson gson = new GsonBuilder().setPrettyPrinting().create();
 		try {
 			FileWriter writer = new FileWriter(new File(filePath));
@@ -50,11 +38,14 @@ public class DynastyScrapeFull implements IWriteJson,ICombine{
 		}
 	}
 
-
+	public static void main(String[] args) throws JsonIOException, IOException {
+		DynastyScrapeFull f = new DynastyScrapeFull();
+		f.combine();
+		f.writeJson();
+	}
+	
 	@Override
-	public void combine() {
-		dynastys = new LinkedList<Dynasty>();
-
+	public void combine() throws IOException {
 		firstKings = new DynastyScrapeWikiKings();
 		firstKings.scraping();
 
@@ -74,7 +65,7 @@ public class DynastyScrapeFull implements IWriteJson,ICombine{
 			Dynasty d = new Dynasty(name);
 			dynastys.add(d);
 		}
-
+		firstKings.getDynastys().addAll(remainedKings.getDynastys());
 		for (Dynasty d_1 : firstKings.getDynastys()) {
 			for (Dynasty d_2 : dynastys) {
 				if (d_1.getName().equals(d_2.getName())) {
@@ -84,16 +75,6 @@ public class DynastyScrapeFull implements IWriteJson,ICombine{
 			}
 		}
 		
-		for (Dynasty d_1 : remainedKings.getDynastys()) {
-			for (Dynasty d_2 : dynastys) {
-				if (d_1.getName().equals(d_2.getName())) {
-					// System.out.println("* " + d_1.getName());
-					d_2.setKings(d_1.getKings());
-				}
-			}
-		}
-		
-
 		for (Dynasty d_1 : crawlFounder.getDynastys()) {
 			for (Dynasty d_2 : dynastys) {
 				if (d_1.getName().equals(d_2.getName())) {
@@ -137,5 +118,6 @@ public class DynastyScrapeFull implements IWriteJson,ICombine{
 			// System.out.println(d.getName() + " " + d.getCapital());
 
 		}
+		
 	}
 }
