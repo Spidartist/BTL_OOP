@@ -3,6 +3,7 @@ package webcrawler.parent;
 import org.jsoup.Jsoup;
 
 import java.io.IOException;
+
 import org.jsoup.nodes.Document;
 
 public abstract class BasicWebScraper {
