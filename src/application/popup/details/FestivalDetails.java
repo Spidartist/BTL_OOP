@@ -9,7 +9,13 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.BackgroundImage;
+import javafx.scene.layout.BackgroundPosition;
+import javafx.scene.layout.BackgroundRepeat;
+import javafx.scene.layout.BackgroundSize;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import objects.dynasty.Dynasty;
@@ -22,13 +28,17 @@ public class FestivalDetails {
             ObservableList<King> listKing) {
         BorderPane borderPane = new BorderPane();
         Stage stage = new Stage();
-        stage.setTitle("Figure Detail");
+        stage.setTitle("Festival Detail");
+        
+        Image imagebackground = new Image("https://media.discordapp.net/attachments/755083836169257062/1071699179488944128/image.png?width=1190&height=670");
+        BackgroundImage backgroundImage = new BackgroundImage(imagebackground, BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.CENTER, BackgroundSize.DEFAULT);
+        borderPane.setBackground(new Background(backgroundImage));
+        
         Image image = new Image(
                 "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSufu-xJiSOxynzT2dbbwlAGaP5Gm-TnGM2IA&usqp=CAU");
         ImageView imageView = new ImageView(image);
-        borderPane.setLeft(imageView);
+        imageView.getStyleClass().add("border-style");
 
-        BorderPane.setAlignment(imageView, Pos.CENTER);
         Label tenLeHoi = new Label("Tên Lễ hội: " + curSelect.getTenLeHoi());
         Label thoigian = new Label("Thời gian: " + curSelect.getThoigian());
         Label diaDiem = new Label("Địa điểm: " + curSelect.getDiaDiem());
@@ -51,16 +61,40 @@ public class FestivalDetails {
         Label figure = new Label(
                 "Nhân vật liên quan: " + (curSelect.getFigure().getTen() == null ? "Không có" : strFigure));
         figure.setWrapText(true);
-        VBox contentText = new VBox(10);
-        contentText.setPadding(new Insets(20, 20, 20, 20));
+             
+        tenLeHoi.getStyleClass().add("text-color");
+        thoigian.getStyleClass().add("text-color");
+        diaDiem.getStyleClass().add("text-color");
+        noiDung.getStyleClass().add("text-color");
+        figure.getStyleClass().add("text-color");
+        
+        VBox vbox = new VBox();
+        HBox hbox = new HBox();
+        hbox.setPadding(new Insets(20,20,20,20));
+        hbox.setSpacing(25);
+        HBox picturebox = new HBox();
+        //picturebox.setSpacing(20);
+        picturebox.getChildren().add(imageView);
+        picturebox.setStyle("-fx-border-color: white; -fx-border-width: 3px; -fx-effect : dropshadow(one-pass-box,white, 5, 5, 0, 0);");
+        
+        VBox labelbox = new VBox();
+        //labelbox.setSpacing(20);
+        labelbox.getChildren().addAll(tenLeHoi,thoigian,diaDiem,figure);
+        
+        hbox.getChildren().addAll(picturebox,labelbox);
+        
+        VBox contentText = new VBox();
+        contentText.getChildren().addAll(noiDung);
+        contentText.setPadding(new Insets(10, 50, 10, 50));
+        
+        vbox.getChildren().addAll(hbox,contentText);
+        borderPane.setCenter(vbox);
+        picturebox.setAlignment(Pos.CENTER_LEFT);
+        labelbox.setAlignment(Pos.BASELINE_LEFT);
+        hbox.setAlignment(Pos.CENTER);
         contentText.setAlignment(Pos.CENTER);
-        contentText.getChildren().add(tenLeHoi);
-        contentText.getChildren().add(thoigian);
-        contentText.getChildren().add(diaDiem);
-        contentText.getChildren().add(noiDung);
-        contentText.getChildren().add(figure);
-
-        borderPane.setCenter(contentText);
+        vbox.setAlignment(Pos.CENTER);
+        
         if (curSelect.getFigure().getTen() != null) {
             Button moreInfoButton = new Button("More Info " + curSelect.getFigure().getTen());
             moreInfoButton.addEventHandler(MouseEvent.MOUSE_CLICKED, (MouseEvent e) -> {
@@ -70,6 +104,7 @@ public class FestivalDetails {
         }
 
         Scene scene = new Scene(borderPane, 800, 600);
+        scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
         stage.setScene(scene);
         stage.show();
     }

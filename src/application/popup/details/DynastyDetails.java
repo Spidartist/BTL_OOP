@@ -1,5 +1,6 @@
 package application.popup.details;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 
 import javafx.collections.ObservableList;
@@ -11,8 +12,14 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.BackgroundImage;
+import javafx.scene.layout.BackgroundPosition;
+import javafx.scene.layout.BackgroundRepeat;
+import javafx.scene.layout.BackgroundSize;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import objects.dynasty.Dynasty;
@@ -23,12 +30,14 @@ public class DynastyDetails {
         BorderPane borderPane = new BorderPane();
         Stage stage = new Stage();
         stage.setTitle("Figure Detail");
+        Image imagebackground = new Image("https://media.discordapp.net/attachments/755083836169257062/1071699179488944128/image.png?width=1190&height=670");
+        BackgroundImage backgroundImage = new BackgroundImage(imagebackground, BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.CENTER, BackgroundSize.DEFAULT);
+        borderPane.setBackground(new Background(backgroundImage));
+        
         Image image = new Image(
                 "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSufu-xJiSOxynzT2dbbwlAGaP5Gm-TnGM2IA&usqp=CAU");
         ImageView imageView = new ImageView(image);
-        borderPane.setLeft(imageView);
 
-        BorderPane.setAlignment(imageView, Pos.CENTER);
         Label name = new Label("Tên Triều đại: " + curSelect.getName());
         Label startYear = new Label("Năm bắt đầu: " + curSelect.getStartYear());
         Label endYear = new Label("Năm kết thúc: " + curSelect.getEndYear());
@@ -49,19 +58,34 @@ public class DynastyDetails {
         Label kings = new Label(strKing);
         curSelect.setKings(newKing);
         kings.setWrapText(true);
-        VBox contentText = new VBox(10);
-        contentText.setPadding(new Insets(20, 20, 20, 20));
-        contentText.setAlignment(Pos.CENTER);
-        contentText.getChildren().add(name);
-        contentText.getChildren().add(startYear);
-        contentText.getChildren().add(endYear);
-        contentText.getChildren().add(capital);
-        contentText.getChildren().add(founder);
-        contentText.getChildren().add(kings);
+        
+        name.getStyleClass().add("text-color");
+        startYear.getStyleClass().add("text-color");
+        endYear.getStyleClass().add("text-color");
+        capital.getStyleClass().add("text-color");
+        founder.getStyleClass().add("text-color");
 
-        borderPane.setCenter(contentText);
+        HBox hbox = new HBox();
+        hbox.setPadding(new Insets(20,20,20,20));
+        hbox.setSpacing(25);
+        HBox picturebox = new HBox();
+        
+        //picturebox.setSpacing(20);
+        picturebox.getChildren().add(imageView);
+        //picturebox.setStyle("-fx-border-color: white; -fx-border-width: 3px; -fx-effect : dropshadow(one-pass-box,white, 5, 5, 0, 0);");
+        
+        VBox labelbox = new VBox();
+        //labelbox.setSpacing(20);
+        labelbox.getChildren().addAll(name,startYear,endYear,capital,founder);
+        
+        hbox.getChildren().addAll(picturebox,labelbox);
+        
+        borderPane.setCenter(hbox);
+        picturebox.setAlignment(Pos.CENTER_LEFT);
+        labelbox.setAlignment(Pos.CENTER_LEFT);
+        hbox.setAlignment(Pos.CENTER);
+
         HBox moreInforContainer = new HBox();
-
         for (int i = 0; i < curSelect.getKings().size(); i++) {
             final int index = i;
             Button moreInfoButton = new Button("More Info " + curSelect.getKings().get(index).getTen());
@@ -74,6 +98,7 @@ public class DynastyDetails {
         borderPane.setBottom(moreInforContainer);
         BorderPane.setAlignment(moreInforContainer, Pos.CENTER);
         Scene scene = new Scene(borderPane, 800, 600);
+        scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
         stage.setScene(scene);
         stage.show();
     }
