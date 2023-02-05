@@ -23,13 +23,8 @@ import org.jsoup.select.Elements;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
-public class LeHoiAnGiang extends BasicWebScraper implements IScraping {
+public class LeHoiAnGiang extends BasicFindFestival{
 	
-	private ArrayList<Festival> list = new ArrayList<Festival>() ;
-	
-	public ArrayList<Festival> getList() {
-		return list;
-	}
 	public LeHoiAnGiang() {
 		String url = "https://angiangtourist.vn/thoi-gian-va-dia-diem-to-chuc-cac-le-hoi-lon-o-an-giang/#";
 		this.url = url;
