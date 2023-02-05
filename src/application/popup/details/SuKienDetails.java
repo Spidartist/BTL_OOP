@@ -1,5 +1,6 @@
 package application.popup.details;
 
+import objects.event.SuKien;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -15,10 +16,9 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import objects.figure.King;
 
-public class KingDetails {
-    public KingDetails(King curSelect) {
+public class SuKienDetails {
+    public SuKienDetails(SuKien curSelect) {
         BorderPane borderPane = new BorderPane();
         Stage stage = new Stage();
         stage.setTitle("Figure Detail");
@@ -29,29 +29,21 @@ public class KingDetails {
         borderPane.setBackground(new Background(backgroundImage));
 
         Image image = new Image(
-                "https://baotanglichsu.vn/DataFiles/Uploaded/image/03-Thieu-Tri-emperor.jpg");
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrDuM8-H23BUUNCV6C90QbUqbWV2iyQ7b_fQ&usqp=CAU");
         ImageView imageView = new ImageView(image);
+        imageView.setFitWidth(233);
+        imageView.setFitHeight(145);
         // imageView.setStyle("-fx-border-color: red; -fx-border-width:
         // medium;-fx-border-style: solid;");
         imageView.getStyleClass().add("border-style");
 
-        Label ten = new Label("Tên Vua: " + curSelect.getTen());
-        Label namTriVi = new Label("Năm trị vì: " + curSelect.getNamTriVi());
-        Label theThu = new Label("Tên thứ: " + curSelect.getTheThu());
-        Label tenHuy = new Label("Tên húy: " + curSelect.getTenHuy());
-        Label nienHieu = new Label("Niên hiệu: " + curSelect.getNienHieu());
-        Label thuyHieu = new Label("Thụy hiệu: " + curSelect.getThuyHieu());
-        Label mieuHieu = new Label("Miếu hiệu: " + curSelect.getMieuHieu());
-        Label paperURL = new Label("Link bài báo tìm hiểu thêm: " + curSelect.getPaperURL());
+        Label ten = new Label("Tên Sự Kiện: " + curSelect.getTen());
+        Label thoi_gian = new Label("Thời gian diễn ra: " + curSelect.getThoi_gian());
+        Label dia_diem = new Label("Địa điểm : " + curSelect.getDia_diem());
 
         ten.getStyleClass().add("text-color");
-        namTriVi.getStyleClass().add("text-color");
-        theThu.getStyleClass().add("text-color");
-        tenHuy.getStyleClass().add("text-color");
-        nienHieu.getStyleClass().add("text-color");
-        thuyHieu.getStyleClass().add("text-color");
-        mieuHieu.getStyleClass().add("text-color");
-        paperURL.getStyleClass().add("text-color");
+        thoi_gian.getStyleClass().add("text-color");
+        dia_diem.getStyleClass().add("text-color");
 
         VBox vbox = new VBox();
         HBox hbox = new HBox();
@@ -65,12 +57,11 @@ public class KingDetails {
 
         VBox labelbox = new VBox();
         // labelbox.setSpacing(20);
-        labelbox.getChildren().addAll(ten, namTriVi, theThu, tenHuy, nienHieu, thuyHieu, mieuHieu);
+        labelbox.getChildren().addAll(ten, thoi_gian, dia_diem);
 
         hbox.getChildren().addAll(picturebox, labelbox);
 
         VBox contentText = new VBox();
-        contentText.getChildren().addAll(paperURL);
 
         vbox.getChildren().addAll(hbox, contentText);
         borderPane.setCenter(vbox);

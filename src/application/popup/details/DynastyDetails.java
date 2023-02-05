@@ -35,9 +35,11 @@ public class DynastyDetails {
         borderPane.setBackground(new Background(backgroundImage));
 
         Image image = new Image(
-                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSufu-xJiSOxynzT2dbbwlAGaP5Gm-TnGM2IA&usqp=CAU");
-        ImageView imageView = new ImageView(image);
+                "https://vozer.vn/storage/images/tom-tat-lich-su-viet-nam-bang-mot-bai-tho-05494151.jpg");
 
+        ImageView imageView = new ImageView(image);
+        imageView.setFitWidth(233);
+        imageView.setFitHeight(145);
         Label name = new Label("Tên Triều đại: " + curSelect.getName());
         Label startYear = new Label("Năm bắt đầu: " + curSelect.getStartYear());
         Label endYear = new Label("Năm kết thúc: " + curSelect.getEndYear());
@@ -89,7 +91,7 @@ public class DynastyDetails {
         HBox moreInforContainer = new HBox();
         for (int i = 0; i < curSelect.getKings().size(); i++) {
             final int index = i;
-            Button moreInfoButton = new Button("More Info " + curSelect.getKings().get(index).getTen());
+            Button moreInfoButton = new Button("" + curSelect.getKings().get(index).getTen());
             moreInfoButton.addEventHandler(MouseEvent.MOUSE_CLICKED, (MouseEvent e) -> {
                 new KingDetails(curSelect.getKings().get(index));
             });

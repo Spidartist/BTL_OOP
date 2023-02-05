@@ -29,14 +29,18 @@ public class FestivalDetails {
         BorderPane borderPane = new BorderPane();
         Stage stage = new Stage();
         stage.setTitle("Festival Detail");
-        
-        Image imagebackground = new Image("https://media.discordapp.net/attachments/755083836169257062/1071699179488944128/image.png?width=1190&height=670");
-        BackgroundImage backgroundImage = new BackgroundImage(imagebackground, BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.CENTER, BackgroundSize.DEFAULT);
+
+        Image imagebackground = new Image(
+                "https://media.discordapp.net/attachments/755083836169257062/1071699179488944128/image.png?width=1190&height=670");
+        BackgroundImage backgroundImage = new BackgroundImage(imagebackground, BackgroundRepeat.NO_REPEAT,
+                BackgroundRepeat.NO_REPEAT, BackgroundPosition.CENTER, BackgroundSize.DEFAULT);
         borderPane.setBackground(new Background(backgroundImage));
-        
+
         Image image = new Image(
-                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSufu-xJiSOxynzT2dbbwlAGaP5Gm-TnGM2IA&usqp=CAU");
+                "https://lib.agu.edu.vn/images/2020/2.png");
         ImageView imageView = new ImageView(image);
+        imageView.setFitWidth(233);
+        imageView.setFitHeight(145);
         imageView.getStyleClass().add("border-style");
 
         Label tenLeHoi = new Label("Tên Lễ hội: " + curSelect.getTenLeHoi());
@@ -61,40 +65,41 @@ public class FestivalDetails {
         Label figure = new Label(
                 "Nhân vật liên quan: " + (curSelect.getFigure().getTen() == null ? "Không có" : strFigure));
         figure.setWrapText(true);
-             
+
         tenLeHoi.getStyleClass().add("text-color");
         thoigian.getStyleClass().add("text-color");
         diaDiem.getStyleClass().add("text-color");
         noiDung.getStyleClass().add("text-color");
         figure.getStyleClass().add("text-color");
-        
+
         VBox vbox = new VBox();
         HBox hbox = new HBox();
-        hbox.setPadding(new Insets(20,20,20,20));
+        hbox.setPadding(new Insets(20, 20, 20, 20));
         hbox.setSpacing(25);
         HBox picturebox = new HBox();
-        //picturebox.setSpacing(20);
+        // picturebox.setSpacing(20);
         picturebox.getChildren().add(imageView);
-        picturebox.setStyle("-fx-border-color: white; -fx-border-width: 3px; -fx-effect : dropshadow(one-pass-box,white, 5, 5, 0, 0);");
-        
+        picturebox.setStyle(
+                "-fx-border-color: white; -fx-border-width: 3px; -fx-effect : dropshadow(one-pass-box,white, 5, 5, 0, 0);");
+
         VBox labelbox = new VBox();
-        //labelbox.setSpacing(20);
-        labelbox.getChildren().addAll(tenLeHoi,thoigian,diaDiem,figure);
-        
-        hbox.getChildren().addAll(picturebox,labelbox);
-        
+        // labelbox.setSpacing(20);
+        labelbox.getChildren().addAll(tenLeHoi, thoigian, diaDiem, figure);
+
+        hbox.getChildren().addAll(picturebox, labelbox);
+
         VBox contentText = new VBox();
         contentText.getChildren().addAll(noiDung);
         contentText.setPadding(new Insets(10, 50, 10, 50));
-        
-        vbox.getChildren().addAll(hbox,contentText);
+
+        vbox.getChildren().addAll(hbox, contentText);
         borderPane.setCenter(vbox);
         picturebox.setAlignment(Pos.CENTER_LEFT);
         labelbox.setAlignment(Pos.BASELINE_LEFT);
         hbox.setAlignment(Pos.CENTER);
         contentText.setAlignment(Pos.CENTER);
         vbox.setAlignment(Pos.CENTER);
-        
+
         if (curSelect.getFigure().getTen() != null) {
             Button moreInfoButton = new Button("More Info " + curSelect.getFigure().getTen());
             moreInfoButton.addEventHandler(MouseEvent.MOUSE_CLICKED, (MouseEvent e) -> {
