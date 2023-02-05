@@ -1,24 +1,14 @@
 package webcrawler.history_figures;
 
-import org.jsoup.Jsoup;
-
-import java.awt.desktop.ScreenSleepEvent;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import org.json.simple.JSONArray;
-import org.jsoup.Connection;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
-
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonIOException;
 
-import webcrawler.parent.BasicWebScraper;
 import webcrawler.combine.ICombineData;
 import webcrawler.tojson.IWriteJson;
 import objects.figure.Figure;

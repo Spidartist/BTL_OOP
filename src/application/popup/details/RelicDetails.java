@@ -1,6 +1,5 @@
 package application.popup.details;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
 
 import javafx.collections.ObservableList;

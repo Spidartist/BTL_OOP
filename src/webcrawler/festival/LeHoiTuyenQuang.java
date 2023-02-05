@@ -1,25 +1,12 @@
 package webcrawler.festival;
 
 import java.util.ArrayList;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.ArrayList;
-
-import org.json.simple.JSONArray;
-import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 
 import webcrawler.parent.BasicWebScraper;
 import webcrawler.parent.IScraping;
 import objects.festival.Festival;
 import objects.figure.Figure;
-import objects.figure.HistoricalFigure;
-import objects.figure.King;
-
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-import org.jsoup.nodes.Node;
 import org.jsoup.select.Elements;
 
 public class LeHoiTuyenQuang extends BasicWebScraper implements IScraping {
@@ -40,8 +27,6 @@ public class LeHoiTuyenQuang extends BasicWebScraper implements IScraping {
 		Element mainContent = this.doc.getElementsByClass("single-blog-content entry clr").first();
 		Elements festivalNames = mainContent.select("h2");
 		Elements paragraphs = mainContent.select("p:has(br)");
-		Element firstParagraph = paragraphs.remove(0);
-
 		for (int i = 0; i < festivalNames.size(); i++) {
 			Element p = paragraphs.get(i);
 			String tenLeHoi = festivalNames.get(i).text();

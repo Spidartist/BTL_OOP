@@ -1,12 +1,7 @@
 package webcrawler.test;
-import webcrawler.parent.BasicWebScraper;
-import webcrawler.parent.IScraping;
-
 import java.util.ArrayList;
 
 import objects.dynasty.Dynasty;
-import objects.figure.Figure;
-import objects.figure.King;
 public class Test {
 	public static void main(String[] args) {
 		Dynasty d1 = new Dynasty("Thời tiền sử");

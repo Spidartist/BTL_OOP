@@ -1,7 +1,5 @@
 package objects.figure;
 
-import org.json.simple.JSONObject;
-
 
 public class King extends HistoricalFigure {
 	private String paperURL;

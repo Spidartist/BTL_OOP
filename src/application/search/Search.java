@@ -9,6 +9,7 @@ import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
 import javafx.scene.control.TextField;
 import objects.dynasty.Dynasty;
+import objects.figure.Figure;
 import objects.figure.King;
 
 public class Search<T> {
@@ -16,17 +17,14 @@ public class Search<T> {
         FilteredList<T> filteredData = new FilteredList<>(data, b -> true);
         textField.textProperty().addListener((observable, oldValue, newValue) -> {
             filteredData.setPredicate(obj -> {
-
                 if (newValue == null || newValue.isEmpty()) {
                     return true;
                 }
-
                 // Compare first name and last name of every person with filter text.
                 String lowerCaseFilter = newValue.toLowerCase().trim();
                 Method[] methods = type.getMethods();
                 for (Method m : methods) {
                     if (m.getName().startsWith("get")) {
-                        // System.out.println(String.class);
                         try {
                             if (m.getReturnType() == String.class) {
                                 try {
@@ -39,21 +37,14 @@ public class Search<T> {
                                     } else {
                                         continue;
                                     }
-                                    // if (lowerCaseFilter.indexOf(objField) != -1) {
-                                    // return true;
-                                    // }
                                 } catch (IllegalAccessException e) {
-                                    // TODO Auto-generated catch block
                                     e.printStackTrace();
                                 } catch (IllegalArgumentException e) {
-                                    // TODO Auto-generated catch block
                                     e.printStackTrace();
                                 } catch (InvocationTargetException e) {
-                                    // TODO Auto-generated catch block
                                     e.printStackTrace();
                                 }
-
-                            } else if (m.getReturnType() == ArrayList.class) {
+                            } else if (m.getReturnType() == ArrayList.class && type == Figure.class) {
                                 try {
                                     ArrayList<Dynasty> objField;
                                     objField = (ArrayList<Dynasty>) m.invoke(obj);
@@ -68,22 +59,14 @@ public class Search<T> {
                                             continue;
                                         }
                                     }
-
-                                    // if (lowerCaseFilter.indexOf(objField) != -1) {
-                                    // return true;
-                                    // }
                                 } catch (IllegalAccessException e) {
-                                    // TODO Auto-generated catch block
                                     e.printStackTrace();
                                 } catch (IllegalArgumentException e) {
-                                    // TODO Auto-generated catch block
                                     e.printStackTrace();
                                 } catch (InvocationTargetException e) {
-                                    // TODO Auto-generated catch block
                                     e.printStackTrace();
                                 }
-
-                            } else if (m.getReturnType() == LinkedList.class) {
+                            } else if (m.getReturnType() == LinkedList.class && type == Dynasty.class) {
                                 try {
                                     LinkedList<King> objField;
                                     objField = (LinkedList<King>) m.invoke(obj);
@@ -97,25 +80,16 @@ public class Search<T> {
                                             continue;
                                         }
                                     }
-
-                                    // if (lowerCaseFilter.indexOf(objField) != -1) {
-                                    // return true;
-                                    // }
                                 } catch (IllegalAccessException e) {
-                                    // TODO Auto-generated catch block
                                     e.printStackTrace();
                                 } catch (IllegalArgumentException e) {
-                                    // TODO Auto-generated catch block
                                     e.printStackTrace();
                                 } catch (InvocationTargetException e) {
-                                    // TODO Auto-generated catch block
                                     e.printStackTrace();
                                 }
-
                             } else {
                                 continue;
                             }
-
                         } catch (ArithmeticException e) {
                             System.out.println("Error!");
                         }
