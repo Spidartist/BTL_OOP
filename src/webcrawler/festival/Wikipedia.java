@@ -17,22 +17,14 @@ import org.jsoup.select.Elements;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
-public class Wikipedia extends BasicWebScraper implements IScraping {
-	private ArrayList<Festival> list = new ArrayList<Festival>();
-
-	public Document getDoc() {
-		return this.doc;
-	}
-
+public class Wikipedia extends BasicFindFestival {
+	
 	public Wikipedia() {
 		String url = "https://vi.wikipedia.org/wiki/L%E1%BB%85_h%E1%BB%99i_Vi%E1%BB%87t_Nam";
 		setUrl(url);
 		connect();
 	}
 
-	public ArrayList<Festival> getChuaHuong() {
-		return this.list;
-	}
 
 	@Override
 	public void scraping() {
