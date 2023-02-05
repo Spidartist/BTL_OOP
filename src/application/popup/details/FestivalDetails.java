@@ -38,6 +38,7 @@ public class FestivalDetails {
         Figure newFigure = new Figure();
 
         strFigure = curSelect.getFigure().getTen();
+        System.out.println(strFigure);
         for (int j = 0; j < listFigure.size(); j++) {
 
             if (curSelect.getFigure().getTen().toLowerCase()
@@ -47,7 +48,7 @@ public class FestivalDetails {
         }
 
         curSelect.setFigure(newFigure);
-        Label figure = new Label("Nhân vật liên quan: " + strFigure);
+        Label figure = new Label("Nhân vật liên quan: " + ("" == strFigure ? "Không có" : strFigure));
         figure.setWrapText(true);
         VBox contentText = new VBox(10);
         contentText.setPadding(new Insets(20, 20, 20, 20));
@@ -59,11 +60,13 @@ public class FestivalDetails {
         contentText.getChildren().add(figure);
 
         borderPane.setCenter(contentText);
-        Button moreInfoButton = new Button("More Info " + curSelect.getFigure().getTen());
-        moreInfoButton.addEventHandler(MouseEvent.MOUSE_CLICKED, (MouseEvent e) -> {
-            new FigureDetails(curSelect.getFigure(), listDynasty, listKing);
-        });
-        borderPane.setBottom(moreInfoButton);
+        if (curSelect.getFigure().getTen() != null) {
+            Button moreInfoButton = new Button("More Info " + curSelect.getFigure().getTen());
+            moreInfoButton.addEventHandler(MouseEvent.MOUSE_CLICKED, (MouseEvent e) -> {
+                new FigureDetails(curSelect.getFigure(), listDynasty, listKing);
+            });
+            borderPane.setBottom(moreInfoButton);
+        }
 
         Scene scene = new Scene(borderPane, 800, 600);
         stage.setScene(scene);

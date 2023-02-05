@@ -99,7 +99,7 @@ public class MainController {
                 tableFigureView.addEventHandler(MouseEvent.MOUSE_CLICKED, (MouseEvent e) -> {
                     if (e.getClickCount() > 1) {
                         Figure demo = tableFigureView.getSelectionModel().getSelectedItem();
-                        System.out.println(demo.getTen());
+
                         new FigureDetails(demo, listObservablesDynasty, listObservablesKing);
                     }
                 });
