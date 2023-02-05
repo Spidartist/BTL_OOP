@@ -21,17 +21,12 @@ import org.jsoup.nodes.Element;
 import org.jsoup.nodes.Node;
 import org.jsoup.select.Elements;
 
-public class LeHoiDaNang extends BasicWebScraper implements IScraping {
-	private ArrayList<Festival> list = new ArrayList<Festival>() ;
+public class LeHoiDaNang extends BasicFindFestival  {
 	
 	public LeHoiDaNang() {
 		String url = "https://dulichkhampha24.com/le-hoi-o-da-nang.html";
 		this.url = url;
 		connect();
-	}
-	
-	public ArrayList<Festival> getList() {
-		return list;
 	}
 
 	@Override
