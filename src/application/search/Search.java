@@ -22,7 +22,7 @@ public class Search<T> {
                 }
 
                 // Compare first name and last name of every person with filter text.
-                String lowerCaseFilter = newValue.toLowerCase();
+                String lowerCaseFilter = newValue.toLowerCase().trim();
                 Method[] methods = type.getMethods();
                 for (Method m : methods) {
                     if (m.getName().startsWith("get")) {

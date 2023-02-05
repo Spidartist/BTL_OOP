@@ -128,6 +128,7 @@ public class MainController {
                 break;
             case "Di tích lịch sử":
 
+                break;
             case "Lễ Hội Văn Hóa":
                 TableView<Festival> tableFestivalView = new TableView<>();
                 tableFestivalView.getColumns().clear();
