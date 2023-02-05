@@ -85,9 +85,11 @@ public class RelicDetails {
         curSelect.setDynastys(newDynasty);
         curSelect.setKings(newKings);
         curSelect.setFigures(newFigures);
-        Label trieuDai = new Label("Triều đại: " + strTrieuDai);
-        Label vua = new Label("Vua: " + strKings);
-        Label nhanVat = new Label("Nhân vật Lịch sử: " + strFigures);
+        Label trieuDai = new Label(
+                "Triều đại: " + (strTrieuDai == "" ? "Không có" : strTrieuDai));
+        Label vua = new Label("Vua: " + (strKings == "" ? "Không có" : strKings));
+        Label nhanVat = new Label(
+                "Nhân vật Lịch sử: " + (strFigures == "" ? "Không có" : strFigures));
         VBox contentText = new VBox(10);
         contentText.setPadding(new Insets(20, 20, 20, 20));
         contentText.setAlignment(Pos.CENTER);
