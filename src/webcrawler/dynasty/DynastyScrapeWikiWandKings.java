@@ -74,4 +74,5 @@ public class DynastyScrapeWikiWandKings extends BasicWebScraper implements IScra
 		}
 
 	}
+	
 }
