@@ -12,6 +12,8 @@ public class Main extends Application {
 		try {
 			Parent root = FXMLLoader.load(getClass().getResource("/Main.fxml"));
 			// Group root = new Group();
+			root.setStyle(
+					"-fx-background-image:url('https://media.discordapp.net/attachments/755083836169257062/1071084215606722560/image.png?width=1190&height=670');-fx-background-size : 100% 100%");
 			Scene scene = new Scene(root, 800, 600);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setScene(scene);

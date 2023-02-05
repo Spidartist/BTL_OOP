@@ -4,6 +4,10 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 import application.popup.PopUpWinDow;
+import application.popup.details.DynastyDetails;
+import application.popup.details.FestivalDetails;
+import application.popup.details.FigureDetails;
+import application.popup.details.KingDetails;
 import application.readdata.ReadData;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -69,28 +73,19 @@ public class MainController {
                     if (e.getClickCount() > 1) {
                         King demo = tableKingView.getSelectionModel().getSelectedItem();
                         System.out.println(demo.getTen());
-                        newPopUp.getPopUpWindow(demo);
+                        new KingDetails(demo);
                     }
                 });
 
-                String[] kingStr = { "mieuHieu", "thuyHieu", "nienHieu", "tenHuy", "theThu", "namTriVi" };
+                String[] kingStr = { "ten", "namTriVi", "mieuHieu", "thuyHieu", "nienHieu" };
                 for (int i = 0; i < kingStr.length; i++) {
                     TableColumn<King, String> ColKing = new TableColumn<King, String>(kingStr[i]);
-                    ColKing.prefWidthProperty().bind(tableKingView.widthProperty().multiply(0.143));
+                    ColKing.prefWidthProperty().bind(tableKingView.widthProperty().multiply(0.2));
                     ColKing.setCellValueFactory(new PropertyValueFactory<King, String>(kingStr[i]));
                     tableKingView.getColumns().add(ColKing);
                 }
-
-                // System.out.println(reader.getKingList());
-                // for (King elm : readerDataKing) {
-                // System.out.println(elm.getTen());
-                // King newKing = new King(elm.getTen());
-                // }
                 tableKingView.setItems(listObservablesKing);
-                // readerDataKing.forEach(elm -> tableKingView.getItems().add(elm));
-                // for (int i = 0; i < readerDataKing.size(); i++) {
 
-                // }
                 borderPane.setCenter(tableKingView);
 
                 break;
@@ -101,7 +96,7 @@ public class MainController {
                     if (e.getClickCount() > 1) {
                         Figure demo = tableFigureView.getSelectionModel().getSelectedItem();
                         System.out.println(demo.getTen());
-                        newPopUp.getPopUpWindow(demo);
+                        new FigureDetails(demo, listObservablesDynasty, listObservablesKing);
                     }
                 });
                 String[] figureStr = { "ten", "queQuan", "namSinh", "namMat" };
@@ -120,6 +115,7 @@ public class MainController {
                 }
                 // readerDataFigure.forEach(elm -> tableFigureView.getItems().add(elm));
                 tableFigureView.setItems(listObservablesFigure);
+
                 borderPane.setCenter(tableFigureView);
                 break;
             case "Sự kiện lịch sử":
@@ -127,6 +123,27 @@ public class MainController {
                 break;
             case "Di tích lịch sử":
 
+            case "Lễ Hội Văn Hóa":
+                TableView<Festival> tableFestivalView = new TableView<>();
+                tableFestivalView.getColumns().clear();
+                tableFestivalView.addEventHandler(MouseEvent.MOUSE_CLICKED, (MouseEvent e) -> {
+                    if (e.getClickCount() > 1) {
+                        Festival demo = tableFestivalView.getSelectionModel().getSelectedItem();
+
+                        new FestivalDetails();
+                    }
+                });
+                String[] festivalStr = { "tenLeHoi", "thoigian", "diaDiem" };
+                for (int i = 0; i < festivalStr.length; i++) {
+
+                    TableColumn<Festival, String> ColFestival = new TableColumn<Festival, String>(festivalStr[i]);
+                    ColFestival.prefWidthProperty().bind(tableFestivalView.widthProperty().multiply(0.33));
+                    ColFestival.setCellValueFactory(new PropertyValueFactory<>(festivalStr[i]));
+                    tableFestivalView.getColumns().add(ColFestival);
+
+                }
+                tableFestivalView.setItems(listObservablesFestival);
+                borderPane.setCenter(tableFestivalView);
                 break;
             case "Triều Đại Lịch Sử":
                 TableView<Dynasty> tableDynastyView = new TableView<>();
@@ -134,14 +151,14 @@ public class MainController {
                     if (e.getClickCount() > 1) {
                         Dynasty demo = tableDynastyView.getSelectionModel().getSelectedItem();
                         System.out.println(demo.getFounder());
-                        newPopUp.getPopUpWindow(demo);
+                        new DynastyDetails(demo, listObservablesKing);
                     }
                 });
                 tableDynastyView.getColumns().clear();
-                String[] dynastyStr = { "name", "startYear", "endYear", "capital", "founder" };
+                String[] dynastyStr = { "name", "startYear", "endYear", "capital" };
                 for (int i = 0; i < dynastyStr.length; i++) {
                     TableColumn<Dynasty, String> colDynasty = new TableColumn<Dynasty, String>(dynastyStr[i]);
-                    colDynasty.prefWidthProperty().bind(tableDynastyView.widthProperty().multiply(0.2));
+                    colDynasty.prefWidthProperty().bind(tableDynastyView.widthProperty().multiply(0.25));
                     colDynasty.setCellValueFactory(new PropertyValueFactory<>(dynastyStr[i]));
                     tableDynastyView.getColumns().add(colDynasty);
                 }
