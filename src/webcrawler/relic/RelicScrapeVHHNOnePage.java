@@ -7,14 +7,34 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import objects.relic.Relic;
+import webcrawler.parent.BasicFind;
 import webcrawler.parent.BasicWebScraper;
 import webcrawler.parent.IScraping;
 
-public class RelicScrapeVHHNOnePage extends BasicWebScraper implements IScraping{
+public class RelicScrapeVHHNOnePage extends BasicFind{
 	private LinkedList<Relic> relics;
+	private int lienKetKing = 0;
+	private int lienKetDynasty = 0;
+	private int lienKetFigure = 0;
 	
 	public LinkedList<Relic> getRelics() {
 		return relics;
+	}
+	
+	public int getLienKetKing() {
+		return lienKetKing;
+	}
+
+
+
+	public int getLienKetDynasty() {
+		return lienKetDynasty;
+	}
+
+
+
+	public int getLienKetFigure() {
+		return lienKetFigure;
 	}
 
 	public RelicScrapeVHHNOnePage(int i) {
@@ -33,6 +53,9 @@ public class RelicScrapeVHHNOnePage extends BasicWebScraper implements IScraping
 			System.out.println(boxUrl);
 			RelicScrapeVHHNOneBox h = new RelicScrapeVHHNOneBox(boxUrl);
 			h.scraping();
+			lienKetDynasty += h.getLienKetDynasty();
+			lienKetKing += h.getLienKetKing();
+			lienKetFigure += h.getLienKetFigure();
 			relics.add(h.getRelic());
 		}
 	}

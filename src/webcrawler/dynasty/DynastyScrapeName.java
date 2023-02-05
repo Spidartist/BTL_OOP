@@ -5,10 +5,11 @@ import java.util.LinkedList;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
+import webcrawler.parent.BasicFind;
 import webcrawler.parent.BasicWebScraper;
 import webcrawler.parent.IScraping;
 
-public class DynastyScrapeName extends BasicWebScraper implements IScraping {
+public class DynastyScrapeName extends BasicFind {
 
 	private LinkedList<String> dynasty_names;
 	private LinkedList<String> black_list;

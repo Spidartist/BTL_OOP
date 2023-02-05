@@ -3,10 +3,9 @@ package webcrawler.relic;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-import webcrawler.parent.BasicWebScraper;
-import webcrawler.parent.IScraping;
+import webcrawler.parent.BasicFind;
 
-public class RelicScrapeDiTichOnePage extends BasicWebScraper implements IScraping {
+public class RelicScrapeDiTichOnePage extends BasicFind {
 	private String type;
 	private String rank;
 	private String person;

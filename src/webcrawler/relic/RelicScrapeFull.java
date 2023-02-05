@@ -29,6 +29,9 @@ public class RelicScrapeFull implements ICombineData, IWriteJson {
 		RelicScrapeVHHN r_h = new RelicScrapeVHHN();
 		r_h.combine();
 		relics.addAll(r_h.getRelics());
+		System.out.println(r_h.getLienKetDynasty());
+		System.out.println(r_h.getLienKetFigure());
+		System.out.println(r_h.getLienKetKing());
 	}
 
 	public void writeJSon() throws JsonIOException, IOException {

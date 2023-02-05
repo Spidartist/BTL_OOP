@@ -5,10 +5,9 @@ import java.util.ArrayList;
 import org.jsoup.select.Elements;
 
 import objects.dynasty.Dynasty;
-import webcrawler.parent.BasicWebScraper;
-import webcrawler.parent.IScraping;
+import webcrawler.parent.BasicFind;
 
-public class DynastyScrapeWikiYear extends BasicWebScraper implements IScraping {
+public class DynastyScrapeWikiYear extends BasicFind {
 	private String tenTrieuDai;
 	private String beginYear;
 	private String endYear;

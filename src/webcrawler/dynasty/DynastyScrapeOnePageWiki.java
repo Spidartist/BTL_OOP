@@ -6,10 +6,11 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import objects.figure.King;
+import webcrawler.parent.BasicFind;
 import webcrawler.parent.BasicWebScraper;
 import webcrawler.parent.IScraping;
 
-public class DynastyScrapeOnePageWiki extends BasicWebScraper implements IScraping {
+public class DynastyScrapeOnePageWiki extends BasicFind {
 	private LinkedList<King> kingNames;
 
 	public void scraping() {

@@ -10,10 +10,11 @@ import org.jsoup.select.Elements;
 
 import objects.dynasty.Dynasty;
 import objects.figure.King;
+import webcrawler.parent.BasicFind;
 import webcrawler.parent.BasicWebScraper;
 import webcrawler.parent.IScraping;
 
-public class DynastyScrapeNKSKings extends BasicWebScraper implements IScraping{
+public class DynastyScrapeNKSKings extends BasicFind{
 	LinkedList<Dynasty> dynastys = new LinkedList<Dynasty>();
 	
 	public DynastyScrapeNKSKings() {

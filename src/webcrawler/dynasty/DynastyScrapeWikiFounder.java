@@ -7,10 +7,11 @@ import org.jsoup.select.Elements;
 
 import objects.dynasty.Dynasty;
 import objects.figure.King;
+import webcrawler.parent.BasicFind;
 import webcrawler.parent.BasicWebScraper;
 import webcrawler.parent.IScraping;
 
-public class DynastyScrapeWikiFounder extends BasicWebScraper implements IScraping {
+public class DynastyScrapeWikiFounder extends BasicFind {
 	private LinkedList<Dynasty> dynastys;
 
 	public DynastyScrapeWikiFounder() {

@@ -8,16 +8,39 @@ import objects.figure.Figure;
 import objects.figure.King;
 import objects.relic.Relic;
 import webcrawler.linkdata.LinkRelicWithFigureAndDynasty;
+import webcrawler.parent.BasicFind;
 import webcrawler.parent.BasicWebScraper;
 import webcrawler.parent.IScraping;
 
-public class RelicScrapeVHHNOneBox extends BasicWebScraper implements IScraping {
+public class RelicScrapeVHHNOneBox extends BasicFind {
 	private Relic relic;
 	private LinkRelicWithFigureAndDynasty linkRelic;
+	private int lienKetKing = 0;
+	private int lienKetDynasty = 0;
+	private int lienKetFigure = 0;
 	
 	public Relic getRelic() {
 		return relic;
 	}
+	
+
+	public int getLienKetKing() {
+		return lienKetKing;
+	}
+
+
+
+	public int getLienKetDynasty() {
+		return lienKetDynasty;
+	}
+
+
+
+	public int getLienKetFigure() {
+		return lienKetFigure;
+	}
+
+
 
 	public RelicScrapeVHHNOneBox(String url) throws IOException {
 		this.setUrl(url);
@@ -53,6 +76,9 @@ public class RelicScrapeVHHNOneBox extends BasicWebScraper implements IScraping 
 		}
 		
 		linkRelic.genLink(desc);
+		lienKetDynasty += linkRelic.getLienKetDynasty();
+		lienKetKing += linkRelic.getLienKetKing();
+		lienKetFigure += linkRelic.getLienKetFigure();
 		LinkedList<Figure> figures = linkRelic.getFigures();
 		LinkedList<King> kings = linkRelic.getKings();
 		LinkedList<Dynasty> dynastys = linkRelic.getDynastys();

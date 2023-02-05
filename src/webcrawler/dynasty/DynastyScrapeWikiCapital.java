@@ -3,10 +3,11 @@ package webcrawler.dynasty;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
+import webcrawler.parent.BasicFind;
 import webcrawler.parent.BasicWebScraper;
 import webcrawler.parent.IScraping;
 
-public class DynastyScrapeWikiCapital extends BasicWebScraper implements IScraping {
+public class DynastyScrapeWikiCapital extends BasicFind {
 	private String capital;
 	private String tenTrieuDai;
 
