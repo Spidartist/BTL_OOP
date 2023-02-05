@@ -79,7 +79,7 @@ public class MainController {
                         new KingDetails(demo);
                     }
                 });
-                String[] nameColKing  = {"Tên Vua", "Năm trị vì", "Miếu hiệu", "Thụy hiệu", "Niên hiệu"};
+                String[] nameColKing = { "Tên Vua", "Năm trị vì", "Miếu hiệu", "Thụy hiệu", "Niên hiệu" };
                 String[] kingStr = { "ten", "namTriVi", "mieuHieu", "thuyHieu", "nienHieu" };
                 for (int i = 0; i < kingStr.length; i++) {
                     TableColumn<King, String> ColKing = new TableColumn<King, String>(nameColKing[i]);
@@ -94,7 +94,7 @@ public class MainController {
                 // King newKing = new King(elm.getTen());
                 // }
                 Search<King> searchKing = new Search<King>();
-                tableKingView.setItems(searchKing.demoSearch(listObservablesKing, textField, King.class));
+                tableKingView.setItems(searchKing.searchList(listObservablesKing, textField, King.class));
                 borderPane.setCenter(tableKingView);
                 break;
             case "Nhân Vật Lịch Sử":
@@ -107,7 +107,7 @@ public class MainController {
                         new FigureDetails(demo, listObservablesDynasty, listObservablesKing);
                     }
                 });
-                String[] nameColFigure  = {"Tên Nhân Vật", "Quê quán", "Năm sinh", "Năm mất"};
+                String[] nameColFigure = { "Tên Nhân Vật", "Quê quán", "Năm sinh", "Năm mất" };
                 String[] figureStr = { "ten", "queQuan", "namSinh", "namMat" };
                 for (int i = 0; i < figureStr.length; i++) {
                     TableColumn<Figure, String> ColFigure = new TableColumn<Figure, String>(nameColFigure[i]);
@@ -117,8 +117,7 @@ public class MainController {
                 }
                 // readerDataFigure.forEach(elm -> tableFigureView.getItems().add(elm));
                 Search<Figure> searchFigure = new Search<Figure>();
-                tableFigureView.setItems(searchFigure.demoSearch(listObservablesFigure, textField, Figure.class));
-                System.out.println("fig");
+                tableFigureView.setItems(searchFigure.searchList(listObservablesFigure, textField, Figure.class));
                 borderPane.setCenter(tableFigureView);
                 break;
             case "Sự kiện lịch sử":
@@ -134,7 +133,7 @@ public class MainController {
                     }
                 });
                 tableRelicView.getColumns().clear();
-                String[] nameColRelic  = {"Tên Di tích", "Địa điểm", "Thể loại", "Xếp hạng"};
+                String[] nameColRelic = { "Tên Di tích", "Địa điểm", "Thể loại", "Xếp hạng" };
                 String[] RelicStr = { "name", "location", "type", "rank" };
                 for (int i = 0; i < RelicStr.length; i++) {
                     TableColumn<Relic, String> colRelic = new TableColumn<Relic, String>(nameColRelic[i]);
@@ -144,7 +143,7 @@ public class MainController {
                 }
                 // readerDataRelic.forEach(elm -> tableRelicView.getItems().add(elm));
                 Search<Relic> searchRelic = new Search<Relic>();
-                tableRelicView.setItems(searchRelic.demoSearch(listObservablesRelic, textField, Relic.class));
+                tableRelicView.setItems(searchRelic.searchList(listObservablesRelic, textField, Relic.class));
                 borderPane.setCenter(tableRelicView);
                 break;
             case "Lễ Hội Văn Hóa":
@@ -157,7 +156,7 @@ public class MainController {
                         new FestivalDetails(demo, listObservablesFigure, listObservablesDynasty, listObservablesKing);
                     }
                 });
-                String[] nameColFestival  = {"Tên Lễ hội", "Thời gian", "Địa điểm"};
+                String[] nameColFestival = { "Tên Lễ hội", "Thời gian", "Địa điểm" };
                 String[] festivalStr = { "tenLeHoi", "thoigian", "diaDiem" };
                 for (int i = 0; i < festivalStr.length; i++) {
 
@@ -169,7 +168,7 @@ public class MainController {
                 }
                 Search<Festival> searchFestival = new Search<Festival>();
                 tableFestivalView
-                        .setItems(searchFestival.demoSearch(listObservablesFestival, textField, Festival.class));
+                        .setItems(searchFestival.searchList(listObservablesFestival, textField, Festival.class));
                 borderPane.setCenter(tableFestivalView);
                 break;
             case "Triều Đại Lịch Sử":
@@ -182,7 +181,7 @@ public class MainController {
                     }
                 });
                 tableDynastyView.getColumns().clear();
-                String[] nameColDynasty = {"Tên Triều đại", "Năm bất đầu", "Năm kết thúc", "Kinh đô"};
+                String[] nameColDynasty = { "Tên Triều đại", "Năm bất đầu", "Năm kết thúc", "Kinh đô" };
                 String[] dynastyStr = { "name", "startYear", "endYear", "capital" };
                 for (int i = 0; i < dynastyStr.length; i++) {
                     TableColumn<Dynasty, String> colDynasty = new TableColumn<Dynasty, String>(nameColDynasty[i]);
@@ -192,7 +191,7 @@ public class MainController {
                 }
                 // readerDataDynasty.forEach(elm -> tableDynastyView.getItems().add(elm));
                 Search<Dynasty> searchDynasty = new Search<Dynasty>();
-                tableDynastyView.setItems(searchDynasty.demoSearch(listObservablesDynasty, textField, Dynasty.class));
+                tableDynastyView.setItems(searchDynasty.searchList(listObservablesDynasty, textField, Dynasty.class));
                 borderPane.setCenter(tableDynastyView);
                 break;
             default:

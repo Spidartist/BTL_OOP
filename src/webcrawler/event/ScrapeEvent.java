@@ -40,7 +40,7 @@ public class ScrapeEvent implements IWriteJson, ICombineData {
 
 	@Override
 	public void writeJSon() throws JsonIOException, IOException {
-		String JsonURL = "D:\\webCrawler\\jSoupWebCrawler\\src\\data\\event.json";
+		String JsonURL = "src\\data\\event.json";
 		Gson gson = new GsonBuilder().setPrettyPrinting().create();
 		try {
 			FileWriter writer = new FileWriter(new File(JsonURL));

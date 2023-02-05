@@ -51,9 +51,20 @@ public class TranDanhLon extends BasicWebScraper implements IScraping {
 		return ThoiGianTraVe.toString();
 	}
 
+	// private String LayNam(String thoi_gian) {
+	// 	thoi_gian = thoi_gian.replaceAll("[^0-9]", "#");
+	// 	String[] arr = thoi_gian.split("#");
+	// 	for (String s : arr) {
+	// 		if (s.matches("[0-9]{3}$") || s.matches("[0-9]{4}$")) {
+	// 			return s;
+	// 		}
+	// 	}
+	// 	return "";
+	// }
+
 	private String CaoDiaDiem(String DuLieuTho, String KyTuCanXoa) {
 		// StringBuilder s = new StringBuilder();
-		final String[] tukhoa = new String[] { "Trận ", "Chiến dịch ", "Biến cố " };
+		final String[] tukhoa = new String[] { "Trận ", "Chiến dịch ", "Biến cố ", "Chiến tranh " };
 		boolean CanChinhSua = false;
 		DuLieuTho = DuLieuTho.replace(KyTuCanXoa, "");
 
@@ -95,6 +106,7 @@ public class TranDanhLon extends BasicWebScraper implements IScraping {
 			s.setThoi_gian(TamNhoGiaTriThoiGian);
 			s.setDia_diem(CaoDiaDiem(tran_danh, TamNhoGiaTriThoiGian));
 			s.setNhan_vat_lien_quan(CaoNhanVat(tran_danh, TamNhoGiaTriThoiGian));
+			s.getNhan_vat_lien_quan();
 			TranDanh.add(s);
 			System.out.println(TamNhoGiaTriThoiGian + ": " + tran_danh);
 		}
@@ -104,7 +116,7 @@ public class TranDanhLon extends BasicWebScraper implements IScraping {
 	public static void main(String args[]) {
 		TranDanhLon trandanh = new TranDanhLon();
 		trandanh.scraping();
-		String JsonURL = "C:\\Users\\lemin\\OneDrive\\Documents\\New Java projects\\webCrawler\\src\\TranDanhLon.json";
+		String JsonURL = "src\\objects\\event\\TranDanhLon.json";
 		Gson gson = new GsonBuilder().setPrettyPrinting().create();
 		try {
 			FileWriter writer = new FileWriter(new File(JsonURL));
