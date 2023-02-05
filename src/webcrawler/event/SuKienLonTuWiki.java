@@ -23,7 +23,7 @@ public class SuKienLonTuWiki extends BasicWebScraper implements IScraping {
 
 	SuKienLonTuWiki() {
 		String url = "https://vi.wikipedia.org/wiki/Ni%C3%AAn_bi%E1%BB%83u_l%E1%BB%8Bch_s%E1%BB%AD_Vi%E1%BB%87t_Nam";
-		this.url = url;
+		setUrl(url);;
 		connect();
 	}
 

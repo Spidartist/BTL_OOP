@@ -2,9 +2,11 @@ package webcrawler.history_figures;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.JsonIOException;
 
 import webcrawler.parent.BasicWebScraper;
 import webcrawler.parent.IScraping;
+import webcrawler.tojson.IWriteJson;
 import objects.figure.King;
 
 import java.io.BufferedReader;
@@ -23,7 +25,7 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-public class FindKing extends BasicWebScraper implements IScraping {
+public class FindKing extends BasicWebScraper implements IScraping,IWriteJson {
 	private ArrayList<King> kings = new ArrayList<King>();
 
 	public FindKing() {
@@ -134,12 +136,18 @@ public class FindKing extends BasicWebScraper implements IScraping {
 		return data;
 	}
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws JsonIOException, IOException {
 		FindKing obj = new FindKing();
-		ArrayList<King> kings = new ArrayList<King>();
+//		ArrayList<King> kings = new ArrayList<King>();
 		obj.scraping();
-		kings.addAll(obj.getKings());
-		System.out.println(kings.size());
+		obj.writeJSon();
+//		kings.addAll(obj.getKings());
+//		System.out.println(kings.size());
+		
+	}
+
+	@Override
+	public void writeJSon() throws JsonIOException, IOException {
 		String filePath = "D:\\webCrawler\\jSoupWebCrawler\\src\\data\\king.json";
 		JSONArray jarray = new JSONArray();
 		Gson gson = new GsonBuilder().setPrettyPrinting().create();

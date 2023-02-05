@@ -2,10 +2,13 @@ package webcrawler.festival;
 
 import webcrawler.parent.BasicWebScraper;
 import webcrawler.parent.IScraping;
+import webcrawler.tojson.ICombine;
+import webcrawler.tojson.IWriteJson;
 import objects.festival.Festival;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.JsonIOException;
 
 import webcrawler.parent.BasicWebScraper;
 import webcrawler.parent.IScraping;
@@ -25,23 +28,24 @@ import org.jsoup.nodes.Element;
 import org.jsoup.nodes.Node;
 import org.jsoup.select.Elements;
 
-public class FindFestival extends BasicWebScraper implements IScraping {
-	public FindFestival() {
-		String url = "https://vinpearl.com/vi/top-12-le-hoi-mua-xuan-dac-sac-o-3-mien";
-		this.url = url;
-		connect();
-	}
-
-	public Document getDoc() {
-		return this.doc;
+public class FindFestival implements IWriteJson,ICombine {
+	private ArrayList<Festival> list = new ArrayList<Festival>();
+	public static void main(String[] args) {
+		FindFestival fes = new FindFestival();
+		fes.combine();
+		try {
+			fes.writeJSon();
+		} catch (JsonIOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	@Override
-	public void scraping() {
-
-	}
-
-	public static void main(String[] args) {
+	public void combine() {
 		LeHoiDaNang daNang = new LeHoiDaNang();
 		daNang.scraping();
 		LeHoiTuyenQuang tuyenQuang = new LeHoiTuyenQuang();
@@ -52,12 +56,15 @@ public class FindFestival extends BasicWebScraper implements IScraping {
 		anGiang.scraping();
 		Wikipedia obj = new Wikipedia();
 		obj.scraping();
-		ArrayList<Festival> list = new ArrayList<Festival>();
 		list.addAll(tuyenQuang.getList());
 		list.addAll(bacNinh.getList());
 		list.addAll(anGiang.getList());
 		list.addAll(daNang.getList());
 		list.addAll(obj.getList());
+	}
+
+	@Override
+	public void writeJSon() throws JsonIOException, IOException {
 		String filePath = "D:\\webCrawler\\jSoupWebCrawler\\src\\webcrawler\\jsonFiles\\festival.json";
 		Gson gson = new GsonBuilder().setPrettyPrinting().create();
 		try {
@@ -67,6 +74,5 @@ public class FindFestival extends BasicWebScraper implements IScraping {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		// System.out.println(list.size());
 	}
 }

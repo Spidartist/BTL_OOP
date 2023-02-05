@@ -2,10 +2,13 @@ package webcrawler.history_figures;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.JsonIOException;
 import com.google.gson.JsonParser;
 
 import webcrawler.parent.BasicWebScraper;
 import webcrawler.parent.IScraping;
+import webcrawler.tojson.ICombine;
+import webcrawler.tojson.IWriteJson;
 import objects.dynasty.Dynasty;
 import objects.figure.Figure;
 import objects.figure.King;
@@ -27,41 +30,22 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-public class VanSuMain {
+public class ScrapeFigureMain implements IWriteJson, ICombine {
+	private LinkedList<Figure> list = new LinkedList<Figure>();
 	public static void main(String[] args) {
 //		ArrayList<String> links = new ArrayList<String>();
-		int pageIndex = 1;
-		String urlFirstHalf = "https://vansu.vn/viet-nam/viet-nam-nhan-vat/";
-		LinkedList<Figure> list = new LinkedList<Figure>();
-		while (pageIndex <= 800) {
-			String url = urlFirstHalf + Integer.toString(pageIndex);
-			VanSu vanSu = new VanSu(url);
-			vanSu.scraping();
-			list.add(vanSu.getFigure());
-			pageIndex += 1;
-		}
-
-		System.out.println("num of mem: " + list.size());
-		for (Figure figure:list) {
-			ArrayList<Dynasty> dynastyList = figure.getTrieuDai();
-			for (Dynasty dynasty : dynastyList) {
-				String name = dynasty.getName();
-				dynasty.setName(replaceTrieuDai(name));
-			}
-		}
-		String filePath = "D:\\webCrawler\\jSoupWebCrawler\\src\\data\\figureUpdate.json";
-		Gson gson = new GsonBuilder().setPrettyPrinting().create();
+		ScrapeFigureMain figure = new ScrapeFigureMain();
+		figure.combine();
 		try {
-			FileWriter writer = new FileWriter(new File(filePath));
-			gson.toJson(list, writer);
-			writer.close();
+			figure.writeJSon();
+		} catch (JsonIOException e) {
+			e.printStackTrace();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
 	}
 	
-	public static String replaceTrieuDai(String original) {
+	public String replaceTrieuDai(String original) {
 		String trieuDai = "";
 		switch(original) {
 			case "Bắc thuộc lần 1":{
@@ -113,5 +97,41 @@ public class VanSuMain {
 			}
 		}
 		return trieuDai;
+	}
+
+	@Override
+	public void writeJSon() throws JsonIOException, IOException {
+		String filePath = "D:\\webCrawler\\jSoupWebCrawler\\src\\data\\figureUpdate.json";
+		Gson gson = new GsonBuilder().setPrettyPrinting().create();
+		try {
+			FileWriter writer = new FileWriter(new File(filePath));
+			gson.toJson(list, writer);
+			writer.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+	@Override
+	public void combine() {
+		int pageIndex = 1;
+		String urlFirstHalf = "https://vansu.vn/viet-nam/viet-nam-nhan-vat/";
+		
+		while (pageIndex <= 800) {
+			String url = urlFirstHalf + Integer.toString(pageIndex);
+			VanSu vanSu = new VanSu(url);
+			vanSu.scraping();
+			list.add(vanSu.getFigure());
+			pageIndex += 1;
+		}
+
+		System.out.println("num of mem: " + list.size());
+		for (Figure figure:list) {
+			ArrayList<Dynasty> dynastyList = figure.getTrieuDai();
+			for (Dynasty dynasty : dynastyList) {
+				String name = dynasty.getName();
+				dynasty.setName(replaceTrieuDai(name));
+			}
+		}
 	}
 }
