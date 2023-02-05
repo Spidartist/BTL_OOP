@@ -6,6 +6,7 @@ import application.popup.details.DynastyDetails;
 import application.popup.details.FestivalDetails;
 import application.popup.details.FigureDetails;
 import application.popup.details.KingDetails;
+import application.popup.details.RelicDetails;
 import application.readdata.ReadData;
 import application.search.Search;
 import javafx.collections.ObservableList;
@@ -25,6 +26,7 @@ import objects.dynasty.Dynasty;
 import objects.festival.Festival;
 import objects.figure.Figure;
 import objects.figure.King;
+import objects.relic.Relic;
 
 public class MainController {
 
@@ -62,6 +64,8 @@ public class MainController {
                 .FromJsonToArray("src/data/dynasty.json", Dynasty.class);
         ObservableList<Festival> listObservablesFestival = new ReadData<Festival>()
                 .FromJsonToArray("src/data/festival.json", Festival.class);
+        ObservableList<Relic> listObservablesRelic = new ReadData<Relic>()
+                .FromJsonToArray("src/data/relic.json", Relic.class);
 
         switch (lableSelecItem) {
             case "Vua":
@@ -127,7 +131,27 @@ public class MainController {
 
                 break;
             case "Di tích lịch sử":
+                TableView<Relic> tableRelicView = new TableView<>();
+                tableRelicView.addEventHandler(MouseEvent.MOUSE_CLICKED, (MouseEvent e) -> {
+                    if (e.getClickCount() > 1) {
+                        Relic demo = tableRelicView.getSelectionModel().getSelectedItem();
 
+                        new RelicDetails(demo, listObservablesFigure, listObservablesKing, listObservablesDynasty);
+                    }
+                });
+                tableRelicView.getColumns().clear();
+                String[] RelicStr = { "name", "location", "type", "rank" };
+                for (int i = 0; i < RelicStr.length; i++) {
+                    TableColumn<Relic, String> colRelic = new TableColumn<Relic, String>(RelicStr[i]);
+                    colRelic.prefWidthProperty().bind(tableRelicView.widthProperty().multiply(0.25));
+                    colRelic.setCellValueFactory(new PropertyValueFactory<>(RelicStr[i]));
+                    tableRelicView.getColumns().add(colRelic);
+                }
+                // readerDataRelic.forEach(elm -> tableRelicView.getItems().add(elm));
+                Search<Relic> searchRelic = new Search<Relic>();
+                tableRelicView.setItems(searchRelic.demoSearch(listObservablesRelic, textField, Relic.class));
+                borderPane.setCenter(tableRelicView);
+                break;
             case "Lễ Hội Văn Hóa":
                 TableView<Festival> tableFestivalView = new TableView<>();
                 tableFestivalView.getColumns().clear();
