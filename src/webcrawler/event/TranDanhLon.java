@@ -109,7 +109,7 @@ public class TranDanhLon extends BasicWebScraper implements IScraping {
 			s.setTen(tran_danh);
 			s.setThoi_gian(TamNhoGiaTriThoiGian);
 			s.setDia_diem(CaoDiaDiem(tran_danh, TamNhoGiaTriThoiGian));
-			//s.setNhan_vat_lien_quan(CaoNhanVat(tran_danh, TamNhoGiaTriThoiGian));
+			s.setNhan_vat_lien_quan(CaoNhanVat(tran_danh, TamNhoGiaTriThoiGian)); s.getNhan_vat_lien_quan();
 			TranDanh.add(s);
 			System.out.println(TamNhoGiaTriThoiGian + ": " + tran_danh);
 		}
@@ -119,7 +119,7 @@ public class TranDanhLon extends BasicWebScraper implements IScraping {
 	public static void main(String args[]) {
 		TranDanhLon trandanh = new TranDanhLon();
 		trandanh.scraping();
-		String JsonURL = "C:\\Users\\lemin\\OneDrive\\Documents\\New Java projects\\BTL_OOP\\BTL_OOP\\src\\objects\\event\\TranDanhLon.json";
+		String JsonURL = "src\\objects\\event\\TranDanhLon.json";
 		Gson gson = new GsonBuilder().setPrettyPrinting().create();
 		try {
 			FileWriter writer = new FileWriter(new File(JsonURL));

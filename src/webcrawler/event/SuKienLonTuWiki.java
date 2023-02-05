@@ -153,7 +153,7 @@ public class SuKienLonTuWiki extends BasicWebScraper implements IScraping {
 			s.setTen(ten);
 			s.setThoi_gian(thoi_gian);
 			s.setDia_diem(CaoDiaDiem(ten, thoi_gian));
-			s.setNhan_vat_lien_quan(CaoNhanVat(ten, thoi_gian));
+			s.setNhan_vat_lien_quan(CaoNhanVat(ten, thoi_gian)); s.getNhan_vat_lien_quan();
 			//s.setNien_dai(CaoTrieuDai(thoi_gian));
 			SuKienWiki.add(s);
 			System.out.println(thoi_gian + ": " + ten);
@@ -164,7 +164,7 @@ public class SuKienLonTuWiki extends BasicWebScraper implements IScraping {
 		SuKienLonTuWiki sukien = new SuKienLonTuWiki();
 		sukien.scraping();
 		// can chinh sua khi len remote
-		String JsonURL = "C:\\Users\\lemin\\OneDrive\\Documents\\New Java projects\\BTL_OOP\\BTL_OOP\\src\\objects\\event\\SuKienLon.json";
+		String JsonURL = "src\\objects\\event\\SuKienLon.json";
 		Gson gson = new GsonBuilder().setPrettyPrinting().create();
 		try {
 			FileWriter writer = new FileWriter(new File(JsonURL));
