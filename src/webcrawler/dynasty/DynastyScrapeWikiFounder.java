@@ -57,5 +57,4 @@ public class DynastyScrapeWikiFounder extends BasicWebScraper implements IScrapi
 		DynastyScrapeWikiFounder w = new DynastyScrapeWikiFounder();
 		w.scraping();
 	}
-
 }
