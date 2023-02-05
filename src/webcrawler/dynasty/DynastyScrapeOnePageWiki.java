@@ -57,5 +57,4 @@ public class DynastyScrapeOnePageWiki extends BasicWebScraper implements IScrapi
 				"https://vi.wikipedia.org/wiki/Nh%C3%A0_Nguy%E1%BB%85n");
 		one.scraping();
 	}
-
 }

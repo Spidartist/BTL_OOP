@@ -1,8 +1,8 @@
 package webcrawler.festival;
 
+import webcrawler.combine.ICombineData;
 import webcrawler.parent.BasicWebScraper;
 import webcrawler.parent.IScraping;
-import webcrawler.tojson.ICombine;
 import webcrawler.tojson.IWriteJson;
 import objects.festival.Festival;
 
@@ -28,7 +28,7 @@ import org.jsoup.nodes.Element;
 import org.jsoup.nodes.Node;
 import org.jsoup.select.Elements;
 
-public class FindFestival implements IWriteJson,ICombine {
+public class FindFestival implements IWriteJson,ICombineData {
 	private ArrayList<Festival> list = new ArrayList<Festival>();
 	public static void main(String[] args) {
 		FindFestival fes = new FindFestival();

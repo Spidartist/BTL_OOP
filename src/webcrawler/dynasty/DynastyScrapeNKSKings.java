@@ -80,4 +80,5 @@ public class DynastyScrapeNKSKings extends BasicWebScraper implements IScraping{
 		DynastyScrapeNKSKings n = new DynastyScrapeNKSKings();
 		n.scraping();
 	}
+	
 }

@@ -73,4 +73,5 @@ public class DynastyScrapeName extends BasicWebScraper implements IScraping {
 		DynastyScrapeName dynastyScrape = new DynastyScrapeName();
 		dynastyScrape.scraping();
 	}
+	
 }
