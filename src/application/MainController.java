@@ -2,7 +2,6 @@ package application;
 
 import java.io.IOException;
 
-import application.popup.PopUpWinDow;
 import application.popup.details.DynastyDetails;
 import application.popup.details.FestivalDetails;
 import application.popup.details.FigureDetails;
@@ -52,7 +51,7 @@ public class MainController {
     void clickMenuItem(ActionEvent event) throws IOException {
         MenuItem menuItem = (MenuItem) event.getSource();
         String lableSelecItem = menuItem.getText();
-        PopUpWinDow newPopUp = new PopUpWinDow();
+
         searchField.setText(menuItem.getText());
 
         ObservableList<Figure> listObservablesFigure = new ReadData<Figure>()
@@ -136,7 +135,7 @@ public class MainController {
                     if (e.getClickCount() > 1) {
                         Festival demo = tableFestivalView.getSelectionModel().getSelectedItem();
 
-                        new FestivalDetails();
+                        new FestivalDetails(demo, listObservablesFigure, listObservablesDynasty, listObservablesKing);
                     }
                 });
                 String[] festivalStr = { "tenLeHoi", "thoigian", "diaDiem" };
