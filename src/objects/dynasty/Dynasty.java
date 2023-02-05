@@ -5,12 +5,12 @@ import java.util.LinkedList;
 import objects.figure.King;
 
 public class Dynasty {
-	private String startYear; // co ve de
-	private String endYear; // chua code
-	private String name; // xong, day la base
-	private LinkedList<King> kings; // 1 phan, 8 ban ghi
-	private String capital; // co ve day la thu do thi hop ly hon
-	private King founder; // done
+	private String startYear; 
+	private String endYear; 
+	private String name; 
+	private LinkedList<King> kings; 
+	private String capital; 
+	private King founder; 
 
 	public Dynasty() {
 
