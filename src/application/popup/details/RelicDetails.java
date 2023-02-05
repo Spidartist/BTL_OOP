@@ -31,15 +31,18 @@ public class RelicDetails {
         BorderPane borderPane = new BorderPane();
         Stage stage = new Stage();
         stage.setTitle("Relic Detail");
-        
-        Image imagebackground = new Image("https://media.discordapp.net/attachments/755083836169257062/1071699179488944128/image.png?width=1190&height=670");
-        BackgroundImage backgroundImage = new BackgroundImage(imagebackground, BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.CENTER, BackgroundSize.DEFAULT);
+
+        Image imagebackground = new Image(
+                "https://media.discordapp.net/attachments/755083836169257062/1071699179488944128/image.png?width=1190&height=670");
+        BackgroundImage backgroundImage = new BackgroundImage(imagebackground, BackgroundRepeat.NO_REPEAT,
+                BackgroundRepeat.NO_REPEAT, BackgroundPosition.CENTER, BackgroundSize.DEFAULT);
         borderPane.setBackground(new Background(backgroundImage));
-        
+
         Image image = new Image(
-                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSufu-xJiSOxynzT2dbbwlAGaP5Gm-TnGM2IA&usqp=CAU");
+                "https://mcdn.coolmate.me/uploads/January2022/di-tic-lich-su-viet-nam.png");
         ImageView imageView = new ImageView(image);
-     
+        imageView.setFitWidth(233);
+        imageView.setFitHeight(145);
         Label name = new Label("Tên di tích: " + curSelect.getName());
         Label location = new Label("Địa điểm: " + curSelect.getLocation());
         Label type = new Label("Kiểu di tích: " + curSelect.getType());
@@ -96,7 +99,7 @@ public class RelicDetails {
         Label vua = new Label("Vua: " + (strKings == "" ? "Không có" : strKings));
         Label nhanVat = new Label(
                 "Nhân vật Lịch sử: " + (strFigures == "" ? "Không có" : strFigures));
-        
+
         name.getStyleClass().add("text-color");
         location.getStyleClass().add("text-color");
         type.getStyleClass().add("text-color");
@@ -105,27 +108,28 @@ public class RelicDetails {
         trieuDai.getStyleClass().add("text-color");
         vua.getStyleClass().add("text-color");
         nhanVat.getStyleClass().add("text-color");
-        
+
         VBox vbox = new VBox();
         HBox hbox = new HBox();
-        hbox.setPadding(new Insets(20,20,20,20));
+        hbox.setPadding(new Insets(20, 20, 20, 20));
         hbox.setSpacing(25);
         HBox picturebox = new HBox();
-        //picturebox.setSpacing(20);
+        // picturebox.setSpacing(20);
         picturebox.getChildren().add(imageView);
-        picturebox.setStyle("-fx-border-color: white; -fx-border-width: 3px; -fx-effect : dropshadow(one-pass-box,white, 5, 5, 0, 0);");
-        
+        picturebox.setStyle(
+                "-fx-border-color: white; -fx-border-width: 3px; -fx-effect : dropshadow(one-pass-box,white, 5, 5, 0, 0);");
+
         VBox labelbox = new VBox();
-        //labelbox.setSpacing(20);
-        labelbox.getChildren().addAll(name,location,type,rank,trieuDai,vua,nhanVat);
-        
-        hbox.getChildren().addAll(picturebox,labelbox);
-        
+        // labelbox.setSpacing(20);
+        labelbox.getChildren().addAll(name, location, type, rank, trieuDai, vua, nhanVat);
+
+        hbox.getChildren().addAll(picturebox, labelbox);
+
         VBox contentText = new VBox();
         contentText.getChildren().addAll(desc);
         contentText.setPadding(new Insets(10, 50, 10, 50));
-        
-        vbox.getChildren().addAll(hbox,contentText);
+
+        vbox.getChildren().addAll(hbox, contentText);
         borderPane.setCenter(vbox);
         picturebox.setAlignment(Pos.CENTER_LEFT);
         labelbox.setAlignment(Pos.BASELINE_LEFT);

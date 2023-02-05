@@ -29,8 +29,10 @@ public class SuKienDetails {
         borderPane.setBackground(new Background(backgroundImage));
 
         Image image = new Image(
-                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSufu-xJiSOxynzT2dbbwlAGaP5Gm-TnGM2IA&usqp=CAU");
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrDuM8-H23BUUNCV6C90QbUqbWV2iyQ7b_fQ&usqp=CAU");
         ImageView imageView = new ImageView(image);
+        imageView.setFitWidth(233);
+        imageView.setFitHeight(145);
         // imageView.setStyle("-fx-border-color: red; -fx-border-width:
         // medium;-fx-border-style: solid;");
         imageView.getStyleClass().add("border-style");

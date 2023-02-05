@@ -35,9 +35,11 @@ public class DynastyDetails {
         borderPane.setBackground(new Background(backgroundImage));
 
         Image image = new Image(
-                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSufu-xJiSOxynzT2dbbwlAGaP5Gm-TnGM2IA&usqp=CAU");
-        ImageView imageView = new ImageView(image);
+                "https://vozer.vn/storage/images/tom-tat-lich-su-viet-nam-bang-mot-bai-tho-05494151.jpg");
 
+        ImageView imageView = new ImageView(image);
+        imageView.setFitWidth(233);
+        imageView.setFitHeight(145);
         Label name = new Label("Tên Triều đại: " + curSelect.getName());
         Label startYear = new Label("Năm bắt đầu: " + curSelect.getStartYear());
         Label endYear = new Label("Năm kết thúc: " + curSelect.getEndYear());
