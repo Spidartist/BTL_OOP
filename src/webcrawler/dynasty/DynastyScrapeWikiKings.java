@@ -63,4 +63,5 @@ public class DynastyScrapeWikiKings extends BasicWebScraper implements IScraping
 		dynastyScrapeWiki.scraping();
 
 	}
+	
 }
